@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	  <!-- Load plotly.js into the DOM -->
+	  <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+		<!-- chart object sripts -->
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="assets/10-header.css">
+		<link rel="stylesheet" href="assets/20-reset.css">
+		<link rel="stylesheet" href="assets/30-dash-style.css">
+  </head>
+  <body>
+		<h2>JS, CSS & HTML version of Plymouth Parks heroku app.</h2>
+  	<div id='mapDiv'><!-- Plotly map will be drawn inside this DIV --></div>
+		<div id='hoverInfo' class='info'></div><!-- Counter ID will be displayed in here on plotly_hover event -->
+		<div id='chartDiv'><!-- Plotly chart goes in this DIV --></div>
+  </body>
+  <script src='makemap.js'></script>
+  <!-- <script src='setcounter.js'></script> -->
+  <!-- <script src='makeplot.js'></script> -->
+</html>
