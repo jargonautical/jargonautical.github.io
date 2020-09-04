@@ -110,6 +110,7 @@ p.console {
 
 h1 {
   color: white;
+  background-color: var(--bgheaders);
   font-size: 2.5em;
   font-family: Lora;
   padding-top: 30px;
