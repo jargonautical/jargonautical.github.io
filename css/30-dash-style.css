@@ -1,0 +1,300 @@
+/* TDP stylesheet */
+
+/* TDP stylesheet */
+@import url('https://fonts.googleapis.com/css?family=Chivo|Lora|Space+Mono:700&display=swap');
+
+:root {
+  /* chart colours */
+  --main: mediumaquamarine;
+  --bgbody: rgba(245,255,250,0.25); /* mintcream 25% */
+  --bgbox: whitesmoke;
+  --bgheaders: cadetblue;
+  --bghover: lightslategray;
+  --outline: darkslategray;
+  --fade: gainsboro;
+  --dark: darkslategray;
+  --tint: paleturquoise;
+  --dull: cadetblue;
+  --calm: gray;
+  --pop: orangered;
+  --night: #202020;
+  --warm: ivory;
+}
+
+html, body,
+h1, h2, h3, h4, h5, h6, p,
+ol, ul, li, a, blockquote
+{
+	margin: 10px;
+	padding: 10px;
+	line-height: 130%;
+}
+
+body {
+  background-color: var(--bgbody);
+  font-size: 100%;
+  font-family: Chivo;
+}
+
+p {
+  font-size: 100%;
+  font-family: Chivo;
+}
+
+p.pop {
+  color: var(--pop);
+}
+
+blockquote {
+	color: var(--night);
+	padding-left:20px;
+}
+
+p.snippet {
+  font-family: 'Space Mono';
+  color: var(--night);
+  background-color: var(--fade);
+	border-style: inset;
+	border-width: medium;
+	padding-left:20px;
+}
+
+p.docs {
+	font-family: Georgia;
+	font-size: 1.1em;
+	border-style: outset;
+	border-width: medium;
+	background-color: ivory;
+	padding-left:20px;
+}
+
+p.console {
+  font-family: 'Space Mono';
+  color: var(--night);
+  background-color: var(--bgbox);
+	border-style: inset;
+	border-width: medium;
+	padding-left:20px;
+}
+
+/* headings */
+
+.hero-text {
+	text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+	color: white;
+	font-size: 2.8em;
+	font-family: Lora;
+	padding-top: 30px;
+	padding-bottom: 30px;
+  /*
+	background-image: url("https://github.com/jargonautical/hero_images/raw/master/d2_screenshot.png");
+	background-image: url("https://lh6.googleusercontent.com/NTqK2z2E1ar0Ky0X8Yna68oTEN8V5Ylun72nmY_WMY7pDlznPWDV1iv4Xf1mXr6fBCoyT9GYeA=w16383")
+  */
+}
+
+.hero-image {
+	background-image: url('https://github.com/jargonautical/hero_images/raw/master/Screenshot_57.jpg');
+	height: 100px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	padding: 10px;
+	margin: 10px;
+}
+
+
+h1 {
+  color: white;
+  font-size: 2.5em;
+  font-family: Lora;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+h2 {
+  color: white;
+  background-color: var(--dull);
+  font-size:1.5em;
+  font-family: Lora;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+h3 {
+  color: black;
+  font-size:1.2em;
+}
+
+h4 {
+  color: black;
+  font-size:1.1em;
+}
+
+h5 {
+  font-size:1.0em;
+  font-weight: strong;
+}
+
+h6 {
+  font-size:1.0em;
+  font-style: oblique;
+}
+
+html {
+  max-width: 1200px;
+  margin: 0 auto;
+  #background: #eee; /* Fills the page */
+  position: relative; /* Fix for absolute positioning */
+}
+
+ul {
+  list-style-type: circle;
+  list-style-position: inside;
+  margin-left: 30px;
+  padding: 0;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.flex-container .box {
+  background-color: var(--bgbox);
+  max-width: 50%;
+  width: 50%;
+  margin: 10px;
+	padding: 10px;
+  text-align: left;
+  border-style: solid;
+  border-width: thin;
+  border-color: var(--outline);
+}
+
+.flex-container .invisbox-small {
+  background-color: var(--bgbody);
+  max-width: 33%;
+  width: 33%;
+  text-align: left;
+  padding: 10px;
+}
+
+.flex-container .invisbox {
+  background-color: var(--bgbody);
+  max-width: 50%;
+  width: 50%;
+  text-align: left;
+  padding: 10px;
+}
+
+.flex-container .invisbox-big {
+  background-color: var(--bgbody);
+  max-width: 67%;
+  width: 67%;
+  text-align: left;
+  padding: 10px;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* info box */
+.info {
+  background-color: var(--warm);
+  border-style: solid;
+  border-width: thin;
+  border-color: var(--outline);
+  margin: 10px;
+	padding: 10px;
+}
+
+/* nav buttons */
+
+.button-back {
+  background-color: var(--tint);
+  border-style: solid;
+  border-width: thin;
+  border-color: var(--dull);
+  border-radius: 8px;
+  color: var(--night);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  float: left;
+}
+
+.button-next {
+  background-color: var(--tint);
+  border-style: solid;
+  border-width: thin;
+  border-color: var(--dull);
+  border-radius: 8px;
+  color: var(--night);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  float: right;
+}
+
+.button-next:hover {
+  background-color: var(--fade);
+}
+
+.button-back:hover {
+  background-color: var(--fade);
+}
+
+/* lists - unordered */
+ul {
+  list-style: square inside;
+  list-style-type: disc;
+}
+
+/* lists - ordered */
+ol {
+  list-style: square inside;
+  list-style-type: lower-alpha;
+}
+
+/* tables */
+table {
+  border-collapse: collapse;
+  text-align: left;
+  vertical-align: middle;
+  background-color: var(--bgbox);
+}
+
+th {
+  padding:10px;
+}
+
+td {
+  padding:10px
+}
+
+table, td, th {
+  border-style: solid;
+  border-width: thin;
+  border-color: var(--outline);
+}
+
+tr:hover {background-color:var(--bghover);}
+
+caption {
+  caption-side: bottom;
+  padding: 10px
+}
