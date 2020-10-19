@@ -9,7 +9,6 @@ ol, ul, li, blockquote
 	line-height: 130%;
 }
 
-
 body {
   background-image: url('assets/background/Background_Blue.png');
   font-size: 100%;
@@ -93,7 +92,6 @@ html {
 	border-radius: 50%;
 }
 
-
 @media screen and (max-width: 750px) {
 	.dropzone {
 		width: 100%;
@@ -129,10 +127,6 @@ html {
 .item:hover {
   cursor: pointer;
 }
-
-
-
-
 
 ul {
   list-style-type: circle;
@@ -186,70 +180,6 @@ ul {
   content: "";
   clear: both;
   display: table;
-}
-
-/* info box */
-.info {
-  background-color: var(--bgbox);
-  border-style: solid;
-  border-width: thin;
-  border-color: var(--outline);
-  margin: 10px;
-	padding: 10px;
-}
-
-/* nav buttons */
-
-.button-back {
-  background-color: var(--tint);
-  border-style: solid;
-  border-width: thin;
-  border-color: var(--dull);
-  border-radius: 8px;
-  color: var(--tdpDarkText);
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  cursor: pointer;
-  float: left;
-}
-
-.button-next {
-  background-color: var(--fade);
-  border-style: solid;
-  border-width: thin;
-  border-color: var(--dull);
-  border-radius: 8px;
-  color: var(--tdpDarkText);
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  cursor: pointer;
-  float: right;
-}
-
-.button-next:hover {
-  background-color: var(--fade);
-}
-
-.button-back:hover {
-  background-color: var(--fade);
-}
-
-/* lists - unordered */
-ul {
-  list-style: square inside;
-  list-style-type: disc;
-}
-
-/* lists - ordered */
-ol {
-  list-style: square inside;
-  list-style-type: lower-alpha;
 }
 
 /* tables */
