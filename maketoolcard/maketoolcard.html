@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>Make a tool card sample</title>
+  <link rel="stylesheet" href="maketoolcard.css"/>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/interact.js/1.2.9/interact.min.js'></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
+</head>
+
+<body>
+  <h1>Make a tool card for Datopolis</h1>
+  <p>Some info about what this is and how to make a toolcard</p>
+  <div id="intro" class="flex-container">
+
+    <!-- mock up of toolcard layout .......................................... -->
+    <div id="form1" class="invisbox-small"  style="border-radius: 5%; height: 410px; width: 300px; background-image: url('assets/backgrounds/ToolRecipe_Front_BG.png'); background-size: 100%;">
+
+      <FORM>
+        <br>
+      <INPUT type="textarea" id="tool_name" value="Give your tool a name ..." style="width: 300px; height: 35px; color: white; font-size: 1.5em; text-align: center; background-color: rgba(0, 0, 0, 0); border-color: gray;"><BR>
+      <INPUT type="text" id="description" value="... and write a sentence about what it does." style="height: 60px; width: 300px; font-size: 1em; text-align: center; background-color: rgba(0, 0, 0, 0); border-color: lightgray;">
+      </FORM>
+      <!-- Tool card canvas -->
+        <div id="canvas" class="dropzone" style="width: 300px; height: 200px;">
+          <p>Arrange the data tiles you want to use inside this box</p>
+        </div>
+        <div id="impact-images" class="flex-container">
+          <div class="invisbox-small">
+            <img alt="" src="assets/impact_icons/ec1.svg" style="height: 50px; width: 50px" id="ecImpact" onclick="changeEcImage()"   />
+            <script language="javascript">
+            var counter = 1;
+            function changeEcImage() {
+              counter > 1 ? counter = 1 : counter++;
+              document.getElementById("ecImpact").src = "assets/impact_icons/ec"+counter+".svg";
+            }
+            </script>
+          </div>
+          <div class="invisbox-small">
+            <img alt="" src="assets/impact_icons/soc1.svg" style="height: 50px; width: 50px" id="socImpact" onclick="changeSocImage()"   />
+            <script language="javascript">
+              var socCounter = 1;
+              function changeSocImage() {
+                socCounter > 1 ? socCounter = 1 : socCounter++;
+                document.getElementById("socImpact").src = "assets/impact_icons/soc"+socCounter+".svg";
+              }
+            </script>
+          </div>
+          <div class="invisbox-small">
+            <img alt="" src="assets/impact_icons/env1.svg" style="height: 50px; width: 50px" id="envImpact" onclick="changeEnvImage()"   />
+            <script language="javascript">
+              var envCounter = 1;
+              function changeEnvImage() {
+                envCounter > 1 ? envCounter = 1 : envCounter++;
+                document.getElementById("envImpact").src = "assets/impact_icons/env"+envCounter+".svg";
+              }
+            </script>
+          </div>
+        <br>
+      </div>
+        <p style="text-align: center;">Click or tap on the icons to select the impact your tool will have.</p>
+        <br>
+
+      </div>
+
+
+
+    <!-- data tiles ........................................................ -->
+    <div class="invisbox-big">
+        <p>Data tiles</p>
+        <div class="row">
+            <div id="DC" class="draggable drag-drop">
+              <img src="assets/tiles/Democratic - Closed.png" height="100px" width="100px"/>
+            </div>
+            <div id="GC" class="draggable drag-drop">
+              <img src="assets/tiles/Geographic - Closed.png" height="100px" width="100px"/>
+            </div>
+            <div id="HC" class="draggable drag-drop">
+              <img src="assets/tiles/Health - Closed.png" height="100px" width="100px"/>
+            </div>
+            <div id="PC" class="draggable drag-drop">
+              <img src="assets/tiles/Product - Closed.png" height="100px" width="100px"/>
+            </div>
+            <div id="TC" class="draggable drag-drop">
+              <img src="assets/tiles/Transport - Closed.png" height="100px" width="100px"/>
+            </div>
+            <div id="WC" class="draggable drag-drop">
+              <img src="assets/tiles/Weather - Closed.png" height="100px" width="100px"/>
+            </div>
+          </div>
+          <div class="row">
+              <div id="DO" class="draggable drag-drop">
+                <img src="assets/tiles/Democratic - Open.png" height="100px" width="100px"/>
+              </div>
+              <div id="GO" class="draggable drag-drop">
+                <img src="assets/tiles/Geographic - Open.png" height="100px" width="100px"/>
+              </div>
+              <div id="HO" class="draggable drag-drop">
+                <img src="assets/tiles/Health - Open.png" height="100px" width="100px"/>
+              </div>
+              <div id="PO" class="draggable drag-drop">
+                <img src="assets/tiles/Product - Open.png" height="100px" width="100px"/>
+              </div>
+              <div id="TO" class="draggable drag-drop">
+                <img src="assets/tiles/Transport - Open.png" height="100px" width="100px"/>
+              </div>
+              <div id="WO" class="draggable drag-drop">
+                <img src="assets/tiles/Weather - Open.png" height="100px" width="100px"/>
+              </div>
+            </div>
+            <div class="row">
+                <div id="DP" class="draggable drag-drop">
+                  <img src="assets/tiles/Democratic - Personal.png" height="100px" width="100px"/>
+                </div>
+                <div id="GP" class="draggable drag-drop">
+                  <img src="assets/tiles/Geographic - Personal.png" height="100px" width="100px"/>
+                </div>
+                <div id="HP" class="draggable drag-drop">
+                  <img src="assets/tiles/Health - Personal.png" height="100px" width="100px"/>
+                </div>
+                <div id="PP" class="draggable drag-drop">
+                  <img src="assets/tiles/Product - Personal.png" height="100px" width="100px"/>
+                </div>
+                <div id="TP" class="draggable drag-drop">
+                  <img src="assets/tiles/Transport - Personal.png" height="100px" width="100px"/>
+                </div>
+                <div id="WP" class="draggable drag-drop">
+                  <img src="assets/tiles/Weather - Personal.png" height="100px" width="100px"/>
+                </div>
+              </div>
+        </div>
+</body>
+<script src="maketoolcard.js"></script>
+
+
+</html>
