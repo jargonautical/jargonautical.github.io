@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	  <!-- Load plotly.js into the DOM -->
+	  <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+    <script type="text/javascript" src="d3.min.js"></script>
+  
+		<!-- chart object sripts -->
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="assets/10-header.css">
+		<link rel="stylesheet" href="assets/20-reset.css">
+		<link rel="stylesheet" href="assets/tdp-web-style.css">
+  </head>
+  <body>
+    <div id="intro">
+    <h3>Data Mince: collating datasets for demographic context</h3>
+    <p>
+      Why 'data mince'? Lucy explains:
+    </p>
+    <p class="info">
+    "A long time ago, my brother went off to university and started learning to shop,
+    cook and stay alive on a student's budget. He found out that pretty quickly
+    he fell into a pattern; after a long day of lectures and coursework and
+    assignments he would realise it was time to cook dinner. He'd chop an onion
+    and start frying it, add some cheap beef mince to the pan ... and then realise
+    he hadn't decided what he was actually going to cook. Chilli? Spag bol? Maybe go all
+    out and make cottage pie? His basic fried-mince-and-onion was just the
+    starting point.<br><br>
+    What we found when we started working on projects for different clients, no
+    matter how sophisticated the toolset or how complex the problem, was that we
+    almost always needed to start with the same initial collection of demographic
+    data; population, income, deprivation, working patterns and so on. This is
+    what we call our 'data mince'."
+  </p>
+  <p>
+    Working in the data science field in the middle of a global pandemic, there
+    are many opportunties to start building tracking dashboards and viral
+    infection models. But there are enough of those already, so we're focusing on
+    how we can provide something useful to anyone trying to manage service demand or
+    community responses to the current crisis.<br><br>
+    We'll update this periodically as we find new and useful things to add to it,
+    but for now here are the basics:<br>
+    - population,<br>
+    - deprivation<br>
+    - economic activity.<br><br>
+    All of the data we use here is published under the <a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Open Government Licence</a> as open data.
+  </p>
+  </div>
+
+  <h3>Looking at population variation</h3>
+
+  <div id="pop-section" class="flex-container">
+
+    <div class="box">
+      <p>We always find it useful to look at the distribution of ages
+        rather than the absolute values; the shape of a place's age
+        profile tells you a lot when you compare it to the wider
+        area. For example, Exeter and Plymouth stand out in this chart
+        because of the much higher numbers of resident young people
+        due to the universities. Torbay on the other hand has a profile skewed
+        towards the older age ranges, as many people retire to the area.<br><br>
+        Use the dropdown to select different Devon districts.<br>
+        Source: <a href="https://www.nomisweb.co.uk/query/construct/summary.asp?mode=construct&version=0&dataset=2002">ONS population estimates.</a>
+      </p>
+    </div>
+
+    <div class="box">
+      <p>
+        If we were looking at something like vulnerability profiles, then both groups
+        would be of interest. Outbreaks like the coronavirus are particularly concerning
+        for the elderly and anyone with an underlying health condition, but young people
+        are by no means immune. In fact a university environment can carry extra risks,
+        e.g. dorms, house shares, group tutorials and lectures in spaces that see a
+        lot of use.
+    </p>
+    </div>
+
+  </div>
+
+  <div>
+    <div id="pop">
+      <div class="bubbleplot" data-num="1">
+        <div class="plot" id="popDiv"></div>
+        <div class="control-row1">
+          District: <select class="districtdata">
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h3>Economic vulnerability and differential impacts</h3>
+
+
+  <div id="emp-section" class="flex-container">
+
+    <div class="box">
+      <p>
+        Health isn't the only vulnerability factor; for many people self-employment,
+        freelance and contracting work and zero-hours contracts have become a standard
+        part of their income generation. To take a look at the potential numbers of
+        people affected we can use the ONS Annual Labour Survey data - latest is for
+        the year from October 2018 to September 2019.<br><br>
+        Source: <a href="https://www.nomisweb.co.uk/query/construct/summary.asp?mode=construct&version=0&dataset=141">ONS UK Business Counts</a>
+      </p> <!-- update the data version -->
+    </div>
+
+    <div class="box">
+      <p>
+        These charts show two different attributes of the UK Business Counts data;
+        the breakdown by legal status, which gives us the proportion of sole traders
+        in a district, and the size band by number of employees so we can see where
+        there's a high proprotion of businesses with, for example, fewer than 5 people
+        working there.
+      </p>
+    </div>
+
+  </div>
+
+  <div id="biz-section" class="flex-container">
+
+    <div class="box">
+      <div id="se">
+        <div class="bubbleplot" data-num="2">
+          <div class="plot" id="empDiv"></div>
+          <div class="control-row2">
+            District: <select class="districtdata">
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="box">
+      <div id="biz">
+        <div class="bubbleplot" data-num="4">
+          <div class="plot" id="bizDiv"></div>
+          <div class="control-row2">
+            District: <select class="districtdata">
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <h3>Other measures of disadvantage</h3>
+
+  <div id="imd-section" class="flex-container">
+
+    <div class="invisbox">
+      <h3>Indices of Multiple Deprivation (IMD)</h3>
+      <p>
+        Income and employment are far from the only measure of wellbeing - although they certainly make a
+        difference. The Indices of Multiple Deprivation (IMD) are updated every few
+        years and cover a wider range of measures including environment, barriers to
+        opportunity, health and crime.<br><br>
+        The top-level index of deprivation is calculated from a combination of the
+        contributing indices, and assigns every small area (LSOA or Lower-level
+        Super Output Area) in England a score based on how deprived the model says
+        the area is in comparison to all the others. With all the LSOAs ranked in order,
+        each one is then assigned to a decile with a numeric score from 1 to 10.
+        Any LSOA with a decile score of 1 is therefore in the top 10% most deprived
+        nationally; and the higher the decile score, the less deprived.<br><br>
+        This chart looks at how many LSOAs per district fall into which deciles, so we can see
+        that the more urban areas like Torbay and Plymouth have a far greater
+        proportion of LSOAs with lower decile scores.<br>
+        Source: <a href="https://www.gov.uk/government/statistics/english-indices-of-deprivation-2019">UK Government - MHCLG</a>
+        <a href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/835115/IoD2019_Statistical_Release.pdf">Further reading</a>
+      </p>
+    </div>
+
+    <div class="invisbox">
+      <div id='imdDiv' width=100%></div><!-- IMD chart -->
+    </div>
+
+  </div>
+</body>
+
+<footer>
+</footer>
+
+  <!-- SCRIPTS ............................................................ -->
+  <script src='data-mince-pop.js'></script>
+  <script src='data-mince-emp.js'></script>
+  <script src='data-mince-biz.js'></script>
+  <script src='data-reshape.js'></script>
+</html>
