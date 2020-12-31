@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="reset.css">
+  <link rel="stylesheet" type="text/css" href="header.css">
+  <link rel="stylesheet" type="text/css" href="typography.css">
+  <link rel="stylesheet" type="text/css" href="newstyle.css">
+  <link rel="shortcut icon" href="barchart.jpg" />
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <div class='hero-image'>
+    <div class='hero-text'>
+      TDP sandbox
+    </div>
+  </div>
+</head>
+
+<!---------------------------------------------------------------------------->
+
+<body>
+  <!-- navbar -->
+  <div class='nav'>
+    <a href="./api1.html" target="_blank">Tutorial - how to use an API</a>
+    <a href="https://data-mince.herokuapp.com/" target="_blank">Data Mince - our open data starter</a>
+    <a href="https://plym-parks-app.herokuapp.com/" target="_blank">Footfall data in Plymouth parks</a>
+  </div>
+
+
+  <!-- ROW 4 Build a query -->
+  <div>
+    <h2>Building your query</h2>
+  </div>
+
+  <div class='flex-container'>
+    <div class='invisibox-big'>
+      <p>
+        If there are several possible options, then we need to be clear about what we want. This can be
+        tricky if you don't know what the available options are ahead of time, but luckily most APIs have
+        helpful documentation. Sometimes that's a selection of examples as code snippets, or sometimes you
+        may get a reference list of values that you can call on.
+      </p>
+      <p>For our milk analogy, the options might look something like this:</p>
+      <p class='docs'>
+        my-corner-shop API documentation<br>
+        -------------------------<br>
+        milk options<br>
+        - size<br>
+        -- 500ml, 1 litre or 2 litres<br>
+        - type<br>
+        -- skimmed, semi-skimmed or whole
+      </p>
+
+    </div>
+
+    <div class='invisibox-small'>
+      <img src="https://github.com/jargonautical/scraping_calls/raw/master/images/too_much_choice_bod.png" align="right">
+    </div>
+  </div>
+
+  <div>
+    <p>
+      Here's how we can tell the computer we have some extra
+      conditions for our request.
+    </p>
+    <p class='snippet'>
+      https://my-corner-shop.com/milk?size=1
+    </p>
+    <p>
+      The '?' means "I have some extra query conditions ...", and 'size=1' at the end adds a filter; "1 litre, please".<br>
+      If you have more than one filter to apply, you can join them with an ampersand '&' so it looks like this:
+    </p>
+    <p class='snippet'>
+      https://my-corner-shop.com/milk?size=1&type=semiskimmed
+    </p>
+  </div>
+
+  </div>
+  <!-- navbar -->
+  <div>
+    <a href="./api3.html"><button class='button-back'> << Step by step instructions</button>
+    <a href="./api5.html"><button class = 'button-next'>Dealing with errors >></button>
+  </div>
+
+</body>
+<footer>
+  <div>
+  <!-- need a stock footer in here -->
+</div>
+</footer>

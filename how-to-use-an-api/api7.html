@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="reset.css">
+  <link rel="stylesheet" type="text/css" href="header.css">
+  <link rel="stylesheet" type="text/css" href="typography.css">
+  <link rel="stylesheet" type="text/css" href="newstyle.css">
+  <link rel="shortcut icon" href="barchart.jpg" />
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <div class='hero-image'>
+    <div class='hero-text'>
+      TDP sandbox
+    </div>
+  </div>
+</head>
+
+<!---------------------------------------------------------------------------->
+
+<body>
+  <!-- navbar -->
+  <div class='nav'>
+    <a href="./api1.html" target="_blank">Tutorial - how to use an API</a>
+    <a href="https://data-mince.herokuapp.com/" target="_blank">Data Mince - our open data starter</a>
+    <a href="https://plym-parks-app.herokuapp.com/" target="_blank">Footfall data in Plymouth parks</a>
+  </div>
+
+  <div>
+    <h2>Success!</h2>
+    <h3>
+        Let's have a look at what we achieved (other than buying milk!)
+    </h3>
+  </div>
+  
+  <div class='flex-container'>
+  
+    <div class='invisbox-big'>
+      <p>
+        We found the shop
+      </p>
+      <p class='snippet'>
+        http://my-corner-shop.com
+      </p>
+      <p>
+        We tracked down the right department
+      </p>
+      <p class='snippet'>
+        /dairy
+      </p>
+      <p>
+        We specified the option we wanted
+      </p>
+      <p class='snippet'>
+        ?product=milk
+      </p>
+      <p>
+        And finally added our filters.
+      </p>
+      <p class='snippet'>
+          &size=1&type=semiskimmed
+      </p>
+    </div>
+  
+    <div class='invisbox-small'>
+        <div>
+            <img src="https://github.com/jargonautical/scraping_calls/raw/master/images/got_milk_bod.png" align='top'>
+        </div>
+        <div>
+            <p>
+                It may not seem like a big deal. But now you know your way around the shop to fetch a single item, you could use the same framework for filling your trolley with a week's worth of groceries.
+            </p>
+        </div>
+      
+    </div>
+      
+  </div>
+  
+  <div>
+      
+  </div>
+  
+  <div>
+      <h3>So what's next?</h3>
+    <p>
+      Now we've covered the theory with a simple analogy, why don't you have a look at some real-life examples of APIs you can play with.
+    </p>
+    <h4>Open APIs</h4>
+    <p>
+      Click on each link, or copy and paste it into your browser address bar,
+      and see what you get back. If that works, try changing the query terms and filters
+      and see what happens.
+    </p>
+    <p>
+      Pokemon evolution<br>
+      <a href='http://pokeapi.co/api/v2/evolution-chain/7/' target='_blank'>http://pokeapi.co/api/v2/evolution-chain/7/</a><br>
+    </p>
+    <p>
+      Open API for air quality data<br>
+      <a href='https://api.openaq.org/v1/cities?country=GB' target='_blank'>https://api.openaq.org/v1/cities?country=GB</a><br>
+    </p>
+    <p>
+      Wikipedia<br>
+      <a href='https://en.wikipedia.org/w/api.php?action=query&titles=parliament&prop=revisions&format=json' target='_blank'>https://en.wikipedia.org/w/api.php?action=query&titles=parliament&prop=revisions&format=json</a>
+    </p>
+    <h4>More resources</h4>
+    <p>
+      If you'd like to try working with an API using code rather than your browser,
+      take a look at our Jupyter notebook.
+    </p>
+    <p>
+      <a style={padding-left:-10; margin-left:-10;} href="https://colab.research.google.com/drive/1SemSnu-PZ6BEiuhrGIgCdcWrbEX8VXdw">https://colab.research.google.com/drive/1SemSnu-PZ6BEiuhrGIgCdcWrbEX8VXdw </a>.
+    </p>
+  </div>
+
+  <!-- navbar -->
+  <div>
+    <a href="./api6.html"><button class='button-back'> << Getting help</button>
+    <a href="./index.html"><button class = 'button-next'>End</button>
+  </div>
+
+</body>
+<footer>
+  <div>
+  <!-- need a stock footer in here -->
+</div>
+</footer>
+</html>

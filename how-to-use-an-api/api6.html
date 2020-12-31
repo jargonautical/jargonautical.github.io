@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="reset.css">
+  <link rel="stylesheet" type="text/css" href="header.css">
+  <link rel="stylesheet" type="text/css" href="typography.css">
+  <link rel="stylesheet" type="text/css" href="newstyle.css">
+  <link rel="shortcut icon" href="barchart.jpg" />
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <div class='hero-image'>
+    <div class='hero-text'>
+      TDP sandbox
+    </div>
+  </div>
+</head>
+
+<!---------------------------------------------------------------------------->
+
+<body>
+  <!-- navbar -->
+  <div class='nav'>
+    <a href="./api1.html" target="_blank">Tutorial - how to use an API</a>
+    <a href="https://data-mince.herokuapp.com/" target="_blank">Data Mince - our open data starter</a>
+    <a href="https://plym-parks-app.herokuapp.com/" target="_blank">Footfall data in Plymouth parks</a>
+  </div>
+
+  <h2>Getting help</h2>
+  <div class='invisibox'>
+    <h3>So, what do you do now?</h3>
+      <p>
+        Okay, to keep pushing the shopping analogy - maybe the shop doesn't
+          have a 'Milk' shelf. Perhaps it has a 'Dairy' aisle.
+          Maybe it's not a corner shop at all, but rather a petrol station with a
+          fridge marked 'Essentials' where the milk is kept along with the
+          sausage rolls and the energy drinks. Maybe you actually need almond milk,
+          or soya, and those are kept in a completely different section
+          called 'Alternatives to dairy'. Until you get there it's difficult to know.
+        </p>
+
+      </div>
+
+    <div class='flex-container'>
+      <div class='invisibox'>
+        <p class='docs'>
+          my-corner-shop API documentation<br>
+          -----------------------------------<br>
+          Departments<br>
+          - readymeals<br>
+          - frozenfood<br>
+          - fruitandveg<br>
+          - bakery<br>
+          - dairy<br>
+          - - products<br>
+          - - - cheese<br>
+          - - - yoghurt<br>
+          - - - milk<br>
+          ...</p>
+      </div>
+
+      <div class='invisibox'>
+        <img src="https://github.com/jargonautical/scraping_calls/raw/master/images/got_milk_bod.png" align='right'>
+        <p>
+          That's what the API documentation is supposed to do - it acts as a
+          guide to the layout of the store, so to speak, and
+          what products you might expect to find on which shelves.
+        </p>
+        <p>
+          According to this, the department we need is called 'dairy' and
+          once we get there we want to look in 'products', then find the actual product name we're looking for.
+          So we need to specify both the 'department' and the 'product' in our API call.
+        </p>
+
+      </div>
+
+    </div>
+
+    <div>
+      <p>
+        Putting all that together, our request is going to look something like this:
+      </p>
+      <p class='snippet'>
+        https://my-corner-shop.com/dairy?product=milk&size=1&type=semiskimmed
+      </p>
+    </div>
+
+
+  <!-- navbar -->
+  <div>
+    <a href="./api5.html"><button class='button-back'> << Dealing with errors</button>
+    <a href="./api7.html"><button class = 'button-next'>Success! >></button>
+  </div>
+
+</body>
+<footer>
+  <div>
+  <!-- need a stock footer in here -->
+</div>
+</footer>

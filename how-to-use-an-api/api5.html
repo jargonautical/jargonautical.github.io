@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="reset.css">
+  <link rel="stylesheet" type="text/css" href="header.css">
+  <link rel="stylesheet" type="text/css" href="typography.css">
+  <link rel="stylesheet" type="text/css" href="newstyle.css">
+  <link rel="shortcut icon" href="barchart.jpg" />
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <div class='hero-image'>
+    <div class='hero-text'>
+      TDP sandbox
+    </div>
+  </div>
+</head>
+
+<!---------------------------------------------------------------------------->
+
+<body>
+  <!-- navbar -->
+  <div class='nav'>
+    <a href="./api1.html" target="_blank">Tutorial - how to use an API</a>
+    <a href="https://data-mince.herokuapp.com/" target="_blank">Data Mince - our open data starter</a>
+    <a href="https://plym-parks-app.herokuapp.com/" target="_blank">Footfall data in Plymouth parks</a>
+  </div>
+
+  <!-- row 5 header -->
+  <div>
+    <h2>Dealing with errors</h2>
+  </div>
+
+  <div>
+    <h3>What if things go wrong?</h3>
+    <p>Sometimes your API call will fail, and you might not know why.
+      You did everything right, you followed the documentation or you used an
+      existing example, and yet ... there is no milk (or rather, no data!).
+      There's just an error message.
+    </p>
+    <p class='console'>
+      Error 404: "milk" not found
+    </p>
+    <p>
+      By far the most common error is 404. It simply means 'we can't find what you're asking for'.
+      Either it doesn't exist, or it's not where you told your computer to look.
+      This is the API server's response, telling you what the result of your question is.
+      The response is usually a code or a generic message that doesn't help you much by itself.
+      But there are ways of identifying and translating the error codes so you can
+      try to work out what went wrong.
+    </p>
+  </div>
+
+  <div class='flex-container'>
+    <div class='invisibox'>
+      <p>
+        401, 402 and 403 are variations on 'you're not allowed to look at what you're asking for',
+        for instance you're trying to access a section that needs authentication or login credentials.<br>
+        Responses in the 500 range cover things like the API server being down,
+        the network being down and other problems that are at the server's end and are nothing
+        to do with whatever you did.
+      </p>
+    </div>
+
+    <div class='invisibox'>
+      <p class='docs'>
+        100: Here is some information<br>
+        200: Success!<br>
+        300: We need to redirect you<br>
+        400: You did something wrong<br>
+        500: We did something wrong<br>
+      </p>
+    </div>
+
+  </div>
+
+  <!-- navbar -->
+  <div>
+    <a href="./api4.html"><button class='button-back'> << Building your query</button>
+    <a href="./api6.html"><button class = 'button-next'>Getting help >></button>
+  </div>
+
+</body>
+<footer>
+  <div>
+  <!-- need a stock footer in here -->
+</div>
+</footer>
