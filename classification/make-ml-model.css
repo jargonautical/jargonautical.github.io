@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css?family=Chivo|Lora|Space+Mono:700&display=swap');
+
+body,
+h1, h2, h3, h4, h5, h6, p,
+ol, ul, li, blockquote
+{
+	margin: 10px;
+	padding: 10px;
+	line-height: 130%;
+}
+
+body {
+  font-size: 100%;
+  font-family: Chivo;
+}
+
+h1 {
+  color: black;
+  font-size: 2.5em;
+  font-family: Lora;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+h2 {
+  color: black;
+  font-size:1.5em;
+  font-family: Lora;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+h3 {
+  color: black;
+  font-size:1.2em;
+}
+
+h4 {
+  color: black;
+  font-size:1.1em;
+}
+
+h5 {
+  font-size:1.0em;
+  font-weight: strong;
+}
+
+h6 {
+  font-size:1.0em;
+  font-style: oblique;
+}
+
+html {
+  margin: auto;
+  #background: #eee; /* Fills the page */
+  position: center; /* Fix for absolute positioning */
+}
+
+/*le style du cercle qui sert de zone pour déposer le carré*/
+.dropzone {
+	width: 100%;
+  border-width: 0.5px;
+  border-style: solid;
+  border-color: lightgray;
+  background-color: rgba(0,100,255,0.1);
+	z-index: -1;
+}
+
+/*le carré change de couleur quand il survol le cercle*/
+.drag-drop {
+	width: 150px;
+	height: 150px;
+  color: #fff;
+  transition: background-color 0.3s;
+	text-align: center;
+	transition: border-radius .1s;
+}
+
+.drag-drop.can-drop {
+  color: #000;
+  background-color: #FC6E5E;
+}
+
+/*le carré devient un cercle*/
+.drop-ok {
+	border-radius: 50%;
+}
+
+@media screen and (max-width: 750px) {
+	.dropzone {
+		width: 100%;
+		height: 100%;
+		margin-top: 20%;
+	}
+
+  .canvas {
+    width: 100%;
+  }
+
+	.drag-drop {
+	width: 90px;
+	height: 90px;
+	}
+}
+
+#container {
+  width: 100%;
+  background-color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  overflow: hidden;
+  border-radius: 7px;
+  touch-action: none;
+}
+
+.item:active {
+  opacity: .75;
+}
+
+.item:hover {
+  cursor: pointer;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+	align-items: center;
+}
+
+.flex-container .box {
+  background-color: var(--bgbox);
+  max-width: 50%;
+  width: 50%;
+  margin: 10px;
+	padding: 10px;
+  text-align: left;
+}
+
+.flex-container .invisbox-small {
+  background-color: var(--bgbody);
+  max-width: 33%;
+  width: 33%;
+  text-align: left;
+  padding: 10px;
+}
+
+.flex-container .invisbox {
+  background-color: var(--bgbody);
+  max-width: 50%;
+  width: 50%;
+  text-align: left;
+  padding: 10px;
+	align-items: center;
+  justify-content: center;
+}
+
+.flex-container .invisbox-big {
+  background-color: var(--bgbody);
+  max-width: 67%;
+  width: 67%;
+  text-align: left;
+  padding: 10px;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+	height: 450px;
+}
+
+.row img {
+  margin: 4px;
+  vertical-align: top;
+  width: 100%;
+	border: 2px outset gray;
+
+/* Create ten equal columns that sit next to each other */
+.column {
+  flex: 9%;
+  max-width: 10%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin: 4px;
+  vertical-align: top;
+  width: 100%;
+	border: 3px solid black;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}

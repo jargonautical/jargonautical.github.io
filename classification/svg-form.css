@@ -1,0 +1,159 @@
+/* RESET RULES & INITIAL SET UP
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@font-face {
+  font-family: "Summer";
+  src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/Summer%20Font%20Regular.woff);
+}
+
+@font-face {
+  font-family: "Summer Bold";
+  src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/Summer%20Font%20Bold.woff);
+}
+
+:root {
+  --white: #fff;
+  --red: #e31b23;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  border: none;
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+input,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  background: none;
+  outline: none;
+  height: 100%;
+}
+
+textarea {
+  resize: none;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  font: 32px/1.2 "Summer";
+  margin: 1.5rem 0;
+}
+
+.container {
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+
+/* FORM ELEMENTS
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.handmade-form h1,
+.handmade-form li,
+.handmade-form .grid > *:not(:last-child) {
+  padding: 0px;
+  margin: 0px;
+}
+
+.handmade-form .form-wrapper,
+.handmade-form input:not([type="radio"]),
+.handmade-form textarea,
+.handmade-form button,
+.handmade-form .checkbox-list label {
+  position: relative;
+}
+
+.handmade-form input:not([type="radio"]),
+.handmade-form textarea,
+.handmade-form button,
+.handmade-form .checkbox-list label {
+  z-index: 1;
+}
+
+.handmade-form input:not([type="radio"]),
+.handmade-form textarea,
+.handmade-form button {
+  width: 100%;
+  height: 100%;
+}
+
+.handmade-form input:not([type="radio"]),
+.handmade-form textarea,
+.handmade-form fieldset {
+  padding: 10px;
+}
+
+.handmade-form textarea {
+  height: 200px;
+  vertical-align: top;
+}
+
+.handmade-form legend {
+  margin: 0 auto;
+}
+
+.handmade-form ::placeholder {
+  color: inherit;
+  /*Fix opacity issue on Firefox*/
+  opacity: 1;
+}
+
+.handmade-form .form-wrapper svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* FOOTER
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+footer {
+  font-family: "Summer Bold";
+  font-size: 1.2rem;
+  text-align: right;
+}
+
+footer span {
+  color: var(--red);
+}
+
+
+/* MQ
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@media screen and (min-width: 600px) {
+  .handmade-form .grid {
+    display: grid;
+    grid-gap: 1.5rem;
+  }
+
+  .handmade-form .grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .handmade-form .grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .handmade-form .grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .handmade-form .grid-7 {
+    grid-template-columns: repeat(7, 1fr);
+  }
+
+  .handmade-form .grid > *:not(:last-child) {
+    margin-bottom: 0;
+  }
+}
