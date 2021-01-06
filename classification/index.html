@@ -11,7 +11,7 @@
 </head>
 
 <body>
-  <h3>Build a simple decision tree</h3>
+  <h3>Building a simple decision tree</h3>
   <!-- main flex container -->
   <div class='flex-container'>
     <!-- cards -->
@@ -132,28 +132,33 @@
               <!-- arrows and first factor conditions ................................ -->
               <li class="grid grid-2">
                 <div class="form-wrapper">
-                  <input type="text" placeholder="condition" required>
-                  <svg>
-                    <use xlink:href="#down-left"></use>
-                  </svg>
+                  <input type="text" placeholder="CONDITION A (e.g. <=2)" required>
+                    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 841.89 595.28">
+                      <defs>
+                        <style>.cls-1{fill:#3f3b3c;}</style>
+                      </defs>
+                      <path class="cls-1" d="M225.72,463.92l-9.6-7.46-5.79,13.77-5.57,13.83L202,491l-2.66,6.94L194,511.72l11.49-9.32,5.73-4.63,5.8-4.56,11.58-9.07,11.69-8.87-9.6-7.46,3.22-4.18q27.45-35.07,57.27-68.18c39.81-44,83-85.06,129.73-121.59a838,838,0,0,1,150.41-94.35c53.33-25.84,109.71-45.55,167.8-57.25l-1.25-6.21c-58.66,11.81-115.55,31.7-169.31,57.76A844.52,844.52,0,0,0,417,268.86C370,305.65,326.54,346.93,286.52,391.2q-30,33.19-57.56,68.53Z"/>
+                    </svg>
                 </div>
                 <div class="form-wrapper">
-                  <input type="text" placeholder="condition" required>
-                  <svg>
-                    <use xlink:href="#down-right"></use>
-                  </svg>
+                  <input type="text" placeholder="CONDITION B (e.g. >2)" required>
+                  <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 841.89 595.28">
+                    <defs>
+                      <style>.cls-1{fill:#3f3b3c;}</style>
+                    </defs>
+                    <path class="cls-1" d="M612.92,418.23l-9,8.12,12.26,8,12.12,8.27,6.08,4.16,6,4.28,12,8.59-6.14-13.48-3.09-6.78-3.21-6.7-6.48-13.46-6.75-13.35L617.64,414l-3.52-4q-30.06-33.24-62.73-64A1143.61,1143.61,0,0,0,411.77,233.92,1135.11,1135.11,0,0,0,89,81.38l-1.77,6.09a1128.77,1128.77,0,0,1,321,151.69A1137.86,1137.86,0,0,1,547,350.66q32.46,30.54,62.37,63.63Z"/></svg>
                 </div>
               </li>
               <!-- first factor sort counts ................................ -->
               <li class="grid grid-2">
                 <div class="form-wrapper">
-                  <input type="text" placeholder="count" required>
+                  <input type="text" placeholder="COUNT: How many NY? how many SF?" required>
                   <svg>
                     <use xlink:href="#input2"></use>
                   </svg>
                 </div>
                 <div class="form-wrapper">
-                  <input type="text" placeholder="count" required>
+                  <input type="text" placeholder="COUNT" required>
                   <svg>
                     <use xlink:href="#input2"></use>
                   </svg>
@@ -164,10 +169,10 @@
               <!-- first factor card sort placement boxes ................................ -->
               <li class="grid grid-2">
                   <svg width="100%" height="300" preserveAspectRatio="none">
-                    <rect width="100%" height="300" style="fill:white;stroke-width:3;stroke:darkgray" />
+                    <rect width="100%" height="300" style="fill:darkgray;stroke-width:3;stroke:none" />
                   </svg>
                   <svg width="100%" height="300" preserveAspectRatio="none">
-                    <rect width="100%" height="300" style="fill:white;stroke-width:3;stroke:darkgray" />
+                    <rect width="100%" height="300" style="fill:darkgray;stroke-width:3;stroke:none" />
                   </svg>
               </li>
             </div>
@@ -190,52 +195,64 @@
               <!-- arrows and second factor conditions ................................ -->
               <li class="grid grid-4">
                 <div class="form-wrapper">
-                  <input type="email" placeholder="condition" required>
-                  <svg>
-                    <use xlink:href="#down-left"></use>
+                  <input type="email" placeholder="CONDITION A" required>
+                  <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 841.89 595.28">
+                    <defs>
+                      <style>.cls-1{fill:#3f3b3c;}</style>
+                    </defs>
+                    <path class="cls-1" d="M225.72,463.92l-9.6-7.46-5.79,13.77-5.57,13.83L202,491l-2.66,6.94L194,511.72l11.49-9.32,5.73-4.63,5.8-4.56,11.58-9.07,11.69-8.87-9.6-7.46,3.22-4.18q27.45-35.07,57.27-68.18c39.81-44,83-85.06,129.73-121.59a838,838,0,0,1,150.41-94.35c53.33-25.84,109.71-45.55,167.8-57.25l-1.25-6.21c-58.66,11.81-115.55,31.7-169.31,57.76A844.52,844.52,0,0,0,417,268.86C370,305.65,326.54,346.93,286.52,391.2q-30,33.19-57.56,68.53Z"/>
                   </svg>
                 </div>
                 <div class="form-wrapper">
-                  <input type="tel" placeholder="condition">
-                  <svg>
-                    <use xlink:href="#down-right"></use>
+                  <input type="tel" placeholder="CONDITION B">
+                  <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 841.89 595.28">
+                    <defs>
+                      <style>.cls-1{fill:#3f3b3c;}</style>
+                    </defs>
+                    <path class="cls-1" d="M612.92,418.23l-9,8.12,12.26,8,12.12,8.27,6.08,4.16,6,4.28,12,8.59-6.14-13.48-3.09-6.78-3.21-6.7-6.48-13.46-6.75-13.35L617.64,414l-3.52-4q-30.06-33.24-62.73-64A1143.61,1143.61,0,0,0,411.77,233.92,1135.11,1135.11,0,0,0,89,81.38l-1.77,6.09a1128.77,1128.77,0,0,1,321,151.69A1137.86,1137.86,0,0,1,547,350.66q32.46,30.54,62.37,63.63Z"/>
                   </svg>
                 </div>
                 <div class="form-wrapper">
-                  <input type="tel" placeholder="condition">
-                  <svg>
-                    <use xlink:href="#down-left"></use>
+                  <input type="tel" placeholder="CONDITION A">
+                  <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 841.89 595.28">
+                    <defs>
+                      <style>.cls-1{fill:#3f3b3c;}</style>
+                    </defs>
+                    <path class="cls-1" d="M228.61,411l-9.37-7.74L213,416.87l-5.94,13.7-2.94,6.83-2.82,6.89L195.74,458l11.68-9.07,5.82-4.51,5.92-4.4,11.78-8.75,11.94-8.5L233.5,415l3.35-4.08q28.8-34.53,60.29-66.68A1142.64,1142.64,0,0,1,750.25,60.78l-2-6A1149.34,1149.34,0,0,0,292.61,339.84Q260.95,372.12,232,406.9Z"/>
                   </svg>
                 </div>
                 <div class="form-wrapper">
-                  <input type="tel" placeholder="condition">
-                  <svg>
-                    <use xlink:href="#down-right"></use>
+                  <input type="tel" placeholder="CONDITION B">
+                  <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 841.89 595.28">
+                    <defs>
+                      <style>.cls-1{fill:#3f3b3c;}</style>
+                    </defs>
+                    <path class="cls-1" d="M596,470.92l-8.5,8.71,12.89,7.19,12.79,7.34L638.83,509,624,483.3l-7.46-12.86L609,457.68l-8.5,8.71-3.77-3.67-15.48-15-15.68-14.84c-5.24-4.94-10.43-9.91-15.7-14.81l-15.89-14.62Q470.35,345,403.48,290.28A3021.53,3021.53,0,0,0,124.31,87.22l-3.43,5.33A3017.17,3017.17,0,0,1,399.47,295.18q66.67,54.58,130.18,112.9l15.85,14.58c5.25,4.9,10.44,9.86,15.67,14.79l15.64,14.8,15.45,15Z"/>
                   </svg>
                 </div>
               </li>
               <!-- second factor sort counts ................................ -->
               <li class="grid grid-4">
                 <div class="form-wrapper">
-                  <input type="email" placeholder="count" required>
+                  <input type="email" placeholder="COUNT" required>
                   <svg>
                     <use xlink:href="#input2"></use>
                   </svg>
                 </div>
                 <div class="form-wrapper">
-                  <input type="tel" placeholder="count">
+                  <input type="tel" placeholder="COUNT">
                   <svg>
                     <use xlink:href="#input2"></use>
                   </svg>
                 </div>
                 <div class="form-wrapper">
-                  <input type="tel" placeholder="count">
+                  <input type="tel" placeholder="COUNT">
                   <svg>
                     <use xlink:href="#input2"></use>
                   </svg>
                 </div>
                 <div class="form-wrapper">
-                  <input type="tel" placeholder="count">
+                  <input type="tel" placeholder="COUNT">
                   <svg>
                     <use xlink:href="#input2"></use>
                   </svg>
@@ -244,16 +261,16 @@
               <!-- second factor card sort area ................................ -->
               <li class="grid grid-4">
                 <svg width="100%" height="300" preserveAspectRatio="none">
-                  <rect width="100%" height="300" style="fill:white;stroke-width:3;stroke:darkgray" />
+                  <rect width="100%" height="300" style="fill:darkgray;stroke-width:1;stroke:none" />
                 </svg>
                 <svg width="100%" height="300" preserveAspectRatio="none">
-                  <rect width="100%" height="300" style="fill:white;stroke-width:3;stroke:darkgray" />
+                  <rect width="100%" height="300" style="fill:darkgray;stroke-width:1;stroke:none" />
                 </svg>
                 <svg width="100%" height="300" preserveAspectRatio="none">
-                  <rect width="100%" height="300" style="fill:white;stroke-width:3;stroke:darkgray" />
+                  <rect width="100%" height="300" style="fill:darkgray;stroke-width:1;stroke:none" />
                 </svg>
                 <svg width="100%" height="300" preserveAspectRatio="none">
-                  <rect width="100%" height="300" style="fill:white;stroke-width:3;stroke:darkgray" />
+                  <rect width="100%" height="300" style="fill:darkgray;stroke-width:1;stroke:none" />
                 </svg>
               </li>
 
