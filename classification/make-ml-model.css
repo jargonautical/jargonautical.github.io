@@ -62,7 +62,7 @@ html {
   border-width: 0.5px;
   border-style: solid;
   border-color: lightgray;
-  background-color: rgba(0,100,255,0.1);
+  background-color: darkgray;
 	z-index: -1;
 }
 
