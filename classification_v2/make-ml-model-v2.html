@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>Build a decision tree</title>
+  <link rel="stylesheet" href="make-ml-model.css"/>
+  <link rel="stylesheet" href="svg-form.css"/>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/interact.js/1.0.2/interact.min.js'></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <h3>Building a simple decision tree</h3>
+  <button class="button"><a href="houses.csv" target="_blank">Download the data</a></button>
+  <button onClick="window.location.reload();">Reset and start again</button>
+  <!-- main flex container -->
+  <div class='flex-container'>
+    <!-- cards -->
+    <div id='training-set' class='invisbox-small' style="width: 100%; background-color: white; height: 1000px; padding: 0;">
+        <div class="row">
+          <div id="b6" class="draggable drag-drop">
+            <img src="assets/train/blue6.png" width="100%"/>
+          </div>
+          <div id="b17" class="draggable drag-drop">
+            <img src="assets/train/blue17.png" width="100%"/>
+          </div>
+          <div id="b26" class="draggable drag-drop">
+            <img src="assets/train/blue26.png" width="100%"/>
+          </div>
+          <div id="b52" class="draggable drag-drop">
+            <img src="assets/train/blue52.png" width="100%"/>
+          </div>
+          <div id="b66" class="draggable drag-drop">
+            <img src="assets/train/blue66.png" width="100%"/>
+          </div>
+          <div id="b69" class="draggable drag-drop">
+            <img src="assets/train/blue69.png" width="100%"/>
+          </div>
+          <div id="b86" class="draggable drag-drop">
+            <img src="assets/train/blue86.png" width="100%"/>
+          </div>
+          <div id="b89" class="draggable drag-drop">
+            <img src="assets/train/blue89.png" width="100%"/>
+          </div>
+          <div id="b95" class="draggable drag-drop">
+            <img src="assets/train/blue95.png" width="100%"/>
+          </div>
+          <div id="b98" class="draggable drag-drop">
+            <img src="assets/train/blue98.png" width="100%"/>
+          </div>
+          <div id="b107" class="draggable drag-drop">
+            <img src="assets/train/blue107.png" width="100%"/>
+          </div>
+          <div id="b108" class="draggable drag-drop">
+            <img src="assets/train/blue108.png" width="100%"/>
+          </div>
+          <div id="b117" class="draggable drag-drop">
+            <img src="assets/train/blue117.png" width="100%"/>
+          </div>
+          <div id="b126" class="draggable drag-drop">
+            <img src="assets/train/blue126.png" width="100%"/>
+          </div>
+          <div id="b135" class="draggable drag-drop">
+            <img src="assets/train/blue135.png" width="100%"/>
+          </div>
+          <div id="b143" class="draggable drag-drop">
+            <img src="assets/train/blue143.png" width="100%"/>
+          </div>
+          <div id="b151" class="draggable drag-drop">
+            <img src="assets/train/blue151.png" width="100%"/>
+          </div>
+          <div id="b195" class="draggable drag-drop">
+            <img src="assets/train/blue195.png" width="100%"/>
+          </div>
+          <div id="b207" class="draggable drag-drop">
+            <img src="assets/train/blue207.png" width="100%"/>
+          </div>
+          <div id="b227" class="draggable drag-drop">
+            <img src="assets/train/blue227.png" width="100%"/>
+          </div>
+        </div>
+      </div>
+
+  <!-- decision tree interaction zone -->
+  <div class="invisbox-big">
+    <div id="canvas" class="dropzone" style="width: 100%; height: 100%; margin: auto;">
+      <div style="margin: auto;">
+        <svg style="display:none;">
+          <symbol id="sort-box" width="100%" height="300" preserveAspectRatio="none">
+              <rect width="100%" height="300" style="fill:silver;stroke-width:3;stroke:none" />
+              <text x="50%" y="50%" fill="white" dominant-baseline="middle" text-anchor="middle">CARDS</text>
+          </symbol>
+        </svg>
+
+        <!-- html form -->
+        <form>
+          <div class="container">
+            <!-- ROW 1 -->
+            <!-- first sort factor ................................ -->
+            <div class="flex-container">
+              <div class="invisbox-tiny">
+                <p>...</p>
+              </div>
+              <div class="invisbox-tiny">
+                <p>...</p>
+              </div>
+              <div class="invisbox-tiny">
+                <input type="text" placeholder="factor" id="factor1" name="factor1"><br>
+              </div>
+              <div class="invisbox-tiny">
+                <img src="elements/decision.svg" width="100%"/>
+              </div>
+              <div class="invisbox-med">
+              </div>
+            </div>
+            <!-- ROW 2 ................................ -->
+            <div class="flex-container">
+            <div class="invisbox-tiny">
+              <p>...</p>
+            </div>
+            <div class="invisbox-tiny">
+              <input type="text" placeholder="condition" id="condition1A" name="condition1A"><br>
+            </div>
+            <div class="invisbox-tiny">
+              <img src="elements/neat-arrow-left.svg" width="100%"/>
+            </div>
+            <div class="invisbox-tiny">
+              <p>...</p>
+            </div>
+            <div class="invisbox-tiny">
+              <img src="elements/neat-arrow-right.svg" width="100%"/>
+            </div>
+            <div class="invisbox-tiny">
+              <input type="text" placeholder="condition" id="condition1B" name="condition1B"><br>
+            </div>
+            <div class="invisbox-tiny">
+              <p>...</p>
+            </div>
+          </div>
+          <!-- ROW 3 ................................ -->
+          <div class="flex-container">
+          <div class="invisbox-fill">
+            <input type="text" placeholder="notes" id="count1A" name="count1A"><br>
+            <textarea name="notes1" rows="4" cols="20">Write your notes here</textarea>
+          </div>
+          <div class="invisbox-fill">
+            <svg width="100%" height="300" preserveAspectRatio="none">
+              <rect width="100%" height="300" style="fill:silver;stroke-width:3;stroke:none" />
+              <text x="50%" y="50%" fill="white" dominant-baseline="middle" text-anchor="middle">CARDS</text>
+            </svg>
+          </div>
+          <div class="invisbox-tiny">
+            <p>...</p>
+          </div>
+          <div class="invisbox-fill">
+            <svg width="100%" height="300" preserveAspectRatio="none">
+              <rect width="100%" height="300" style="fill:silver;stroke-width:3;stroke:none" />
+              <text x="50%" y="50%" fill="white" dominant-baseline="middle" text-anchor="middle">CARDS</text>
+            </svg>
+          </div>
+          <div class="invisbox-fill">
+            <input type="text" placeholder="count" id="count1B" name="count1B"><br>
+          </div>
+        </div>
+        <!-- ROW 4 -->
+          <div class="flex-container">
+          <div class="invisbox-tiny">
+            <input type="text" placeholder="factor" id="factor2A" name="factor2A"><br>
+          </div>
+          <div class="invisbox-tiny">
+            <img src="elements/decision.svg" width="100%"/>
+          </div>
+          <div class="invisbox-tiny">
+            <p>...</p>
+          </div>
+          <div class="invisbox-tiny">
+            <p>...</p>
+          </div>
+          <div class="invisbox-tiny">
+            <input type="text" placeholder="factor" id="factor2B" name="factor2B"><br>
+          </div>
+          <div class="invisbox-tiny">
+            <img src="elements/decision.svg" width="100%"/>
+          </div>
+          <div class="invisbox-tiny">
+            <p>...</p>
+          </div>
+        </div>
+        <!-- ROW 5 -->
+        <div class="flex-container">
+        <div class="invisbox-tiny">
+          <img src="elements/neat-arrow-left.svg" width="100%"/>
+        </div>
+        <div class="invisbox-tiny">
+          <p>...</p>
+        </div>
+        <div class="invisbox-tiny">
+          <img src="elements/neat-arrow-right.svg" width="100%"/>
+        </div>
+        <div class="invisbox-tiny">
+          <p>...</p>
+        </div>
+        <div class="invisbox-tiny">
+          <img src="elements/neat-arrow-left.svg" width="100%"/>
+        </div>
+        <div class="invisbox-tiny">
+          <p>...</p>
+        </div>
+        <div class="invisbox-tiny">
+          <img src="elements/neat-arrow-right.svg" width="100%"/>
+        </div>
+      </div>
+      <!-- ROW 6 -->
+      <div class="flex-container">
+      <div class="invisbox-tiny">
+        <input type="text" placeholder="condition" id="condition2AA" name="condition2AA"><br>
+      </div>
+      <div class="invisbox-tiny">
+        <p>...</p>
+      </div>
+      <div class="invisbox-tiny">
+        <input type="text" placeholder="condition" id="condition2AB" name="condition2AB"><br>
+      </div>
+      <div class="invisbox-tiny">
+        <p>...</p>
+      </div>
+      <div class="invisbox-tiny">
+        <input type="text" placeholder="condition" id="condition2BA" name="condition2BA"><br>
+      </div>
+      <div class="invisbox-tiny">
+        <p>...</p>
+      </div>
+      <div class="invisbox-tiny">
+        <input type="text" placeholder="condition" id="condition2BB" name="condition2BB"><br>
+      </div>
+    </div>
+    <!-- ROW 7 -->
+      <div class="flex-container">
+      <div class="invisbox-fill">
+        <svg width="100%" height="300" preserveAspectRatio="none">
+          <rect width="100%" height="300" style="fill:silver;stroke-width:3;stroke:none" />
+          <text x="50%" y="50%" fill="white" dominant-baseline="middle" text-anchor="middle">CARDS</text>
+        </svg>
+      </div>
+      <div class="invisbox-fill">
+        <svg width="100%" height="300" preserveAspectRatio="none">
+          <rect width="100%" height="300" style="fill:silver;stroke-width:3;stroke:none" />
+          <text x="50%" y="50%" fill="white" dominant-baseline="middle" text-anchor="middle">CARDS</text>
+        </svg>
+      </div>
+      <div class="invisbox-tiny">
+        <p>...</p>
+      </div>
+      <div class="invisbox-fill">
+        <svg width="100%" height="300" preserveAspectRatio="none">
+          <rect width="100%" height="300" style="fill:silver;stroke-width:3;stroke:none" />
+          <text x="50%" y="50%" fill="white" dominant-baseline="middle" text-anchor="middle">CARDS</text>
+        </svg>
+      </div>
+      <div class="invisbox-fill">
+        <svg width="100%" height="300" preserveAspectRatio="none">
+          <rect width="100%" height="300" style="fill:silver;stroke-width:3;stroke:none" />
+          <text x="50%" y="50%" fill="white" dominant-baseline="middle" text-anchor="middle">CARDS</text>
+        </svg>
+      </div>
+    </div>
+
+      </div>
+
+
+
+        </form>
+        <!-- end of html form -->
+      </div>
+    </div>
+  </div>
+
+
+
+</body>
+<script src="make-ml-model.js"></script>
+
+</html>
