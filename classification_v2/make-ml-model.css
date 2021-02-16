@@ -177,9 +177,10 @@ html {
   background-color: var(--bgbody);
   min-width: 14.25%;
   width: 14.25%;
+  max-width: 14.25%;
   text-align: left;
   padding: 0px;
-	align-items: center;
+  align-items: center;
   justify-content: center;
 }
 
