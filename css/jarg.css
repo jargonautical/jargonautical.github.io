@@ -1,7 +1,7 @@
 /* TDP stylesheet */
 
 /* Jargonautical stylesheet */
-@import url('https://fonts.googleapis.com/css?family=Chivo|Lora|Space+Mono:700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Chivo|Space+Mono:700&display=swap');
 
 :root {
   /* chart colours */
@@ -88,7 +88,6 @@ p.console {
   transform: translate(-50%, -50%);
 	color: white;
 	font-size: 2.8em;
-	font-family: Lora;
 	padding-top: 30px;
 	padding-bottom: 30px;
   /*
@@ -113,7 +112,6 @@ h1 {
   color: white;
   background-color: var(--bgheaders);
   font-size: 2.5em;
-  font-family: Lora;
   padding-top: 30px;
   padding-bottom: 30px;
 }
@@ -122,7 +120,6 @@ h2 {
   color: white;
   background-color: var(--dull);
   font-size:1.5em;
-  font-family: Lora;
   padding-top: 20px;
   padding-bottom: 20px;
 }
