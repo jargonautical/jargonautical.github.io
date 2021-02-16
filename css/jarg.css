@@ -97,7 +97,8 @@ p.console {
 }
 
 .hero-image {
-	background-image: url('https://github.com/jargonautical/hero_images/raw/master/Screenshot_57.jpg');
+	/*background-image: url('https://github.com/jargonautical/hero_images/raw/master/Screenshot_57.jpg');*/
+	background-image: url('images/thingscamp.jpg');
 	height: 100px;
 	background-position: center;
 	background-repeat: no-repeat;
