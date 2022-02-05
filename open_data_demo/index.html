@@ -130,7 +130,7 @@
           map.on('mousemove', function(e) {
             var states = map.queryRenderedFeatures(e.point, {layers: ['IMD2019']});
             if (states.length > 0) {
-              document.getElementById('pd').innerHTML = '<p>LSOA name: ' + states[0].properties.lsoa11nm + '<br>Decile: ' + states[0].properties.IMDDec0 + '<p>';
+              document.getElementById('pd').innerHTML = '<p>LSOA name: ' + states[0].properties.lsoa11nm + '.   Decile: ' + states[0].properties.IMDDec0 + '<p>';
             } else {
               document.getElementById('pd').innerHTML = '<p>Hover over an area to see the IMD Decile</p>';
             }

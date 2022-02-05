@@ -1,5 +1,5 @@
 /* TDP stylesheet */
-@import url('https://fonts.googleapis.com/css?family=Chivo|Lora|Space+Mono:700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Oxygen|Lora|Space+Mono:700&display=swap');
 
 html, body,
 h1, h2, h3, h4, h5, h6, p,
@@ -13,12 +13,12 @@ ol, ul, li, nav, a, blockquote
 body {
   background-color: var(--bgbody);
   font-size: 100%;
-  font-family: Chivo;
+  font-family: Oxygen;
 }
 
 p {
   font-size: 100%;
-  font-family: Chivo;
+  font-family: Oxygen;
 }
 
 p.pop {

@@ -1,5 +1,5 @@
 /* JARGONAUTICAL STYLESHEET */
-@import url('https://fonts.googleapis.com/css?family=Chivo|Space+Mono:700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Oxygen|Ubuntu:wght@500;700||Space+Mono:700&display=swap');
 
 :root {
   /* JARGONAUTICAL THEME COLOURS BY SHUFFLEWING */
@@ -21,18 +21,17 @@ ol, ul, li, a, blockquote
 	margin: 10px;
 	padding: 10px;
 	line-height: 130%;
-	font-family: Chivo;
 }
 
 body {
   background-color: var(--bgbody);
   font-size: 100%;
-  font-family: Chivo;
+  font-family: Oxygen;
 }
 
 p {
   font-size: 100%;
-  font-family: Chivo;
+  font-family: Oxygen;
 }
 
 p.pop {
@@ -102,6 +101,8 @@ h1 {
   font-size: 2.5em;
   padding-top: 30px;
   padding-bottom: 30px;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 700
 }
 
 h2 {
@@ -110,26 +111,32 @@ h2 {
   font-size:1.5em;
   padding-top: 20px;
   padding-bottom: 20px;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 700;
 }
 
 h3 {
   color: black;
   font-size:1.2em;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 h4 {
   color: black;
   font-size:1.1em;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 h5 {
   font-size:1.0em;
   font-weight: strong;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 h6 {
   font-size:1.0em;
   font-style: oblique;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 html {
