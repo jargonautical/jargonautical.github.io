@@ -14,7 +14,7 @@ var apiKey = 'a43fee90ad014eb880cb591885a383c4'
 
 var xhr = new XMLHttpRequest();
 //xhr.open("GET", "https://www.bungie.net/platform/Destiny/Manifest/InventoryItem/1274330687/", true);
-xhr.open("GET", "https://www.bungie.net/Platform/Destiny2/3/Account/4611686018476645284/Character/2305843009360795669/Stats/AggregateActivityStats/", true);
+xhr.open("GET", "https://www.bungie.net/Platform/Destiny2/3/Account/4611686018476645284/Character/2305843009360795669/Stats/", true);
 
 
 
@@ -23,9 +23,9 @@ xhr.setRequestHeader("X-API-Key", apiKey);
 xhr.onreadystatechange = function(){
  if(this.readyState === 4 && this.status === 200){
   var json = JSON.parse(this.responseText);
-	console.log(json.Response.activities);
+	console.log(json);
   //console.log(json.Response.data.inventoryItem.itemName); //Gjallarhorn
  }
-}
+};
 
 xhr.send();
