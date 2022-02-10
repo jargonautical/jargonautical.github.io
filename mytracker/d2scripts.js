@@ -19,10 +19,18 @@ console.log(apiKey);
 //xhr.open("GET", "https://www.bungie.net/Platform/Destiny2/3/Account/4611686018476645284/Character/2305843009423934835/Stats/Activities/?mode=5", true);
 var url = 'https://www.bungie.net/Platform/Destiny2/3/Account/4611686018476645284/Character/2305843009423934835/Stats/Activities/?mode=5'
 //url = 'https://jsonplaceholder.typicode.com/users'
-fetch(url, {credentials: 'include', headers: {'Authorization': apiKey})
-.then(response => {
-  return response.json();
-})
-.then(users => {
-  console.log(users);
-});
+fetch(url, {
+  credentials: 'include',
+  headers: {
+    'X-API-Key': apiKey
+  }
+}
+).then(
+  response => {
+    return response.json();
+  }
+).then(
+  users => {
+    console.log(users);
+  }
+)
