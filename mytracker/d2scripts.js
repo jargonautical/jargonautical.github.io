@@ -21,7 +21,7 @@ xhr.open("GET", "https://www.bungie.net/platform/Destiny/Manifest/InventoryItem/
 xhr.setRequestHeader("X-API-Key", apiKey);
 
 xhr.onreadystatechange = function(){
- if(this.status === 200){
+ if(this.status == 200){
   var json = JSON.parse(this.responseText);
 	//console.log(json.Response);
   console.log(json.Response.data.inventoryItem); //Gjallarhorn
