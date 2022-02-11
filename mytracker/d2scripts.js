@@ -10,16 +10,33 @@ app.appendChild(logo);
 app.appendChild(container);
 
 var apiKey = 'a43fee90ad014eb880cb591885a383c4'
-console.log(apiKey);
 
 $.ajax({
-  url: "https://www.bungie.net/Platform/Destiny2/3/Account/4611686018476645284/Character/2305843009360795669/Stats/?daystart=2020-01-01&dayend=2020-01-31&mode=63&periodType=1/",
-  //url: "https://www.bungie.net/platform/Destiny/Manifest/InventoryItem/1274330687/",
+  url: "https://www.bungie.net/Platform/Destiny2/3/Account/4611686018476645284/Character/2305843009423934835/Stats/Activities/?mode=5",
   headers: {
     "X-API-Key": apiKey
   }
 }).done(function(json){
-  //console.log(json.Response.data.inventoryItem.itemName); //Gjallarhorn
-  console.log('is this even working?');
-  //console.log(json.Response); //data
-});
+  //console.log(json.Response.activities[0]); //data
+  var data = json.Response.activities[0].values;
+  console.log(data)
+  var keys = Object.keys(data);
+  keys.forEach(function(key) {
+    var item = data[key];
+    // access the `key` variable and `item` variable
+    const card = document.createElement('div');
+    card.setAttribute('class', 'card');
+
+    const h1 = document.createElement('h1');
+    h1.textContent = key;
+    console.log(key);
+
+    const p = document.createElement('p');
+    p.textContent = `${item.basic.value}...`;
+
+    container.appendChild(card);
+    card.appendChild(h1);
+    card.appendChild(p);
+  }
+)
+})
