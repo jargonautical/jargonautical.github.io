@@ -35,13 +35,16 @@ function displayPayload(response) {
     // TODO get player displayName
     // TODO get platform enum, maybe add logos?
     // access each player all time PvP stats
-    var allTime = allTimeCall(platform, memid).done(function(response) {
-      let foo = response.Response.mergedAllCharacters.results.allPvP.allTime;
+    var allTime = allTimeCall(platform, memid, charId).done(function(response) {
+      //console.log(response.Response.allPvECompetitive);
+      let foo = response.Response.allPvECompetitive.allTime;
       console.log(foo);
       let highScore = foo.bestSingleGameKills.basic.displayValue;
       let kills = foo.kills.pga.displayValue;
       let bestWeapon = foo.weaponBestType.basic.displayValue;
-      let elo = foo.combatRating.basic.displayValue;
+      //let elo = foo.combatRating.basic.displayValue;
+      let invaderKills = foo.invaderKills.basic.displayValue;
+      let invasionKills = foo.invasionKills.basic.displayValue;
       let kd = foo.killsDeathsRatio.basic.displayValue;
       let winLossRatio = foo.winLossRatio.basic.displayValue;
       let prec = foo.precisionKills.pga.displayValue;
@@ -62,16 +65,10 @@ function displayPayload(response) {
       c3.textContent = `K/D this match: ${matchKd} vs all time ${kd}`;
 
       const p2 = document.createElement('p');
-      if (elo <= 100) {
-        //  block of code to be executed if the condition is true
-        p2.style = "background-image: linear-gradient(120deg, var(--color-blueberry) 0%, ivory 100%)";
-      } else if (100 < elo <= 200) {
-        //  block of code to be executed if the condition is false
-        p2.style = "background-image: linear-gradient(120deg, var(--color-scrub) 0%, gold 100%)";
-      } else {
-        p2.style = "background-image: linear-gradient(120deg, var(--color-god) 0%, salmon 100%)";
-      };
-      p2.textContent = `Combat rating: ${elo}`;
+      p2.textContent = `Invasion kills: ${invasionKills}`;
+
+      const p4 = document.createElement('p');
+      p4.textContent =  `Invaders brought down: ${invaderKills}`;
 
       // best weapon all time
       const p3 = document.createElement('p');
@@ -154,6 +151,7 @@ function displayPayload(response) {
       // values
       card.appendChild(p2);
       card.appendChild(p3);
+      card.appendChild(p4);
       // section header - comparison
       card.appendChild(s3);
       card.appendChild(c1);
@@ -170,11 +168,11 @@ function displayPayload(response) {
   })
 }
 
-function allTimeCall(platform, memid) {
-  let pvpUrl = "https://www.bungie.net/Platform/Destiny2/"+ platform + "/Account/" + memid + "/Stats/"
+function allTimeCall(platform, memid, charId) {
+  let gambitUrl = "https://www.bungie.net/Platform/Destiny2/"+ platform + "/Account/" + memid + "/Character/" + charId + "/Stats/"
   //console.log(pvpUrl);
   return $.ajax({
-    url: pvpUrl,
+    url: gambitUrl,
     type: 'GET',
     dataType: 'json',
     timeout: 3000,
@@ -184,8 +182,8 @@ function allTimeCall(platform, memid) {
 
 function instanceCall() {
   return $.ajax({
-    // jarg hunter pvp 
-    url: "https://www.bungie.net/Platform/Destiny2/3/Account/4611686018476645284/Character/2305843009399245548/Stats/Activities/?mode=5",
+    // jarg hunter pvp
+    url: "https://www.bungie.net/Platform/Destiny2/3/Account/4611686018476645284/Character/2305843009399245548/Stats/Activities/?mode=63",
     type: 'GET',
     dataType: 'json',
     timeout: 3000,
