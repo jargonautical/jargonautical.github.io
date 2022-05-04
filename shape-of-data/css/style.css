@@ -9,8 +9,7 @@ body {
 .number {
   font-family: 'Lora';
   width: 195px;
-  height: 100px;
-  background-color: gray;
+  background-color: blue;
   color: #fff;
   font-size: 2.5em;
   border-radius: 4px;
