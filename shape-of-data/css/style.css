@@ -9,7 +9,22 @@ body {
 .number {
   font-family: 'Lora';
   width: 195px;
-  background-color: darkgray;
+  background-color: deepskyblue;
+  color: #fff;
+  font-size: 2.5em;
+  border-radius: 4px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  margin: 5px;
+  touch-action: none;
+  position: absolute;
+  text-align: center;
+  z-index: -1;
+}
+.highlight {
+  font-family: 'Lora';
+  width: 195px;
+  background-color: tomato;
   color: #fff;
   font-size: 2.5em;
   border-radius: 4px;

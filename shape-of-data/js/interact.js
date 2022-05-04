@@ -31,7 +31,7 @@ $(".number").click(function(event) {
 $(".number").on('mousedown', function (evt) {
   $(".number").on('mouseup mousemove', function handler(evt) {
     if (evt.type === 'mouseup') {
-      $("#"+event.target.id).toggleClass('red');
+      $("#"+event.target.id).toggleClass('highlight');
     } else {
       // drag
     }
@@ -45,10 +45,10 @@ function formatNumber(num) {
 
 function addElements(numbers) {
   $.each(numbers, function(idx) {
-    $("body").append('<div id="number'+idx+'" class="number">'+formatNumber(numbers[idx])+'</div>'); 
+    $("body").append('<div id="number'+idx+'" class="number">'+formatNumber(numbers[idx])+'</div>');
   });
   /*$.each(markers, function(idx) {
-    $("body").append('<div id="marker'+idx+'" class="marker"><text class="marker_text">'+formatNumber(markers[idx])+'</text><arrow class="marker_arrow"></arrow></div>'); 
+    $("body").append('<div id="marker'+idx+'" class="marker"><text class="marker_text">'+formatNumber(markers[idx])+'</text><arrow class="marker_arrow"></arrow></div>');
   });
   */
 }
