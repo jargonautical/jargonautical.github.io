@@ -53,6 +53,12 @@
 		  </p>
 	  </div>
 	  <div class="invisbox-small">
+		  <p>
+			  existing trackers - great at pulling out info but use ELO and also have
+			  lots of ads and moving banners. plus you need to stay logged in so you can get your results faster.
+			  my version will be simple look up with my own data already loaded and ready to call on
+			  (show new version once I have this done)
+		  </p>
 		  
 	  </div>
 	</div>
@@ -63,7 +69,9 @@
 		  <p>
 			One thing that sets Destiny as a game apart from many others is its very rich, well-structured and 
 			  well-documented API. With a developer account I can access huge amounts of game data for myself and other 
-			  players, and using that I can do any analysis I'd like.
+			  players, and using that I can do pretty much any analysis that takes my fancy.
+			  <br>
+			  This is a very dangerous scenario for any data scientist. All this data, and no clear question ...
 			  <br>
 			  I wondered if it would be possible to extract the right data to analyse who the likely cheats are in 
 			  the games I'd played recently. That sort of thing would show up in their game statistics, right? Simple. 
@@ -90,7 +98,7 @@
 			  Time to go back and reframe the question. 
 			  <br>
 		  </p>
-		  <h4>What do I want to know?</h4>
+		  <h4>What do I really want to know?</h4>
 		  <p>
 			  Firstly: should I have expected this person to beat me?<br>
 			  Signs for that include:
@@ -113,23 +121,34 @@
 	<div class="flex-container">
 	  <div class="invisbox-big">
 		  <p>
-			  what i can do though, is see from someone's play history whether their win or their kill count seems feasible
-			  elo - not a useful ranking (explain why)
-			  someone with lots of wins could have spent a lot of time being caried to wins by better players
-			  someone with a streak of losses might have been trying to compensate for lower-ranked teammates
-			  game devs have their own combat rating which takes into account individual performance
-			  we can also look at % precision shots, most successful weapons or most used weapons
+			  One way to explore possible answers to these questions is to look at someone's game history 
+			  to see whether their win status or their kill count seems feasible. Some  of the other tracker 
+			  sites include a player's Elo ranking, which many take as a relevant metric. I prefer not to, however, 
+			  and here's why. It only counts wins and losses. Win a game, and you move up.  Lose a game and you move down. 
+			  In a team game, where there can be (depending on the specific mode) 4 or 6 players on each side, it's far 
+			  too blunt an instrument. 
+			  Someone with a high success rate could simply have been teamed up with very high-skill players - a 'carry', 
+			  where the lower-ranking player gets an easy ride with their team mates doing all the hard work.  By the same token 
+			  someone with a streak of losses may actually be very good, but has been matched with lower-ranked teammates in 
+			  an effort to balance the lobby. So Elo, which was designed for ranking one-on-one performance in chess, is not 
+			  helpful here.
+			  <br>
+			  The game developers have their own combat rating which (while I don't know all the details) does 
+			  take into account each player's individual performance and contribution to the match result. I decided 
+			  this would be interesting to include in my analysis, and along with that we can also extract very 
+			  precise and detailed data on the percentage of precision shots, which indicates skill, or the usage of 
+			  particular weapon archetypes and character builds which suggest careful tuning of attributes and mods.
+			  <br>
+			  
+			  
 			  show current format -  it shows the data, but is it useful? does it help?
-			  I don;t know because I'm not sure any more what the question is.
 			  (sample private match, ask for vols to be in this and be happy to have their names displayed)
 			  is this person cheating? very very difficult to say.
-			  existing trackers - great at pulling out info but use ELO and also have
-			  lots of ads and moving banners. plus you need to stay logged in so you can get your results faster.
-			  my version will be simple look up with my own data already loaded and ready to call on
-			  (show new version once I have this done)
+			  
 		  </p>
 		</div>
-		<div class="invisbox-small">	  
+		<div class="invisbox-small">
+			<img src="/app_card.png" align='center'>
 		</div>
 	</div>
 	<div class="flex-container">
