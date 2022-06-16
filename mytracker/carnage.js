@@ -198,7 +198,7 @@ function carnageCall(data) {
   var instanceId = data.Response.activities[0].activityDetails.instanceId;
   // Using variables for another call
   return $.ajax({
-    url: "http://www.bungie.net/platform/Destiny2/Stats/PostGameCarnageReport/" + instanceId + "/",
+    url: "https://www.bungie.net/platform/Destiny2/Stats/PostGameCarnageReport/" + instanceId + "/",
     type: 'GET',
     dataType: 'json',
     timeout: 3000,
