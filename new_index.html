@@ -22,78 +22,131 @@
 	  
   </div>
   <h2>Making sense of data</h2>
+	
   <div class="flex-container">
-    <div class="invisbox-big">
-      <p>
-	  What do we mean by 'making sense of data'? It can't be that complicated. 
-	  Surely that's what graphs and stuff are for ... just shove your data into 
-	  some  kind of chart and the job is done, right?
-	      
-	  As it turns out - no, not really.
-	      
-	  Data visualisation is about so much more than visualising data. 
-	  It's a commmunication, a set of design choices around brand and audience, 
-	  and most of all it's a response. 
-	      
-	  What question does your chart answer?
-	  What problem does it solve?
-	  Who will look at it and as a result feel ready to take action or make a decision?
-	      
-	  To explore this point, here's an example using some data from my real life.
-	  I spend several hours a day playing Destiny 2, an online MMORPG first-person shooter.
-	  Like many games in this genre it has a player-versus-player (PvP) mode where you can 
-	  test your skills against other players in a controlled arena separate from the main 
-	  story missions. Tensions run hot in this type of mode, and accusations of cheating are commonplace.
-	      
-	  Being a middle-aged gamer with below-average reflexes, I frequently come off worse in these competitions, and 
-	  of course that's very frustrating. Sometimes I find myself matched against people so skilled, so godly, that 
-	  I never stood a chance of beating them. When that happens I find myself hovering over the 'Report' button and 
-	  asking myself, 'do I really believe they're cheating? or am I just salty about losing?'.
-      </p>
-    </div>
-    <div>
-    </div>
-	  <p>
-		  i thought i could use this to see who the likely cheats are so i could report them
-		  as it turns out it's not that easy
-		  collected loads of data, ran a few ML models, nothing coherent. new sympathy for people who have to create anti-cheat software
+	  <div class="invisbox-big">
+		  <p>
+			  What do we mean by 'making sense of data'? It can't be that complicated. 
+			  Surely that's what graphs and stuff are for ... just shove your data into 
+			  some  kind of chart and the job is done, right?
+			  <br>
+			  As it turns out - no, not really.
+			  <br>
+			  Data visualisation is about so much more than visualising data. 
+			  It's a commmunication, a set of design choices around brand and audience, 
+			  and most of all it's a response.
+			  <br>
+			  What question does your chart answer?<br>
+			  What problem does it solve?<br>
+			  Who will look at it and as a result feel ready to take action or make a decision?<br>
+			  <br>
+			  To explore this point, here's an example using some data from my real life.
+			  I spend several hours a day playing Destiny 2, an online MMORPG first-person shooter.
+			  Like many games in this genre it has a player-versus-player (PvP) mode where you can 
+			  test your skills against other players in a controlled arena separate from the main 
+			  story missions. Tensions run hot in this type of mode, and accusations of cheating are commonplace.
+			  <br>
+			  Being a middle-aged gamer with below-average reflexes, I frequently come off worse in these competitions, and 
+			  of course that's very frustrating. Sometimes I find myself matched against people so skilled, so godly, that 
+			  I never stood a chance of beating them. When that happens I find myself hovering over the 'Report' button and 
+			  asking myself, 'Do I really believe they're cheating, or am I just salty about losing?'.
+		  </p>
+	  </div>
+	  <div class="invisbox-small">
 		  
-		  what i can do though, is see from someone's play history whether their win or their kill count seems feasible
-		  
-		  elo - not a useful ranking (explain why)
-		  someone with lots of wins could have spent a lot of time being caried to wins by better players
-		  someone with a streak of losses might have been trying to compensate for lower-ranked teammates
-		  
-		  game devs have their own combat rating which takes into account individual performance
-		  we can also look at % precision shots, most successful weapons or most used weapons
-		  
-		  show current format -  it shows the data, but is it useful? does it help?
-		  I don;t know because I'm not sure any more what the question is.
-		  
-		  (sample private match, ask for vols to be in this and be happy to have their names displayed)
-		  
-		  is this person cheating? very very difficult to say.
-should I have expected to have been beaten by this person?
-are they using the meta?
-are there signs that they are using known  exploits?
-or do i in fact just need to git gud ...
-
-existing trackers - great at pulling out info but use ELO and also have
-lots of ads and moving banners. plus you need to stay logged in so you can get your results faster.
-my version will be simple look up with my own data already loaded and ready to call on
-
-(show new version once I have this done)
-
-      </p>
-      
-    </div>
+	  </div>
 	</div>
-	<div>
-    <div class="invisbox-small">
-	    <p>Lucy works in education, open data and civic tech in the South West of England (and anywhere else she's needed).<br> Contact details:</p>
-      <p><a href=mailto:lucy@jargonautical.com>Email</a><a href=https://twitter.com/jargonautical>Twitter</a><a href=https://uk.linkedin.com/in/jargonautical>LinkedIn</a></p>
-    </div>
-  </div>
+	
+	<div class="flex-container">
+	  <div class="invisbox-big">
+		  <h4>There's a question to be answered!</h4>
+		  <p>
+			One thing that sets Destiny as a game apart from many others is its very rich, well-structured and 
+			  well-documented API. With a developer account I can access huge amounts of game data for myself and other 
+			  players, and using that I can do any analysis I'd like.
+			  <br>
+			  I wondered if it would be possible to extract the right data to analyse who the likely cheats are in 
+			  the games I'd played recently. That sort of thing would show up in their game statistics, right? Simple. 
+			  All I needed to do was extract all of the game stats and then try some different models until I got an answer.
+			  
+			  For the machine learning bit, I ran through various different model and data structures before admitting that, 
+			  actually, I couldn't identify any particular pattern.
+			  <br>
+			  This just in - good players tend to be good, more at ten.
+			  <br>
+			  And the more I tweaked the models, the more I lost sight of the problem I was originally trying to solve. 
+			  I also developed immense sympathy for the developers who work on anti-cheat tools!
+		  </p>
+	  </div>
+	  <div class="invisbox-small">
+		  
+	  </div>
+	</div>
+	
+	<div class="flex-container">
+	  <div class="invisbox-big">
+		  <p>
+			  So if my analysis isn't answering my question, what does? 
+			  Time to go back and reframe the question. 
+			  <br>
+		  </p>
+		  <h4>What do I want to know?</h4>
+		  <p>
+			  Firstly: should I have expected this person to beat me?<br>
+			  Signs for that include:
+		  </p>
+		  <ul>
+			  <li>Are they using the meta?</li>
+			  <li>Are they are using known  exploits?</li>
+			  <li>Are they at a significantly higher level than me?</li>
+		  </ul>
+		  <p>
+			  If one or more of those things is true, perhaps I just need to 'git gud' ...
+		  </p>
+		  
+	  </div>
+	  <div class="invisbox-small">
+		  
+	  </div>
+	</div>
+	
+	<div class="flex-container">
+	  <div class="invisbox-big">
+		  <p>
+			  what i can do though, is see from someone's play history whether their win or their kill count seems feasible
+			  elo - not a useful ranking (explain why)
+			  someone with lots of wins could have spent a lot of time being caried to wins by better players
+			  someone with a streak of losses might have been trying to compensate for lower-ranked teammates
+			  game devs have their own combat rating which takes into account individual performance
+			  we can also look at % precision shots, most successful weapons or most used weapons
+			  show current format -  it shows the data, but is it useful? does it help?
+			  I don;t know because I'm not sure any more what the question is.
+			  (sample private match, ask for vols to be in this and be happy to have their names displayed)
+			  is this person cheating? very very difficult to say.
+			  existing trackers - great at pulling out info but use ELO and also have
+			  lots of ads and moving banners. plus you need to stay logged in so you can get your results faster.
+			  my version will be simple look up with my own data already loaded and ready to call on
+			  (show new version once I have this done)
+		  </p>
+		</div>
+		<div class="invisbox-small">	  
+		</div>
+	</div>
+	<div class="flex-container">
+		<div class="invisbox-big">	
+		</div>
+		<div class="invisbox-small">
+			<p>
+			Lucy works in education, open data and civic tech in the South West of England 
+			(and anywhere else she's needed).
+			<br><br>
+			Contact details:
+		</p>
+		<p>
+			<a href=mailto:lucy@jargonautical.com>Email</a>
+			<a href=https://twitter.com/jargonautical>Twitter</a>
+			<a href=https://uk.linkedin.com/in/jargonautical>LinkedIn</a>
+		</p>
 	</div>
   <footer>
     <h5>(c) Jargonautical Ltd 2020. Branding and logo design by Shufflewing</h5>
