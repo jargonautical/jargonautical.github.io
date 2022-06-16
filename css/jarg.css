@@ -1,5 +1,5 @@
 /* JARGONAUTICAL STYLESHEET */
-@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&family=Ubuntu:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Oxygen|Ubuntu:wght@500;700||Space+Mono:700&display=swap||Caveat:400&display=swap');
 
 :root {
   /* JARGONAUTICAL THEME COLOURS BY SHUFFLEWING */
@@ -9,6 +9,7 @@
   --bghover: #c0c0c0; /* Silver #c0c0c0 192/192/192 */
   --bgbox: #c0c0c0; /* Silver #c0c0c0 192/192/192 */
   --outline: #36454f; /* Charcoal #36454f 54/69/79 */
+  --hand: #318385; /* Dark Seafoam #318385 49/131/133 */
   --dark: #36454f; /* Charcoal #36454f 54/69/79 */
   --pop: #ca492f; /* Coral #ca492f 202/74/47 */
   --warm: #d56e59; /* Light Coral #d56e59 213/110/89 */
@@ -69,6 +70,27 @@ p.console {
 	padding-left:20px;
 }
 
+p.hand {
+    font-family: 'Caveat', cursive;
+    color: var(--dark);
+    padding-left:20px;
+    font-size: 1.5em;
+}
+
+p.hand2 {
+    font-family: 'Grape Nuts', cursive;
+    color: var(--hand);
+    padding-left:20px;
+    font-size: 1.6em;
+}
+
+p.hand3 {
+    font-family: 'Rock Salt', cursive;
+    color: var(--dark);
+    padding-left:20px;
+    font-size: 1.4em;
+}
+
 /* headings */
 
 .hero-text {
@@ -85,7 +107,7 @@ p.console {
 
 .hero-image {
 	background-image: url('../assets/Jargonautical_hero_image_final.jpg');
-	height: 100px;
+	height: 150px;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -107,7 +129,7 @@ h1 {
 
 h2 {
   color: white;
-  background-color: var(--bgbox);
+  background-color: var(--bgheaders);
   font-size:1.5em;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -124,19 +146,19 @@ h3 {
 h4 {
   color: black;
   font-size:1.1em;
-  font-family: 'Oxygen', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 h5 {
   font-size:1.0em;
   font-weight: strong;
-  font-family: 'Oxygen', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 h6 {
   font-size:1.0em;
   font-style: oblique;
-  font-family: 'Oxygen', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 html {
@@ -149,7 +171,7 @@ html {
 ul {
   list-style-type: circle;
   list-style-position: inside;
-  margin-left: 30px;
+  margin-left: 20px;
   padding: 0;
 }
 
