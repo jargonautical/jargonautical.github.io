@@ -14,28 +14,31 @@
 <body>
   <h2>Making sense of data</h2>
 	<div class="flex-container">
-		<div class="invisbox-wide">
+		<div class="invisbox-big">
 		<h4>Back to basics</h4>
-		  <p>
+			<p>
 			  What do we mean by 'making sense of data'? It can't be that complicated. 
 			  Surely that's what graphs and stuff are for ... just shove your data into 
 			  some  kind of chart and the job is done, right?
-			  <br>
 			  As it turns out - no, not really.
-			  <br>
 			  Data visualisation is about so much more than visualising data. 
-			  It's a commmunication, a set of design choices around brand and audience, 
-			  and most of all it's a response.  
-		  </p>
-		  <h5>A response to what?</h5>
-		  <p>Well, it's kind of your job to figure that out.</p>
+			  It's crafting a message, a set of design choices around brand and audience, 
+			  and most of all it's a response.
+			  <b>A response to what?</b>
+			  Well, it's kind of your job to figure that out.
+			</p>
 		  <ul>
 			  <li>What question does your chart answer?</li>
 			  <li>What problem does it solve?</li>
-			  <li>Who will look at it and as a result feel ready to take action or make a decision?</li>
+			  <li>Who will look at it?</li>
+			  <li>Will it help them to take action or make a decision?</li>
 		  </ul>
 		<p>To explore this point, here's an example using some data from one of my hobbies.</p>
 		</div>
+		<div>
+			<p class="hand">"People don't want data - they want answers."</p>
+			<p class="caption">Lucy Knight, Data Scientist</p>
+		
 	</div>
 	
 	<div class="flex-container">
@@ -45,9 +48,9 @@
 				I spend several hours a week playing Destiny 2, an online MMORPG first-person shooter.
 				Like many games in this genre it has a player-versus-player (PvP) mode where you can 
 				test your skills against other players in a controlled arena separate from the main 
-				story missions. Tensions run hot in this type of mode, and accusations of cheating are commonplace.
+				story missions. Tensions run hot in this type of gameplay, and accusations of cheating are commonplace.
 				<br>
-				Being a middle-aged gamer with below-average reflexes, I frequently come off worse in these competitions, and 
+				Being a middle-aged gamer with below-average reflexes I often come off worse in these competitions, and 
 				of course that's very frustrating. Sometimes I find myself matched against people so skilled, so godly, that 
 				I never stood a chance of beating them. 
 				<br>
@@ -64,12 +67,13 @@
 				resources while playing, to swap items over without having to return to aa specific 
 				lcoaation to access your vaault. Others provide performance and ranking information 
 				so you can see how you're doing and who you're up against. 
-				<br>
+				<br><br>
 				These are all good, but the trackers in particular tend to have a lot of blinking or scrolling 
 				content - mostly adverts but also banners, buttons and links. It's a very cluttered interface 
-				and not one I enjoy looking at or having open oin a second screen while I'm trying to play. 
-				Added to that, to get up-to-the-minute data I would need to stay logged in constantly. I need
-				something much more basic than that - a simple visual look up that tells me at a glance whether 
+				and not one I enjoy looking at or having open oin a second screen while I'm trying to play.
+				
+				Added to that, to get up-to-the-minute data I would need to stay logged in constantly. 
+				<br><br>I need something much more basic than that - a simple visual look up that tells me at a glance whether 
 				I'm justified in reporting a player or whether I just need to get over it.
 			</p>
 		</div>
@@ -80,23 +84,22 @@
 		  <h4>There's a question to be answered!</h4>
 		  <p>
 			One thing that sets Destiny as a game apart from many others is its very rich, well-structured and 
-			  well-documented API, hence the rich ecosystem of supporting apps and services. 
-			  With a developer account I can access huge amounts of game data for myself and other 
+			  well-documented API, hence the varied ecosystem of supporting apps and services. 
+			  With a developer account I can access game data for myself and other 
 			  players, and using that I can do pretty much any analysis that takes my fancy.
-			  <br>
-			  This is a very dangerous scenario for any data scientist. All this data, and no clear question ...
-			  <br>
+			  <br><br>
+			  This is a very dangerous scenario for any data scientist. All this data, and no clear question in mind ...
+			  <br><br>
 			  I wondered if it would be possible to extract the right data to analyse who the likely cheats are in 
 			  the games I'd played recently. That sort of thing would show up in their game statistics, right? Simple. 
 			  All I needed to do was extract all of the game stats and then try some different models until I got an answer.
-			  <br>
+			  <br><br>
 			  For the machine learning bit, I ran through various different model and data structures before admitting that, 
 			  actually, I couldn't identify any meaningful pattern.
-			  <br>
-			  This just in - good players tend to be good, more at ten.
-			  <br>
+			  <br><br>
+			  <b>This just in - good players tend to be good, more at ten.</b>
+			  <br><br>
 			  And the more I tweaked the models, the more I lost sight of the problem I was originally trying to solve. 
-			  I also developed immense sympathy for the developers who work on anti-cheat tools!
 		  </p>
 	  </div>
 	  <div class="invisbox-small">
@@ -109,20 +112,23 @@
 			<h4>Something isn't right here ...</h4>
 			<p>
 				My models either made no sense at all, or were far too efficient. 
-				Exploring possible principal components for the k-means model shown below, 
-				it appeared that match duration and total team score (the nunmber of kills by 
+				Exploring possible principal components for the k-means model shown on the right, 
+				it looked like match duration and total team score (the number of kills by 
 				everyone in the players team combined) have been selected as the most significant 
 				factors in whether that person was likely to be cheating. That clearly makes no sense in context!
-				<br>
+				<br><br>
 				Thinking about all the factors I'd added to the model, it was obvious that <br>
 				1. there were too many, and <br>
 				2. most of them were redundant.<br>
-				<br>
-				Another factor which could and should be discounted was the player's class - 
-				in Destiny 2 you can play as one of three classes; Titan, Warlock or Hunter. Each has its 
+				<br><br>
+				One factor which could and should be discounted was the player's class. 
+				In Destiny 2 you can play as one of three classes; Titan, Warlock or Hunter. Each has its 
 				advantages and disadvantages, but looking at the balance of classes in my data 
 				I could see that frequent PvP players are more likely to play hunter, and several of my sample 
 				group play ONLY on hunter and have no characters in either of the other classes. 
+				<br><br>
+				So that's both skewing my sample 
+				and at the same time adding no useful information whatsoever.
 			</p>
 		</div>
 		<div class="invisbox-small">
@@ -134,7 +140,7 @@
 	  <div class="invisbox-big">
 		  <h4>Lie down, try not to cry, cry anyway ...</h4>
 		  <p>
-			  So if my analysis isn't answering my question, what does? 
+			  So if my analysis isn't answering my question, what will? 
 			  Time to go back and reframe the question. 
 		  </p>
 		  <h4>What do I really want to know?</h4>
@@ -153,7 +159,7 @@
 		  </p>
 	  </div>
 	  <div class="invisbox-small">
-		  <img src="/mytracker/scatter.png" width="100%" align='center'>
+		  <p class="hand">Some slogan here</p>
 	  </div>
 	</div>
 	
