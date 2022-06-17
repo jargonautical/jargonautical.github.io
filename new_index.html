@@ -14,7 +14,7 @@
 <body>
   <h2>Making sense of data</h2>
 	<div class="flex-container">
-		<div class="box">
+		<div class="invisbox-wide">
 		<h4>Back to basics</h4>
 		  <p>
 			  What do we mean by 'making sense of data'? It can't be that complicated. 
@@ -56,7 +56,7 @@
 			</p>
 			<h5>'Do I really believe they're cheating, or am I just salty about losing?'.</h5>
 		</div>
-		<div class="invisbox-small">
+		<div class="box">
 			<h4>Reinventing the wheel?</h4>
 			<p>
 				There are many existing tracker sites and apps for Destiny 2, and they're each good 
@@ -106,12 +106,24 @@
 	
 	<div class="flex-container">
 		<div class="invisbox-big">
+			<h4>Something isn't right here ...</h4>
 			<p>
-				models are just far too accurate - something here isn't right
-				id'd one player as 'dubious' who is actually just very, very good
-				including class - lots of people who play a lot of pvp favour hunter class. 
-				one of the samples (a known cheat, banned recently and very publicly) only plays on hunter
-				<img src="/mytracker/dt.png" width="100%" align='center'>
+				My models either made no sense at all, or were far too efficient. 
+				Exploring possible principal components for the k-means model shown below, 
+				it appeared that match duration and total team score (the nunmber of kills by 
+				everyone in the players team combined) have been selected as the most significant 
+				factors in whether that person was likely to be cheating. That clearly makes no sense in context!
+				<br>
+				Thinking about all the factors I'd added to the model, it was obvious that <br>
+				1. there were too many, and <br>
+				2. most of them were redundant.<br>
+				<br>
+				Another factor which could and should be discounted was the player's class - 
+				in Destiny 2 you can play as one of three classes; Titan, Warlock or Hunter. Each has its 
+				advantages and disadvantages, but looking at the balance of classes in my data 
+				I could see that frequent PvP players are more likely to play hunter, and several of my sample 
+				group play ONLY on hunter and have no characters in either of the other classes. 
+			</p>
 		</div>
 		<div class="invisbox-small">
 			<img src="/mytracker/kmeans.png" width="100%" align='center'>
@@ -154,6 +166,7 @@
 			  and here's why. It only counts wins and losses. Win a game, and you move up.  Lose a game and you move down. 
 			  In a team game, where there can be (depending on the specific mode) 4 or 6 players on each side, it's far 
 			  too blunt an instrument. 
+			  <br>
 			  Someone with a high success rate could simply have been teamed up with very high-skill players - a 'carry', 
 			  where the lower-ranking player gets an easy ride with their team mates doing all the hard work.  By the same token 
 			  someone with a streak of losses may actually be very good, but has been matched with lower-ranked teammates in 
@@ -168,7 +181,7 @@
 		  </p>
 		</div>
 		<div class="invisbox-small">
-			<img src="/mytracker/scatter.png" width="100%" align='center'>
+			<img src="/mytracker/best.png" width="100%" align='center'>
 		</div>
 	</div>
 	<div class="flex-container">
@@ -186,6 +199,14 @@
 		</div>
 		<div class="invisbox-small">
 			<img src="/mytracker/app_card.png" width="100%" align='center'>
+		</div>
+	</div>
+	<div class="flex-container">
+		<div class="invisbox-big">
+			<h4>Designing the thing</h4>
+		</div>
+		<div class="invisbox-small">
+			<p>Final version of the card interface goes here</p>
 		</div>
 	</div>
 	
