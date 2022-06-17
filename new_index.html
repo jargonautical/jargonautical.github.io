@@ -13,23 +13,21 @@
 </head>
 <body>
   <h2>Making sense of data</h2>
-	<h4>Back to basics</h4>
+	<h3>Back to basics</h3>
 	<p>
 		What do we mean by 'making sense of data'? It can't be that complicated. 
 		Surely that's what graphs and stuff are for ... just shove your data into 
 		some  kind of chart and the job is done, right?
 	</p>
 	<div class="flex-container">
-		<div class="invisbox-big">
-			<p class="comment">Not really</p>
+		<div class="invisbox-wide">
 			<p>
-			  Data visualisation is about so much more than visualising data. 
-			  It's crafting a message, a set of design choices around brand and audience, 
+			  Not really. Data visualisation is about so much more than visualising data  
+			  - it's crafting a message, a set of design choices around brand and audience, 
 			  and most of all it's a response.
-			</p>
-			 <p class="comment">A response to what?</p>
-			<p>
-			  Well, it's kind of your job to figure that out. Here's what you need to be asking yourself.
+			  <br><br>
+                          
+			  A response to what? Well, it's kind of your job to figure that out. Here's what you need to be asking yourself.
 			</p>
 		  <ul>
 			  <li>What question does your chart answer?</li>
@@ -39,15 +37,14 @@
 		  </ul>
 		<p>To explore this point, here's an example using some data from one of my hobbies.</p>
 		</div>
-		<div class="invisbox-small">
-			<p class="hand">"People don't want data - they want answers."</p>
-			<p class="caption">Lucy Knight, Data Scientist</p>
-		</div>
-		
 	</div>
-	<h4>First, find some data</h4>
 	<div class="flex-container">
-		<div class="invisbox-big">
+			<p class="hand4">"People don't want data - they want answers."</p>
+			<p class="caption">Lucy Knight, Data Scientist</p>
+	</div>
+        <h3>First, define the problem</h3>
+	<div class="flex-container">
+		<div class="invisbox-wide">
 			
 			<p>
 				I spend several hours a week playing Destiny 2, an online MMORPG first-person shooter.
@@ -62,10 +59,12 @@
 				When that happens I find myself hovering over the 'Report' button and 
 				asking myself this question ...
 			</p>
-			<p class="comment">'Do I really believe they're cheating, or am I just salty about losing?'.</p>
+			<p class="hand4">"Do I really believe they're cheating - or am I just upset because I lost?".</p>
 		</div>
-		<div class="box">
-			<p class="comment">Reinventing the wheel?</p>
+	</div>
+	<div class="flex-container">
+		<div class="invisbox-wide">
+			<h4>Reinventing the wheel?</h4>
 			<p>
 				There are several support apps for Destiny 2, and they're each good 
 				at different things. Inventory management apps let you access your gear and 
@@ -81,7 +80,7 @@
 			</p>
 		</div>
 	</div>
-	<h4>There's a question to be answered!</h4>
+	<h3>There's a question to be answered!</h3>
 	<div class="flex-container">
 	  <div class="invisbox-wide">
 		  
@@ -100,7 +99,7 @@
 		</div>
 	</div>
 	<div class="flex-container">
-		<div class="invisbox-big">
+		<div class="invisbox">
 			<p>
 				For the machine learning bit, I ran through various different model and data structures before admitting that, 
 			        actually, I couldn't identify any meaningful pattern.
@@ -109,36 +108,36 @@
 				<br><br>
 				Good players tend to be good across competitive and casual game modes, and they play more matches. 
 				They win more, they have a higher kills to deaths ratio (K/D), and more kills per game. They also do better 
-				on the percentage of precision shots with difficult-to-master weapons like sniper rifles. Lots of these are 
-				also what you'd expect to see if someone were cheating, but what's the crucial indicator for high-skill 
+				on the percentage of precision shots with difficult-to-master weapons like sniper rifles. 
+				<br><br>
+				Lots of these are 
+				also what you'd expect to see if someone were cheating ... so what's the crucial indicator for high-skill 
 				versus illegal mods? I couldn't see find it, even when I included individuals recently and very 
 				publicly banned for using cheats.
 				<br><br>
 				And the more I tweaked the models, the more I lost sight of the problem I was originally trying to solve. 
+				Exploring possible principal components for the k-means model shown on the right, 
+				it looked like match duration and total team score (the number of kills by 
+				everyone in the players team combined) were selected as the most significant 
+				factors in whether that person was likely to be cheating. That clearly makes no sense in context!
 		  </p>
 	  </div>
-	  <div class="invisbox-small">
-		  <img src="/mytracker/corr_flare.png" width="100%" align='center'>
+	  <div class="invisbox">
+		  <img src="/mytracker/kmeans.png" width="100%" align='center'>
 	  </div>
 	</div>
-	<h4>Something isn't right here ...</h4>
 	<div class="flex-container">
 		<div class="invisbox-big">
 			
 			<p>
-				My models either made no sense at all, or were far too efficient. 
-				Exploring possible principal components for the k-means model shown on the right, 
-				it looked like match duration and total team score (the number of kills by 
-				everyone in the players team combined) have been selected as the most significant 
-				factors in whether that person was likely to be cheating. That clearly makes no sense in context!
+				My models either made no sense at all, or were impossibly 100% efficient. Frequently both at once!
 				<br><br>
-				Thinking about all the factors I'd added to the model, it was obvious that <br>
+				Thinking about all the factors I'd added to the model, it was obvious that <br><br>
 				1. there were too many, and <br>
 				2. most of them were redundant.<br>
-				<br><br>
-				One factor which could and should be discounted was the player's class. 
-				In Destiny 2 you can play as one of three classes; Titan, Warlock or Hunter. Each has its 
-				advantages and disadvantages, but looking at the balance of classes in my data 
+				<br>
+				For example: one factor which could and should be discounted was the player's class. 
+				, but looking at the balance of classes in my data 
 				I could see that frequent PvP players are more likely to play hunter, and several of my sample 
 				group play ONLY on hunter and have no characters in either of the other classes. 
 				<br><br>
@@ -147,10 +146,17 @@
 			</p>
 		</div>
 		<div class="invisbox-small">
-			<img src="/mytracker/kmeans.png" width="100%" align='center'>
+			<div class="box">
+				<p>
+					In Destiny 2 you can play as one of three classes;<br>
+					Titan (strong and resilient)<br>
+					Warlock (healing and support)<br>
+					Hunter (mobile and stealthy)<br>
+					Each has its advantages and disadvantages in game play.
+				</p>
+			</div>
 		</div>
 	</div>
-	<h4>Lie down, try not to cry, cry anyway ...</h4>
 	<div class="flex-container">
 	  <div class="invisbox-big">
 		  
@@ -173,7 +179,7 @@
 		  </p>
 	  </div>
 	  <div class="invisbox-small">
-		  <p class="hand4">What do I really want to know?</p>
+		  <p class="hand4">So ... what do I really want to know here?</p>
 	  </div>
 	</div>
 	
