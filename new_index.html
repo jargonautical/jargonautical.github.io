@@ -14,19 +14,22 @@
 <body>
   <h2>Making sense of data</h2>
 	<h4>Back to basics</h4>
+	<p>
+		What do we mean by 'making sense of data'? It can't be that complicated. 
+		Surely that's what graphs and stuff are for ... just shove your data into 
+		some  kind of chart and the job is done, right?
+	</p>
 	<div class="flex-container">
 		<div class="invisbox-big">
-		
+			<p class="console">Not really</p>
 			<p>
-			  What do we mean by 'making sense of data'? It can't be that complicated. 
-			  Surely that's what graphs and stuff are for ... just shove your data into 
-			  some  kind of chart and the job is done, right?
-			  As it turns out - no, not really.
 			  Data visualisation is about so much more than visualising data. 
 			  It's crafting a message, a set of design choices around brand and audience, 
 			  and most of all it's a response.
-			  <b>A response to what?</b>
-			  Well, it's kind of your job to figure that out.
+			</p>
+			 <p class="console">A response to what?</p>
+			<p>
+			  Well, it's kind of your job to figure that out. Here's what you need to be asking yourself.
 			</p>
 		  <ul>
 			  <li>What question does your chart answer?</li>
@@ -37,7 +40,7 @@
 		<p>To explore this point, here's an example using some data from one of my hobbies.</p>
 		</div>
 		<div class="invisbox-small">
-			<p class="hand3">"People don't want data - they want answers."</p>
+			<p class="hand">"People don't want data - they want answers."</p>
 			<p class="caption">Lucy Knight, Data Scientist</p>
 		</div>
 		
@@ -74,33 +77,44 @@
 				content - mostly adverts but also banners, buttons and links. It's a very cluttered interface 
 				and not one I enjoy looking at or having open on a second screen while I'm trying to play.
 				Also to get up-to-the-minute data you need to stay logged in constantly. 
-				<br><br>I need something much more basic than that - a simple visual look up that tells me at a glance whether 
-				I'm justified in reporting a player or whether I just need to get over it.
+				
 			</p>
 		</div>
 	</div>
 	<h4>There's a question to be answered!</h4>
 	<div class="flex-container">
-	  <div class="invisbox-big">
+	  <div class="invisbox-wide">
 		  
 		  <p>
+			  What I need is a simple visual look up that tells me at a glance whether 
+				I'm justified in reporting a player or whether I just need to get over it.
+			  <br><br>
 			One thing that sets Destiny as a game apart from many others is its very rich, well-structured and 
 			  well-documented API, hence the varied ecosystem of supporting apps and services. 
 			  With a developer account I can access game data for myself and other 
 			  players, and using that I can do pretty much any analysis that takes my fancy.
 			  <br><br>
-			  This is a very dangerous scenario for any data scientist. All this data, and no clear question in mind ...
-			  <br><br>
-			  I wondered if it would be possible to extract the right data to analyse who the likely cheats are in 
+			  I started with an assumption: it should be possible to get some data to analyse who the likely cheats are in 
 			  the games I'd played recently. That sort of thing would show up in their game statistics, right? Simple. 
-			  All I needed to do was extract all of the game stats and then try some different models until I got an answer.
-			  <br><br>
-			  For the machine learning bit, I ran through various different model and data structures before admitting that, 
-			  actually, I couldn't identify any meaningful pattern.
-			  <br><br>
-			  <b>This just in - good players tend to be good, more at ten.</b>
-			  <br><br>
-			  And the more I tweaked the models, the more I lost sight of the problem I was originally trying to solve. 
+			  All I needed to do was extract all of the game stats and then try out different models until I got an answer.
+		</div>
+	</div>
+	<div class="flex-container">
+		<div class="invisbox-big">
+			<p>
+				For the machine learning bit, I ran through various different model and data structures before admitting that, 
+			        actually, I couldn't identify any meaningful pattern.
+			        <br><br>
+				What did the data tell me?
+				<br><br>
+				Good players tend to be good across competitive and casual game modes, and they play more matches. 
+				They win more, they have a higher kills to deaths ratio (K/D), and more kills per game. They also do better 
+				on the percentage of precision shots with difficult-to-master weapons like sniper rifles. Lots of these are 
+				also what you'd expect to see if someone were cheating, but what's the crucial indicator for high-skill 
+				versus illegal mods? I couldn't see find it, even when I included individuals recently and very 
+				publicly banned for using cheats.
+				<br><br>
+				And the more I tweaked the models, the more I lost sight of the problem I was originally trying to solve. 
 		  </p>
 	  </div>
 	  <div class="invisbox-small">
