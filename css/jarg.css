@@ -50,6 +50,13 @@ p.caption {
   font-style: italic;
 }
 
+p.comment {
+  font-family: 'Space Mono';
+  color: var(--dark);
+  font-size: 1.2em;
+  font-style: italic;
+}
+
 p.snippet {
   font-family: 'Space Mono';
   color: var(--dark);
@@ -95,6 +102,12 @@ p.hand3 {
     color: var(--dark);
     padding-left:20px;
     font-size: 1.4em;
+}
+p.hand4 {
+    font-family: 'Caveat', cursive;
+    color: var(--dark);
+    padding-left:20px;
+    font-size: 2.5em;
 }
 
 /* headings */
