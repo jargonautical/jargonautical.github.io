@@ -13,12 +13,16 @@
 </head>
 <body>
   <h2>Making sense of data</h2>
-	<h3>Back to basics</h3>
-	<p>
-		What do we mean by 'making sense of data'? It can't be that complicated. 
-		Surely that's what graphs and stuff are for ... just shove your data into 
-		some  kind of chart and the job is done, right?
-	</p>
+	<div class="flex-container">
+		<div class="invisbox-wide">
+			<h3>Back to basics</h3>
+			<p>
+				What do we mean by 'making sense of data'? It can't be that complicated. 
+				Surely that's what graphs and stuff are for ... just shove your data into 
+				some  kind of chart and the job is done, right?
+			</p>
+		</div>
+	</div>
 	<div class="flex-container">
 		<div class="invisbox-wide">
 			<p>
@@ -39,32 +43,32 @@
 		</div>
 	</div>
 	<div class="flex-container">
-			<p class="hand4">"People don't want data - they want answers."</p>
+			<p class="hand4">"People don't want data - they want answers."</p><br>
 			<p class="caption">Lucy Knight, Data Scientist</p>
 	</div>
-        <h3>First, define the problem</h3>
+        
 	<div class="flex-container">
 		<div class="invisbox-wide">
-			
+			<h3>First, define the problem</h3>
 			<p>
 				I spend several hours a week playing Destiny 2, an online MMORPG first-person shooter.
 				Like many games in this genre it has a player-versus-player (PvP) mode where you can 
 				test your skills against other players in a controlled arena separate from the main 
 				story missions. Tensions run hot in this type of gameplay, and accusations of cheating are commonplace.
-				<br>
+				<br><br>
 				Being a middle-aged gamer with below-average reflexes I often come off worse in these competitions, and 
 				of course that's very frustrating. Sometimes I find myself matched against people so skilled, so godly, that 
 				I never stood a chance of beating them. 
-				<br>
+				<br><br>
 				When that happens I find myself hovering over the 'Report' button and 
 				asking myself this question ...
 			</p>
-			<p class="hand4">"Do I really believe they're cheating - or am I just upset because I lost?".</p>
+			<h5>"Do I really believe they're cheating - or am I just upset because I lost?".</h5>
 		</div>
 	</div>
 	<div class="flex-container">
 		<div class="invisbox-wide">
-			<h4>Reinventing the wheel?</h4>
+			<h3>Reinventing the wheel?</h3>
 			<p>
 				There are several support apps for Destiny 2, and they're each good 
 				at different things. Inventory management apps let you access your gear and 
@@ -103,23 +107,26 @@
 			<p>
 				For the machine learning bit, I ran through various different model and data structures before admitting that, 
 			        actually, I couldn't identify any meaningful pattern.
-			        <br><br>
-				What did the data tell me?
-				<br><br>
+			</p>
+			<h5>What did the data tell me?</h5>
+			<p>
 				Good players tend to be good across competitive and casual game modes, and they play more matches. 
 				They win more, they have a higher kills to deaths ratio (K/D), and more kills per game. They also do better 
 				on the percentage of precision shots with difficult-to-master weapons like sniper rifles. 
 				<br><br>
 				Lots of these are 
 				also what you'd expect to see if someone were cheating ... so what's the crucial indicator for high-skill 
-				versus illegal mods? I couldn't see find it, even when I included individuals recently and very 
+				versus illegal mods? I couldn't find it, even when I included individuals recently and very 
 				publicly banned for using cheats.
 				<br><br>
-				And the more I tweaked the models, the more I lost sight of the problem I was originally trying to solve. 
 				Exploring possible principal components for the k-means model shown on the right, 
 				it looked like match duration and total team score (the number of kills by 
 				everyone in the players team combined) were selected as the most significant 
 				factors in whether that person was likely to be cheating. That clearly makes no sense in context!
+				<br><br>
+				My models either made no sense at all, or were impossibly 100% efficient. Frequently both at once!
+				And the more I tweaked the models, the more I lost sight of the problem I was originally trying to solve. 
+
 		  </p>
 	  </div>
 	  <div class="invisbox">
@@ -130,45 +137,45 @@
 		<div class="invisbox-big">
 			
 			<p>
-				My models either made no sense at all, or were impossibly 100% efficient. Frequently both at once!
-				<br><br>
-				Thinking about all the factors I'd added to the model, it was obvious that <br><br>
-				1. there were too many, and <br>
-				2. most of them were redundant.<br>
-				<br>
+				Thinking about all the factors I'd added to the model, it was obvious that:
+				<ol>
+					<li>there were too many, and</li>
+					<li>most of them were redundant.</li>
+			</ol>
 				For example: one factor which could and should be discounted was the player's class. 
-				, but looking at the balance of classes in my data 
+				Looking at the balance of classes in my data 
 				I could see that frequent PvP players are more likely to play hunter, and several of my sample 
 				group play ONLY on hunter and have no characters in either of the other classes. 
-				<br><br>
-				So that's both skewing my sample 
-				and at the same time adding no useful information whatsoever.
+				
+				That's both skewing my sample 
+				and at the same time adding no useful information whatsoever. 
+			<br><br>
+			So if my analysis isn't answering my question, what will? 
+			  Time to go back and reframe the question. 
 			</p>
 		</div>
-		<div class="invisbox-small">
-			<div class="box">
+		<div class="box">
 				<p>
 					In Destiny 2 you can play as one of three classes;<br>
-					Titan (strong and resilient)<br>
-					Warlock (healing and support)<br>
-					Hunter (mobile and stealthy)<br>
+					<ul>
+						<li>Titan (strong and resilient)</li>
+						<li>Warlock (healing and support)</li>
+						<li>Hunter (mobile and stealthy)</li>
+			                </ul>
 					Each has its advantages and disadvantages in game play.
 				</p>
-			</div>
 		</div>
 	</div>
+<h3>Should I have expected this person to beat me?</h3>
 	<div class="flex-container">
 	  <div class="invisbox-big">
 		  
 		  <p>
-			  So if my analysis isn't answering my question, what will? 
-			  Time to go back and reframe the question. 
+			  
 		  </p>
-		  <p class="comment">
-			  Should I have expected this person to beat me?<br>
-			  Signs for that include:
-		  </p>
+		  
 		  <p>
+			  Signs for that include:
 		  <ul>
 			  <li>Are they using the meta?</li>
 			  <li>Are they are using known exploits?</li>
@@ -186,7 +193,7 @@
 	<div class="flex-container">
 	  <div class="invisbox-big">
 		  <p>
-			  One way to explore possible answers to these questions is to look at someone's game history 
+			  One way to explore these questions is to look at someone's game history 
 			  to see whether their win status or their kill count seems feasible.
 			  <br><br>
 			  How do we do this?
@@ -239,15 +246,19 @@
 	</div>
 <h4>Designing the thing</h4>
 	<div class="flex-container">
-		<div class="invisbox-big">
+		<div class="invisbox-wide">
 			<p>
-				we want the better/worse. comparisons to be obvious at a glance. Is this person 
+				We want the comparisons to be obvious at a glance. Is this person 
 				doing much, much better than they normally would? Then we have three dimensions to convey.
 				<br><br>
-				1. direction of travel (better/worse)<br>
-				2. the extent of the difference (big/small), and <br>
-				2. a value judgement (good/bad) perhaps assigned to colours
-				<br><br>
+				<ol>
+					<li>direction of travel (better/worse)</li>
+					<li>the extent of the difference (big/small), and </li>
+					<li>a value judgement (good/bad) perhaps assigned to colours.</li>
+			</ol>
+			</p>
+		<h5>Some options</h5>
+		<p>
 				We could use a single symbol for all three dimensions. An up-arrow or down- arrows to convey direction, 
 				a colour to represent good/bad, and the arrow size relative to the difference between this match and the usual average.
 				<br><br>
@@ -257,9 +268,7 @@
 				Finally we could use text formatting. the colour of the text or its background could represent 
 				good/bad, and the font size could be relative to the difference.
 				<br><br>
-		</div>
-		<div class="invisbox-small">
-			<p>Mock ups of the options, hand drawn</p>
+		</p>
 		</div>
 	</div>
 <h4>About ...</h4>
