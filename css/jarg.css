@@ -44,6 +44,12 @@ blockquote {
 	padding-left:20px;
 }
 
+p.caption {
+  color: var(--dark);
+  font-size: 0.8em;
+  font-style: italic;
+}
+
 p.snippet {
   font-family: 'Space Mono';
   color: var(--dark);
