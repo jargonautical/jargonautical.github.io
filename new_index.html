@@ -13,9 +13,10 @@
 </head>
 <body>
   <h2>Making sense of data</h2>
+	<h4>Back to basics</h4>
 	<div class="flex-container">
 		<div class="invisbox-big">
-		<h4>Back to basics</h4>
+		
 			<p>
 			  What do we mean by 'making sense of data'? It can't be that complicated. 
 			  Surely that's what graphs and stuff are for ... just shove your data into 
@@ -36,15 +37,15 @@
 		<p>To explore this point, here's an example using some data from one of my hobbies.</p>
 		</div>
 		<div class="invisbox-small">
-			<p class="hand">"People don't want data - they want answers."</p>
+			<p class="hand3">"People don't want data - they want answers."</p>
 			<p class="caption">Lucy Knight, Data Scientist</p>
 		</div>
 		
 	</div>
-	
+	<h4>First, find some data</h4>
 	<div class="flex-container">
 		<div class="invisbox-big">
-			<h4>First, find some data</h4>
+			
 			<p>
 				I spend several hours a week playing Destiny 2, an online MMORPG first-person shooter.
 				Like many games in this genre it has a player-versus-player (PvP) mode where you can 
@@ -58,31 +59,30 @@
 				When that happens I find myself hovering over the 'Report' button and 
 				asking myself this question ...
 			</p>
-			<h5>'Do I really believe they're cheating, or am I just salty about losing?'.</h5>
+			<p class="hand3">'Do I really believe they're cheating, or am I just salty about losing?'.</p>
 		</div>
 		<div class="box">
-			<h4>Reinventing the wheel?</h4>
+			<p class="hand">Reinventing the wheel?</p>
 			<p>
-				There are many existing tracker sites and apps for Destiny 2, and they're each good 
+				There are several support apps for Destiny 2, and they're each good 
 				at different things. Inventory management apps let you access your gear and 
-				resources while playing, to swap items over without having to return to aa specific 
-				lcoaation to access your vaault. Others provide performance and ranking information 
+				resources while playing, to swap items over without having to return to a specific 
+				location to access your vault. Others provide performance and ranking information 
 				so you can see how you're doing and who you're up against. 
 				<br><br>
-				These are all good, but the trackers in particular tend to have a lot of blinking or scrolling 
+				These are all good, but the performance trackers have a lot of blinking or scrolling 
 				content - mostly adverts but also banners, buttons and links. It's a very cluttered interface 
-				and not one I enjoy looking at or having open oin a second screen while I'm trying to play.
-				
-				Added to that, to get up-to-the-minute data I would need to stay logged in constantly. 
+				and not one I enjoy looking at or having open on a second screen while I'm trying to play.
+				Also to get up-to-the-minute data you need to stay logged in constantly. 
 				<br><br>I need something much more basic than that - a simple visual look up that tells me at a glance whether 
 				I'm justified in reporting a player or whether I just need to get over it.
 			</p>
 		</div>
 	</div>
-	
+	<h4>There's a question to be answered!</h4>
 	<div class="flex-container">
 	  <div class="invisbox-big">
-		  <h4>There's a question to be answered!</h4>
+		  
 		  <p>
 			One thing that sets Destiny as a game apart from many others is its very rich, well-structured and 
 			  well-documented API, hence the varied ecosystem of supporting apps and services. 
@@ -107,10 +107,10 @@
 		  <img src="/mytracker/corr_flare.png" width="100%" align='center'>
 	  </div>
 	</div>
-	
+	<h4>Something isn't right here ...</h4>
 	<div class="flex-container">
 		<div class="invisbox-big">
-			<h4>Something isn't right here ...</h4>
+			
 			<p>
 				My models either made no sense at all, or were far too efficient. 
 				Exploring possible principal components for the k-means model shown on the right, 
@@ -136,31 +136,30 @@
 			<img src="/mytracker/kmeans.png" width="100%" align='center'>
 		</div>
 	</div>
-	
+	<h4>Lie down, try not to cry, cry anyway ...</h4>
 	<div class="flex-container">
 	  <div class="invisbox-big">
-		  <h4>Lie down, try not to cry, cry anyway ...</h4>
+		  
 		  <p>
 			  So if my analysis isn't answering my question, what will? 
 			  Time to go back and reframe the question. 
 		  </p>
-		  <h4>What do I really want to know?</h4>
-		  <p>
-			  Firstly: should I have expected this person to beat me?<br>
+		  <p class="hand3">
+			  Should I have expected this person to beat me?<br>
 			  Signs for that include:
 		  </p>
+		  <p>
 		  <ul>
 			  <li>Are they using the meta?</li>
 			  <li>Are they are using known exploits?</li>
 			  <li>Are they using particlar exotic weapons or armour?</li>
 			  <li>Are they at a significantly higher level than me?</li>
 		  </ul>
-		  <p>
 			  If one or more of those things is true, perhaps I just need to 'git gud' ...
 		  </p>
 	  </div>
 	  <div class="invisbox-small">
-		  <p class="hand">Some slogan here</p>
+		  <p class="hand3">What do I really want to know?</p>
 	  </div>
 	</div>
 	
@@ -168,55 +167,82 @@
 	  <div class="invisbox-big">
 		  <p>
 			  One way to explore possible answers to these questions is to look at someone's game history 
-			  to see whether their win status or their kill count seems feasible. Some  of the other tracker 
-			  sites include a player's Elo ranking, which many take as a relevant metric. I prefer not to, however, 
-			  and here's why. It only counts wins and losses. Win a game, and you move up.  Lose a game and you move down. 
-			  In a team game, where there can be (depending on the specific mode) 4 or 6 players on each side, it's far 
+			  to see whether their win status or their kill count seems feasible.
+			  <br><br>
+			  How do we do this?
+			  <br><br>
+			  Tracker apps usually start with a player's Elo ranking, which I find unhelpful. 
+			  because it only counts wins and losses. Win a game and you move up, lose a game and you move down. 
+			  In a multiplayer activity where there can be (depending on match settings) up to six players per team, it's  
 			  too blunt an instrument. 
-			  <br>
-			  Someone with a high success rate could simply have been teamed up with very high-skill players - a 'carry', 
-			  where the lower-ranking player gets an easy ride with their team mates doing all the hard work.  By the same token 
-			  someone with a streak of losses may actually be very good, but has been matched with lower-ranked teammates in 
+			  <br><br>
+			  For example, someone with a high Elo could simply have been teamed up with very high-skill players - a 'carry', 
+			  where the less-skilled player gets an easy ride with their team mates doing all the hard work.  By the same token 
+			  someone with a streak of losses may actually be very good, but has been repeatedly matched with lower-ranked teammates in 
 			  an effort to balance the lobby. So Elo, which was designed for ranking one-on-one performance in chess, is not 
 			  helpful here.
-			  <br>
-			  The game developers have their own combat rating which (while I don't know all the details) does 
-			  take into account each player's individual performance and contribution to the match result. I decided 
-			  this would be interesting to include in my analysis, and along with that we can also extract very 
-			  precise and detailed data on the percentage of precision shots, which indicates skill, or the usage of 
-			  particular weapon archetypes and character builds which suggest careful tuning of attributes and mods.
+			  <br><br>
+			  Destiny 2 players are instead assigned a 'combat rating' which takes into account 
+			  each player's individual performance and contribution to the match result. 
+			  Along with that we can also access very 
+			  detailed data on the percentage of precision shots, which indicates skill, or the usage of 
+			  particular weapon archetypes and character builds which suggest careful tuning of attributes.
+			  <br><br>
+			  The chart to the right shows what some of that data looks like when plotted against kill 
+			  count and all-time per-game average.
 		  </p>
 		</div>
 		<div class="invisbox-small">
 			<img src="/mytracker/best.png" width="100%" align='center'>
+			<p class="caption">Best weapon archetype by mode and number of kills</p>
 		</div>
 	</div>
+<h4>Working out how to frame it</h4>
 	<div class="flex-container">
-		<div class="invisbox-big">
-			<h4>Working out how to frame it</h4>
+		<div class="invisbox">
+			
 			<p>
 				Looking at some of these stats in a quick look up, one card per player, it could be helpful. Certainly 
 				having the per-game average to compare to the match in question seems like a useful indicator 
 				of unusual circumstances which might point to cheating.
+				<br><br>
 				But is this the right way to display it? Are the colours informative, or just distracting? Are the items in 
 				a logical or intuitive order for the reader?
-				<br>
+				<br><br>
 				Now we're into design territory.
 			</p>
 		</div>
-		<div class="invisbox-small">
+		<div class="invisbox">
 			<img src="/mytracker/app_card.png" width="100%" align='center'>
+			<p class="caption">A mock up of the current iteration<p>
 		</div>
 	</div>
+<h4>Designing the thing</h4>
 	<div class="flex-container">
 		<div class="invisbox-big">
-			<h4>Designing the thing</h4>
+			<p>
+				we want the better/worse. comparisons to be obvious at a glance. Is this person 
+				doing much, much better than they normally would? Then we have three dimensions to convey.
+				<br><br>
+				1. direction of travel (better/worse)<br>
+				2. the extent of the difference (big/small), and <br>
+				2. a value judgement (good/bad) perhaps assigned to colours
+				<br><br>
+				We could use a single symbol for all three dimensions. An up-arrow or down- arrows to convey direction, 
+				a colour to represent good/bad, and the arrow size relative to the difference between this match and the usual average.
+				<br><br>
+				Or we could have a small plot showing the difference, leave out the colours and let the x-axis position or 
+				the labelling indicate which is this match and which is the usual average.
+				<br><br>
+				Finally we could use text formatting. the colour of the text or its background could represent 
+				good/bad, and the font size could be relative to the difference.
+				<br><br>
 		</div>
 		<div class="invisbox-small">
-			<p>Final version of the card interface goes here</p>
+			<p>Mock ups of the options, hand drawn</p>
 		</div>
 	</div>
-	
+<h4>About ...</h4>
 	<div class="flex-container">
 		<div class="invisbox">
 			<p>
