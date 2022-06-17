@@ -7,7 +7,7 @@
   --bgbody: #f9f6ee; /* Bone White #f9f6ee 249/246/238 */
   --bgheaders: #318385; /* Dark Seafoam #318385 49/131/133 */
   --bghover: #c0c0c0; /* Silver #c0c0c0 192/192/192 */
-  --bgbox: #c0c0c0; /* Silver #c0c0c0 192/192/192 */
+  --bgbox: #FAF0E6; /* Linen #FAF0E6 250,240,230 */
   --outline: #36454f; /* Charcoal #36454f 54/69/79 */
   --hand: #318385; /* Dark Seafoam #318385 49/131/133 */
   --dark: #36454f; /* Charcoal #36454f 54/69/79 */
@@ -212,6 +212,14 @@ ul {
   background-color: var(--bgbody);
   max-width: 67%;
   width: 67%;
+  text-align: left;
+  padding: 10px;
+}
+
+.flex-container .invisbox-wide {
+  background-color: var(--bgbody);
+  max-width: 100%;
+  width: 100%;
   text-align: left;
   padding: 10px;
 }
