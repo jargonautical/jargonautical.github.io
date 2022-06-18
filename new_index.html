@@ -89,7 +89,6 @@
 				<br><br>
 				What I need is a simple visual look up that tells me at a glance whether 
 				I'm justified in reporting a player, or whether I just need to get over it.
-				<br><br>
 			</p>
 			<h3>Getting hold of some data</h3>
 			<p>
@@ -108,7 +107,7 @@
 		
 	<div class="flex-container">
 		<div style="clear: left;">
-			<p style="float: right;" class="caption"><img src="/mytracker/kmeans.png" width="400" border="1px">K-means clustering of game data</p>
+			<p style="float: right;"><img src="/mytracker/kmeans.png" width="400" border="1px"></p>
 			<p>
 				And this is exactly what I did, using the API to extract a massive file for a sample of players. 
 				I included myself as a control (I know I'm not cheating!). For the same reaason I included a couple of friends 
@@ -119,6 +118,10 @@
 				Armed with this data, I built various different models and reviewed the results. I won't bore the reader 
 				with the details of each one because, as it turned out, none of them could identify any meaningful pattern.
 				<br><br>
+				The k-means model shown on the right looked very promising, but when I delved into it further with a principal 
+				components analysis it indicated that match duration and total team score (the number of kills by 
+				everyone in the player's team combined) were most significant 
+				factors in whether that person was likely to be cheating. That clearly can't be right in this context.
 			</p>
 		</div>
 	</div>
@@ -137,12 +140,8 @@
 				Lots of these are also what you'd expect to see if someone were cheating ... so what's the crucial 
 				indicator for high-skill versus illegal mods?
 				<br><br>
-				The k-means model shown above looked promising, but when I delved into it further with a principal 
-				components analysis it indicated that match duration and total team score (the number of kills by 
-				everyone in the player's team combined) were most significant 
-				factors in whether that person was likely to be cheating. That clearly can't be right in this context.
-				<br><br>
-				My models either made no sense at all, or were impossibly 100% efficient. Frequently both at once!
+				I honestly couldn;t tell you. My models either made no sense at all, or were impossibly 100% efficient. 
+				Sometimes both at once!
 				And the more different models I built and the more I tweaked the parameters, the more I lost sight 
 				of the problem I was originally trying to solve. 
 			</p>
@@ -153,33 +152,36 @@
 				A good example of this is the choice of stats about number of kills. 
 				Average score per life = how many kills before the player is brought down by an opponent. 
 				This will be reflected in the kills-to-deaths ratio and also efficiency. 
-				Number of kills overall is strongly correlated to score, and so on.
+				Number of kills overall is strongly correlated to score, and so on. 
+				This is borne out in the correlation matrix.
 				<br><br>
 				Another factor which could be skewing the analysis is the player's choice of class. Options are:
+			</p>
 			<ul>
 				<li>Titan (strong and resilient). Basically a tank with fists.</li>
 				<li>Warlock (healing and support). Can fly, also look fabulous in robes.</li>
 				<li>Hunter (mobile and sneaky). Like to jump a lot, hard to catch.</li>
 
 			</ul>
-			        Looking at the balance of classes in my data 
-				I could see that frequent PvP players are more likely to play hunter, an archetype known for agility and stealth, 
-				and several of my sample group play ONLY on hunter and have no characters in either of the other classes. 
+			<p>
+			        There's a perception that frequent PvP players are more likely to play hunter, 
+				an archetype known for agility and stealth, 
+				and indeed several of my sample group play ONLY on hunter and have no characters in either of the other classes.
+				This may or may not be meaningful, but it's certainly a balance issue for my dataset.
 				<br><br>
-				So if my analysis isn't answering my question, what will? What is the question, anyway?	
-			        What I really want to know is ...
+				So if my analysis isn't answering my question, what will? What was the question, anyway?	
 			</p>
 		</div>
 	  </div>
 	
 	<div class="flex-container">
-		<div class="invisbox-wide">
-			<p class="hand4">
-				Should I have expected this person to beat me?
-			</p>
+		<p class="hand4">
+			Should I have expected this person to beat me?
+		</p>
+		<div style="clear: left;">
 			<p>
-				I don't need machine learning for that. I just need to look at the other player's character, their build 
-				and gear choices, and then use my own understanding of the game's context to make a judgement.
+				I don't need machine learning for that. If I can look at the other player's character, their build 
+				and gear choices, I can use my own understanding of the game's context to make a judgement.
 			</p>
 			<ul>
 				<li>Are they using the strongest weapon types?</li>
@@ -196,8 +198,9 @@
 				<li>Did I equip any weapons or abilities that I haven't had much practice using?</li>
 			</ul>
 			<p>
-				In the heat of the moment it's not easy to be that self-reflective, but it's a good habit 
-				to develop. It's entirely possible that nobody here is cheating, and I just need to 'git gud'.
+				When you're taking heavy and sustained fire from player 'xX~reference-to-god-tier-skills~Xx' 
+				it's clearly not the ideal time for self-reflection, but it's a good habit 
+				to develop post-match. It's entirely possible that nobody here is cheating, and I simply need to 'git gud'.
 			</p>
 		</div>
 	</div>
@@ -207,31 +210,31 @@
 			<p style="float: right;"><img src="/mytracker/best.png" width="600" border="1px"></p>
 			<p style="float: right;" class="caption">Best weapon archetype by mode and number of kills</p>
 			<p>
-			  We're getting there now. We can certainly do a comparison of gear, level and also player history 
-			  to see whether their win status or their kill count seems feasible.
-			  <br><br>
-			  Existing tracker apps can help here, but they usually centre around a player's
-			  <a href=https://en.wikipedia.org/wiki/Elo_rating_system>Elo rating</a>.
-			  I find this less meaningful in context, because it's calculated purely on wins and losses. 
-			  Win a game and you move up, lose a game and you move down. 
-			  In a multiplayer activity where there can be (depending on match settings) up to six players per team, it's  
-			  not necessarily an accurate meaasure of each player's performance. 
-			  <br><br>
-			  For example, someone with a high Elo could simply have been teamed up with very high-skill players - a 'carry', 
-			  where the less-skilled player gets an easy ride with their team mates doing all the hard work.  By the same token 
-			  someone with a streak of losses may actually be very good, but has been repeatedly matched with lower-ranked teammates in 
-			  an effort to balance the lobby. So Elo, which was designed for ranking one-on-one performance in chess, is not 
-			  helpful here.
-			  <br><br>
-			  Destiny 2 players are instead assigned a 'combat rating' which takes into account 
-			  each player's individual performance and contribution to the match result. 
-			  Along with that we can also access very 
-			  detailed data on things like the percentage of precision shots, which indicates skill, or the usage of 
-			  particular weapon archetypes and character builds which suggest careful tuning of attributes.
-			  <br><br>
-			  The chart to the right shows what some of that data looks like when plotted against kill 
-			  count and all-time per-game average. This is starting to look like something that 
-			  could help with my particular question.
+				We're getting there now. With the data I've extracted I can certainly do a comparison of gear, 
+				level and also player history to see whether their win status or their kill count seems feasible.
+				<br><br>
+				Existing tracker apps can help here, but they usually centre around a player's
+				<a href=https://en.wikipedia.org/wiki/Elo_rating_system>Elo rating</a>.
+				I find this less meaningful in this context, because it's calculated purely on wins and losses. 
+				Win a game and you move up, lose a game and you move down. 
+				In a multiplayer activity where there can be (depending on match settings) up to six players per team, it's  
+				not necessarily an accurate meaasure of each player's performance. 
+				<br><br>
+				Someone with a high Elo could simply have been teamed up with very high-skill players - a 'carry', 
+				where the less-skilled player gets an easy ride with their team mates doing all the hard work.  By the same token 
+				someone with a streak of losses may actually be very good, but has been repeatedly matched with lower-ranked teammates in 
+				an effort to balance the lobby. So Elo, which was designed for ranking one-on-one performance in chess, is not 
+				helpful here.
+				<br><br>
+				Destiny 2 players are instead assigned a 'combat rating' which takes into account 
+				each player's individual performance and contribution to the match result. 
+				Along with that we can also access very 
+				detailed data on things like the percentage of precision shots, which indicates skill, or the usage of 
+				particular weapon archetypes and character builds which suggest careful tuning of attributes.
+				<br><br>
+				The scaattor plot to the right shows what some of that data looks like when plotted against kill 
+				count and all-time per-game average. This is starting to look like something that 
+				could help with my particular question.
 			</p>
 		</div>
 	</div>
@@ -279,13 +282,15 @@
 				We could use a single symbol for all three dimensions. An up-arrow or down-arrow to convey direction, 
 				a colour to represent good/bad, and the arrow size relative to the difference between this match and the usual average.
 				<br><br>
-				Or we could have a small plot showing the difference, leave out the colours and let the x-axis position or 
-				the labelling indicate which is this match and which is the usual average.
-				<br><br>
-				Finally we could use text formatting. the colour of the text or its background could represent 
+				Or we could use text formatting. the colour of the text or its background could represent 
 				good/bad, and the font size could be relative to the difference.
 				<br><br>
-		</p>
+				Finally we could have a small plot showing the difference, maybe even leave out the colours 
+				and let the x-axis position or 
+				the labelling indicate which is this match and which is the usual average. 
+				<br><br>
+				<img src="/assets/mockup.jpeg" width="100%" align='center'>
+			</p>
 		</div>
 	</div>
 <h5>(c) Jargonautical Ltd 2020. Branding and logo design by Shufflewing</h5>
