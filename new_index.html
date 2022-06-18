@@ -23,7 +23,7 @@
 				Not really.
 			</p>
 			<p class="hand4">
-				"People don't want data - they want answers."<br>
+				"People don't want data;<br>they want answers."
 			</p>
 			<p class="caption">
 				Lucy Knight, Data Scientist
@@ -31,7 +31,7 @@
 			<p>
 				Data visualisation is about so much more than visualising data. 
 				It's crafting a message. It's a set of design choices around brand and audience. 
-				And most of all it's a <strong>response</strong>.
+				And most of all it's a <bold>response</bold>.
 				<br><br>                   
 				A response to what? Well, it's kind of your job to figure that out. Here's what you need to be asking yourself.
 			</p>
@@ -46,7 +46,9 @@
 		<div class="invisbox-small">
 			<p>
 				Lucy works in education, open data and civic tech in the South West of England 
-				(and anywhere else she's needed). Currently available for project work.
+				(and anywhere else she's needed). 
+				<br><br>
+				Currently available for project work.
 				<br><br>
 				<a href=mailto:lucy@jargonautical.com><img src="assets/email64px.png"></a>
 				<a href=https://twitter.com/jargonautical><img src="assets/twitter64px.png"></a>
@@ -57,7 +59,7 @@
 	</div>
         
 	<div class="flex-container">
-		<div class="invisbox-big">
+		<div class="invisbox-wide">
 			<h3>Defining the problem</h3>
 			<p>
 				I spend several hours a week playing Destiny 2, an online MMORPG first-person shooter.
@@ -75,8 +77,6 @@
 			<p class="hand4">
 				"Do I really believe they're cheating - or am I just upset because I lost?".
 			</p>
-		</div>
-		<div class="box">
 			<h3>Reinventing the wheel?</h3>
 			<p>
 				There are several support apps for Destiny 2, and they're each good 
@@ -92,6 +92,9 @@
 				What I need is a simple visual look up that tells me at a glance whether 
 				I'm justified in reporting a player, or whether I just need to get over it.
 				<br><br>
+			</p>
+			<h3>Getting hold of some data</h3>
+			<p>
 				One thing that sets Destiny as a game apart from many others is its very rich, well-structured and 
 				well-documented API, hence the varied ecosystem of supporting apps and services. 
 				With a developer account I can access game data for myself and other 
@@ -106,7 +109,7 @@
 	</div>
 		
 	<div class="flex-container">
-		<div class="invisbox">
+		<div class="invisbox-big">
 			<p>
 				And this is exactly what I did, using the API to extract a massive file for a sample of players. 
 				I included myself as a control (I know I'm not cheating!). For the same reaason I included a couple of friends 
@@ -118,18 +121,30 @@
 				with the details of each one because, as it turned out, none of them could identify any meaningful pattern.
 				<br><br>
 			</p>
-			<h4>So what could the data tell me?</h4>
+		</div>
+		<div class="invixbox-small">
+			<img src="/mytracker/kmeans.png" width="100%" align='center'>
+			<p class="caption">K-means clustering of game data</p>
+		</div>
+	</div>
+	
+	<div class="flex-container">
+		<div class="invisbox">
+			<img src="/mytracker/corr_flare.png" width="100%" align='center'>
+			<p class="caption">Correlation matrix</p>
+		</div>
+		<div class="invisbox">
+			<h3>So what could the data tell me?</h3>
 			<p>
 				Well, skilled players tend to be good across both competitive and casual game modes, and they play more matches overall 
 				(getting in a lot of practice).
 				Obviously they win more, with a higher kills-to-deaths ratio (K/D), and more kills per game. They also do better 
 				on the percentage of precision shots with difficult-to-master weapons like sniper rifles. 
 				<br><br>
-				Lots of these are 
-				also what you'd expect to see if someone were cheating ... so what's the crucial indicator for high-skill 
-				versus illegal mods?
+				Lots of these are also what you'd expect to see if someone were cheating ... so what's the crucial 
+				indicator for high-skill versus illegal mods?
 				<br><br>
-				The k-means model shown on the right looked promising, but when I delved into it further with a principal 
+				The k-means model shown above looked promising, but when I delved into it further with a principal 
 				components analysis it indicated that match duration and total team score (the number of kills by 
 				everyone in the player's team combined) were most significant 
 				factors in whether that person was likely to be cheating. That clearly can't be right in this context.
@@ -137,13 +152,10 @@
 				My models either made no sense at all, or were impossibly 100% efficient. Frequently both at once!
 				And the more different models I built and the more I tweaked the parameters, the more I lost sight 
 				of the problem I was originally trying to solve. 
-		  </p>
+			</p>
+		</div>
 	  </div>
-	  <div class="invisbox">
-		  <img src="/mytracker/kmeans.png" width="100%" align='center'>
-		  <p class="caption">K-means clustering of game data</p>
-	  </div>
-	</div>
+	
 	<div class="flex-container">
 		<div class="invisbox-big">
 			<h3>Time for a sense check</h3>
@@ -162,75 +174,64 @@
 				<br><br>
 				Another factor which could be skewing the analysis is the player's choice of class. 
 				Looking at the balance of classes in my data 
-				I could see that frequent PvP players are more likely to play hunter, and several of my sample 
-				group play ONLY on hunter and have no characters in either of the other classes. 
+				I could see that frequent PvP players are more likely to play hunter, an archetype known for agility and stealth, 
+				and several of my sample group play ONLY on hunter and have no characters in either of the other classes. 
 				<br><br>
 				So if my analysis isn't answering my question, what will? What is the question, anyway?			
 			</p>
 		</div>
 		<div class="box">
 			<h4>Player classes</h4>
-			<p>
-				In Destiny 2 you can play as one of three character types, or <strong>classes</strong>;<br>
-			</p>
 			<ul>
-				<li>Titan (strong and resilient)</li>
-				<li>Warlock (healing and support)</li>
-				<li>Hunter (mobile and stealthy)</li>
+				<li>Titan (strong and resilient). Basically a tank with fists.</li>
+				<li>Warlock (healing and support). Can fly, also look fabulous in robes.</li>
+				<li>Hunter (mobile and sneaky). Like to jump a lot, hard to catch.</li>
 			</ul>
-			<p>
-				Each has its advantages and disadvantages in game play. Warlocks can fly, but that consumes 
-				significant ability energy. Hunters can go invisible but they are also the least 
-				resilient. Titans can deal and withstand massive damage but are not very agile.
-			</p>
 		</div>
 	</div>
 	<div class="flex-container">
-	  <div class="invisbox-big">
-		  <h4>What do I really want to know?</h4>
-		  <p>
-			  Here's the question I should have been asking.
-		  </p>
-		  <p class="hand4">
-			  Should I have expected this person to beat me?
-		  </p>
-		  <p>
-			  I don't need machine learning for that. I just need to look at the other player's character, their build 
-			  and gear choices, and use my own understanding of the game's context to make a judgement.
-		  </p>
-		  <ul>
-			  <li>Are they using the strongest weapon types?</li>
-			  <li>Are they are using known exploits?</li>
-			  <li>Are they using particlar exotic weapons or armour that add extra abilities?</li>
-			  <li>Are they at a significantly higher level than me?</li>
-		  </ul>
-		  <p>
-			  And finally, I need to take a good hard look at myself too.
-		  </p>
-		  <ul>
-			  <li>Are we playing on a PvP map that I'm not very familiar with?</li>
-			  <li>Am I using the right set up and play style for that map?</li>
-			  <li>Did I equip any weapons or abilities that I haven't had much practice using?</li>
-		  </ul>
-		  <p>
-			  In the heat of the moment it's difficult to be that self-reflective, but it's a good habit 
-			  to develop. It's entirely possible that nobody here is cheating, and I just need to 'git gud'.
-		  </p>
-	  </div>
-	  <div class="invisbox-small">
-		  image of character stats maybe
-	  </div>
+		<div class="invisbox-wide">
+			<h4>What do I really want to know?</h4>
+			<p>
+				Here's the question I should have been asking.
+			</p>
+			<p class="hand4">
+				Should I have expected this person to beat me?
+			</p>
+			<p>
+				I don't need machine learning for that. I just need to look at the other player's character, their build 
+				and gear choices, and then use my own understanding of the game's context to make a judgement.
+			</p>
+			<ul>
+				<li>Are they using the strongest weapon types?</li>
+				<li>Are they are using known exploits?</li>
+				<li>Are they using particlar exotic weapons or armour that add extra abilities?</li>
+				<li>Are they at a significantly higher level than me?</li>
+			</ul>
+			<p>
+				And of course I need to take a good hard look at myself too.
+			</p>
+			<ul>
+				<li>Are we playing on a PvP map that I'm not very familiar with?</li>
+				<li>Am I using the right set up and play style for that map?</li>
+				<li>Did I equip any weapons or abilities that I haven't had much practice using?</li>
+			</ul>
+			<p>
+				In the heat of the moment it's not easy to be that self-reflective, but it's a good habit 
+				to develop. It's entirely possible that nobody here is cheating, and I just need to 'git gud'.
+			</p>
+		</div>
 	</div>
 	
 	<div class="flex-container">
-	  <div class="invisbox-big">
-		  <p>
+		<div class="invisbox-big">
+			<p>
 			  We're getting there now. We can certainly do a comparison of gear, level and also player history 
 			  to see whether their win status or their kill count seems feasible.
 			  <br><br>
-			  Tracker apps wil help here, but they usually centre around a player's 
-			  <a href=https://en.wikipedia.org/wiki/Elo_rating_system>Elo rating</a>. 
-			  I find this less meaningful in context, because it's calculated purely on  wins and losses. 
+			  Existing tracker apps can help here, but they usually centre around a player's
+			  <a href=https://en.wikipedia.org/wiki/Elo_rating_system>Elo rating</a>.
+			  I find this less meaningful in context, because it's calculated purely on wins and losses. 
 			  Win a game and you move up, lose a game and you move down. 
 			  In a multiplayer activity where there can be (depending on match settings) up to six players per team, it's  
 			  not necessarily an accurate meaasure of each player's performance. 
@@ -259,8 +260,7 @@
 	</div>
 <h4>Working out how to frame it</h4>
 	<div class="flex-container">
-		<div class="invisbox">
-			
+		<div class="invisbox-big">
 			<p>
 				Here's where I abandoned complex models and wrote a script to pull out the results of my latest match. 
 				Each time I play, if I have doubts, I can refresh this page and take a quick look at each player to see 
@@ -280,7 +280,7 @@
 				Now we're into design territory.
 			</p>
 		</div>
-		<div class="invisbox">
+		<div class="invisbox-small">
 			<img src="/mytracker/app_card.png" width="100%" align='center'>
 			<p class="caption">First pass at a card display in Javascript<p>
 		</div>
@@ -289,18 +289,16 @@
 	<div class="flex-container">
 		<div class="invisbox-wide">
 			<p>
-				We want the comparisons to be obvious at a glance. Is this person 
+				I want the comparisons to be obvious at a glance. Is this person 
 				doing much, much better than they normally would? Then we have three dimensions to convey.
-				<br><br>
-				<ol>
-					<li>direction of travel (better/worse)</li>
-					<li>the extent of the difference (big/small), and </li>
-					<li>a value judgement (good/bad) perhaps assigned to colours.</li>
-			</ol>
 			</p>
-		<h5>Some options</h5>
-		<p>
-				We could use a single symbol for all three dimensions. An up-arrow or down- arrows to convey direction, 
+			<ol>
+				<li>direction of travel (better/worse)</li>
+				<li>the extent of the difference (big/small), and </li>
+				<li>a value judgement (good/bad) perhaps assigned to colours.</li>
+			</ol>
+			<p>
+				We could use a single symbol for all three dimensions. An up-arrow or down-arrow to convey direction, 
 				a colour to represent good/bad, and the arrow size relative to the difference between this match and the usual average.
 				<br><br>
 				Or we could have a small plot showing the difference, leave out the colours and let the x-axis position or 
