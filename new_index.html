@@ -14,7 +14,7 @@
 <body>
   <h2>Making sense of data</h2>
 	<div class="flex-container">
-		<div class="invisbox-wide">
+		<div class="invisbox-big">
 			<h3>Back to basics</h3>
 			<p>
 				What do we mean by 'making sense of data'? It can't be that complicated. 
@@ -22,34 +22,49 @@
 				some  kind of chart and the job is done, right?
 			</p>
 		</div>
+		<div class="invisbox-small">
+			<p>
+				Lucy works in education, open data and civic tech in the South West of England 
+				(and anywhere else she's needed).
+				<br><br>
+				<a href=mailto:lucy@jargonautical.com><img src="assets/email64px.png"></a>
+				<a href=https://twitter.com/jargonautical><img src="assets/twitter64px.png"></a>
+				<a href=https://uk.linkedin.com/in/jargonautical><img src="assets/linkedin64px.png"></a>
+			</p>
+			
+		</div>
 	</div>
 	<div class="flex-container">
 		<div class="invisbox-wide">
 			<p>
-			  Not really. Data visualisation is about so much more than visualising data  
-			  - it's crafting a message, a set of design choices around brand and audience, 
-			  and most of all it's a response.
-			  <br><br>
-                          
-			  A response to what? Well, it's kind of your job to figure that out. Here's what you need to be asking yourself.
+				Not really. 
 			</p>
-		  <ul>
-			  <li>What question does your chart answer?</li>
-			  <li>What problem does it solve?</li>
-			  <li>Who will look at it?</li>
-			  <li>Will it help them to take action or make a decision?</li>
-		  </ul>
-		<p>To explore this point, here's an example using some data from one of my hobbies.</p>
+			<p class="hand4">
+				"People don't want data - they want answers."<br>
+			</p>
+			<p class="caption">
+				Lucy Knight, Data Scientist
+			</p>
+			<p>
+				Data visualisation is about so much more than visualising data. 
+				It's crafting a message. It's a set of design choices around brand and audience. 
+				And most of all it's a <strong>response</strong>.
+				<br><br>                   
+				A response to what? Well, it's kind of your job to figure that out. Here's what you need to be asking yourself.
+			</p>
+			<ul>
+				<li>What question does your chart answer?</li>
+				<li>What problem does it solve?</li>
+				<li>Who will look at it?</li>
+				<li>Will it help them to take action or make a decision?</li>
+			</ul>
+			<p>To explore this point, let's diive into an example.</p>
 		</div>
-	</div>
-	<div class="flex-container">
-			<p class="hand4">"People don't want data - they want answers."</p><br>
-			<p class="caption">Lucy Knight, Data Scientist</p>
 	</div>
         
 	<div class="flex-container">
-		<div class="invisbox-wide">
-			<h3>First, define the problem</h3>
+		<div class="invisbox-big">
+			<h3>Defining the problem</h3>
 			<p>
 				I spend several hours a week playing Destiny 2, an online MMORPG first-person shooter.
 				Like many games in this genre it has a player-versus-player (PvP) mode where you can 
@@ -57,18 +72,18 @@
 				story missions. Tensions run hot in this type of gameplay, and accusations of cheating are commonplace.
 				<br><br>
 				Being a middle-aged gamer with below-average reflexes I often come off worse in these competitions, and 
-				of course that's very frustrating. Sometimes I find myself matched against people so skilled, so godly, that 
+				of course that's very frustrating. Occasionally I get matched against people so skilled, so godly, that 
 				I never stood a chance of beating them. 
 				<br><br>
 				When that happens I find myself hovering over the 'Report' button and 
-				asking myself this question ...
+				asking myself this question ... <br><br>
 			</p>
-			<h5>"Do I really believe they're cheating - or am I just upset because I lost?".</h5>
+			<p class="hand4">
+				"Do I really believe they're cheating - or am I just upset because I lost?".
+			</p>
 		</div>
-	</div>
-	<div class="flex-container">
-		<div class="invisbox-wide">
-			<h3>Reinventing the wheel?</h3>
+		<div class="invisbox-small">
+			<h4>Reinventing the wheel?</h4>
 			<p>
 				There are several support apps for Destiny 2, and they're each good 
 				at different things. Inventory management apps let you access your gear and 
@@ -79,54 +94,56 @@
 				These are all good, but the performance trackers have a lot of blinking or scrolling 
 				content - mostly adverts but also banners, buttons and links. It's a very cluttered interface 
 				and not one I enjoy looking at or having open on a second screen while I'm trying to play.
-				Also to get up-to-the-minute data you need to stay logged in constantly. 
-				
+				<br><br>
+				What I need is a simple visual look up that tells me at a glance whether 
+				I'm justified in reporting a player, or whether I just need to get over it.
 			</p>
 		</div>
 	</div>
-	<h3>There's a question to be answered!</h3>
+	
+	<h3>Deciding what the question is</h3>
 	<div class="flex-container">
-	  <div class="invisbox-wide">
-		  
-		  <p>
-			  What I need is a simple visual look up that tells me at a glance whether 
-				I'm justified in reporting a player or whether I just need to get over it.
-			  <br><br>
-			One thing that sets Destiny as a game apart from many others is its very rich, well-structured and 
-			  well-documented API, hence the varied ecosystem of supporting apps and services. 
-			  With a developer account I can access game data for myself and other 
-			  players, and using that I can do pretty much any analysis that takes my fancy.
-			  <br><br>
-			  I started with an assumption: it should be possible to get some data to analyse who the likely cheats are in 
-			  the games I'd played recently. That sort of thing would show up in their game statistics, right? Simple. 
-			  All I needed to do was extract all of the game stats and then try out different models until I got an answer.
+		<div class="invisbox-big">
+			<p>
+				One thing that sets Destiny as a game apart from many others is its very rich, well-structured and 
+				well-documented API, hence the varied ecosystem of supporting apps and services. 
+				With a developer account I can access game data for myself and other 
+				players, and using that I can do pretty much any analysis that takes my fancy.
+				<br><br>
+				I started with an assumption: it should be possible to get some data to analyse who the likely cheats are in 
+				the games I'd played recently. That sort of thing would show up in their game statistics, wouldn't it? Simple. 
+				All I needed to do was extract all of the game stats and then try out different models until I got an answer.
+			</p>
+		</div>
+		<div class="invisbox-small">
+			Some image here
 		</div>
 	</div>
+	
 	<div class="flex-container">
 		<div class="invisbox">
 			<p>
 				For the machine learning bit, I ran through various different model and data structures before admitting that, 
-			        actually, I couldn't identify any meaningful pattern.
-			</p>
-			<h5>What did the data tell me?</h5>
-			<p>
-				Good players tend to be good across competitive and casual game modes, and they play more matches. 
-				They win more, they have a higher kills to deaths ratio (K/D), and more kills per game. They also do better 
+			        actually, I couldn't identify any meaningful pattern.<br><br>
+				<strong>So what did the data tell me?</strong><br><br>
+				Well, skilled players tend to be good across both competitive and casual game modes, and they play more matches overall 
+				(getting in a lot of practice).
+				Obviously they win more, with a higher kills-to-deaths ratio (K/D), and more kills per game. They also do better 
 				on the percentage of precision shots with difficult-to-master weapons like sniper rifles. 
 				<br><br>
 				Lots of these are 
 				also what you'd expect to see if someone were cheating ... so what's the crucial indicator for high-skill 
-				versus illegal mods? I couldn't find it, even when I included individuals recently and very 
+				versus illegal mods? I couldn't find it, even when I included data from individuals recently and very 
 				publicly banned for using cheats.
 				<br><br>
-				Exploring possible principal components for the k-means model shown on the right, 
-				it looked like match duration and total team score (the number of kills by 
-				everyone in the players team combined) were selected as the most significant 
-				factors in whether that person was likely to be cheating. That clearly makes no sense in context!
+				The k-means model shown on the right looked promising, but when I delved into it further and did a principal 
+				components analysis it indicated that match duration and total team score (the number of kills by 
+				everyone in the player's team combined) were most significant 
+				factors in whether that person was likely to be cheating. That clearly makes no sense in context.
 				<br><br>
 				My models either made no sense at all, or were impossibly 100% efficient. Frequently both at once!
-				And the more I tweaked the models, the more I lost sight of the problem I was originally trying to solve. 
-
+				And the more different models I built and the more I tweaked the parameters, the more I lost sight 
+				of the problem I was originally trying to solve. 
 		  </p>
 	  </div>
 	  <div class="invisbox">
@@ -135,14 +152,13 @@
 	</div>
 	<div class="flex-container">
 		<div class="invisbox-big">
-			
 			<p>
 				Thinking about all the factors I'd added to the model, it was obvious that:
-				<ol>
-					<li>there were too many, and</li>
-					<li>most of them were redundant.</li>
-			</ol>
-				For example: one factor which could and should be discounted was the player's class. 
+			<ul>
+				<li>there were too many, and</li>
+				<li>most of them were redundant.</li>
+			</ul>
+				A good example is the player's choice of class. 
 				Looking at the balance of classes in my data 
 				I could see that frequent PvP players are more likely to play hunter, and several of my sample 
 				group play ONLY on hunter and have no characters in either of the other classes. 
@@ -155,25 +171,28 @@
 			</p>
 		</div>
 		<div class="box">
-				<p>
-					In Destiny 2 you can play as one of three classes;<br>
-					<ul>
-						<li>Titan (strong and resilient)</li>
-						<li>Warlock (healing and support)</li>
-						<li>Hunter (mobile and stealthy)</li>
-			                </ul>
-					Each has its advantages and disadvantages in game play.
-				</p>
+			<h4>Player classes</h4>
+			<p>
+				In Destiny 2 you can play as one of three character types, or <strong>classes</strong>;<br>
+			</p>
+			<ul>
+				<li>Titan (strong and resilient)</li>
+				<li>Warlock (healing and support)</li>
+				<li>Hunter (mobile and stealthy)</li>
+			</ul>
+			<p>
+				Each has its advantages and disadvantages in game play. Warlocks can fly, but that consumes 
+				significant ability energy. Hunters can go invisible but they are also the least 
+				resilient. Titans can deal and withstand massive damage but are not very agile.
+			</p>
 		</div>
 	</div>
-<h3>Should I have expected this person to beat me?</h3>
 	<div class="flex-container">
 	  <div class="invisbox-big">
 		  
-		  <p>
-			  
+		  <p class="hand4">
+			  Should I have expected this person to beat me?<br><br>
 		  </p>
-		  
 		  <p>
 			  Signs for that include:
 		  <ul>
@@ -274,15 +293,7 @@
 <h4>About ...</h4>
 	<div class="flex-container">
 		<div class="invisbox">
-			<p>
-				Lucy works in education, open data and civic tech in the South West of England 
-				(and anywhere else she's needed).
-				<br><br>
-				Contact details:
-				<a href=mailto:lucy@jargonautical.com>Email</a>
-				<a href=https://twitter.com/jargonautical>Twitter</a>
-				<a href=https://uk.linkedin.com/in/jargonautical>LinkedIn</a>
-			</p>
+			
 		</div>
 		<div class="invisbox">
 			<h5>(c) Jargonautical Ltd 2020. Branding and logo design by Shufflewing</h5>
