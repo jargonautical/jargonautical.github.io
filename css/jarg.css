@@ -21,7 +21,7 @@ ol, ul, li, a, blockquote
 {
 	margin: 10px;
 	padding: 10px;
-	line-height: 130%;
+	line-height: 100%;
 }
 
 body {
@@ -185,13 +185,6 @@ html {
   margin: 0 auto;
   #background: #eee; /* Fills the page */
   position: relative; /* Fix for absolute positioning */
-}
-
-ul {
-  list-style-type: circle;
-  list-style-position: inside;
-  margin-left: 20px;
-  padding: 0;
 }
 
 .flex-container {
