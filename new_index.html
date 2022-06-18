@@ -22,16 +22,11 @@
 				some  kind of chart and the job is done, right?<br><br>
 				Not really.
 			</p>
-			<p class="hand4">
-				"People don't want data;<br>they want answers."
-			</p>
-			<p class="caption">
-				Lucy Knight, Data Scientist
-			</p>
+			
 			<p>
 				Data visualisation is about so much more than visualising data. 
 				It's crafting a message. It's a set of design choices around brand and audience. 
-				And most of all it's a <bold>response</bold>.
+				And most of all it's a <b>response</b>.
 				<br><br>                   
 				A response to what? Well, it's kind of your job to figure that out. Here's what you need to be asking yourself.
 			</p>
@@ -44,6 +39,7 @@
 			<p>To explore this point, let's dive into an example.</p>
 		</div>
 		<div class="invisbox-small">
+			<h3>About the author</h3>
 			<p>
 				Lucy works in education, open data and civic tech in the South West of England 
 				(and anywhere else she's needed). 
@@ -54,7 +50,9 @@
 				<a href=https://twitter.com/jargonautical><img src="assets/twitter64px.png"></a>
 				<a href=https://uk.linkedin.com/in/jargonautical><img src="assets/linkedin64px.png"></a>
 			</p>
-			
+			<p class="hand4">
+				"People don't want data;<br>they want answers."
+			</p>			
 		</div>
 	</div>
         
@@ -111,7 +109,7 @@
 	<div class="flex-container">
 		<div style="clear: left;">
 			<p style="float: right;"><img src="/mytracker/kmeans.png" width="400" border="1px"></p>
-			<p class="caption">K-means clustering of game data</p>
+			<p style="float: right;" class="caption">K-means clustering of game data</p>
 			<p>
 				And this is exactly what I did, using the API to extract a massive file for a sample of players. 
 				I included myself as a control (I know I'm not cheating!). For the same reaason I included a couple of friends 
@@ -127,12 +125,10 @@
 	</div>
 	
 	<div class="flex-container">
-		<div class="invisbox">
-			<img src="/mytracker/corr_flare.png" width="100%" align='center'>
-			<p class="caption">Correlation matrix</p>
-		</div>
-		<div class="invisbox">
+		<div style="clear: left;">
 			<h3>So what could the data tell me?</h3>
+			<p style="float: right;"><img src="/mytracker/corr_flare.png" width="600" border="1px"></p>
+			<p style="float: right;" class="caption">Correlation matrix</p>
 			<p>
 				Well, skilled players tend to be good across both competitive and casual game modes, and they play more matches overall 
 				(getting in a lot of practice).
@@ -155,7 +151,7 @@
 	  </div>
 	
 	<div class="flex-container">
-		<div class="invisbox-big">
+		<div class="invisbox-wide">
 			<h3>Time for a sense check</h3>
 			<p>
 				Thinking about all the factors I'd added to the model, it was obvious that:
@@ -170,7 +166,14 @@
 				This will be reflected in the kills-to-deaths ratio and also efficiency. 
 				Number of kills overall is strongly correlated to score, and so on.
 				<br><br>
-				Another factor which could be skewing the analysis is the player's choice of class. 
+				Another factor which could be skewing the analysis is the player's choice of class.
+			</p>
+			<ul>
+				<li>Titan (strong and resilient). Basically a tank with fists.</li>
+				<li>Warlock (healing and support). Can fly, also look fabulous in robes.</li>
+				<li>Hunter (mobile and sneaky). Like to jump a lot, hard to catch.</li>
+			</ul>
+			<p>
 				Looking at the balance of classes in my data 
 				I could see that frequent PvP players are more likely to play hunter, an archetype known for agility and stealth, 
 				and several of my sample group play ONLY on hunter and have no characters in either of the other classes. 
@@ -178,18 +181,9 @@
 				So if my analysis isn't answering my question, what will? What is the question, anyway?			
 			</p>
 		</div>
-		<div class="invisbox-small">
-			<h4>Player classes</h4>
-			<ul>
-				<li>Titan (strong and resilient). Basically a tank with fists.</li>
-				<li>Warlock (healing and support). Can fly, also look fabulous in robes.</li>
-				<li>Hunter (mobile and sneaky). Like to jump a lot, hard to catch.</li>
-			</ul>
-		</div>
 	</div>
 	<div class="flex-container">
 		<div class="invisbox-wide">
-			<h4>What do I really want to know?</h4>
 			<p>
 				Here's the question I should have been asking.
 			</p>
@@ -222,7 +216,9 @@
 	</div>
 	
 	<div class="flex-container">
-		<div class="invisbox-big">
+		<div style="clear: left;" class="invisbox-wide">
+			<p style="float: right;"><img src="/mytracker/best.png" width="600" border="1px"></p>
+			<p style="float: right;" class="caption">Best weapon archetype by mode and number of kills</p>
 			<p>
 			  We're getting there now. We can certainly do a comparison of gear, level and also player history 
 			  to see whether their win status or their kill count seems feasible.
@@ -250,10 +246,6 @@
 			  count and all-time per-game average. This is starting to look like something that 
 			  could help with my particular question.
 			</p>
-		</div>
-		<div class="invisbox-small">
-			<img src="/mytracker/best.png" width="100%" align='center'>
-			<p class="caption">Best weapon archetype by mode and number of kills</p>
 		</div>
 	</div>
 	<div class="flex-container">
