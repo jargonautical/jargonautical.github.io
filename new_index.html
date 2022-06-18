@@ -3,7 +3,6 @@
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="css/reset.css">
   <link rel="stylesheet" type="text/css" href="css/header.css">
-  <!--<link rel="stylesheet" type="text/css" href="css/typography.css">-->
   <link rel="stylesheet" type="text/css" href="css/jarg.css">
   <link rel="shortcut icon" href="assets/Jargonautical_web_icon.jpg" />
   <style>
@@ -22,7 +21,6 @@
 				some  kind of chart and the job is done, right?<br><br>
 				Not really.
 			</p>
-			
 			<p>
 				Data visualisation is about so much more than visualising data. 
 				It's crafting a message. It's a set of design choices around brand and audience. 
@@ -70,7 +68,7 @@
 				I never stood a chance of beating them. 
 				<br><br>
 				When that happens I find myself hovering over the 'Report' button and 
-				asking myself this question ... <br><br>
+				asking myself this crucial question.<br><br>
 			</p>
 			<p class="hand4">
 				"Do I really believe they're cheating - or am I just upset because I lost?".
@@ -83,7 +81,7 @@
 				location to access your vault. Others provide performance and ranking information 
 				so you can see how you're doing and who you're up against. 
 				<br><br>
-				These are all good, but the performance trackers have a lot of blinking or scrolling 
+				These are all helpful functions, but the performance trackers tend to have a lot of blinking or scrolling 
 				content - mostly adverts but also banners, buttons and links. It's a very cluttered interface 
 				and not one I enjoy looking at or having open on a second screen while I'm trying to play.
 				<br><br>
@@ -93,7 +91,7 @@
 			<h3>Getting hold of some data</h3>
 			<p>
 				One thing that sets Destiny as a game apart from many others is its very rich, well-structured and 
-				well-documented API, hence the varied ecosystem of supporting apps and services. 
+				well-documented API - hence the varied ecosystem of supporting apps and services. 
 				With a developer account I can access game data for myself and other 
 				players, and using that I can do pretty much any analysis that takes my fancy.
 				<br><br>
@@ -110,12 +108,12 @@
 			<p style="float: right;"><img src="/mytracker/kmeans.png" width="400" border="1px"></p>
 			<p>
 				And this is exactly what I did, using the API to extract a massive file for a sample of players. 
-				I included myself as a control (I know I'm not cheating!). For the same reaason I included a couple of friends 
+				I included myself as a control (since I know I'm not cheating!). For the same reaason I included a couple of friends 
 				who I know absolutely would never do so, and for good measure I got data on a small number of professional streamers 
 				with excellent reputations for fair play. For balance I then included at least one known cheater (recently and 
 				very publicly banned) and a few people I've played against in the past and had doubts about.
 				<br><br>
-				Armed with this data, I built various different models and reviewed the results. I won't bore the reader 
+				Armed with this data, I built several different models and reviewed the results. I won't bore the reader 
 				with the details of each one because, as it turned out, none of them could identify any meaningful pattern.
 				<br><br>
 				The k-means model shown on the right looked very promising, but when I delved into it further with a principal 
@@ -147,10 +145,11 @@
 			</p>
 			<h3>Time for a sense check</h3>
 			<p>
-				Thinking about all the factors I'd added to the model, it was obvious that for a 
-				start, there were too many, and also many of them were redundant.
-				A good example of this is the choice of stats about number of kills. 
-				Average score per life = how many kills before the player is brought down by an opponent. 
+				Thinking about all the factors I'd added to the model, it became obvious that for a 
+				start there were too many, and also many of them were redundant.
+				A good example of this is the range of stats about the number of kills. 
+				Average-score-per-life (avscpl) reflects how many kills a player cana get before 
+				they're brought down by an opponent. 
 				This will be reflected in the kills-to-deaths ratio and also efficiency. 
 				Number of kills overall is strongly correlated to score, and so on. 
 				This is borne out in the correlation matrix.
@@ -158,27 +157,26 @@
 				Another factor which could be skewing the analysis is the player's choice of class. Options are:
 			</p>
 			<ul>
-				<li>Titan (strong and resilient). Basically a tank with fists.</li>
-				<li>Warlock (healing and support). Can fly, also look fabulous in robes.</li>
-				<li>Hunter (mobile and sneaky). Like to jump a lot, hard to catch.</li>
+				<li>Titan - strong and resilient. Basically a tank with fists.</li>
+				<li>Warlock - healing and support. Some of then can fly, and they all look fabulous.</li>
+				<li>Hunter - mobile and sneaky. Like to jump around a lot, very hard to catch.</li>
 
 			</ul>
 			<p>
 			        There's a perception that frequent PvP players are more likely to play hunter, 
 				an archetype known for agility and stealth, 
 				and indeed several of my sample group play ONLY on hunter and have no characters in either of the other classes.
-				This may or may not be meaningful, but it's certainly a balance issue for my dataset.
-				<br><br>
-				So if my analysis isn't answering my question, what will? What was the question, anyway?	
+				This may or may not be meaningful, but it's certainly a balance issue for my dataset. Should I remove it from the 
+				analysis? No. I need to go back to the beginning and remind myself what problem I'm trying to solve.
 			</p>
 		</div>
 	  </div>
 	
 	<div class="flex-container">
-		<p class="hand4">
-			Should I have expected this person to beat me?
-		</p>
 		<div style="clear: left;">
+			<p class="hand4">
+				Should I have expected this person to beat me?
+			</p>
 			<p>
 				I don't need machine learning for that. If I can look at the other player's character, their build 
 				and gear choices, I can use my own understanding of the game's context to make a judgement.
@@ -198,8 +196,8 @@
 				<li>Did I equip any weapons or abilities that I haven't had much practice using?</li>
 			</ul>
 			<p>
-				When you're taking heavy and sustained fire from player 'xX~reference-to-god-tier-skills~Xx' 
-				it's clearly not the ideal time for self-reflection, but it's a good habit 
+				When you're taking heavy and sustained fire from Mad Skillz McKillbot 
+				it's clearly not the ideal time to indulge in self-reflection, but it's a good habit 
 				to develop post-match. It's entirely possible that nobody here is cheating, and I simply need to 'git gud'.
 			</p>
 		</div>
@@ -208,7 +206,6 @@
 	<div class="flex-container">
 		<div style="clear: left;" class="invisbox-wide">
 			<p style="float: right;"><img src="/mytracker/best.png" width="600" border="1px"></p>
-			<p style="float: right;" class="caption">Best weapon archetype by mode and number of kills</p>
 			<p>
 				We're getting there now. With the data I've extracted I can certainly do a comparison of gear, 
 				level and also player history to see whether their win status or their kill count seems feasible.
@@ -232,16 +229,16 @@
 				detailed data on things like the percentage of precision shots, which indicates skill, or the usage of 
 				particular weapon archetypes and character builds which suggest careful tuning of attributes.
 				<br><br>
-				The scaattor plot to the right shows what some of that data looks like when plotted against kill 
-				count and all-time per-game average. This is starting to look like something that 
+				The scatter plot to the right shows what some of that data looks like when plotted against kill 
+				count and all-time per-game average. This is starting to resemble something that 
 				could help with my particular question.
 			</p>
 		</div>
 	</div>
 	<div class="flex-container">
 		<h4>Working out how to frame it</h4>
-
-		<div class="invisbox-big">
+		<div style="clear: left;">
+			<p style="float: right;"><img src="/mytracker/app_card.png" width="600" border="1px"></p>
 			<p>
 				Here's where I abandoned complex models and wrote a script to pull out the results of my latest match. 
 				Each time I play, if I have doubts, I can refresh this page and take a quick look at each player to see 
@@ -261,12 +258,7 @@
 				Now we're into design territory.
 			</p>
 		</div>
-		<div class="invisbox-small">
-			<img src="/mytracker/app_card.png" width="100%" align='center'>
-			<p class="caption">First pass at a card display in Javascript<p>
-		</div>
 	</div>
-<h4>Designing the thing</h4>
 	<div class="flex-container">
 		<div class="invisbox-wide">
 			<p>
