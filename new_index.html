@@ -204,29 +204,26 @@
 	</div>
 	
 	<div class="flex-container">
-		<div style="clear: left;" class="invisbox-wide">
-			<p style="float: right;"><img src="/mytracker/best.png" width="600" border="1px"></p>
+		<div style="clear: left;">
+			<p style="float: right;"><img src="/mytracker/best.png" width="400" border="1px"></p>
 			<p>
-				We're getting there now. With the data I've extracted I can certainly do a comparison of gear, 
-				level and also player history to see whether their win status or their kill count seems feasible.
+				We're getting there now. With the data I've extracted I can review a player's gear, build and 
+				level. I can also look into their game history to see whether their win status or their kill count seems feasible.
 				<br><br>
-				Existing tracker apps can help here, but they usually centre around a player's
+				Existing tracker apps can also do this, but they usually centre around a player's
 				<a href=https://en.wikipedia.org/wiki/Elo_rating_system>Elo rating</a>.
-				I find this less meaningful in this context, because it's calculated purely on wins and losses. 
+				For me this feels unhelpful in this context, because it only counts wins and losses. 
 				Win a game and you move up, lose a game and you move down. 
 				In a multiplayer activity where there can be (depending on match settings) up to six players per team, it's  
-				not necessarily an accurate meaasure of each player's performance. 
-				<br><br>
+				not an accurate meaasure of each player's performance. 
 				Someone with a high Elo could simply have been teamed up with very high-skill players - a 'carry', 
 				where the less-skilled player gets an easy ride with their team mates doing all the hard work.  By the same token 
 				someone with a streak of losses may actually be very good, but has been repeatedly matched with lower-ranked teammates in 
-				an effort to balance the lobby. So Elo, which was designed for ranking one-on-one performance in chess, is not 
-				helpful here.
+				an effort to balance the lobby. Elo ratings work best in one-on-one scenarios.
 				<br><br>
-				Destiny 2 players are instead assigned a 'combat rating' which takes into account 
-				each player's individual performance and contribution to the match result. 
-				Along with that we can also access very 
-				detailed data on things like the percentage of precision shots, which indicates skill, or the usage of 
+				In the Destiny 2 data, I found that players are assigned a 'combat rating' which takes into account 
+				each person's individual performance and their contribution to the match result. This makes more sense to me, 
+				so I'll use that along with detailed data on things like the percentage of precision shots, and the usage of 
 				particular weapon archetypes and character builds which suggest careful tuning of attributes.
 				<br><br>
 				The scatter plot shows what some of that data looks like when plotted against kill 
@@ -244,14 +241,15 @@
 				if I can spot any unusual patterns. 
 				<br><br>
 				Certainly having each player's all-time per-game average to compare to the match in question 
-				seems like a useful indicator of unusual circumstances which might point to cheating.
+				seems like a useful indicator of unusually good performance which might point to cheating.
 				<br><br>
-				It's progress, but there are still some issues. For one, it's ugly! I built this based on something far more beautiful,
+				It's progress, but there are still some issues. For one - it's ugly! I built this based on something far more beautiful,
 				<a href=https://www.taniarascia.com/how-to-connect-to-an-api-with-javascript/>this tutorial on connecting to an API with javascript<a>, 
 				and then I played around with the colours to indicate win/loss status (the colour at the top of the card) and the 
 				comparative combat rating (the stripe in the centre). I didn't like how it looked, but colours are easy to tweak. 
 				What's more critical now is deciding how to arrange this data. Is the colour coding informative, or 
-				just distracting? Are the items in a logical or intuitive order for the reader? What's the 
+				just distracting? Does the text adequately explain what these things mean? 
+				Are the items in a logical or intuitive order for the reader? What's the 
 				first thing I want to know when I look at this, aand which items do I want to stand out?
 				<br><br>
 			</p>
@@ -273,14 +271,16 @@
 	<div class="flex-container">
 		<div class="invisbox-small">
 			<p>
-				We could use a single symbol for all three dimensions. An up-arrow or down-arrow to convey direction, 
-				a colour to represent good/bad, and the arrow size relative to the difference between this match and the usual average.
+				We could use a single symbol for all three dimensions. An up-arrow or down-arrow works to convey direction, 
+				optional colour to represent good/bad, and the arrow height can be made 
+				relative to the difference between this match and the usual average.
 			</p>
 		</div>
 		<div class="invisbox-small">
 			<p>
-				Or we could use text formatting. the colour of the text or its background could represent 
-				good/bad, and the font size could be relative to the difference.
+				Or we could use text formatting. Either the colour of the text itself or its background element could represent 
+				good/bad, and the font size could be relative to the difference between this match and the player's usual 
+				per-game average.
 			</p>
 		</div>
 		<div class="invisbox-small">
@@ -294,6 +294,23 @@
 	<div class="flex-container">
 		<div class="invisbox-wide">
 			<img src="/assets/mockup.jpeg" width="100%" align='center'>
+		</div>
+	</div>
+	<div class="flex-container">
+		<div class="invisbox-small">
+			Image of latest iteration
+		</div>
+		<div class="invisbox-big">
+			<p>
+				Once I'd drawn them out very roughly, it got a lot easier to see which of these would work 
+				- in fact I found that I instantly preferred the bar chart option. The text formatting could 
+				also work, and that would be my second choice if the bar charts turned out to be too awkward to code. 
+				<br><br>
+				The arrow symbols weren't even in the running, as I realised when I tried to work out how 
+				to sketch the mockup. It felt unintuitive to have an arrow for the 
+				per-game average, since it's actually supposed to show the baseline, but then that meant I would have two different 
+				symbols side by side in that element. I didn't want to spend ages dithering over which symbols to choose here so 
+				that option was parked until I figure out a way to do it (or get inspired by someone else's solution).
 		</div>
 	</div>
 	
