@@ -19,25 +19,8 @@
 			<p>
 				What do we mean by 'making sense of data'? It can't be that complicated. 
 				Surely that's what graphs and stuff are for ... just shove your data into 
-				some  kind of chart and the job is done, right?
-			</p>
-		</div>
-		<div class="invisbox-small">
-			<p>
-				Lucy works in education, open data and civic tech in the South West of England 
-				(and anywhere else she's needed).
-				<br><br>
-				<a href=mailto:lucy@jargonautical.com><img src="assets/email64px.png"></a>
-				<a href=https://twitter.com/jargonautical><img src="assets/twitter64px.png"></a>
-				<a href=https://uk.linkedin.com/in/jargonautical><img src="assets/linkedin64px.png"></a>
-			</p>
-			
-		</div>
-	</div>
-	<div class="flex-container">
-		<div class="invisbox-wide">
-			<p>
-				Not really. 
+				some  kind of chart and the job is done, right?<br><br>
+				Not really.
 			</p>
 			<p class="hand4">
 				"People don't want data - they want answers."<br>
@@ -58,7 +41,18 @@
 				<li>Who will look at it?</li>
 				<li>Will it help them to take action or make a decision?</li>
 			</ul>
-			<p>To explore this point, let's diive into an example.</p>
+			<p>To explore this point, let's dive into an example.</p>
+		</div>
+		<div class="invisbox-small">
+			<p>
+				Lucy works in education, open data and civic tech in the South West of England 
+				(and anywhere else she's needed). Currently available for project work.
+				<br><br>
+				<a href=mailto:lucy@jargonautical.com><img src="assets/email64px.png"></a>
+				<a href=https://twitter.com/jargonautical><img src="assets/twitter64px.png"></a>
+				<a href=https://uk.linkedin.com/in/jargonautical><img src="assets/linkedin64px.png"></a>
+			</p>
+			
 		</div>
 	</div>
         
@@ -82,8 +76,8 @@
 				"Do I really believe they're cheating - or am I just upset because I lost?".
 			</p>
 		</div>
-		<div class="invisbox-small">
-			<h4>Reinventing the wheel?</h4>
+		<div class="box">
+			<h3>Reinventing the wheel?</h3>
 			<p>
 				There are several support apps for Destiny 2, and they're each good 
 				at different things. Inventory management apps let you access your gear and 
@@ -97,14 +91,7 @@
 				<br><br>
 				What I need is a simple visual look up that tells me at a glance whether 
 				I'm justified in reporting a player, or whether I just need to get over it.
-			</p>
-		</div>
-	</div>
-	
-	<h3>Deciding what the question is</h3>
-	<div class="flex-container">
-		<div class="invisbox-big">
-			<p>
+				<br><br>
 				One thing that sets Destiny as a game apart from many others is its very rich, well-structured and 
 				well-documented API, hence the varied ecosystem of supporting apps and services. 
 				With a developer account I can access game data for myself and other 
@@ -112,20 +99,27 @@
 				<br><br>
 				I started with an assumption: it should be possible to get some data to analyse who the likely cheats are in 
 				the games I'd played recently. That sort of thing would show up in their game statistics, wouldn't it? Simple. 
-				All I needed to do was extract all of the game stats and then try out different models until I got an answer.
+				All I needed to do is extract all of the game stats and then try out different machine learning models 
+				until I get an answer.
 			</p>
 		</div>
-		<div class="invisbox-small">
-			Some image here
-		</div>
 	</div>
-	
+		
 	<div class="flex-container">
 		<div class="invisbox">
 			<p>
-				For the machine learning bit, I ran through various different model and data structures before admitting that, 
-			        actually, I couldn't identify any meaningful pattern.<br><br>
-				<strong>So what did the data tell me?</strong><br><br>
+				And this is exactly what I did, using the API to extract a massive file for a sample of players. 
+				I included myself as a control (I know I'm not cheating!). For the same reaason I included a couple of friends 
+				who I know absolutely would never do so, and for good measure I got data on a small number of professional streamers 
+				with excellent reputations for fair play. For balance I then included at least one known cheater (recently and 
+				very publicly banned) and a few people I've played against in the past and had doubts about.
+				<br><br>
+				Armed with this data, I built various different models and reviewed the results. I won't bore the reader 
+				with the details of each one because, as it turned out, none of them could identify any meaningful pattern.
+				<br><br>
+			</p>
+			<h4>So what could the data tell me?</h4>
+			<p>
 				Well, skilled players tend to be good across both competitive and casual game modes, and they play more matches overall 
 				(getting in a lot of practice).
 				Obviously they win more, with a higher kills-to-deaths ratio (K/D), and more kills per game. They also do better 
@@ -133,13 +127,12 @@
 				<br><br>
 				Lots of these are 
 				also what you'd expect to see if someone were cheating ... so what's the crucial indicator for high-skill 
-				versus illegal mods? I couldn't find it, even when I included data from individuals recently and very 
-				publicly banned for using cheats.
+				versus illegal mods?
 				<br><br>
-				The k-means model shown on the right looked promising, but when I delved into it further and did a principal 
+				The k-means model shown on the right looked promising, but when I delved into it further with a principal 
 				components analysis it indicated that match duration and total team score (the number of kills by 
 				everyone in the player's team combined) were most significant 
-				factors in whether that person was likely to be cheating. That clearly makes no sense in context.
+				factors in whether that person was likely to be cheating. That clearly can't be right in this context.
 				<br><br>
 				My models either made no sense at all, or were impossibly 100% efficient. Frequently both at once!
 				And the more different models I built and the more I tweaked the parameters, the more I lost sight 
@@ -148,26 +141,31 @@
 	  </div>
 	  <div class="invisbox">
 		  <img src="/mytracker/kmeans.png" width="100%" align='center'>
+		  <p class="caption">K-means clustering of game data</p>
 	  </div>
 	</div>
 	<div class="flex-container">
 		<div class="invisbox-big">
+			<h3>Time for a sense check</h3>
 			<p>
 				Thinking about all the factors I'd added to the model, it was obvious that:
+			</p>
 			<ul>
 				<li>there were too many, and</li>
-				<li>most of them were redundant.</li>
+				<li>many of them were redundant.</li>
 			</ul>
-				A good example is the player's choice of class. 
+			<p>
+				A good example of this is the choice of stats about number of kills. 
+				Average score per life = how many kills before the player is brought down by an opponent. 
+				This will be reflected in the kills-to-deaths ratio and also efficiency. 
+				Number of kills overall is strongly correlated to score, and so on.
+				<br><br>
+				Another factor which could be skewing the analysis is the player's choice of class. 
 				Looking at the balance of classes in my data 
 				I could see that frequent PvP players are more likely to play hunter, and several of my sample 
 				group play ONLY on hunter and have no characters in either of the other classes. 
-				
-				That's both skewing my sample 
-				and at the same time adding no useful information whatsoever. 
-			<br><br>
-			So if my analysis isn't answering my question, what will? 
-			  Time to go back and reframe the question. 
+				<br><br>
+				So if my analysis isn't answering my question, what will? What is the question, anyway?			
 			</p>
 		</div>
 		<div class="box">
@@ -189,38 +187,53 @@
 	</div>
 	<div class="flex-container">
 	  <div class="invisbox-big">
-		  
+		  <h4>What do I really want to know?</h4>
+		  <p>
+			  Here's the question I should have been asking.
+		  </p>
 		  <p class="hand4">
-			  Should I have expected this person to beat me?<br><br>
+			  Should I have expected this person to beat me?
 		  </p>
 		  <p>
-			  Signs for that include:
+			  I don't need machine learning for that. I just need to look at the other player's character, their build 
+			  and gear choices, and use my own understanding of the game's context to make a judgement.
+		  </p>
 		  <ul>
-			  <li>Are they using the meta?</li>
+			  <li>Are they using the strongest weapon types?</li>
 			  <li>Are they are using known exploits?</li>
-			  <li>Are they using particlar exotic weapons or armour?</li>
+			  <li>Are they using particlar exotic weapons or armour that add extra abilities?</li>
 			  <li>Are they at a significantly higher level than me?</li>
 		  </ul>
-			  If one or more of those things is true, perhaps I just need to 'git gud' ...
+		  <p>
+			  And finally, I need to take a good hard look at myself too.
+		  </p>
+		  <ul>
+			  <li>Are we playing on a PvP map that I'm not very familiar with?</li>
+			  <li>Am I using the right set up and play style for that map?</li>
+			  <li>Did I equip any weapons or abilities that I haven't had much practice using?</li>
+		  </ul>
+		  <p>
+			  In the heat of the moment it's difficult to be that self-reflective, but it's a good habit 
+			  to develop. It's entirely possible that nobody here is cheating, and I just need to 'git gud'.
 		  </p>
 	  </div>
 	  <div class="invisbox-small">
-		  <p class="hand4">So ... what do I really want to know here?</p>
+		  image of character stats maybe
 	  </div>
 	</div>
 	
 	<div class="flex-container">
 	  <div class="invisbox-big">
 		  <p>
-			  One way to explore these questions is to look at someone's game history 
+			  We're getting there now. We can certainly do a comparison of gear, level and also player history 
 			  to see whether their win status or their kill count seems feasible.
 			  <br><br>
-			  How do we do this?
-			  <br><br>
-			  Tracker apps usually start with a player's Elo ranking, which I find unhelpful. 
-			  because it only counts wins and losses. Win a game and you move up, lose a game and you move down. 
+			  Tracker apps wil help here, but they usually centre around a player's 
+			  <a href=https://en.wikipedia.org/wiki/Elo_rating_system>Elo rating</a>. 
+			  I find this less meaningful in context, because it's calculated purely on  wins and losses. 
+			  Win a game and you move up, lose a game and you move down. 
 			  In a multiplayer activity where there can be (depending on match settings) up to six players per team, it's  
-			  too blunt an instrument. 
+			  not necessarily an accurate meaasure of each player's performance. 
 			  <br><br>
 			  For example, someone with a high Elo could simply have been teamed up with very high-skill players - a 'carry', 
 			  where the less-skilled player gets an easy ride with their team mates doing all the hard work.  By the same token 
@@ -231,11 +244,12 @@
 			  Destiny 2 players are instead assigned a 'combat rating' which takes into account 
 			  each player's individual performance and contribution to the match result. 
 			  Along with that we can also access very 
-			  detailed data on the percentage of precision shots, which indicates skill, or the usage of 
+			  detailed data on things like the percentage of precision shots, which indicates skill, or the usage of 
 			  particular weapon archetypes and character builds which suggest careful tuning of attributes.
 			  <br><br>
 			  The chart to the right shows what some of that data looks like when plotted against kill 
-			  count and all-time per-game average.
+			  count and all-time per-game average. This is starting to look like something that 
+			  could help with my particular question.
 		  </p>
 		</div>
 		<div class="invisbox-small">
@@ -248,19 +262,27 @@
 		<div class="invisbox">
 			
 			<p>
-				Looking at some of these stats in a quick look up, one card per player, it could be helpful. Certainly 
-				having the per-game average to compare to the match in question seems like a useful indicator 
-				of unusual circumstances which might point to cheating.
+				Here's where I abandoned complex models and wrote a script to pull out the results of my latest match. 
+				Each time I play, if I have doubts, I can refresh this page and take a quick look at each player to see 
+				if I can spot any unusual patterns. 
 				<br><br>
-				But is this the right way to display it? Are the colours informative, or just distracting? Are the items in 
-				a logical or intuitive order for the reader?
+				Certainly having each player's all-time per-game average to compare to the match in question 
+				seems like a useful indicator of unusual circumstances which might point to cheating.
+				<br><br>
+				It's progress, but there are still some issues. For one, it's ugly! I built on something far more beautiful,
+				<a href=https://www.taniarascia.com/how-to-connect-to-an-api-with-javascript/>this tutorial on connecting to an API with javascript<a>, 
+				and played around with the colours to show at a glance the win/loss status (the colour at the top of the card) and the 
+				comparative combat rating (the stripe in the centre). I didn't like how it looked, but it's a start. 
+				Now I need to make some decisions about the way I'm displaying this data. Is the colour coding informative, or 
+				just distracting? What colur scheme might I go with if I decide to keep it? 
+				Are the items in a logical or intuitive order for the reader? What do I want to stand out?
 				<br><br>
 				Now we're into design territory.
 			</p>
 		</div>
 		<div class="invisbox">
 			<img src="/mytracker/app_card.png" width="100%" align='center'>
-			<p class="caption">A mock up of the current iteration<p>
+			<p class="caption">First pass at a card display in Javascript<p>
 		</div>
 	</div>
 <h4>Designing the thing</h4>
@@ -290,14 +312,6 @@
 		</p>
 		</div>
 	</div>
-<h4>About ...</h4>
-	<div class="flex-container">
-		<div class="invisbox">
-			
-		</div>
-		<div class="invisbox">
-			<h5>(c) Jargonautical Ltd 2020. Branding and logo design by Shufflewing</h5>
-		</div>
-	</div>
+<h5>(c) Jargonautical Ltd 2020. Branding and logo design by Shufflewing</h5>
 </body>
 
