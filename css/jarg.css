@@ -11,6 +11,7 @@
   --bgbox: #FAF0E6; /* Linen #FAF0E6 250,240,230 */
   --outline: #36454f; /* Charcoal #36454f 54/69/79 */
   --hand: #318385; /* Dark Seafoam #318385 49/131/133 */
+  --query: teal;
   --dark: #36454f; /* Charcoal #36454f 54/69/79 */
   --pop: #ca492f; /* Coral #ca492f 202/74/47 */
   --warm: #d56e59; /* Light Coral #d56e59 213/110/89 */
@@ -57,6 +58,13 @@ p.comment {
   font-size: 1.2em;
   font-style: italic;
 }
+
+p.query {
+  font-family: 'Space Mono';
+  color: var(--query);
+  font-size: 1.2em;
+}
+
 
 p.snippet {
   font-family: 'Space Mono';

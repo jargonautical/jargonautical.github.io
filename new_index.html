@@ -4,182 +4,148 @@
   <link rel="stylesheet" type="text/css" href="css/reset.css">
   <link rel="stylesheet" type="text/css" href="css/header.css">
   <link rel="stylesheet" type="text/css" href="css/jarg.css">
-  <link rel="shortcut icon" href="assets/Jargonautical_web_icon.jpg" />
+  <link rel="shortcut icon" href="./assets/Jargonautical_web_icon.png" />
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Caveat&family=Grape+Nuts&family=Rock+Salt&display=swap');
   </style>
-  <div class='hero-image'></div>
+  <!--<div class='hero-image'></div>-->
 </head>
 <body>
-  <h2>Making sense of data</h2>
+  <h1>Making sense of data</h1>
 	<div class="flex-container">
-		<div class="invisbox-big">
-			<h3>Back to basics</h3>
+		<div style="clear: left;">
 			<p>
-				What do we mean by 'making sense of data'? It can't be that complicated. 
-				Surely that's what graphs and stuff are for ... just shove your data into 
-				some  kind of chart and the job is done, right?<br><br>
-				Not really.
-			</p>
-			<p>
-				Data visualisation is about so much more than visualising data. 
-				It's crafting a message. It's a set of design choices around brand and audience. 
-				And most of all it's a <b>response</b>.
-				<br><br>                   
-				A response to what? Well, it's kind of your job to figure that out. Here's what you need to be asking yourself.
+				How do we make sense of data, and why does it merit a whole article? It can't be that complicated.
+				Surely that's what graphs and stuff are for ... just shove your data into
+				some kind of chart and the job is done, right?
+        <br><br>
+				Well, not really.
+        <br><br>
+        It's become easier and easier over the last few years to create charts
+        and graphs. Lots more tools are available, many of them very
+        intuitive to use even for a non-expert, and more often than not the
+        design options they offer are so well-curated that even a complete beginner
+        can produce a beautiful and clear chart in just a few steps.
+        <br><br>
+        And this is a problem, because data visualisation is about so much more than visualising data.
+        It's sifting the data for meaning. It's cleaning, filtering and merging.
+				It's crafting a message. It's a set of design choices around brand and audience.
+				And most of all it's a response.
+				<br><br>
+				A response to what? Well, it's kind of your job to figure that out.
+        If you're making something to visualise data in some way here's what you need to be asking yourself.
 			</p>
 			<ul>
-				<li>What question does your chart answer?</li>
-				<li>What problem does it solve?</li>
-				<li>Who will look at it?</li>
-				<li>Will it help them to take action or make a decision?</li>
-			</ul>
-			<p>To explore this point, let's dive into an example.</p>
-		</div>
-		<div class="invisbox-small">
-			<h3>About the author</h3>
-			<p>
-				Lucy works in education, open data and civic tech in the South West of England 
-				(and anywhere else she's needed). 
-				<br><br>
-				Currently available for project work.
-				<br><br>
-				<a href=mailto:lucy@jargonautical.com><img src="assets/email64px.png"></a>
-				<a href=https://twitter.com/jargonautical><img src="assets/twitter64px.png"></a>
-				<a href=https://uk.linkedin.com/in/jargonautical><img src="assets/linkedin64px.png"></a>
-			</p>
-			<p class="hand4">
-				"People don't want data;<br>they want answers."
-			</p>			
-		</div>
-	</div>
-        
-	<div class="flex-container">
-		<div class="invisbox-wide">
-			<h3>Defining the problem</h3>
+        <li>What problem does this solve?</li>
+				<li>What question could thing answer?</li>
+        <li>If I had an answer, what would it look like?</li>
+        <li>Who will be looking at it? Why?</li>
+				<li>Will this help someone to make a decision?</li>
+      </ul>
+			<p>To explore these questions, let's dive into an example.</p>
+			<h3>What problem am I solving?</h3>
 			<p>
 				I spend several hours a week playing Destiny 2, an online MMORPG first-person shooter.
-				Like many games in this genre it has a player-versus-player (PvP) mode where you can 
-				test your skills against other players in a controlled arena separate from the main 
-				story missions. Tensions run hot in this type of gameplay, and accusations of cheating are commonplace.
+				Like many games in this genre it has a player-versus-player (PvP) mode where you can
+				test your skills against other players in a controlled arena separate from the main
+				story missions. Emotions run hot in this type of gameplay, and accusations of cheating are commonplace.
 				<br><br>
-				Being a middle-aged gamer with below-average reflexes I often come off worse in these competitions, and 
-				of course that's very frustrating. Occasionally I get matched against people so skilled, so godly, that 
-				I never stood a chance of beating them. 
+				Being a middle-aged gamer with fading eyesight and below-average
+        reflexes I often come off worse in these competitions, and
+				of course that's very frustrating. Occasionally I get matched
+        against people so skilled, so godly, that
+				I never stood a chance of beating them.
 				<br><br>
-				When that happens I find myself hovering over the 'Report' button and 
-				asking myself this crucial question.<br><br>
-			</p>
-			<p class="hand4">
-				"Do I really believe they're cheating - or am I just upset because I lost?".
-			</p>
-			<h3>Reinventing the wheel?</h3>
-			<p>
-				There are several support apps for Destiny 2, and they're each good 
-				at different things. Inventory management apps let you access your gear and 
-				resources while playing, to swap items over without having to return to a specific 
-				location to access your vault. Others provide performance and ranking information 
-				so you can see how you're doing and who you're up against. 
-				<br><br>
-				These are all helpful functions, but the performance trackers tend to have a lot of blinking or scrolling 
-				content - mostly adverts but also banners, buttons and links. It's a very cluttered interface 
-				and not one I enjoy looking at or having open on a second screen while I'm trying to play.
-				<br><br>
-				What I need is a simple visual look up that tells me at a glance whether 
+				When that happens I can find myself hovering over the 'Report' button and
+				asking myself this crucial question:
+        <p class="query">"Do I really believe they were cheating - or am I just upset because I lost?"<p>
+				What I need is a simple visual look up that tells me at a glance whether
 				I'm justified in reporting a player, or whether I just need to get over it.
-			</p>
-			<h3>Getting hold of some data</h3>
-			<p>
-				One thing that sets Destiny as a game apart from many others is its very rich, well-structured and 
-				well-documented API - hence the varied ecosystem of supporting apps and services. 
-				With a developer account I can access game data for myself and other 
+			  <br><br>
+				One thing that sets Destiny as a game apart from many others is its very rich, well-structured and
+				well-documented API - hence the varied ecosystem of supporting apps and services.
+				With a developer account I can access game data for myself and other
 				players, and using that I can do pretty much any analysis that takes my fancy.
 				<br><br>
-				I started with an assumption: it should be possible to get some data to analyse who the likely cheats are in 
-				the games I'd played recently. That sort of thing would show up in their game statistics, wouldn't it? Simple. 
-				All I needed to do is extract all of the game stats and then try out different machine learning models 
+				I started with an assumption: it should be possible to get some data to analyse who the likely cheats are in
+				the games I'd played recently. That sort of thing would show up in their game statistics, wouldn't it? Simple.
+				All I needed to do is extract all of the game stats and then try out different analyses
 				until I get an answer.
 			</p>
-		</div>
-	</div>
-		
-	<div class="flex-container">
-		<div style="clear: left;">
-			<p style="float: right;"><img src="/mytracker/kmeans.png" width="300" border="1px"></p>
+			<p style="float: right;"><img src="./assets/kmeans.png" width="300" border="1px"></p>
 			<p>
-				And this is exactly what I did, using the API to extract a massive file for a sample of players. 
-				I included myself as a control (since I know I'm not cheating!). For the same reaason I included a couple of friends 
-				who I know absolutely would never do so, and for good measure I got data on a small number of professional streamers 
-				with excellent reputations for fair play. For balance I then included at least one known cheater (recently and 
-				very publicly banned) and a few people I've played against in the past and had doubts about.
+				And this is exactly what I did, using the API to extract a massive file for a sample of players.
+				I included myself as a control (since I know I'm not cheating!). For the same reaason I included a couple of friends
+				who I know absolutely would never do so, and for good measure I got data on a small number of professional streamers
+				with excellent reputations for fair play. For balance I then included at least one known cheater (recently and
+				very publicly banned) and a few people I've played with and against in the past and had doubts about.
 				<br><br>
-				Armed with this data, I built several different models and reviewed the results. I won't bore the reader 
+				Armed with this data, I built several different models and reviewed the results. I won't bore the reader
 				with the details of each one because, as it turned out, none of them could identify any meaningful pattern.
 				<br><br>
-				The k-means model shown on the right looked very promising, but when I delved into it further with a principal 
-				components analysis it indicated that match duration and total team score (the number of kills by 
-				everyone in the player's team combined) were most significant 
+				The k-means model shown on the right looked very promising, but when I delved into it further with a principal
+				components analysis it indicated that match duration and total team score (the number of kills by
+				everyone in the player's team combined) were most significant
 				factors in whether that person was likely to be cheating. That clearly can't be right in this context.
 			</p>
-		</div>
-	</div>
-	
-	<div class="flex-container">
-		<div style="clear: left;">
-			<h3>So what could the data tell me?</h3>
-			<p style="float: right;"><img src="/mytracker/corr_flare.png" width="300" border="1px"></p>
-			<p style="float: right;" class="caption">Correlation matrix</p>
-			<p>
-				Well, skilled players tend to be good across both competitive and casual game modes, and they play more matches overall 
+			<h4>So what could the data tell me?</h4>
+
+
+      <p>
+				Well, skilled players tend to be good across both competitive and casual game modes, and they play more matches overall
 				(getting in a lot of practice).
-				Obviously they win more, with a higher kills-to-deaths ratio (K/D), and more kills per game. They also do better 
-				on the percentage of precision shots with difficult-to-master weapons like sniper rifles. 
+				Obviously they win more, with a higher kills-to-deaths ratio (K/D), and more kills per game. They also do better
+				on the percentage of precision shots with difficult-to-master weapons like sniper rifles.
 				<br><br>
-				Lots of these are also what you'd expect to see if someone were cheating ... so what's the crucial 
+				Lots of these are also what you'd expect to see if someone were cheating ... so what's the crucial
 				indicator for high-skill versus illegal mods?
 				<br><br>
-				I honestly couldn;t tell you. My models either made no sense at all, or were impossibly 100% efficient. 
+				I honestly couldn't tell you. My models either made no sense at all, or were impossibly 100% efficient.
 				Sometimes both at once!
-				And the more different models I built and the more I tweaked the parameters, the more I lost sight 
-				of the problem I was originally trying to solve. 
+				And the more different models I built and the more I tweaked the parameters, the more I lost sight
+				of the problem I was originally trying to solve.
 			</p>
-			<h3>Time for a sense check</h3>
+			<h4>Time for a sense check</h4>
 			<p>
-				Thinking about all the factors I'd added to the model, it became obvious that for a 
-				start there were too many, and also many of them were redundant.
-				A good example of this is the range of stats about the number of kills. 
-				Average-score-per-life (avscpl) reflects how many kills a player cana get before 
-				they're brought down by an opponent. 
-				This will be reflected in the kills-to-deaths ratio and also efficiency. 
-				Number of kills overall is strongly correlated to score, and so on. 
-				This is borne out in the correlation matrix.
+				Thinking about all the factors I'd added to the model, it became obvious that firstly
+        there were too many, and secondly many of them were redundant.
+      </p>
+      <p style="float: right;"><img src="./assets/corr_trimmed.png" alt="A correlation matrix showing strong correlation between factors." width="400" padding="10px" border="1px"></p>
+      <p>
+				A good example of this is the range of stats about the number of kills.
+				Average-score-per-life (avscpl) reflects how many kills a player can get before
+				they're brought down by an opponent.
+				This will be reflected in the kills-to-deaths ratio and also efficiency.
+				Number of kills overall is strongly correlated to score, and so on. This is very
+        clear when we look at the correlation matrix on the right, with all the darker-shaded areas
+        around these particular factors.
 				<br><br>
 				Another factor which could be skewing the analysis is the player's choice of class. Options are:
 			</p>
 			<ul>
 				<li>Titan - strong and resilient. Basically a tank with fists.</li>
-				<li>Warlock - healing and support. Some of then can fly, and they all look fabulous.</li>
-				<li>Hunter - mobile and sneaky. Like to jump around a lot, very hard to catch.</li>
-
+				<li>Warlock - healing and support. Some of then can fly, and all of them look fabulous.</li>
+				<li>Hunter - mobile and sneaky. Jumping, dodging, can go invisible.</li>
 			</ul>
 			<p>
-			        There's a perception that frequent PvP players are more likely to play hunter, 
-				an archetype known for agility and stealth, 
+			  There's a perception that frequent PvP players are more likely to play hunter,
+				an archetype known for agility and stealth,
 				and indeed several of my sample group play ONLY on hunter and have no characters in either of the other classes.
-				This may or may not be meaningful, but it's certainly a balance issue for my dataset. Should I remove it from the 
-				analysis? No. I need to go back to the beginning and remind myself what problem I'm trying to solve.
+				This may or may not be meaningful, but it's certainly a balance issue for my dataset. I could remove it from the
+				analysis, but that would just be more tinkering around the edges without a clear goal.
+        It's time to go back to the beginning and remind myself what problem I'm trying to solve.
 			</p>
-		</div>
-	  </div>
-	
-	<div class="flex-container">
-		<div style="clear: left;">
-			<p class="hand4">
-				Should I have expected this person to beat me?
+      <h3>What question does this thing answer?</h3>
+      <p>Thinking back to my original scenario, my issue here is not that I want to build a fully
+        functional cheat detector. What I need is a way to see whether someone's performance against me
+        seems feasible given their game history. The real question is this:
+      </p>
+			<p class="query">
+				"Should I have expected this player to beat me?"
 			</p>
 			<p>
-				I don't need machine learning for that. If I can look at the other player's character, their build 
-				and gear choices, I can use my own understanding of the game's context to make a judgement.
+				I don't need machine learning models to answer that. I can look at the other player's character, build
+				and gear choices, and use my own knowledge of the game's context to make a judgement.
 			</p>
 			<ul>
 				<li>Are they using the strongest weapon types?</li>
@@ -193,143 +159,152 @@
 			<ul>
 				<li>Are we playing on a PvP map that I'm not very familiar with?</li>
 				<li>Am I using the right set up and play style for that map?</li>
-				<li>Did I equip any weapons or abilities that I haven't had much practice using?</li>
+				<li>Did I equip weapons or abilities that I haven't had enough practice with?</li>
 			</ul>
 			<p>
-				When you're taking heavy and sustained fire from Mad Skillz McKillbot 
-				it's clearly not the ideal time to indulge in self-reflection, but it's a good habit 
+				When you're taking heavy and sustained fire from Mad Skillz McAimbot
+				it's clearly not the time to pause for introspection, but it's a good habit
 				to develop post-match. It's entirely possible that nobody here is cheating, and I simply need to 'git gud'.
 			</p>
-		</div>
-	</div>
-	
-	<div class="flex-container">
-		<div style="clear: left;">
-			<p style="float: right;"><img src="/mytracker/best.png" width="400" border="1px"></p>
+      <h3>If I had an answer, what would it look like?</h3>
+			<p style="float: right;"><img src="./assets/best.png" width="400" border="1px"></p>
 			<p>
-				We're getting there now. With the data I've extracted I can review a player's gear, build and 
+				We're getting closer to a solution. With the data I've extracted I can review a player's gear, build and
 				level. I can also look into their game history to see whether their win status or their kill count seems feasible.
 				<br><br>
 				Existing tracker apps can also do this, but they usually centre around a player's
 				<a href=https://en.wikipedia.org/wiki/Elo_rating_system>Elo rating</a>.
-				For me this feels unhelpful in this context, because it only counts wins and losses. 
-				Win a game and you move up, lose a game and you move down. 
-				In a multiplayer activity where there can be (depending on match settings) up to six players per team, it's  
-				not an accurate meaasure of each player's performance. 
-				Someone with a high Elo could simply have been teamed up with very high-skill players - a 'carry', 
-				where the less-skilled player gets an easy ride with their team mates doing all the hard work.  By the same token 
-				someone with a streak of losses may actually be very good, but has been repeatedly matched with lower-ranked teammates in 
+				For me this feels unhelpful in this context, because it only counts wins and losses.
+				Win a game and you move up, lose a game and you move down.
+				In a multiplayer activity where there can be (depending on match settings) up to six players per team, it's
+				not an accurate meaasure of each player's performance.
+				Someone with a high Elo could simply have been teamed up with very high-skill players - a 'carry',
+				where the less-skilled player gets an easy ride with their team mates doing all the hard work.  By the same token
+				someone with a streak of losses may actually be very good, but has been repeatedly matched with lower-ranked teammates in
 				an effort to balance the lobby. Elo ratings work best in one-on-one scenarios.
 				<br><br>
-				In the Destiny 2 data, I found that players are assigned a 'combat rating' which takes into account 
-				each person's individual performance and their contribution to the match result. This makes more sense to me, 
-				so I'll use that along with detailed data on things like the percentage of precision shots, and the usage of 
+				In the API documentation I found that players are assigned a 'combat rating' which takes into account
+				each person's individual performance and their contribution to the match result. This makes more sense to me,
+				so I'll use that along with detailed data on things like the percentage of precision shots, and the usage of
 				particular weapon archetypes and character builds which suggest careful tuning of attributes.
 				<br><br>
-				The scatter plot shows what some of that data looks like when plotted against kill 
-				count and all-time per-game average. This is starting to resemble something that 
+				The scatter plot shows what some of that data looks like when plotted against kill
+				count and all-time per-game average. This is starting to resemble something that
 				could help with my particular question.
 			</p>
-		</div>
-	</div>
-	<div class="flex-container">
-		<div style="clear: left;">
-			<p style="float: right;"><img src="/mytracker/app_card.png" width="400" border="1px"></p>
+			<p style="float: right;"><img src="./assets/app_card.png" width="400" border="1px"></p>
 			<p>
-				Here's where I abandoned complex models and wrote a script to pull out the results of my latest match. 
-				Each time I play, if I have doubts, I can refresh this page and take a quick look at each player to see 
-				if I can spot any unusual patterns. 
+				Here's where I abandoned complex models and started back at the beginning,
+        writing a new script to pull out only the results of my latest match.
+				Each time I play, if I have doubts, I can refresh this page and take a quick look at each player to see
+				if I can spot any unusual patterns.
 				<br><br>
-				Certainly having each player's all-time per-game average to compare to the match in question 
-				seems like a useful indicator of unusually good performance which might point to cheating.
-				<br><br>
-				It's progress, but there are still some issues. For one - it's ugly! 
+				It's definitely progress, but there are still some issues. For one - it's ugly!
 				<br><br>
 				I built this based on something far more beautiful,
-				<a href=https://www.taniarascia.com/how-to-connect-to-an-api-with-javascript/>this tutorial on connecting to an API with javascript<a>, 
-				and then I played around with the colours to indicate win/loss status (the colour at the top of the card) and the 
-				comparative combat rating (the stripe in the centre). I didn't like how it looked, but colours are easy to tweak. 
-				What's more critical now is deciding how to arrange this data. Is the colour coding informative, or 
-				just distracting? Does the text adequately explain what these things mean? 
-				Are the items in a logical or intuitive order for the reader? What's the 
-				first thing I want to know when I look at this, aand which items do I want to stand out?
+				<a href=https://www.taniarascia.com/how-to-connect-to-an-api-with-javascript/>this tutorial on connecting to an API with javascript<a>,
+				and then I played around with the colours to indicate win/loss status (the colour at the top of the card) and the
+				comparative combat rating (the stripe in the centre). I didn't like how it looked, but colours are easy to tweak.
 				<br><br>
-				The priority here is the comparison; I want this to be obvious at a glance. Is this person 
+        What's more critical now is deciding how to arrange this data. Is the colour coding informative, or
+				just distracting? Does the text adequately explain what these things mean?
+				Are the items in a logical or intuitive order for the reader? What's the
+				first thing I want to know when I look at this, and which items do I want to stand out?
+				<br><br>
+				The priority here is the comparison; I want this to be obvious at a glance. Is this person
 				doing much, much better than they normally would? So we have three things to convey.
 			</p>
 			<ul>
 				<li>direction of travel (better/worse)</li>
 				<li>the extent of the difference (big/small), and </li>
-				<li>possibly a value judgement (good/bad) which we might assign to colours.</li>
+				<li>a value judgement (good/bad).</li>
 			</ul>
 		</div>
 	</div>
 	<div class="flex-container">
 		<div class="invisbox-small">
 			<p>
-				We could use a single symbol for all three dimensions. An up-arrow or down-arrow works to convey direction, 
-				optional colour to represent good/bad, and the arrow height can be made 
+				We could use a single symbol for all three dimensions. An up-arrow or down-arrow works to convey direction,
+				optional colour to represent good/bad, and the arrow height can be made
 				relative to the difference between this match and the usual average.
 			</p>
 		</div>
 		<div class="invisbox-small">
 			<p>
-				Or we could use text formatting. Either the colour of the text itself or its background element could represent 
-				good/bad, and the font size could be relative to the difference between this match and the player's usual 
+				Or we could use text formatting. Either the colour of the text itself or its background element could represent
+				good/bad, and the font size could be relative to the difference between this match and the player's usual
 				per-game average.
 			</p>
 		</div>
 		<div class="invisbox-small">
 			<p>
-				Finally we could have a small plot showing the difference, maybe even leave out the colours 
-				and let the x-axis position or 
-				the labelling indicate which is this match and which is the usual average. 
+				Finally we could have a small plot showing the difference, maybe even leave out the colours
+				and let the x-axis position or
+				the labelling indicate which is this match and which is the usual average.
 			</p>
 		</div>
 	</div>
 	<div class="flex-container">
 		<div class="invisbox-wide">
-			<img src="/assets/mockup.jpeg" width="100%" align='center'>
-		</div>
-	</div>
-	<div class="flex-container">
-		<div class="invisbox-wide">
-			<p>
-				Even the very rough sketches above were a huge help in choosing between the different options. 
-				Once I'd drawn them out I instantly preferred the bar chart idea. 
-				<br><br>
-				The text formatting could 
-				also work, and that would be my second choice if the bar charts turned out to be too awkward to code. 
-				<br><br>
-				The arrow symbols weren't even in the running, as I realised when I tried to work out how 
-				to sketch it for the mockup. It felt unintuitive to have an arrow for the 
-				per-game average, since it's actually supposed to show the baseline, but then that meant I would have two different 
-				symbols side by side in that element. I didn't want to spend ages dithering over which symbols to choose here so 
-				that option was parked until I figure out a way to do it (or get inspired by someone else's solution).
-			</p>
+			<img src="./assets/mockup.jpeg" width="100%" align='center'>
 		</div>
 	</div>
 	<div class="flex-container">
 		<div style="clear: left;">
-			<p class='hand4'>
-				If I had an answer, what would it look like?
-			</p>
-			<p style="float: right;"><img src="/mytracker/app_card_updated.png" width="400" border="1px"></p>
-			
 			<p>
-				Here's the current (but not necessarily final) interation. 
-				There's still some work to do on details like text padding, constraints for the chart, divider elements 
-				and labels. Overall though this is something that works for me. I've selected efficiency (the overall ratio of 
-				kills to deaths) as the one statistic I want to see in a chart, and the other values are a basic list for now. 
+				Even the very rough sketches above were a huge help in choosing between the different options.
+				Once I'd drawn them out I instantly preferred the bar chart idea.
 				<br><br>
-				Purely for fun, and because no Destiny 2 PvP match is complete without 
-				<a href=https://www.destinypedia.com/Shaxx>Lord Shaxx</a> yelling encouragement 
-				from the sidelines, I've included a carefully-selected voice line as a footer for each card - each player 
+				The text formatting could also work, and that would be my second
+        choice if the bar charts turned out to be too awkward to code.
+				<br><br>
+				The arrow symbols weren't even in the running, as I realised when I tried to work out how
+				to sketch it for the mockup. It felt unintuitive to have an arrow for the
+				per-game average, since it's actually supposed to show the baseline, but then that meant I would have two different
+				symbols side by side in that element. I didn't want to spend ages dithering over which symbols to choose here so
+				that option was parked until I figure out a way to do it (or, more likely, get inspired by someone else's solution).
+        <br><br>
+
+        <p style="float: left;"><img src="./assets/app_card_updated.png" width="400" border="1px"></p>
+				Here's the current interation.
+        <br><br>
+        There's still some work to do on details like text padding, constraints for the chart, divider elements
+				and labels. Overall though this is something that works for me. I've selected efficiency (the overall ratio of
+				kills to deaths) as the one statistic I want to see in a chart, and the other values are a basic list for now.
+        <br><br>
+				Purely for fun, and because no Destiny 2 PvP match is complete without
+				<a href=https://www.destinypedia.com/Shaxx>Lord Shaxx</a> yelling encouragement
+				from the sidelines, I've included a carefully-selected voice line as a footer for each card - each player
 				gets a motivational comment relating to their performance.
+        <br><br>
+        As you can see, based on my match stats in this instance I clearly did NOT throw enough grenades!
+        <br><br>
+        SUMMARY POINTS HERE
+        what did we learn?
 			</p>
 		</div>
 	</div>
-	
+
+  <h2>About the author</h2>
+  <div class="flex-container">
+
+    <div style="clear: left;">
+
+			<p>
+				Lucy works in education, open data and civic tech in the South West of England
+				(and anywhere else she's needed).
+				<br><br>
+				Currently available for project work.
+				<br><br>
+				<a href=mailto:lucy@jargonautical.com><img src="assets/email64px.png"></a>
+				<a href=https://twitter.com/jargonautical><img src="assets/twitter64px.png"></a>
+				<a href=https://uk.linkedin.com/in/jargonautical><img src="assets/linkedin64px.png"></a>
+			</p>
+			<p class="query">
+				"People don't want data; they want answers."
+			</p>
+    </div>
+  </div>
+
 <h5>(c) Jargonautical Ltd 2020. Branding and logo design by Shufflewing</h5>
 </body>
-
