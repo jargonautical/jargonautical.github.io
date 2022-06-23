@@ -59,6 +59,13 @@ p.comment {
   font-style: italic;
 }
 
+p.shaxx {
+  font-family: 'Oxygen';
+  color: var(--dark);
+  font-size: 1.8em;
+  font-style: italic;
+}
+
 p.query {
   font-family: 'Space Mono';
   color: var(--query);
@@ -166,14 +173,16 @@ h2 {
 
 h3 {
   color: black;
-  font-size:1.2em;
+  font-size:1.3em;
   font-family: 'Ubuntu', sans-serif;
+  font-weight: strong;
 }
 
 h4 {
   color: black;
-  font-size:1.1em;
+  font-size:1.2em;
   font-family: 'Ubuntu', sans-serif;
+  font-weight: strong;
 }
 
 h5 {
