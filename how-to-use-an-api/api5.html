@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" type="text/css" href="reset.css">
-  <link rel="stylesheet" type="text/css" href="header.css">
-  <link rel="stylesheet" type="text/css" href="typography.css">
-  <link rel="stylesheet" type="text/css" href="newstyle.css">
-  <link rel="shortcut icon" href="barchart.jpg" />
+  <link rel="stylesheet" type="text/css" href="../css/20-reset.css">
+  <link rel="stylesheet" type="text/css" href="../css/10-header.css">
+  <link rel="stylesheet" type="text/css" href="../css/jarg.css">
+  <link rel="shortcut icon" href="../assets/Jargonautical_web_icon.png" />
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
   <div class='hero-image'>
     <div class='hero-text'>
-      TDP sandbox
     </div>
   </div>
 </head>
@@ -17,19 +15,21 @@
 <!---------------------------------------------------------------------------->
 
 <body>
-  <!-- navbar -->
+  <!-- navbar
   <div class='nav'>
     <a href="./api1.html" target="_blank">Tutorial - how to use an API</a>
     <a href="https://data-mince.herokuapp.com/" target="_blank">Data Mince - our open data starter</a>
     <a href="https://plym-parks-app.herokuapp.com/" target="_blank">Footfall data in Plymouth parks</a>
   </div>
+-->
 
   <!-- row 5 header -->
   <div>
     <h2>Dealing with errors</h2>
   </div>
 
-  <div>
+  <div class="flex-container">
+    <div>
     <h3>What if things go wrong?</h3>
     <p>Sometimes your API call will fail, and you might not know why.
       You did everything right, you followed the documentation or you used an
@@ -48,9 +48,10 @@
       try to work out what went wrong.
     </p>
   </div>
+</div>
 
   <div class='flex-container'>
-    <div class='invisibox'>
+    <div class='invisbox-big'>
       <p>
         401, 402 and 403 are variations on 'you're not allowed to look at what you're asking for',
         for instance you're trying to access a section that needs authentication or login credentials.<br>
@@ -60,7 +61,7 @@
       </p>
     </div>
 
-    <div class='invisibox'>
+    <div class='invisbox-small'>
       <p class='docs'>
         100: Here is some information<br>
         200: Success!<br>
@@ -79,8 +80,3 @@
   </div>
 
 </body>
-<footer>
-  <div>
-  <!-- need a stock footer in here -->
-</div>
-</footer>

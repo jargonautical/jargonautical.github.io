@@ -9,7 +9,7 @@ Wards = ['Budshead','Compton','Devonport','Drake','Efford and Lipson','Eggbuckla
 //agg = imdDevon.groupby(['geography_name']).median().reset_index()
 
 // BUILD THE CHART -------------------------------------------------------------
-Plotly.d3.csv("http://www.nomisweb.co.uk/api/v01/dataset/NM_2010_1.data.csv?geography=1656751313...1656751327,1656751330,1656751328,1656751329,1656751331,1656751332&date=latest&gender=0&c_age=1,3...18,210&measures=20100&select=date_name,geography_name,geography_code,gender_name,c_age_name,measures_name,obs_value,obs_status_name", function(err, rows){
+Plotly.d3.csv("https://www.nomisweb.co.uk/api/v01/dataset/NM_2010_1.data.csv?geography=1656751313...1656751327,1656751330,1656751328,1656751329,1656751331,1656751332&date=latest&gender=0&c_age=1,3...18,210&measures=20100&select=date_name,geography_name,geography_code,gender_name,c_age_name,measures_name,obs_value,obs_status_name", function(err, rows){
 
     function unpack(rows, key) {
         return rows.map(function(row) { return row[key]; });
@@ -53,7 +53,7 @@ Plotly.d3.csv("http://www.nomisweb.co.uk/api/v01/dataset/NM_2010_1.data.csv?geog
             marker: {
                 size: 12,
                 opacity: 0.7,
-                color: '#85bfe8'
+                color: 'lightseagreen'
             }
         };
 

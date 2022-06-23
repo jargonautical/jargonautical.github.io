@@ -2,7 +2,7 @@ var numbers = [ 33750, 33750, 33750, 33750, 44000, 44000, 44000, 45566, 65000, 9
 var rows = 7;
 var cols = 5;
 var max_rows = 6;
-var max_cols = 7;
+var max_cols = 6;
 var markers = [ 125000, 500000 ];
 
 addElements(numbers);

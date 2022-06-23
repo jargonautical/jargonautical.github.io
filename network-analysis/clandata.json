@@ -1,0 +1,3956 @@
+{
+  "nodes":
+  [
+      {
+          "id": "741",
+          "player": "BoundAndTied",
+          "code": "B",
+          "clan": "1",
+          "role": "2"
+      },
+      {
+          "id": "1051",
+          "player": "Zezku",
+          "code": "Z",
+          "clan": "1",
+          "role": "2"
+      },
+      {
+          "id": "1984",
+          "player": "jargonaut",
+          "code": "J",
+          "clan": "1",
+          "role": "2"
+      },
+      {
+          "id": "4012",
+          "player": "Abby\u2665Wolf",
+          "code": "A",
+          "clan": "1",
+          "role": "3"
+      },
+      {
+          "id": "8869",
+          "player": "Mature_Chaddar",
+          "code": "C",
+          "clan": "2",
+          "role": "1"
+      },
+      {
+          "id": "10018",
+          "player": "Wiggles_",
+          "code": "W",
+          "clan": "2",
+          "role": "1"
+      },
+      {
+          "id": "12210",
+          "player": "Mandem",
+          "code": "s",
+          "clan": "2",
+          "role": "1"
+      },
+      {
+          "id": "13041",
+          "player": "matrinki",
+          "code": "M",
+          "clan": "2",
+          "role": "1"
+      },
+      {
+          "id": "13541",
+          "player": "ToXiiCxFaKiie",
+          "code": "X",
+          "clan": "2",
+          "role": "1"
+      },
+      {
+          "id": "14827",
+          "player": "Ferns",
+          "code": "F",
+          "clan": "2",
+          "role": "3"
+      },
+      {
+          "id": "15688",
+          "player": "Talwolf",
+          "code": "T",
+          "clan": "2",
+          "role": "1"
+      },
+      {
+          "id": "16416",
+          "player": "jayseven",
+          "code": "7",
+          "clan": "2",
+          "role": "1"
+      },
+      {
+          "id": "16592",
+          "player": "Dill Jaegerbuns (Drekar)",
+          "code": "I",
+          "clan": "2",
+          "role": "2"
+      },
+      {
+          "id": "17054",
+          "player": "Draconis233",
+          "code": "D",
+          "clan": "2",
+          "role": "1"
+      },
+      {
+          "id": "18584",
+          "player": "ghillieforb",
+          "code": "P",
+          "clan": "2",
+          "role": "1"
+      }
+  ],
+  "links":
+  [
+      {
+          "id": "6",
+          "source": "Abby\u2665Wolf",
+          "target": "BoundAndTied",
+          "period": "2020-07",
+          "weight": "1"
+      },
+      {
+          "id": "7",
+          "source": "Abby\u2665Wolf",
+          "target": "BoundAndTied",
+          "period": "2021-11",
+          "weight": "1"
+      },
+      {
+          "id": "8",
+          "source": "Abby\u2665Wolf",
+          "target": "BoundAndTied",
+          "period": "2022-03",
+          "weight": "1"
+      },
+      {
+          "id": "9",
+          "source": "Abby\u2665Wolf",
+          "target": "Dill Jaegerbuns (Drekar)",
+          "period": "2020-04",
+          "weight": "2"
+      },
+      {
+          "id": "10",
+          "source": "Abby\u2665Wolf",
+          "target": "Draconis233",
+          "period": "2020-03",
+          "weight": "3"
+      },
+      {
+          "id": "11",
+          "source": "Abby\u2665Wolf",
+          "target": "Draconis233",
+          "period": "2020-04",
+          "weight": "2"
+      },
+      {
+          "id": "14",
+          "source": "Abby\u2665Wolf",
+          "target": "Ferns",
+          "period": "2020-03",
+          "weight": "3"
+      },
+      {
+          "id": "15",
+          "source": "Abby\u2665Wolf",
+          "target": "Ferns",
+          "period": "2020-04",
+          "weight": "4"
+      },
+      {
+          "id": "23",
+          "source": "Abby\u2665Wolf",
+          "target": "Mandem",
+          "period": "2020-03",
+          "weight": "2"
+      },
+      {
+          "id": "24",
+          "source": "Abby\u2665Wolf",
+          "target": "Mandem",
+          "period": "2020-06",
+          "weight": "1"
+      },
+      {
+          "id": "25",
+          "source": "Abby\u2665Wolf",
+          "target": "Mandem",
+          "period": "2021-05",
+          "weight": "1"
+      },
+      {
+          "id": "26",
+          "source": "Abby\u2665Wolf",
+          "target": "Mature_Chaddar",
+          "period": "2020-03",
+          "weight": "3"
+      },
+      {
+          "id": "27",
+          "source": "Abby\u2665Wolf",
+          "target": "Mature_Chaddar",
+          "period": "2020-04",
+          "weight": "4"
+      },
+      {
+          "id": "28",
+          "source": "Abby\u2665Wolf",
+          "target": "Mature_Chaddar",
+          "period": "2020-05",
+          "weight": "1"
+      },
+      {
+          "id": "29",
+          "source": "Abby\u2665Wolf",
+          "target": "Mature_Chaddar",
+          "period": "2020-06",
+          "weight": "1"
+      },
+      {
+          "id": "32",
+          "source": "Abby\u2665Wolf",
+          "target": "ToXiiCxFaKiie",
+          "period": "2020-03",
+          "weight": "6"
+      },
+      {
+          "id": "33",
+          "source": "Abby\u2665Wolf",
+          "target": "ToXiiCxFaKiie",
+          "period": "2020-04",
+          "weight": "2"
+      },
+      {
+          "id": "34",
+          "source": "Abby\u2665Wolf",
+          "target": "ToXiiCxFaKiie",
+          "period": "2020-05",
+          "weight": "1"
+      },
+      {
+          "id": "35",
+          "source": "Abby\u2665Wolf",
+          "target": "ToXiiCxFaKiie",
+          "period": "2020-06",
+          "weight": "1"
+      },
+      {
+          "id": "37",
+          "source": "Abby\u2665Wolf",
+          "target": "Zezku",
+          "period": "2020-03",
+          "weight": "1"
+      },
+      {
+          "id": "38",
+          "source": "Abby\u2665Wolf",
+          "target": "Zezku",
+          "period": "2020-06",
+          "weight": "2"
+      },
+      {
+          "id": "39",
+          "source": "Abby\u2665Wolf",
+          "target": "Zezku",
+          "period": "2020-08",
+          "weight": "1"
+      },
+      {
+          "id": "40",
+          "source": "Abby\u2665Wolf",
+          "target": "Zezku",
+          "period": "2020-09",
+          "weight": "1"
+      },
+      {
+          "id": "41",
+          "source": "Abby\u2665Wolf",
+          "target": "Zezku",
+          "period": "2021-05",
+          "weight": "2"
+      },
+      {
+          "id": "42",
+          "source": "Abby\u2665Wolf",
+          "target": "Zezku",
+          "period": "2021-06",
+          "weight": "2"
+      },
+      {
+          "id": "43",
+          "source": "Abby\u2665Wolf",
+          "target": "Zezku",
+          "period": "2021-08",
+          "weight": "4"
+      },
+      {
+          "id": "44",
+          "source": "Abby\u2665Wolf",
+          "target": "Zezku",
+          "period": "2021-09",
+          "weight": "4"
+      },
+      {
+          "id": "45",
+          "source": "Abby\u2665Wolf",
+          "target": "Zezku",
+          "period": "2021-10",
+          "weight": "3"
+      },
+      {
+          "id": "46",
+          "source": "Abby\u2665Wolf",
+          "target": "Zezku",
+          "period": "2021-11",
+          "weight": "4"
+      },
+      {
+          "id": "47",
+          "source": "Abby\u2665Wolf",
+          "target": "Zezku",
+          "period": "2022-01",
+          "weight": "2"
+      },
+      {
+          "id": "48",
+          "source": "Abby\u2665Wolf",
+          "target": "Zezku",
+          "period": "2022-02",
+          "weight": "4"
+      },
+      {
+          "id": "49",
+          "source": "Abby\u2665Wolf",
+          "target": "Zezku",
+          "period": "2022-03",
+          "weight": "5"
+      },
+      {
+          "id": "50",
+          "source": "Abby\u2665Wolf",
+          "target": "Zezku",
+          "period": "2022-04",
+          "weight": "3"
+      },
+      {
+          "id": "51",
+          "source": "Abby\u2665Wolf",
+          "target": "Zezku",
+          "period": "2022-05",
+          "weight": "4"
+      },
+      {
+          "id": "52",
+          "source": "Abby\u2665Wolf",
+          "target": "ghillieforb",
+          "period": "2020-04",
+          "weight": "2"
+      },
+      {
+          "id": "53",
+          "source": "Abby\u2665Wolf",
+          "target": "jargonaut",
+          "period": "2020-03",
+          "weight": "8"
+      },
+      {
+          "id": "54",
+          "source": "Abby\u2665Wolf",
+          "target": "jargonaut",
+          "period": "2020-04",
+          "weight": "4"
+      },
+      {
+          "id": "55",
+          "source": "Abby\u2665Wolf",
+          "target": "jargonaut",
+          "period": "2020-06",
+          "weight": "2"
+      },
+      {
+          "id": "56",
+          "source": "Abby\u2665Wolf",
+          "target": "jargonaut",
+          "period": "2020-08",
+          "weight": "3"
+      },
+      {
+          "id": "57",
+          "source": "Abby\u2665Wolf",
+          "target": "jargonaut",
+          "period": "2020-09",
+          "weight": "2"
+      },
+      {
+          "id": "58",
+          "source": "Abby\u2665Wolf",
+          "target": "jargonaut",
+          "period": "2021-05",
+          "weight": "3"
+      },
+      {
+          "id": "59",
+          "source": "Abby\u2665Wolf",
+          "target": "jargonaut",
+          "period": "2021-06",
+          "weight": "4"
+      },
+      {
+          "id": "60",
+          "source": "Abby\u2665Wolf",
+          "target": "jargonaut",
+          "period": "2021-08",
+          "weight": "3"
+      },
+      {
+          "id": "61",
+          "source": "Abby\u2665Wolf",
+          "target": "jargonaut",
+          "period": "2021-09",
+          "weight": "6"
+      },
+      {
+          "id": "62",
+          "source": "Abby\u2665Wolf",
+          "target": "jargonaut",
+          "period": "2021-10",
+          "weight": "4"
+      },
+      {
+          "id": "63",
+          "source": "Abby\u2665Wolf",
+          "target": "jargonaut",
+          "period": "2021-11",
+          "weight": "4"
+      },
+      {
+          "id": "64",
+          "source": "Abby\u2665Wolf",
+          "target": "jargonaut",
+          "period": "2022-01",
+          "weight": "3"
+      },
+      {
+          "id": "65",
+          "source": "Abby\u2665Wolf",
+          "target": "jargonaut",
+          "period": "2022-02",
+          "weight": "6"
+      },
+      {
+          "id": "66",
+          "source": "Abby\u2665Wolf",
+          "target": "jargonaut",
+          "period": "2022-03",
+          "weight": "1"
+      },
+      {
+          "id": "67",
+          "source": "Abby\u2665Wolf",
+          "target": "jargonaut",
+          "period": "2022-04",
+          "weight": "2"
+      },
+      {
+          "id": "68",
+          "source": "Abby\u2665Wolf",
+          "target": "jargonaut",
+          "period": "2022-05",
+          "weight": "5"
+      },
+      {
+          "id": "70",
+          "source": "BoundAndTied",
+          "target": "Abby\u2665Wolf",
+          "period": "2017-11",
+          "weight": "1"
+      },
+      {
+          "id": "71",
+          "source": "BoundAndTied",
+          "target": "Abby\u2665Wolf",
+          "period": "2017-12",
+          "weight": "4"
+      },
+      {
+          "id": "72",
+          "source": "BoundAndTied",
+          "target": "Abby\u2665Wolf",
+          "period": "2018-05",
+          "weight": "2"
+      },
+      {
+          "id": "73",
+          "source": "BoundAndTied",
+          "target": "Abby\u2665Wolf",
+          "period": "2018-06",
+          "weight": "2"
+      },
+      {
+          "id": "74",
+          "source": "BoundAndTied",
+          "target": "Abby\u2665Wolf",
+          "period": "2018-07",
+          "weight": "5"
+      },
+      {
+          "id": "75",
+          "source": "BoundAndTied",
+          "target": "Abby\u2665Wolf",
+          "period": "2018-08",
+          "weight": "2"
+      },
+      {
+          "id": "76",
+          "source": "BoundAndTied",
+          "target": "Abby\u2665Wolf",
+          "period": "2018-09",
+          "weight": "7"
+      },
+      {
+          "id": "77",
+          "source": "BoundAndTied",
+          "target": "Abby\u2665Wolf",
+          "period": "2018-10",
+          "weight": "1"
+      },
+      {
+          "id": "78",
+          "source": "BoundAndTied",
+          "target": "Abby\u2665Wolf",
+          "period": "2018-11",
+          "weight": "1"
+      },
+      {
+          "id": "79",
+          "source": "BoundAndTied",
+          "target": "Abby\u2665Wolf",
+          "period": "2019-09",
+          "weight": "1"
+      },
+      {
+          "id": "80",
+          "source": "BoundAndTied",
+          "target": "Abby\u2665Wolf",
+          "period": "2019-10",
+          "weight": "7"
+      },
+      {
+          "id": "81",
+          "source": "BoundAndTied",
+          "target": "Abby\u2665Wolf",
+          "period": "2019-11",
+          "weight": "1"
+      },
+      {
+          "id": "82",
+          "source": "BoundAndTied",
+          "target": "Abby\u2665Wolf",
+          "period": "2019-12",
+          "weight": "2"
+      },
+      {
+          "id": "83",
+          "source": "BoundAndTied",
+          "target": "Abby\u2665Wolf",
+          "period": "2020-07",
+          "weight": "1"
+      },
+      {
+          "id": "84",
+          "source": "BoundAndTied",
+          "target": "Abby\u2665Wolf",
+          "period": "2021-10",
+          "weight": "1"
+      },
+      {
+          "id": "85",
+          "source": "BoundAndTied",
+          "target": "Abby\u2665Wolf",
+          "period": "2021-11",
+          "weight": "1"
+      },
+      {
+          "id": "88",
+          "source": "BoundAndTied",
+          "target": "Mandem",
+          "period": "2018-11",
+          "weight": "1"
+      },
+      {
+          "id": "89",
+          "source": "BoundAndTied",
+          "target": "Mandem",
+          "period": "2019-09",
+          "weight": "1"
+      },
+      {
+          "id": "90",
+          "source": "BoundAndTied",
+          "target": "Mandem",
+          "period": "2019-10",
+          "weight": "2"
+      },
+      {
+          "id": "93",
+          "source": "BoundAndTied",
+          "target": "Zezku",
+          "period": "2017-12",
+          "weight": "1"
+      },
+      {
+          "id": "94",
+          "source": "BoundAndTied",
+          "target": "Zezku",
+          "period": "2018-06",
+          "weight": "2"
+      },
+      {
+          "id": "95",
+          "source": "BoundAndTied",
+          "target": "Zezku",
+          "period": "2018-07",
+          "weight": "3"
+      },
+      {
+          "id": "96",
+          "source": "BoundAndTied",
+          "target": "Zezku",
+          "period": "2018-08",
+          "weight": "1"
+      },
+      {
+          "id": "97",
+          "source": "BoundAndTied",
+          "target": "Zezku",
+          "period": "2019-10",
+          "weight": "1"
+      },
+      {
+          "id": "98",
+          "source": "BoundAndTied",
+          "target": "Zezku",
+          "period": "2019-12",
+          "weight": "1"
+      },
+      {
+          "id": "99",
+          "source": "BoundAndTied",
+          "target": "Zezku",
+          "period": "2021-10",
+          "weight": "1"
+      },
+      {
+          "id": "100",
+          "source": "BoundAndTied",
+          "target": "Zezku",
+          "period": "2021-11",
+          "weight": "1"
+      },
+      {
+          "id": "101",
+          "source": "BoundAndTied",
+          "target": "jargonaut",
+          "period": "2018-11",
+          "weight": "1"
+      },
+      {
+          "id": "102",
+          "source": "BoundAndTied",
+          "target": "jargonaut",
+          "period": "2019-12",
+          "weight": "2"
+      },
+      {
+          "id": "103",
+          "source": "BoundAndTied",
+          "target": "jargonaut",
+          "period": "2021-10",
+          "weight": "1"
+      },
+      {
+          "id": "104",
+          "source": "BoundAndTied",
+          "target": "jargonaut",
+          "period": "2021-11",
+          "weight": "1"
+      },
+      {
+          "id": "118",
+          "source": "Dill Jaegerbuns (Drekar)",
+          "target": "Draconis233",
+          "period": "2020-07",
+          "weight": "1"
+      },
+      {
+          "id": "119",
+          "source": "Dill Jaegerbuns (Drekar)",
+          "target": "Draconis233",
+          "period": "2020-11",
+          "weight": "1"
+      },
+      {
+          "id": "120",
+          "source": "Dill Jaegerbuns (Drekar)",
+          "target": "Draconis233",
+          "period": "2020-12",
+          "weight": "1"
+      },
+      {
+          "id": "121",
+          "source": "Dill Jaegerbuns (Drekar)",
+          "target": "Draconis233",
+          "period": "2021-01",
+          "weight": "1"
+      },
+      {
+          "id": "122",
+          "source": "Dill Jaegerbuns (Drekar)",
+          "target": "Ferns",
+          "period": "2020-07",
+          "weight": "4"
+      },
+      {
+          "id": "123",
+          "source": "Dill Jaegerbuns (Drekar)",
+          "target": "Ferns",
+          "period": "2020-09",
+          "weight": "1"
+      },
+      {
+          "id": "124",
+          "source": "Dill Jaegerbuns (Drekar)",
+          "target": "Ferns",
+          "period": "2020-11",
+          "weight": "3"
+      },
+      {
+          "id": "125",
+          "source": "Dill Jaegerbuns (Drekar)",
+          "target": "Ferns",
+          "period": "2020-12",
+          "weight": "2"
+      },
+      {
+          "id": "126",
+          "source": "Dill Jaegerbuns (Drekar)",
+          "target": "Ferns",
+          "period": "2021-01",
+          "weight": "1"
+      },
+      {
+          "id": "127",
+          "source": "Dill Jaegerbuns (Drekar)",
+          "target": "Ferns",
+          "period": "2021-02",
+          "weight": "7"
+      },
+      {
+          "id": "128",
+          "source": "Dill Jaegerbuns (Drekar)",
+          "target": "Ferns",
+          "period": "2021-03",
+          "weight": "4"
+      },
+      {
+          "id": "129",
+          "source": "Dill Jaegerbuns (Drekar)",
+          "target": "Ferns",
+          "period": "2021-04",
+          "weight": "1"
+      },
+      {
+          "id": "130",
+          "source": "Dill Jaegerbuns (Drekar)",
+          "target": "Ferns",
+          "period": "2021-05",
+          "weight": "1"
+      },
+      {
+          "id": "131",
+          "source": "Dill Jaegerbuns (Drekar)",
+          "target": "Ferns",
+          "period": "2021-06",
+          "weight": "1"
+      },
+      {
+          "id": "132",
+          "source": "Dill Jaegerbuns (Drekar)",
+          "target": "Ferns",
+          "period": "2021-09",
+          "weight": "3"
+      },
+      {
+          "id": "133",
+          "source": "Dill Jaegerbuns (Drekar)",
+          "target": "Ferns",
+          "period": "2021-10",
+          "weight": "1"
+      },
+      {
+          "id": "134",
+          "source": "Dill Jaegerbuns (Drekar)",
+          "target": "Ferns",
+          "period": "2021-11",
+          "weight": "1"
+      },
+      {
+          "id": "135",
+          "source": "Dill Jaegerbuns (Drekar)",
+          "target": "Ferns",
+          "period": "2021-12",
+          "weight": "1"
+      },
+      {
+          "id": "136",
+          "source": "Dill Jaegerbuns (Drekar)",
+          "target": "Ferns",
+          "period": "2022-01",
+          "weight": "1"
+      },
+      {
+          "id": "137",
+          "source": "Dill Jaegerbuns (Drekar)",
+          "target": "Ferns",
+          "period": "2022-02",
+          "weight": "2"
+      },
+      {
+          "id": "138",
+          "source": "Dill Jaegerbuns (Drekar)",
+          "target": "Ferns",
+          "period": "2022-05",
+          "weight": "1"
+      },
+      {
+          "id": "139",
+          "source": "Dill Jaegerbuns (Drekar)",
+          "target": "Ferns",
+          "period": "2022-06",
+          "weight": "1"
+      },
+      {
+          "id": "140",
+          "source": "Dill Jaegerbuns (Drekar)",
+          "target": "Mature_Chaddar",
+          "period": "2020-07",
+          "weight": "2"
+      },
+      {
+          "id": "141",
+          "source": "Dill Jaegerbuns (Drekar)",
+          "target": "Mature_Chaddar",
+          "period": "2020-09",
+          "weight": "2"
+      },
+      {
+          "id": "142",
+          "source": "Dill Jaegerbuns (Drekar)",
+          "target": "Mature_Chaddar",
+          "period": "2020-11",
+          "weight": "4"
+      },
+      {
+          "id": "143",
+          "source": "Dill Jaegerbuns (Drekar)",
+          "target": "Mature_Chaddar",
+          "period": "2020-12",
+          "weight": "1"
+      },
+      {
+          "id": "144",
+          "source": "Dill Jaegerbuns (Drekar)",
+          "target": "Mature_Chaddar",
+          "period": "2021-01",
+          "weight": "1"
+      },
+      {
+          "id": "145",
+          "source": "Dill Jaegerbuns (Drekar)",
+          "target": "Mature_Chaddar",
+          "period": "2021-02",
+          "weight": "5"
+      },
+      {
+          "id": "146",
+          "source": "Dill Jaegerbuns (Drekar)",
+          "target": "Mature_Chaddar",
+          "period": "2021-03",
+          "weight": "4"
+      },
+      {
+          "id": "147",
+          "source": "Dill Jaegerbuns (Drekar)",
+          "target": "Mature_Chaddar",
+          "period": "2021-04",
+          "weight": "1"
+      },
+      {
+          "id": "148",
+          "source": "Dill Jaegerbuns (Drekar)",
+          "target": "Mature_Chaddar",
+          "period": "2021-05",
+          "weight": "1"
+      },
+      {
+          "id": "149",
+          "source": "Dill Jaegerbuns (Drekar)",
+          "target": "Mature_Chaddar",
+          "period": "2021-09",
+          "weight": "2"
+      },
+      {
+          "id": "150",
+          "source": "Dill Jaegerbuns (Drekar)",
+          "target": "Mature_Chaddar",
+          "period": "2022-02",
+          "weight": "2"
+      },
+      {
+          "id": "151",
+          "source": "Dill Jaegerbuns (Drekar)",
+          "target": "Mature_Chaddar",
+          "period": "2022-05",
+          "weight": "1"
+      },
+      {
+          "id": "152",
+          "source": "Dill Jaegerbuns (Drekar)",
+          "target": "Mature_Chaddar",
+          "period": "2022-06",
+          "weight": "1"
+      },
+      {
+          "id": "162",
+          "source": "Dill Jaegerbuns (Drekar)",
+          "target": "ghillieforb",
+          "period": "2020-07",
+          "weight": "2"
+      },
+      {
+          "id": "163",
+          "source": "Dill Jaegerbuns (Drekar)",
+          "target": "ghillieforb",
+          "period": "2020-11",
+          "weight": "3"
+      },
+      {
+          "id": "164",
+          "source": "Dill Jaegerbuns (Drekar)",
+          "target": "ghillieforb",
+          "period": "2020-12",
+          "weight": "1"
+      },
+      {
+          "id": "165",
+          "source": "Dill Jaegerbuns (Drekar)",
+          "target": "ghillieforb",
+          "period": "2021-02",
+          "weight": "3"
+      },
+      {
+          "id": "166",
+          "source": "Dill Jaegerbuns (Drekar)",
+          "target": "ghillieforb",
+          "period": "2021-06",
+          "weight": "1"
+      },
+      {
+          "id": "167",
+          "source": "Dill Jaegerbuns (Drekar)",
+          "target": "matrinki",
+          "period": "2020-07",
+          "weight": "1"
+      },
+      {
+          "id": "168",
+          "source": "Dill Jaegerbuns (Drekar)",
+          "target": "matrinki",
+          "period": "2020-09",
+          "weight": "2"
+      },
+      {
+          "id": "169",
+          "source": "Dill Jaegerbuns (Drekar)",
+          "target": "matrinki",
+          "period": "2020-11",
+          "weight": "1"
+      },
+      {
+          "id": "170",
+          "source": "Dill Jaegerbuns (Drekar)",
+          "target": "matrinki",
+          "period": "2021-01",
+          "weight": "1"
+      },
+      {
+          "id": "171",
+          "source": "Dill Jaegerbuns (Drekar)",
+          "target": "matrinki",
+          "period": "2021-02",
+          "weight": "4"
+      },
+      {
+          "id": "172",
+          "source": "Dill Jaegerbuns (Drekar)",
+          "target": "matrinki",
+          "period": "2021-06",
+          "weight": "1"
+      },
+      {
+          "id": "173",
+          "source": "Draconis233",
+          "target": "Abby\u2665Wolf",
+          "period": "2020-03",
+          "weight": "1"
+      },
+      {
+          "id": "174",
+          "source": "Draconis233",
+          "target": "Abby\u2665Wolf",
+          "period": "2020-04",
+          "weight": "1"
+      },
+      {
+          "id": "176",
+          "source": "Draconis233",
+          "target": "Dill Jaegerbuns (Drekar)",
+          "period": "2020-04",
+          "weight": "1"
+      },
+      {
+          "id": "177",
+          "source": "Draconis233",
+          "target": "Dill Jaegerbuns (Drekar)",
+          "period": "2020-06",
+          "weight": "1"
+      },
+      {
+          "id": "178",
+          "source": "Draconis233",
+          "target": "Dill Jaegerbuns (Drekar)",
+          "period": "2020-10",
+          "weight": "1"
+      },
+      {
+          "id": "179",
+          "source": "Draconis233",
+          "target": "Dill Jaegerbuns (Drekar)",
+          "period": "2020-11",
+          "weight": "1"
+      },
+      {
+          "id": "180",
+          "source": "Draconis233",
+          "target": "Dill Jaegerbuns (Drekar)",
+          "period": "2020-12",
+          "weight": "2"
+      },
+      {
+          "id": "181",
+          "source": "Draconis233",
+          "target": "Dill Jaegerbuns (Drekar)",
+          "period": "2021-03",
+          "weight": "1"
+      },
+      {
+          "id": "182",
+          "source": "Draconis233",
+          "target": "Dill Jaegerbuns (Drekar)",
+          "period": "2021-10",
+          "weight": "1"
+      },
+      {
+          "id": "183",
+          "source": "Draconis233",
+          "target": "Ferns",
+          "period": "2020-03",
+          "weight": "4"
+      },
+      {
+          "id": "184",
+          "source": "Draconis233",
+          "target": "Ferns",
+          "period": "2020-04",
+          "weight": "2"
+      },
+      {
+          "id": "185",
+          "source": "Draconis233",
+          "target": "Ferns",
+          "period": "2020-06",
+          "weight": "1"
+      },
+      {
+          "id": "186",
+          "source": "Draconis233",
+          "target": "Ferns",
+          "period": "2020-07",
+          "weight": "1"
+      },
+      {
+          "id": "187",
+          "source": "Draconis233",
+          "target": "Ferns",
+          "period": "2020-10",
+          "weight": "1"
+      },
+      {
+          "id": "188",
+          "source": "Draconis233",
+          "target": "Ferns",
+          "period": "2020-11",
+          "weight": "1"
+      },
+      {
+          "id": "189",
+          "source": "Draconis233",
+          "target": "Ferns",
+          "period": "2020-12",
+          "weight": "2"
+      },
+      {
+          "id": "190",
+          "source": "Draconis233",
+          "target": "Ferns",
+          "period": "2021-03",
+          "weight": "2"
+      },
+      {
+          "id": "191",
+          "source": "Draconis233",
+          "target": "Ferns",
+          "period": "2021-10",
+          "weight": "1"
+      },
+      {
+          "id": "192",
+          "source": "Draconis233",
+          "target": "Mandem",
+          "period": "2021-10",
+          "weight": "1"
+      },
+      {
+          "id": "193",
+          "source": "Draconis233",
+          "target": "Mature_Chaddar",
+          "period": "2020-03",
+          "weight": "1"
+      },
+      {
+          "id": "194",
+          "source": "Draconis233",
+          "target": "Mature_Chaddar",
+          "period": "2020-04",
+          "weight": "2"
+      },
+      {
+          "id": "195",
+          "source": "Draconis233",
+          "target": "Mature_Chaddar",
+          "period": "2020-06",
+          "weight": "1"
+      },
+      {
+          "id": "196",
+          "source": "Draconis233",
+          "target": "Mature_Chaddar",
+          "period": "2020-07",
+          "weight": "1"
+      },
+      {
+          "id": "197",
+          "source": "Draconis233",
+          "target": "Mature_Chaddar",
+          "period": "2020-10",
+          "weight": "1"
+      },
+      {
+          "id": "198",
+          "source": "Draconis233",
+          "target": "Mature_Chaddar",
+          "period": "2020-11",
+          "weight": "1"
+      },
+      {
+          "id": "199",
+          "source": "Draconis233",
+          "target": "Mature_Chaddar",
+          "period": "2020-12",
+          "weight": "2"
+      },
+      {
+          "id": "200",
+          "source": "Draconis233",
+          "target": "Mature_Chaddar",
+          "period": "2021-03",
+          "weight": "1"
+      },
+      {
+          "id": "201",
+          "source": "Draconis233",
+          "target": "ToXiiCxFaKiie",
+          "period": "2019-09",
+          "weight": "1"
+      },
+      {
+          "id": "202",
+          "source": "Draconis233",
+          "target": "ToXiiCxFaKiie",
+          "period": "2020-03",
+          "weight": "1"
+      },
+      {
+          "id": "203",
+          "source": "Draconis233",
+          "target": "ToXiiCxFaKiie",
+          "period": "2020-04",
+          "weight": "2"
+      },
+      {
+          "id": "204",
+          "source": "Draconis233",
+          "target": "ToXiiCxFaKiie",
+          "period": "2020-06",
+          "weight": "1"
+      },
+      {
+          "id": "205",
+          "source": "Draconis233",
+          "target": "ToXiiCxFaKiie",
+          "period": "2020-11",
+          "weight": "1"
+      },
+      {
+          "id": "212",
+          "source": "Draconis233",
+          "target": "ghillieforb",
+          "period": "2020-03",
+          "weight": "1"
+      },
+      {
+          "id": "213",
+          "source": "Draconis233",
+          "target": "ghillieforb",
+          "period": "2020-04",
+          "weight": "2"
+      },
+      {
+          "id": "214",
+          "source": "Draconis233",
+          "target": "ghillieforb",
+          "period": "2020-06",
+          "weight": "1"
+      },
+      {
+          "id": "215",
+          "source": "Draconis233",
+          "target": "ghillieforb",
+          "period": "2020-07",
+          "weight": "1"
+      },
+      {
+          "id": "216",
+          "source": "Draconis233",
+          "target": "ghillieforb",
+          "period": "2020-11",
+          "weight": "1"
+      },
+      {
+          "id": "217",
+          "source": "Draconis233",
+          "target": "ghillieforb",
+          "period": "2020-12",
+          "weight": "1"
+      },
+      {
+          "id": "218",
+          "source": "Draconis233",
+          "target": "jargonaut",
+          "period": "2020-03",
+          "weight": "2"
+      },
+      {
+          "id": "219",
+          "source": "Draconis233",
+          "target": "matrinki",
+          "period": "2021-03",
+          "weight": "1"
+      },
+      {
+          "id": "225",
+          "source": "Ferns",
+          "target": "Abby\u2665Wolf",
+          "period": "2020-03",
+          "weight": "1"
+      },
+      {
+          "id": "226",
+          "source": "Ferns",
+          "target": "Dill Jaegerbuns (Drekar)",
+          "period": "2019-11",
+          "weight": "1"
+      },
+      {
+          "id": "227",
+          "source": "Ferns",
+          "target": "Dill Jaegerbuns (Drekar)",
+          "period": "2020-04",
+          "weight": "1"
+      },
+      {
+          "id": "228",
+          "source": "Ferns",
+          "target": "Dill Jaegerbuns (Drekar)",
+          "period": "2021-01",
+          "weight": "1"
+      },
+      {
+          "id": "229",
+          "source": "Ferns",
+          "target": "Dill Jaegerbuns (Drekar)",
+          "period": "2021-02",
+          "weight": "5"
+      },
+      {
+          "id": "230",
+          "source": "Ferns",
+          "target": "Dill Jaegerbuns (Drekar)",
+          "period": "2021-03",
+          "weight": "5"
+      },
+      {
+          "id": "231",
+          "source": "Ferns",
+          "target": "Dill Jaegerbuns (Drekar)",
+          "period": "2021-04",
+          "weight": "1"
+      },
+      {
+          "id": "232",
+          "source": "Ferns",
+          "target": "Dill Jaegerbuns (Drekar)",
+          "period": "2021-05",
+          "weight": "2"
+      },
+      {
+          "id": "233",
+          "source": "Ferns",
+          "target": "Dill Jaegerbuns (Drekar)",
+          "period": "2021-09",
+          "weight": "2"
+      },
+      {
+          "id": "234",
+          "source": "Ferns",
+          "target": "Dill Jaegerbuns (Drekar)",
+          "period": "2021-10",
+          "weight": "1"
+      },
+      {
+          "id": "235",
+          "source": "Ferns",
+          "target": "Dill Jaegerbuns (Drekar)",
+          "period": "2021-11",
+          "weight": "1"
+      },
+      {
+          "id": "236",
+          "source": "Ferns",
+          "target": "Dill Jaegerbuns (Drekar)",
+          "period": "2021-12",
+          "weight": "1"
+      },
+      {
+          "id": "237",
+          "source": "Ferns",
+          "target": "Dill Jaegerbuns (Drekar)",
+          "period": "2022-01",
+          "weight": "1"
+      },
+      {
+          "id": "238",
+          "source": "Ferns",
+          "target": "Dill Jaegerbuns (Drekar)",
+          "period": "2022-02",
+          "weight": "2"
+      },
+      {
+          "id": "239",
+          "source": "Ferns",
+          "target": "Dill Jaegerbuns (Drekar)",
+          "period": "2022-06",
+          "weight": "3"
+      },
+      {
+          "id": "240",
+          "source": "Ferns",
+          "target": "Draconis233",
+          "period": "2020-03",
+          "weight": "1"
+      },
+      {
+          "id": "241",
+          "source": "Ferns",
+          "target": "Draconis233",
+          "period": "2021-01",
+          "weight": "1"
+      },
+      {
+          "id": "242",
+          "source": "Ferns",
+          "target": "Mandem",
+          "period": "2021-12",
+          "weight": "1"
+      },
+      {
+          "id": "243",
+          "source": "Ferns",
+          "target": "Mature_Chaddar",
+          "period": "2020-03",
+          "weight": "1"
+      },
+      {
+          "id": "244",
+          "source": "Ferns",
+          "target": "Mature_Chaddar",
+          "period": "2020-12",
+          "weight": "1"
+      },
+      {
+          "id": "245",
+          "source": "Ferns",
+          "target": "Mature_Chaddar",
+          "period": "2021-01",
+          "weight": "1"
+      },
+      {
+          "id": "246",
+          "source": "Ferns",
+          "target": "Mature_Chaddar",
+          "period": "2021-02",
+          "weight": "5"
+      },
+      {
+          "id": "247",
+          "source": "Ferns",
+          "target": "Mature_Chaddar",
+          "period": "2021-03",
+          "weight": "5"
+      },
+      {
+          "id": "248",
+          "source": "Ferns",
+          "target": "Mature_Chaddar",
+          "period": "2021-04",
+          "weight": "1"
+      },
+      {
+          "id": "249",
+          "source": "Ferns",
+          "target": "Mature_Chaddar",
+          "period": "2021-05",
+          "weight": "4"
+      },
+      {
+          "id": "250",
+          "source": "Ferns",
+          "target": "Mature_Chaddar",
+          "period": "2021-06",
+          "weight": "1"
+      },
+      {
+          "id": "251",
+          "source": "Ferns",
+          "target": "Mature_Chaddar",
+          "period": "2021-08",
+          "weight": "2"
+      },
+      {
+          "id": "252",
+          "source": "Ferns",
+          "target": "Mature_Chaddar",
+          "period": "2021-09",
+          "weight": "1"
+      },
+      {
+          "id": "253",
+          "source": "Ferns",
+          "target": "Mature_Chaddar",
+          "period": "2021-12",
+          "weight": "2"
+      },
+      {
+          "id": "254",
+          "source": "Ferns",
+          "target": "Mature_Chaddar",
+          "period": "2022-02",
+          "weight": "2"
+      },
+      {
+          "id": "255",
+          "source": "Ferns",
+          "target": "Mature_Chaddar",
+          "period": "2022-05",
+          "weight": "1"
+      },
+      {
+          "id": "256",
+          "source": "Ferns",
+          "target": "Mature_Chaddar",
+          "period": "2022-06",
+          "weight": "2"
+      },
+      {
+          "id": "257",
+          "source": "Ferns",
+          "target": "Talwolf",
+          "period": "2021-05",
+          "weight": "1"
+      },
+      {
+          "id": "258",
+          "source": "Ferns",
+          "target": "ToXiiCxFaKiie",
+          "period": "2020-03",
+          "weight": "1"
+      },
+      {
+          "id": "259",
+          "source": "Ferns",
+          "target": "ToXiiCxFaKiie",
+          "period": "2021-08",
+          "weight": "1"
+      },
+      {
+          "id": "266",
+          "source": "Ferns",
+          "target": "ghillieforb",
+          "period": "2020-12",
+          "weight": "1"
+      },
+      {
+          "id": "267",
+          "source": "Ferns",
+          "target": "ghillieforb",
+          "period": "2021-01",
+          "weight": "1"
+      },
+      {
+          "id": "268",
+          "source": "Ferns",
+          "target": "ghillieforb",
+          "period": "2021-02",
+          "weight": "6"
+      },
+      {
+          "id": "269",
+          "source": "Ferns",
+          "target": "ghillieforb",
+          "period": "2021-03",
+          "weight": "2"
+      },
+      {
+          "id": "270",
+          "source": "Ferns",
+          "target": "ghillieforb",
+          "period": "2021-05",
+          "weight": "1"
+      },
+      {
+          "id": "271",
+          "source": "Ferns",
+          "target": "ghillieforb",
+          "period": "2022-06",
+          "weight": "1"
+      },
+      {
+          "id": "272",
+          "source": "Ferns",
+          "target": "jargonaut",
+          "period": "2020-03",
+          "weight": "1"
+      },
+      {
+          "id": "273",
+          "source": "Ferns",
+          "target": "matrinki",
+          "period": "2021-01",
+          "weight": "1"
+      },
+      {
+          "id": "274",
+          "source": "Ferns",
+          "target": "matrinki",
+          "period": "2021-02",
+          "weight": "5"
+      },
+      {
+          "id": "275",
+          "source": "Ferns",
+          "target": "matrinki",
+          "period": "2021-03",
+          "weight": "1"
+      },
+      {
+          "id": "276",
+          "source": "Ferns",
+          "target": "matrinki",
+          "period": "2021-08",
+          "weight": "1"
+      },
+      {
+          "id": "277",
+          "source": "Ferns",
+          "target": "matrinki",
+          "period": "2021-12",
+          "weight": "2"
+      },
+      {
+          "id": "362",
+          "source": "Mandem",
+          "target": "Abby\u2665Wolf",
+          "period": "2018-12",
+          "weight": "3"
+      },
+      {
+          "id": "363",
+          "source": "Mandem",
+          "target": "Abby\u2665Wolf",
+          "period": "2019-01",
+          "weight": "2"
+      },
+      {
+          "id": "364",
+          "source": "Mandem",
+          "target": "Abby\u2665Wolf",
+          "period": "2019-02",
+          "weight": "1"
+      },
+      {
+          "id": "365",
+          "source": "Mandem",
+          "target": "Abby\u2665Wolf",
+          "period": "2019-03",
+          "weight": "7"
+      },
+      {
+          "id": "366",
+          "source": "Mandem",
+          "target": "Abby\u2665Wolf",
+          "period": "2019-04",
+          "weight": "5"
+      },
+      {
+          "id": "367",
+          "source": "Mandem",
+          "target": "Abby\u2665Wolf",
+          "period": "2019-05",
+          "weight": "2"
+      },
+      {
+          "id": "368",
+          "source": "Mandem",
+          "target": "Abby\u2665Wolf",
+          "period": "2019-06",
+          "weight": "8"
+      },
+      {
+          "id": "369",
+          "source": "Mandem",
+          "target": "Abby\u2665Wolf",
+          "period": "2019-07",
+          "weight": "3"
+      },
+      {
+          "id": "370",
+          "source": "Mandem",
+          "target": "Abby\u2665Wolf",
+          "period": "2019-08",
+          "weight": "1"
+      },
+      {
+          "id": "371",
+          "source": "Mandem",
+          "target": "Abby\u2665Wolf",
+          "period": "2019-09",
+          "weight": "5"
+      },
+      {
+          "id": "372",
+          "source": "Mandem",
+          "target": "Abby\u2665Wolf",
+          "period": "2019-10",
+          "weight": "3"
+      },
+      {
+          "id": "373",
+          "source": "Mandem",
+          "target": "Abby\u2665Wolf",
+          "period": "2019-11",
+          "weight": "4"
+      },
+      {
+          "id": "374",
+          "source": "Mandem",
+          "target": "Abby\u2665Wolf",
+          "period": "2020-02",
+          "weight": "1"
+      },
+      {
+          "id": "375",
+          "source": "Mandem",
+          "target": "Abby\u2665Wolf",
+          "period": "2020-07",
+          "weight": "1"
+      },
+      {
+          "id": "376",
+          "source": "Mandem",
+          "target": "Abby\u2665Wolf",
+          "period": "2021-05",
+          "weight": "1"
+      },
+      {
+          "id": "377",
+          "source": "Mandem",
+          "target": "BoundAndTied",
+          "period": "2019-06",
+          "weight": "1"
+      },
+      {
+          "id": "378",
+          "source": "Mandem",
+          "target": "BoundAndTied",
+          "period": "2019-09",
+          "weight": "1"
+      },
+      {
+          "id": "379",
+          "source": "Mandem",
+          "target": "Dill Jaegerbuns (Drekar)",
+          "period": "2021-05",
+          "weight": "1"
+      },
+      {
+          "id": "380",
+          "source": "Mandem",
+          "target": "Draconis233",
+          "period": "2020-03",
+          "weight": "1"
+      },
+      {
+          "id": "381",
+          "source": "Mandem",
+          "target": "Ferns",
+          "period": "2020-03",
+          "weight": "1"
+      },
+      {
+          "id": "382",
+          "source": "Mandem",
+          "target": "Ferns",
+          "period": "2021-05",
+          "weight": "1"
+      },
+      {
+          "id": "383",
+          "source": "Mandem",
+          "target": "Mature_Chaddar",
+          "period": "2020-02",
+          "weight": "1"
+      },
+      {
+          "id": "385",
+          "source": "Mandem",
+          "target": "Talwolf",
+          "period": "2019-07",
+          "weight": "1"
+      },
+      {
+          "id": "386",
+          "source": "Mandem",
+          "target": "ToXiiCxFaKiie",
+          "period": "2020-02",
+          "weight": "1"
+      },
+      {
+          "id": "387",
+          "source": "Mandem",
+          "target": "ToXiiCxFaKiie",
+          "period": "2020-03",
+          "weight": "1"
+      },
+      {
+          "id": "388",
+          "source": "Mandem",
+          "target": "ToXiiCxFaKiie",
+          "period": "2021-05",
+          "weight": "1"
+      },
+      {
+          "id": "389",
+          "source": "Mandem",
+          "target": "Zezku",
+          "period": "2019-06",
+          "weight": "2"
+      },
+      {
+          "id": "390",
+          "source": "Mandem",
+          "target": "Zezku",
+          "period": "2019-08",
+          "weight": "1"
+      },
+      {
+          "id": "391",
+          "source": "Mandem",
+          "target": "Zezku",
+          "period": "2019-10",
+          "weight": "1"
+      },
+      {
+          "id": "392",
+          "source": "Mandem",
+          "target": "Zezku",
+          "period": "2019-11",
+          "weight": "2"
+      },
+      {
+          "id": "393",
+          "source": "Mandem",
+          "target": "Zezku",
+          "period": "2020-07",
+          "weight": "1"
+      },
+      {
+          "id": "394",
+          "source": "Mandem",
+          "target": "ghillieforb",
+          "period": "2020-02",
+          "weight": "1"
+      },
+      {
+          "id": "395",
+          "source": "Mandem",
+          "target": "ghillieforb",
+          "period": "2020-03",
+          "weight": "1"
+      },
+      {
+          "id": "396",
+          "source": "Mandem",
+          "target": "ghillieforb",
+          "period": "2021-05",
+          "weight": "1"
+      },
+      {
+          "id": "397",
+          "source": "Mandem",
+          "target": "jargonaut",
+          "period": "2018-11",
+          "weight": "1"
+      },
+      {
+          "id": "398",
+          "source": "Mandem",
+          "target": "jargonaut",
+          "period": "2018-12",
+          "weight": "2"
+      },
+      {
+          "id": "399",
+          "source": "Mandem",
+          "target": "jargonaut",
+          "period": "2019-01",
+          "weight": "3"
+      },
+      {
+          "id": "400",
+          "source": "Mandem",
+          "target": "jargonaut",
+          "period": "2019-02",
+          "weight": "2"
+      },
+      {
+          "id": "401",
+          "source": "Mandem",
+          "target": "jargonaut",
+          "period": "2019-03",
+          "weight": "4"
+      },
+      {
+          "id": "402",
+          "source": "Mandem",
+          "target": "jargonaut",
+          "period": "2019-04",
+          "weight": "7"
+      },
+      {
+          "id": "403",
+          "source": "Mandem",
+          "target": "jargonaut",
+          "period": "2019-05",
+          "weight": "1"
+      },
+      {
+          "id": "404",
+          "source": "Mandem",
+          "target": "jargonaut",
+          "period": "2019-06",
+          "weight": "6"
+      },
+      {
+          "id": "405",
+          "source": "Mandem",
+          "target": "jargonaut",
+          "period": "2019-07",
+          "weight": "3"
+      },
+      {
+          "id": "406",
+          "source": "Mandem",
+          "target": "jargonaut",
+          "period": "2019-09",
+          "weight": "2"
+      },
+      {
+          "id": "407",
+          "source": "Mandem",
+          "target": "jargonaut",
+          "period": "2019-11",
+          "weight": "3"
+      },
+      {
+          "id": "408",
+          "source": "Mandem",
+          "target": "jargonaut",
+          "period": "2020-02",
+          "weight": "1"
+      },
+      {
+          "id": "409",
+          "source": "Mandem",
+          "target": "jargonaut",
+          "period": "2020-03",
+          "weight": "1"
+      },
+      {
+          "id": "410",
+          "source": "Mandem",
+          "target": "jargonaut",
+          "period": "2021-05",
+          "weight": "1"
+      },
+      {
+          "id": "411",
+          "source": "Mandem",
+          "target": "matrinki",
+          "period": "2021-08",
+          "weight": "1"
+      },
+      {
+          "id": "412",
+          "source": "Mandem",
+          "target": "matrinki",
+          "period": "2022-02",
+          "weight": "1"
+      },
+      {
+          "id": "413",
+          "source": "Mature_Chaddar",
+          "target": "Abby\u2665Wolf",
+          "period": "2020-05",
+          "weight": "2"
+      },
+      {
+          "id": "415",
+          "source": "Mature_Chaddar",
+          "target": "Dill Jaegerbuns (Drekar)",
+          "period": "2020-05",
+          "weight": "1"
+      },
+      {
+          "id": "416",
+          "source": "Mature_Chaddar",
+          "target": "Dill Jaegerbuns (Drekar)",
+          "period": "2020-07",
+          "weight": "1"
+      },
+      {
+          "id": "417",
+          "source": "Mature_Chaddar",
+          "target": "Dill Jaegerbuns (Drekar)",
+          "period": "2020-08",
+          "weight": "1"
+      },
+      {
+          "id": "418",
+          "source": "Mature_Chaddar",
+          "target": "Dill Jaegerbuns (Drekar)",
+          "period": "2020-11",
+          "weight": "4"
+      },
+      {
+          "id": "419",
+          "source": "Mature_Chaddar",
+          "target": "Dill Jaegerbuns (Drekar)",
+          "period": "2021-02",
+          "weight": "5"
+      },
+      {
+          "id": "420",
+          "source": "Mature_Chaddar",
+          "target": "Dill Jaegerbuns (Drekar)",
+          "period": "2021-03",
+          "weight": "4"
+      },
+      {
+          "id": "421",
+          "source": "Mature_Chaddar",
+          "target": "Dill Jaegerbuns (Drekar)",
+          "period": "2021-04",
+          "weight": "2"
+      },
+      {
+          "id": "422",
+          "source": "Mature_Chaddar",
+          "target": "Dill Jaegerbuns (Drekar)",
+          "period": "2021-05",
+          "weight": "1"
+      },
+      {
+          "id": "423",
+          "source": "Mature_Chaddar",
+          "target": "Dill Jaegerbuns (Drekar)",
+          "period": "2021-09",
+          "weight": "2"
+      },
+      {
+          "id": "424",
+          "source": "Mature_Chaddar",
+          "target": "Dill Jaegerbuns (Drekar)",
+          "period": "2021-12",
+          "weight": "1"
+      },
+      {
+          "id": "425",
+          "source": "Mature_Chaddar",
+          "target": "Dill Jaegerbuns (Drekar)",
+          "period": "2022-02",
+          "weight": "1"
+      },
+      {
+          "id": "426",
+          "source": "Mature_Chaddar",
+          "target": "Dill Jaegerbuns (Drekar)",
+          "period": "2022-03",
+          "weight": "1"
+      },
+      {
+          "id": "427",
+          "source": "Mature_Chaddar",
+          "target": "Dill Jaegerbuns (Drekar)",
+          "period": "2022-04",
+          "weight": "1"
+      },
+      {
+          "id": "428",
+          "source": "Mature_Chaddar",
+          "target": "Dill Jaegerbuns (Drekar)",
+          "period": "2022-05",
+          "weight": "1"
+      },
+      {
+          "id": "429",
+          "source": "Mature_Chaddar",
+          "target": "Dill Jaegerbuns (Drekar)",
+          "period": "2022-06",
+          "weight": "2"
+      },
+      {
+          "id": "430",
+          "source": "Mature_Chaddar",
+          "target": "Draconis233",
+          "period": "2020-05",
+          "weight": "1"
+      },
+      {
+          "id": "431",
+          "source": "Mature_Chaddar",
+          "target": "Draconis233",
+          "period": "2020-10",
+          "weight": "1"
+      },
+      {
+          "id": "432",
+          "source": "Mature_Chaddar",
+          "target": "Draconis233",
+          "period": "2020-11",
+          "weight": "1"
+      },
+      {
+          "id": "433",
+          "source": "Mature_Chaddar",
+          "target": "Draconis233",
+          "period": "2021-02",
+          "weight": "1"
+      },
+      {
+          "id": "434",
+          "source": "Mature_Chaddar",
+          "target": "Ferns",
+          "period": "2020-05",
+          "weight": "1"
+      },
+      {
+          "id": "435",
+          "source": "Mature_Chaddar",
+          "target": "Ferns",
+          "period": "2020-07",
+          "weight": "2"
+      },
+      {
+          "id": "436",
+          "source": "Mature_Chaddar",
+          "target": "Ferns",
+          "period": "2020-08",
+          "weight": "2"
+      },
+      {
+          "id": "437",
+          "source": "Mature_Chaddar",
+          "target": "Ferns",
+          "period": "2020-09",
+          "weight": "1"
+      },
+      {
+          "id": "438",
+          "source": "Mature_Chaddar",
+          "target": "Ferns",
+          "period": "2020-10",
+          "weight": "1"
+      },
+      {
+          "id": "439",
+          "source": "Mature_Chaddar",
+          "target": "Ferns",
+          "period": "2020-11",
+          "weight": "5"
+      },
+      {
+          "id": "440",
+          "source": "Mature_Chaddar",
+          "target": "Ferns",
+          "period": "2020-12",
+          "weight": "3"
+      },
+      {
+          "id": "441",
+          "source": "Mature_Chaddar",
+          "target": "Ferns",
+          "period": "2021-01",
+          "weight": "1"
+      },
+      {
+          "id": "442",
+          "source": "Mature_Chaddar",
+          "target": "Ferns",
+          "period": "2021-02",
+          "weight": "6"
+      },
+      {
+          "id": "443",
+          "source": "Mature_Chaddar",
+          "target": "Ferns",
+          "period": "2021-03",
+          "weight": "4"
+      },
+      {
+          "id": "444",
+          "source": "Mature_Chaddar",
+          "target": "Ferns",
+          "period": "2021-04",
+          "weight": "2"
+      },
+      {
+          "id": "445",
+          "source": "Mature_Chaddar",
+          "target": "Ferns",
+          "period": "2021-05",
+          "weight": "3"
+      },
+      {
+          "id": "446",
+          "source": "Mature_Chaddar",
+          "target": "Ferns",
+          "period": "2021-06",
+          "weight": "1"
+      },
+      {
+          "id": "447",
+          "source": "Mature_Chaddar",
+          "target": "Ferns",
+          "period": "2021-07",
+          "weight": "1"
+      },
+      {
+          "id": "448",
+          "source": "Mature_Chaddar",
+          "target": "Ferns",
+          "period": "2021-08",
+          "weight": "2"
+      },
+      {
+          "id": "449",
+          "source": "Mature_Chaddar",
+          "target": "Ferns",
+          "period": "2021-09",
+          "weight": "2"
+      },
+      {
+          "id": "450",
+          "source": "Mature_Chaddar",
+          "target": "Ferns",
+          "period": "2021-12",
+          "weight": "1"
+      },
+      {
+          "id": "451",
+          "source": "Mature_Chaddar",
+          "target": "Ferns",
+          "period": "2022-02",
+          "weight": "1"
+      },
+      {
+          "id": "452",
+          "source": "Mature_Chaddar",
+          "target": "Ferns",
+          "period": "2022-03",
+          "weight": "1"
+      },
+      {
+          "id": "453",
+          "source": "Mature_Chaddar",
+          "target": "Ferns",
+          "period": "2022-04",
+          "weight": "1"
+      },
+      {
+          "id": "454",
+          "source": "Mature_Chaddar",
+          "target": "Ferns",
+          "period": "2022-05",
+          "weight": "1"
+      },
+      {
+          "id": "455",
+          "source": "Mature_Chaddar",
+          "target": "Ferns",
+          "period": "2022-06",
+          "weight": "2"
+      },
+      {
+          "id": "456",
+          "source": "Mature_Chaddar",
+          "target": "Mandem",
+          "period": "2021-12",
+          "weight": "1"
+      },
+      {
+          "id": "461",
+          "source": "Mature_Chaddar",
+          "target": "Talwolf",
+          "period": "2020-11",
+          "weight": "1"
+      },
+      {
+          "id": "462",
+          "source": "Mature_Chaddar",
+          "target": "Talwolf",
+          "period": "2021-05",
+          "weight": "1"
+      },
+      {
+          "id": "463",
+          "source": "Mature_Chaddar",
+          "target": "ToXiiCxFaKiie",
+          "period": "2020-05",
+          "weight": "3"
+      },
+      {
+          "id": "464",
+          "source": "Mature_Chaddar",
+          "target": "ToXiiCxFaKiie",
+          "period": "2020-08",
+          "weight": "1"
+      },
+      {
+          "id": "465",
+          "source": "Mature_Chaddar",
+          "target": "ToXiiCxFaKiie",
+          "period": "2020-09",
+          "weight": "2"
+      },
+      {
+          "id": "466",
+          "source": "Mature_Chaddar",
+          "target": "ToXiiCxFaKiie",
+          "period": "2021-08",
+          "weight": "1"
+      },
+      {
+          "id": "467",
+          "source": "Mature_Chaddar",
+          "target": "ToXiiCxFaKiie",
+          "period": "2021-10",
+          "weight": "1"
+      },
+      {
+          "id": "468",
+          "source": "Mature_Chaddar",
+          "target": "ToXiiCxFaKiie",
+          "period": "2021-12",
+          "weight": "1"
+      },
+      {
+          "id": "469",
+          "source": "Mature_Chaddar",
+          "target": "ToXiiCxFaKiie",
+          "period": "2022-02",
+          "weight": "4"
+      },
+      {
+          "id": "470",
+          "source": "Mature_Chaddar",
+          "target": "ToXiiCxFaKiie",
+          "period": "2022-03",
+          "weight": "1"
+      },
+      {
+          "id": "473",
+          "source": "Mature_Chaddar",
+          "target": "ghillieforb",
+          "period": "2020-05",
+          "weight": "1"
+      },
+      {
+          "id": "474",
+          "source": "Mature_Chaddar",
+          "target": "ghillieforb",
+          "period": "2020-07",
+          "weight": "1"
+      },
+      {
+          "id": "475",
+          "source": "Mature_Chaddar",
+          "target": "ghillieforb",
+          "period": "2020-11",
+          "weight": "1"
+      },
+      {
+          "id": "476",
+          "source": "Mature_Chaddar",
+          "target": "ghillieforb",
+          "period": "2020-12",
+          "weight": "3"
+      },
+      {
+          "id": "477",
+          "source": "Mature_Chaddar",
+          "target": "ghillieforb",
+          "period": "2021-02",
+          "weight": "3"
+      },
+      {
+          "id": "478",
+          "source": "Mature_Chaddar",
+          "target": "ghillieforb",
+          "period": "2021-03",
+          "weight": "3"
+      },
+      {
+          "id": "479",
+          "source": "Mature_Chaddar",
+          "target": "ghillieforb",
+          "period": "2021-05",
+          "weight": "1"
+      },
+      {
+          "id": "480",
+          "source": "Mature_Chaddar",
+          "target": "ghillieforb",
+          "period": "2021-08",
+          "weight": "1"
+      },
+      {
+          "id": "481",
+          "source": "Mature_Chaddar",
+          "target": "jargonaut",
+          "period": "2020-08",
+          "weight": "1"
+      },
+      {
+          "id": "482",
+          "source": "Mature_Chaddar",
+          "target": "jayseven",
+          "period": "2020-08",
+          "weight": "1"
+      },
+      {
+          "id": "483",
+          "source": "Mature_Chaddar",
+          "target": "matrinki",
+          "period": "2020-07",
+          "weight": "1"
+      },
+      {
+          "id": "484",
+          "source": "Mature_Chaddar",
+          "target": "matrinki",
+          "period": "2020-08",
+          "weight": "1"
+      },
+      {
+          "id": "485",
+          "source": "Mature_Chaddar",
+          "target": "matrinki",
+          "period": "2020-09",
+          "weight": "2"
+      },
+      {
+          "id": "486",
+          "source": "Mature_Chaddar",
+          "target": "matrinki",
+          "period": "2020-11",
+          "weight": "3"
+      },
+      {
+          "id": "487",
+          "source": "Mature_Chaddar",
+          "target": "matrinki",
+          "period": "2021-03",
+          "weight": "1"
+      },
+      {
+          "id": "488",
+          "source": "Mature_Chaddar",
+          "target": "matrinki",
+          "period": "2021-12",
+          "weight": "1"
+      },
+      {
+          "id": "489",
+          "source": "Mature_Chaddar",
+          "target": "matrinki",
+          "period": "2022-03",
+          "weight": "1"
+      },
+      {
+          "id": "490",
+          "source": "Mature_Chaddar",
+          "target": "matrinki",
+          "period": "2022-04",
+          "weight": "1"
+      },
+      {
+          "id": "522",
+          "source": "Talwolf",
+          "target": "Abby\u2665Wolf",
+          "period": "2019-08",
+          "weight": "1"
+      },
+      {
+          "id": "523",
+          "source": "Talwolf",
+          "target": "Mandem",
+          "period": "2019-05",
+          "weight": "1"
+      },
+      {
+          "id": "524",
+          "source": "Talwolf",
+          "target": "Mature_Chaddar",
+          "period": "2019-09",
+          "weight": "3"
+      },
+      {
+          "id": "525",
+          "source": "Talwolf",
+          "target": "Mature_Chaddar",
+          "period": "2019-10",
+          "weight": "2"
+      },
+      {
+          "id": "526",
+          "source": "Talwolf",
+          "target": "Mature_Chaddar",
+          "period": "2019-11",
+          "weight": "1"
+      },
+      {
+          "id": "527",
+          "source": "Talwolf",
+          "target": "Mature_Chaddar",
+          "period": "2020-07",
+          "weight": "1"
+      },
+      {
+          "id": "528",
+          "source": "Talwolf",
+          "target": "ToXiiCxFaKiie",
+          "period": "2019-10",
+          "weight": "1"
+      },
+      {
+          "id": "529",
+          "source": "Talwolf",
+          "target": "ToXiiCxFaKiie",
+          "period": "2020-06",
+          "weight": "1"
+      },
+      {
+          "id": "530",
+          "source": "Talwolf",
+          "target": "Zezku",
+          "period": "2019-08",
+          "weight": "2"
+      },
+      {
+          "id": "531",
+          "source": "Talwolf",
+          "target": "ghillieforb",
+          "period": "2019-09",
+          "weight": "4"
+      },
+      {
+          "id": "532",
+          "source": "Talwolf",
+          "target": "ghillieforb",
+          "period": "2019-10",
+          "weight": "1"
+      },
+      {
+          "id": "533",
+          "source": "Talwolf",
+          "target": "jargonaut",
+          "period": "2019-08",
+          "weight": "1"
+      },
+      {
+          "id": "534",
+          "source": "Talwolf",
+          "target": "jargonaut",
+          "period": "2019-09",
+          "weight": "1"
+      },
+      {
+          "id": "535",
+          "source": "ToXiiCxFaKiie",
+          "target": "Abby\u2665Wolf",
+          "period": "2019-10",
+          "weight": "1"
+      },
+      {
+          "id": "536",
+          "source": "ToXiiCxFaKiie",
+          "target": "Abby\u2665Wolf",
+          "period": "2020-03",
+          "weight": "6"
+      },
+      {
+          "id": "537",
+          "source": "ToXiiCxFaKiie",
+          "target": "Abby\u2665Wolf",
+          "period": "2020-05",
+          "weight": "1"
+      },
+      {
+          "id": "538",
+          "source": "ToXiiCxFaKiie",
+          "target": "Dill Jaegerbuns (Drekar)",
+          "period": "2020-06",
+          "weight": "1"
+      },
+      {
+          "id": "539",
+          "source": "ToXiiCxFaKiie",
+          "target": "Dill Jaegerbuns (Drekar)",
+          "period": "2020-08",
+          "weight": "1"
+      },
+      {
+          "id": "540",
+          "source": "ToXiiCxFaKiie",
+          "target": "Dill Jaegerbuns (Drekar)",
+          "period": "2020-09",
+          "weight": "1"
+      },
+      {
+          "id": "541",
+          "source": "ToXiiCxFaKiie",
+          "target": "Dill Jaegerbuns (Drekar)",
+          "period": "2022-02",
+          "weight": "1"
+      },
+      {
+          "id": "542",
+          "source": "ToXiiCxFaKiie",
+          "target": "Draconis233",
+          "period": "2019-09",
+          "weight": "1"
+      },
+      {
+          "id": "543",
+          "source": "ToXiiCxFaKiie",
+          "target": "Draconis233",
+          "period": "2020-03",
+          "weight": "2"
+      },
+      {
+          "id": "544",
+          "source": "ToXiiCxFaKiie",
+          "target": "Draconis233",
+          "period": "2020-06",
+          "weight": "2"
+      },
+      {
+          "id": "545",
+          "source": "ToXiiCxFaKiie",
+          "target": "Ferns",
+          "period": "2020-03",
+          "weight": "2"
+      },
+      {
+          "id": "546",
+          "source": "ToXiiCxFaKiie",
+          "target": "Ferns",
+          "period": "2020-06",
+          "weight": "1"
+      },
+      {
+          "id": "547",
+          "source": "ToXiiCxFaKiie",
+          "target": "Ferns",
+          "period": "2022-02",
+          "weight": "1"
+      },
+      {
+          "id": "548",
+          "source": "ToXiiCxFaKiie",
+          "target": "Mature_Chaddar",
+          "period": "2020-02",
+          "weight": "1"
+      },
+      {
+          "id": "549",
+          "source": "ToXiiCxFaKiie",
+          "target": "Mature_Chaddar",
+          "period": "2020-03",
+          "weight": "2"
+      },
+      {
+          "id": "550",
+          "source": "ToXiiCxFaKiie",
+          "target": "Mature_Chaddar",
+          "period": "2020-05",
+          "weight": "1"
+      },
+      {
+          "id": "551",
+          "source": "ToXiiCxFaKiie",
+          "target": "Mature_Chaddar",
+          "period": "2020-06",
+          "weight": "2"
+      },
+      {
+          "id": "552",
+          "source": "ToXiiCxFaKiie",
+          "target": "Mature_Chaddar",
+          "period": "2020-09",
+          "weight": "2"
+      },
+      {
+          "id": "553",
+          "source": "ToXiiCxFaKiie",
+          "target": "Mature_Chaddar",
+          "period": "2021-08",
+          "weight": "1"
+      },
+      {
+          "id": "554",
+          "source": "ToXiiCxFaKiie",
+          "target": "Mature_Chaddar",
+          "period": "2021-10",
+          "weight": "2"
+      },
+      {
+          "id": "555",
+          "source": "ToXiiCxFaKiie",
+          "target": "Mature_Chaddar",
+          "period": "2022-02",
+          "weight": "4"
+      },
+      {
+          "id": "564",
+          "source": "ToXiiCxFaKiie",
+          "target": "Talwolf",
+          "period": "2019-09",
+          "weight": "1"
+      },
+      {
+          "id": "565",
+          "source": "ToXiiCxFaKiie",
+          "target": "Talwolf",
+          "period": "2020-06",
+          "weight": "1"
+      },
+      {
+          "id": "566",
+          "source": "ToXiiCxFaKiie",
+          "target": "Wiggles_",
+          "period": "2019-10",
+          "weight": "1"
+      },
+      {
+          "id": "567",
+          "source": "ToXiiCxFaKiie",
+          "target": "Zezku",
+          "period": "2019-10",
+          "weight": "1"
+      },
+      {
+          "id": "568",
+          "source": "ToXiiCxFaKiie",
+          "target": "ghillieforb",
+          "period": "2019-09",
+          "weight": "1"
+      },
+      {
+          "id": "569",
+          "source": "ToXiiCxFaKiie",
+          "target": "ghillieforb",
+          "period": "2020-03",
+          "weight": "2"
+      },
+      {
+          "id": "570",
+          "source": "ToXiiCxFaKiie",
+          "target": "ghillieforb",
+          "period": "2020-04",
+          "weight": "1"
+      },
+      {
+          "id": "571",
+          "source": "ToXiiCxFaKiie",
+          "target": "ghillieforb",
+          "period": "2020-05",
+          "weight": "2"
+      },
+      {
+          "id": "572",
+          "source": "ToXiiCxFaKiie",
+          "target": "ghillieforb",
+          "period": "2020-06",
+          "weight": "2"
+      },
+      {
+          "id": "573",
+          "source": "ToXiiCxFaKiie",
+          "target": "ghillieforb",
+          "period": "2021-08",
+          "weight": "1"
+      },
+      {
+          "id": "574",
+          "source": "ToXiiCxFaKiie",
+          "target": "ghillieforb",
+          "period": "2021-09",
+          "weight": "1"
+      },
+      {
+          "id": "575",
+          "source": "ToXiiCxFaKiie",
+          "target": "ghillieforb",
+          "period": "2022-02",
+          "weight": "1"
+      },
+      {
+          "id": "576",
+          "source": "ToXiiCxFaKiie",
+          "target": "jargonaut",
+          "period": "2020-03",
+          "weight": "4"
+      },
+      {
+          "id": "577",
+          "source": "ToXiiCxFaKiie",
+          "target": "matrinki",
+          "period": "2020-09",
+          "weight": "1"
+      },
+      {
+          "id": "591",
+          "source": "Wiggles_",
+          "target": "Dill Jaegerbuns (Drekar)",
+          "period": "2020-07",
+          "weight": "2"
+      },
+      {
+          "id": "592",
+          "source": "Wiggles_",
+          "target": "Draconis233",
+          "period": "2020-07",
+          "weight": "1"
+      },
+      {
+          "id": "593",
+          "source": "Wiggles_",
+          "target": "Ferns",
+          "period": "2020-07",
+          "weight": "2"
+      },
+      {
+          "id": "594",
+          "source": "Wiggles_",
+          "target": "Mature_Chaddar",
+          "period": "2020-07",
+          "weight": "1"
+      },
+      {
+          "id": "595",
+          "source": "Wiggles_",
+          "target": "ghillieforb",
+          "period": "2020-07",
+          "weight": "1"
+      },
+      {
+          "id": "596",
+          "source": "Wiggles_",
+          "target": "jayseven",
+          "period": "2020-07",
+          "weight": "2"
+      },
+      {
+          "id": "597",
+          "source": "Wiggles_",
+          "target": "jayseven",
+          "period": "2020-08",
+          "weight": "2"
+      },
+      {
+          "id": "598",
+          "source": "Wiggles_",
+          "target": "matrinki",
+          "period": "2020-07",
+          "weight": "1"
+      },
+      {
+          "id": "627",
+          "source": "Zezku",
+          "target": "Abby\u2665Wolf",
+          "period": "2017-11",
+          "weight": "5"
+      },
+      {
+          "id": "628",
+          "source": "Zezku",
+          "target": "Abby\u2665Wolf",
+          "period": "2017-12",
+          "weight": "2"
+      },
+      {
+          "id": "629",
+          "source": "Zezku",
+          "target": "Abby\u2665Wolf",
+          "period": "2018-05",
+          "weight": "3"
+      },
+      {
+          "id": "630",
+          "source": "Zezku",
+          "target": "Abby\u2665Wolf",
+          "period": "2018-06",
+          "weight": "3"
+      },
+      {
+          "id": "631",
+          "source": "Zezku",
+          "target": "Abby\u2665Wolf",
+          "period": "2018-07",
+          "weight": "7"
+      },
+      {
+          "id": "632",
+          "source": "Zezku",
+          "target": "Abby\u2665Wolf",
+          "period": "2018-08",
+          "weight": "3"
+      },
+      {
+          "id": "633",
+          "source": "Zezku",
+          "target": "Abby\u2665Wolf",
+          "period": "2019-05",
+          "weight": "1"
+      },
+      {
+          "id": "634",
+          "source": "Zezku",
+          "target": "Abby\u2665Wolf",
+          "period": "2019-08",
+          "weight": "1"
+      },
+      {
+          "id": "635",
+          "source": "Zezku",
+          "target": "Abby\u2665Wolf",
+          "period": "2019-12",
+          "weight": "1"
+      },
+      {
+          "id": "636",
+          "source": "Zezku",
+          "target": "Abby\u2665Wolf",
+          "period": "2020-06",
+          "weight": "1"
+      },
+      {
+          "id": "637",
+          "source": "Zezku",
+          "target": "Abby\u2665Wolf",
+          "period": "2020-07",
+          "weight": "4"
+      },
+      {
+          "id": "638",
+          "source": "Zezku",
+          "target": "Abby\u2665Wolf",
+          "period": "2020-08",
+          "weight": "2"
+      },
+      {
+          "id": "639",
+          "source": "Zezku",
+          "target": "Abby\u2665Wolf",
+          "period": "2021-05",
+          "weight": "1"
+      },
+      {
+          "id": "640",
+          "source": "Zezku",
+          "target": "Abby\u2665Wolf",
+          "period": "2021-06",
+          "weight": "2"
+      },
+      {
+          "id": "641",
+          "source": "Zezku",
+          "target": "Abby\u2665Wolf",
+          "period": "2021-08",
+          "weight": "2"
+      },
+      {
+          "id": "642",
+          "source": "Zezku",
+          "target": "Abby\u2665Wolf",
+          "period": "2021-09",
+          "weight": "5"
+      },
+      {
+          "id": "643",
+          "source": "Zezku",
+          "target": "Abby\u2665Wolf",
+          "period": "2021-10",
+          "weight": "4"
+      },
+      {
+          "id": "644",
+          "source": "Zezku",
+          "target": "Abby\u2665Wolf",
+          "period": "2021-11",
+          "weight": "3"
+      },
+      {
+          "id": "645",
+          "source": "Zezku",
+          "target": "Abby\u2665Wolf",
+          "period": "2022-01",
+          "weight": "1"
+      },
+      {
+          "id": "646",
+          "source": "Zezku",
+          "target": "Abby\u2665Wolf",
+          "period": "2022-02",
+          "weight": "4"
+      },
+      {
+          "id": "647",
+          "source": "Zezku",
+          "target": "Abby\u2665Wolf",
+          "period": "2022-03",
+          "weight": "7"
+      },
+      {
+          "id": "648",
+          "source": "Zezku",
+          "target": "Abby\u2665Wolf",
+          "period": "2022-04",
+          "weight": "4"
+      },
+      {
+          "id": "649",
+          "source": "Zezku",
+          "target": "Abby\u2665Wolf",
+          "period": "2022-05",
+          "weight": "4"
+      },
+      {
+          "id": "650",
+          "source": "Zezku",
+          "target": "Abby\u2665Wolf",
+          "period": "2022-06",
+          "weight": "1"
+      },
+      {
+          "id": "651",
+          "source": "Zezku",
+          "target": "BoundAndTied",
+          "period": "2017-11",
+          "weight": "1"
+      },
+      {
+          "id": "652",
+          "source": "Zezku",
+          "target": "BoundAndTied",
+          "period": "2017-12",
+          "weight": "1"
+      },
+      {
+          "id": "653",
+          "source": "Zezku",
+          "target": "BoundAndTied",
+          "period": "2018-06",
+          "weight": "1"
+      },
+      {
+          "id": "654",
+          "source": "Zezku",
+          "target": "BoundAndTied",
+          "period": "2018-07",
+          "weight": "3"
+      },
+      {
+          "id": "655",
+          "source": "Zezku",
+          "target": "BoundAndTied",
+          "period": "2018-08",
+          "weight": "2"
+      },
+      {
+          "id": "656",
+          "source": "Zezku",
+          "target": "BoundAndTied",
+          "period": "2020-08",
+          "weight": "2"
+      },
+      {
+          "id": "657",
+          "source": "Zezku",
+          "target": "BoundAndTied",
+          "period": "2021-09",
+          "weight": "1"
+      },
+      {
+          "id": "658",
+          "source": "Zezku",
+          "target": "BoundAndTied",
+          "period": "2021-11",
+          "weight": "2"
+      },
+      {
+          "id": "668",
+          "source": "Zezku",
+          "target": "Mandem",
+          "period": "2020-08",
+          "weight": "1"
+      },
+      {
+          "id": "672",
+          "source": "Zezku",
+          "target": "Talwolf",
+          "period": "2019-08",
+          "weight": "1"
+      },
+      {
+          "id": "674",
+          "source": "Zezku",
+          "target": "jargonaut",
+          "period": "2019-05",
+          "weight": "1"
+      },
+      {
+          "id": "675",
+          "source": "Zezku",
+          "target": "jargonaut",
+          "period": "2019-12",
+          "weight": "1"
+      },
+      {
+          "id": "676",
+          "source": "Zezku",
+          "target": "jargonaut",
+          "period": "2020-03",
+          "weight": "1"
+      },
+      {
+          "id": "677",
+          "source": "Zezku",
+          "target": "jargonaut",
+          "period": "2020-07",
+          "weight": "3"
+      },
+      {
+          "id": "678",
+          "source": "Zezku",
+          "target": "jargonaut",
+          "period": "2020-08",
+          "weight": "1"
+      },
+      {
+          "id": "679",
+          "source": "Zezku",
+          "target": "jargonaut",
+          "period": "2020-11",
+          "weight": "2"
+      },
+      {
+          "id": "680",
+          "source": "Zezku",
+          "target": "jargonaut",
+          "period": "2021-05",
+          "weight": "1"
+      },
+      {
+          "id": "681",
+          "source": "Zezku",
+          "target": "jargonaut",
+          "period": "2021-08",
+          "weight": "2"
+      },
+      {
+          "id": "682",
+          "source": "Zezku",
+          "target": "jargonaut",
+          "period": "2021-09",
+          "weight": "2"
+      },
+      {
+          "id": "683",
+          "source": "Zezku",
+          "target": "jargonaut",
+          "period": "2021-10",
+          "weight": "2"
+      },
+      {
+          "id": "684",
+          "source": "Zezku",
+          "target": "jargonaut",
+          "period": "2021-11",
+          "weight": "3"
+      },
+      {
+          "id": "685",
+          "source": "Zezku",
+          "target": "jargonaut",
+          "period": "2022-01",
+          "weight": "1"
+      },
+      {
+          "id": "686",
+          "source": "Zezku",
+          "target": "jargonaut",
+          "period": "2022-02",
+          "weight": "3"
+      },
+      {
+          "id": "687",
+          "source": "Zezku",
+          "target": "jargonaut",
+          "period": "2022-03",
+          "weight": "4"
+      },
+      {
+          "id": "688",
+          "source": "Zezku",
+          "target": "jargonaut",
+          "period": "2022-04",
+          "weight": "2"
+      },
+      {
+          "id": "689",
+          "source": "Zezku",
+          "target": "jargonaut",
+          "period": "2022-05",
+          "weight": "3"
+      },
+      {
+          "id": "690",
+          "source": "Zezku",
+          "target": "jargonaut",
+          "period": "2022-06",
+          "weight": "1"
+      },
+      {
+          "id": "691",
+          "source": "Zezku",
+          "target": "jayseven",
+          "period": "2020-07",
+          "weight": "1"
+      },
+      {
+          "id": "692",
+          "source": "Zezku",
+          "target": "matrinki",
+          "period": "2020-07",
+          "weight": "1"
+      },
+      {
+          "id": "701",
+          "source": "ghillieforb",
+          "target": "Dill Jaegerbuns (Drekar)",
+          "period": "2020-05",
+          "weight": "1"
+      },
+      {
+          "id": "702",
+          "source": "ghillieforb",
+          "target": "Dill Jaegerbuns (Drekar)",
+          "period": "2020-06",
+          "weight": "1"
+      },
+      {
+          "id": "703",
+          "source": "ghillieforb",
+          "target": "Dill Jaegerbuns (Drekar)",
+          "period": "2021-02",
+          "weight": "1"
+      },
+      {
+          "id": "704",
+          "source": "ghillieforb",
+          "target": "Dill Jaegerbuns (Drekar)",
+          "period": "2021-03",
+          "weight": "1"
+      },
+      {
+          "id": "705",
+          "source": "ghillieforb",
+          "target": "Dill Jaegerbuns (Drekar)",
+          "period": "2021-06",
+          "weight": "1"
+      },
+      {
+          "id": "706",
+          "source": "ghillieforb",
+          "target": "Dill Jaegerbuns (Drekar)",
+          "period": "2021-08",
+          "weight": "1"
+      },
+      {
+          "id": "707",
+          "source": "ghillieforb",
+          "target": "Draconis233",
+          "period": "2019-11",
+          "weight": "1"
+      },
+      {
+          "id": "708",
+          "source": "ghillieforb",
+          "target": "Draconis233",
+          "period": "2020-06",
+          "weight": "1"
+      },
+      {
+          "id": "709",
+          "source": "ghillieforb",
+          "target": "Draconis233",
+          "period": "2021-02",
+          "weight": "1"
+      },
+      {
+          "id": "710",
+          "source": "ghillieforb",
+          "target": "Draconis233",
+          "period": "2021-03",
+          "weight": "1"
+      },
+      {
+          "id": "711",
+          "source": "ghillieforb",
+          "target": "Ferns",
+          "period": "2020-05",
+          "weight": "1"
+      },
+      {
+          "id": "712",
+          "source": "ghillieforb",
+          "target": "Ferns",
+          "period": "2020-06",
+          "weight": "1"
+      },
+      {
+          "id": "713",
+          "source": "ghillieforb",
+          "target": "Ferns",
+          "period": "2020-07",
+          "weight": "1"
+      },
+      {
+          "id": "714",
+          "source": "ghillieforb",
+          "target": "Ferns",
+          "period": "2020-11",
+          "weight": "1"
+      },
+      {
+          "id": "715",
+          "source": "ghillieforb",
+          "target": "Ferns",
+          "period": "2020-12",
+          "weight": "3"
+      },
+      {
+          "id": "716",
+          "source": "ghillieforb",
+          "target": "Ferns",
+          "period": "2021-02",
+          "weight": "4"
+      },
+      {
+          "id": "717",
+          "source": "ghillieforb",
+          "target": "Ferns",
+          "period": "2021-03",
+          "weight": "2"
+      },
+      {
+          "id": "718",
+          "source": "ghillieforb",
+          "target": "Ferns",
+          "period": "2021-05",
+          "weight": "1"
+      },
+      {
+          "id": "719",
+          "source": "ghillieforb",
+          "target": "Ferns",
+          "period": "2021-06",
+          "weight": "1"
+      },
+      {
+          "id": "720",
+          "source": "ghillieforb",
+          "target": "Ferns",
+          "period": "2021-08",
+          "weight": "3"
+      },
+      {
+          "id": "721",
+          "source": "ghillieforb",
+          "target": "Ferns",
+          "period": "2022-06",
+          "weight": "1"
+      },
+      {
+          "id": "722",
+          "source": "ghillieforb",
+          "target": "Mature_Chaddar",
+          "period": "2019-11",
+          "weight": "1"
+      },
+      {
+          "id": "723",
+          "source": "ghillieforb",
+          "target": "Mature_Chaddar",
+          "period": "2020-07",
+          "weight": "1"
+      },
+      {
+          "id": "724",
+          "source": "ghillieforb",
+          "target": "Mature_Chaddar",
+          "period": "2020-09",
+          "weight": "1"
+      },
+      {
+          "id": "725",
+          "source": "ghillieforb",
+          "target": "Mature_Chaddar",
+          "period": "2020-11",
+          "weight": "2"
+      },
+      {
+          "id": "726",
+          "source": "ghillieforb",
+          "target": "Mature_Chaddar",
+          "period": "2020-12",
+          "weight": "2"
+      },
+      {
+          "id": "727",
+          "source": "ghillieforb",
+          "target": "Mature_Chaddar",
+          "period": "2021-02",
+          "weight": "1"
+      },
+      {
+          "id": "728",
+          "source": "ghillieforb",
+          "target": "Mature_Chaddar",
+          "period": "2021-03",
+          "weight": "2"
+      },
+      {
+          "id": "729",
+          "source": "ghillieforb",
+          "target": "Mature_Chaddar",
+          "period": "2021-05",
+          "weight": "1"
+      },
+      {
+          "id": "730",
+          "source": "ghillieforb",
+          "target": "Mature_Chaddar",
+          "period": "2021-06",
+          "weight": "1"
+      },
+      {
+          "id": "731",
+          "source": "ghillieforb",
+          "target": "Mature_Chaddar",
+          "period": "2021-08",
+          "weight": "3"
+      },
+      {
+          "id": "732",
+          "source": "ghillieforb",
+          "target": "Mature_Chaddar",
+          "period": "2021-09",
+          "weight": "1"
+      },
+      {
+          "id": "734",
+          "source": "ghillieforb",
+          "target": "Talwolf",
+          "period": "2019-11",
+          "weight": "1"
+      },
+      {
+          "id": "735",
+          "source": "ghillieforb",
+          "target": "ToXiiCxFaKiie",
+          "period": "2020-05",
+          "weight": "1"
+      },
+      {
+          "id": "736",
+          "source": "ghillieforb",
+          "target": "ToXiiCxFaKiie",
+          "period": "2020-06",
+          "weight": "1"
+      },
+      {
+          "id": "737",
+          "source": "ghillieforb",
+          "target": "ToXiiCxFaKiie",
+          "period": "2021-08",
+          "weight": "2"
+      },
+      {
+          "id": "739",
+          "source": "ghillieforb",
+          "target": "jayseven",
+          "period": "2020-09",
+          "weight": "1"
+      },
+      {
+          "id": "740",
+          "source": "ghillieforb",
+          "target": "matrinki",
+          "period": "2021-02",
+          "weight": "2"
+      },
+      {
+          "id": "741",
+          "source": "ghillieforb",
+          "target": "matrinki",
+          "period": "2021-03",
+          "weight": "2"
+      },
+      {
+          "id": "742",
+          "source": "ghillieforb",
+          "target": "matrinki",
+          "period": "2021-08",
+          "weight": "1"
+      },
+      {
+          "id": "747",
+          "source": "jargonaut",
+          "target": "Abby\u2665Wolf",
+          "period": "2021-05",
+          "weight": "2"
+      },
+      {
+          "id": "748",
+          "source": "jargonaut",
+          "target": "Abby\u2665Wolf",
+          "period": "2021-06",
+          "weight": "4"
+      },
+      {
+          "id": "749",
+          "source": "jargonaut",
+          "target": "Abby\u2665Wolf",
+          "period": "2021-08",
+          "weight": "4"
+      },
+      {
+          "id": "750",
+          "source": "jargonaut",
+          "target": "Abby\u2665Wolf",
+          "period": "2021-09",
+          "weight": "6"
+      },
+      {
+          "id": "751",
+          "source": "jargonaut",
+          "target": "Abby\u2665Wolf",
+          "period": "2021-10",
+          "weight": "7"
+      },
+      {
+          "id": "752",
+          "source": "jargonaut",
+          "target": "Abby\u2665Wolf",
+          "period": "2021-11",
+          "weight": "3"
+      },
+      {
+          "id": "753",
+          "source": "jargonaut",
+          "target": "Abby\u2665Wolf",
+          "period": "2021-12",
+          "weight": "1"
+      },
+      {
+          "id": "754",
+          "source": "jargonaut",
+          "target": "Abby\u2665Wolf",
+          "period": "2022-01",
+          "weight": "3"
+      },
+      {
+          "id": "755",
+          "source": "jargonaut",
+          "target": "Abby\u2665Wolf",
+          "period": "2022-02",
+          "weight": "4"
+      },
+      {
+          "id": "756",
+          "source": "jargonaut",
+          "target": "Abby\u2665Wolf",
+          "period": "2022-03",
+          "weight": "2"
+      },
+      {
+          "id": "757",
+          "source": "jargonaut",
+          "target": "Abby\u2665Wolf",
+          "period": "2022-04",
+          "weight": "3"
+      },
+      {
+          "id": "758",
+          "source": "jargonaut",
+          "target": "Abby\u2665Wolf",
+          "period": "2022-05",
+          "weight": "6"
+      },
+      {
+          "id": "759",
+          "source": "jargonaut",
+          "target": "Abby\u2665Wolf",
+          "period": "2022-06",
+          "weight": "1"
+      },
+      {
+          "id": "760",
+          "source": "jargonaut",
+          "target": "BoundAndTied",
+          "period": "2021-11",
+          "weight": "1"
+      },
+      {
+          "id": "787",
+          "source": "jargonaut",
+          "target": "Zezku",
+          "period": "2020-11",
+          "weight": "2"
+      },
+      {
+          "id": "788",
+          "source": "jargonaut",
+          "target": "Zezku",
+          "period": "2021-05",
+          "weight": "1"
+      },
+      {
+          "id": "789",
+          "source": "jargonaut",
+          "target": "Zezku",
+          "period": "2021-06",
+          "weight": "2"
+      },
+      {
+          "id": "790",
+          "source": "jargonaut",
+          "target": "Zezku",
+          "period": "2021-08",
+          "weight": "2"
+      },
+      {
+          "id": "791",
+          "source": "jargonaut",
+          "target": "Zezku",
+          "period": "2021-09",
+          "weight": "4"
+      },
+      {
+          "id": "792",
+          "source": "jargonaut",
+          "target": "Zezku",
+          "period": "2021-10",
+          "weight": "5"
+      },
+      {
+          "id": "793",
+          "source": "jargonaut",
+          "target": "Zezku",
+          "period": "2021-11",
+          "weight": "3"
+      },
+      {
+          "id": "794",
+          "source": "jargonaut",
+          "target": "Zezku",
+          "period": "2022-01",
+          "weight": "1"
+      },
+      {
+          "id": "795",
+          "source": "jargonaut",
+          "target": "Zezku",
+          "period": "2022-02",
+          "weight": "4"
+      },
+      {
+          "id": "796",
+          "source": "jargonaut",
+          "target": "Zezku",
+          "period": "2022-03",
+          "weight": "2"
+      },
+      {
+          "id": "797",
+          "source": "jargonaut",
+          "target": "Zezku",
+          "period": "2022-04",
+          "weight": "2"
+      },
+      {
+          "id": "798",
+          "source": "jargonaut",
+          "target": "Zezku",
+          "period": "2022-05",
+          "weight": "3"
+      },
+      {
+          "id": "799",
+          "source": "jargonaut",
+          "target": "Zezku",
+          "period": "2022-06",
+          "weight": "1"
+      },
+      {
+          "id": "805",
+          "source": "matrinki",
+          "target": "Dill Jaegerbuns (Drekar)",
+          "period": "2020-08",
+          "weight": "1"
+      },
+      {
+          "id": "806",
+          "source": "matrinki",
+          "target": "Dill Jaegerbuns (Drekar)",
+          "period": "2020-09",
+          "weight": "2"
+      },
+      {
+          "id": "807",
+          "source": "matrinki",
+          "target": "Dill Jaegerbuns (Drekar)",
+          "period": "2020-11",
+          "weight": "1"
+      },
+      {
+          "id": "808",
+          "source": "matrinki",
+          "target": "Dill Jaegerbuns (Drekar)",
+          "period": "2021-02",
+          "weight": "3"
+      },
+      {
+          "id": "809",
+          "source": "matrinki",
+          "target": "Dill Jaegerbuns (Drekar)",
+          "period": "2021-03",
+          "weight": "3"
+      },
+      {
+          "id": "810",
+          "source": "matrinki",
+          "target": "Dill Jaegerbuns (Drekar)",
+          "period": "2021-06",
+          "weight": "1"
+      },
+      {
+          "id": "811",
+          "source": "matrinki",
+          "target": "Dill Jaegerbuns (Drekar)",
+          "period": "2021-10",
+          "weight": "1"
+      },
+      {
+          "id": "812",
+          "source": "matrinki",
+          "target": "Dill Jaegerbuns (Drekar)",
+          "period": "2022-06",
+          "weight": "1"
+      },
+      {
+          "id": "813",
+          "source": "matrinki",
+          "target": "Draconis233",
+          "period": "2020-08",
+          "weight": "1"
+      },
+      {
+          "id": "814",
+          "source": "matrinki",
+          "target": "Ferns",
+          "period": "2020-08",
+          "weight": "1"
+      },
+      {
+          "id": "815",
+          "source": "matrinki",
+          "target": "Ferns",
+          "period": "2020-11",
+          "weight": "2"
+      },
+      {
+          "id": "816",
+          "source": "matrinki",
+          "target": "Ferns",
+          "period": "2021-02",
+          "weight": "4"
+      },
+      {
+          "id": "817",
+          "source": "matrinki",
+          "target": "Ferns",
+          "period": "2021-03",
+          "weight": "1"
+      },
+      {
+          "id": "818",
+          "source": "matrinki",
+          "target": "Ferns",
+          "period": "2021-05",
+          "weight": "1"
+      },
+      {
+          "id": "819",
+          "source": "matrinki",
+          "target": "Ferns",
+          "period": "2021-06",
+          "weight": "1"
+      },
+      {
+          "id": "820",
+          "source": "matrinki",
+          "target": "Ferns",
+          "period": "2021-08",
+          "weight": "1"
+      },
+      {
+          "id": "821",
+          "source": "matrinki",
+          "target": "Ferns",
+          "period": "2022-03",
+          "weight": "1"
+      },
+      {
+          "id": "822",
+          "source": "matrinki",
+          "target": "Ferns",
+          "period": "2022-06",
+          "weight": "1"
+      },
+      {
+          "id": "823",
+          "source": "matrinki",
+          "target": "Mandem",
+          "period": "2021-05",
+          "weight": "1"
+      },
+      {
+          "id": "824",
+          "source": "matrinki",
+          "target": "Mandem",
+          "period": "2021-09",
+          "weight": "1"
+      },
+      {
+          "id": "825",
+          "source": "matrinki",
+          "target": "Mature_Chaddar",
+          "period": "2020-08",
+          "weight": "1"
+      },
+      {
+          "id": "826",
+          "source": "matrinki",
+          "target": "Mature_Chaddar",
+          "period": "2020-09",
+          "weight": "3"
+      },
+      {
+          "id": "827",
+          "source": "matrinki",
+          "target": "Mature_Chaddar",
+          "period": "2021-02",
+          "weight": "1"
+      },
+      {
+          "id": "828",
+          "source": "matrinki",
+          "target": "Mature_Chaddar",
+          "period": "2021-03",
+          "weight": "1"
+      },
+      {
+          "id": "829",
+          "source": "matrinki",
+          "target": "Mature_Chaddar",
+          "period": "2021-08",
+          "weight": "1"
+      },
+      {
+          "id": "830",
+          "source": "matrinki",
+          "target": "Mature_Chaddar",
+          "period": "2021-10",
+          "weight": "1"
+      },
+      {
+          "id": "831",
+          "source": "matrinki",
+          "target": "Mature_Chaddar",
+          "period": "2022-06",
+          "weight": "1"
+      },
+      {
+          "id": "837",
+          "source": "matrinki",
+          "target": "ToXiiCxFaKiie",
+          "period": "2020-08",
+          "weight": "1"
+      },
+      {
+          "id": "838",
+          "source": "matrinki",
+          "target": "ToXiiCxFaKiie",
+          "period": "2020-09",
+          "weight": "1"
+      },
+      {
+          "id": "839",
+          "source": "matrinki",
+          "target": "ToXiiCxFaKiie",
+          "period": "2021-06",
+          "weight": "1"
+      },
+      {
+          "id": "840",
+          "source": "matrinki",
+          "target": "ToXiiCxFaKiie",
+          "period": "2022-06",
+          "weight": "1"
+      },
+      {
+          "id": "842",
+          "source": "matrinki",
+          "target": "ghillieforb",
+          "period": "2020-11",
+          "weight": "1"
+      },
+      {
+          "id": "843",
+          "source": "matrinki",
+          "target": "ghillieforb",
+          "period": "2020-12",
+          "weight": "1"
+      },
+      {
+          "id": "844",
+          "source": "matrinki",
+          "target": "ghillieforb",
+          "period": "2021-02",
+          "weight": "2"
+      },
+      {
+          "id": "845",
+          "source": "matrinki",
+          "target": "ghillieforb",
+          "period": "2021-03",
+          "weight": "2"
+      },
+      {
+          "id": "846",
+          "source": "matrinki",
+          "target": "ghillieforb",
+          "period": "2022-03",
+          "weight": "1"
+      },
+      {
+          "id": "847",
+          "source": "matrinki",
+          "target": "jayseven",
+          "period": "2020-08",
+          "weight": "1"
+      }
+  ]
+}

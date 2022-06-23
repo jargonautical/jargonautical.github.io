@@ -1,8 +1,8 @@
 var numbers = [ 3, 5, 7, 11, 16, 19, 19, 22, 26, 27, 28, 29, 30, 49, 49, 53, 55, 77 ];
-var rows = 7;
-var cols = 5;
-var max_rows = 4;
-var max_cols = 7;
+var rows = 6;
+var cols = 4;
+var max_rows = 5;
+var max_cols = 4;
 var markers = [ 31, 56 ];
 
 addElements(numbers);
@@ -31,7 +31,7 @@ $(".number").click(function(event) {
 $(".number").on('mousedown', function (evt) {
   $(".number").on('mouseup mousemove', function handler(evt) {
     if (evt.type === 'mouseup') {
-      $("#"+event.target.id).toggleClass('red');
+      $("#"+event.target.id).toggleClass('highlight');
     } else {
       // drag
     }
@@ -45,6 +45,7 @@ function formatNumber(num) {
 
 function addElements(numbers) {
   $.each(numbers, function(idx) {
+
     $("body").append('<div id="number'+idx+'" class="number">'+formatNumber(numbers[idx])+'</div>');
   });
   /*$.each(markers, function(idx) {

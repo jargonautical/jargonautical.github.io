@@ -1,26 +1,28 @@
-@import url('https://fonts.googleapis.com/css?family=Chivo|Lora|Space+Mono:700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Oxygen|Ubuntu:wght@500;700|Space+Mono:700&display=swap|Caveat:400&display=swap');
 
-body {
-  background-color: white;
-  font-size: 100%;
-  font-family: Chivo;
+html, body,
+h1, h2, h3, h4, h5, h6, p,
+ol, ul, blockquote
+{
+  font-family: Oxygen;
 }
 
 .number {
   font-family: 'Lora';
   width: 195px;
-  background-color: deepskyblue;
+  background-color: cornflowerblue;
   color: #fff;
   font-size: 2.5em;
   border-radius: 4px;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   margin: 5px;
   touch-action: none;
   position: absolute;
   text-align: center;
   z-index: -1;
 }
+
 .highlight {
   font-family: 'Lora';
   width: 195px;
@@ -28,8 +30,8 @@ body {
   color: #fff;
   font-size: 2.5em;
   border-radius: 4px;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   margin: 5px;
   touch-action: none;
   position: absolute;

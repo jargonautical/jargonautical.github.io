@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	  <!-- Load plotly.js into the DOM -->
+	  <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+    <script type="text/javascript" src="d3.min.js"></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
+    <div class="hero-image">
+    </div>
+		<!-- chart object sripts -->
+
+    <!-- CSS -->
+		<link rel="stylesheet" href="../css/10-header.css">
+		<link rel="stylesheet" href="../css/20-reset.css">
+		<link rel="stylesheet" href="../css/jarg.css">
+    <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' />
+
+  </head>
+  <body>
+    <h2>Making use of open data</h2>
+    <h3>Local focus</h3>
+    <p>
+      With the aim of making good-quality open data accessible to a wider audience,
+      here's a quick look at easily-available open demographic data on Plymouth and
+      broken down by ward. This is just the basics: population by five-year age bands from
+      the Office for National Statistics (ONS), and the Indices of Multiple
+      Deprivation from the UK Government's Department for Levelling Up,
+      Housing and Communities (DLUHC).
+      <br><br>
+      All of the data here is published under the
+      <a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Open Government Licence</a>
+      as open data.
+    </p>
+    <div> <!-- pop chart will go in here with source and text underneath -->
+      <h3>Population variations</h3>
+      <p>
+        Source: <a href="https://www.nomisweb.co.uk/query/construct/summary.asp?mode=construct&version=0&dataset=2002">ONS population estimates.</a>
+      </p>
+      <div class="bubbleplot" data-num="1">
+        <div class="plot" id="popDiv"></div>
+        <br><br>
+        <div class="control-row1">
+          Wards: <select class="warddata"></select>
+        </div>
+      </div>
+    </div>
+
+    <h3>Measures of disadvantage</h3>
+      <p>
+        The Indices of Multiple Deprivation (IMD) are updated every few
+        years and cover a wider range of measures including environment, barriers to
+        opportunity, health and crime.<br><br>
+        The top-level index of deprivation is calculated from a combination of the
+        contributing measures, and assigns every Lower-level
+        Super Output Area (LSOA) in England a score based on how deprived the model says
+        the area is in comparison to all the others. With all the LSOAs ranked in order,
+        each one is then assigned to a decile with a numeric score from 1 to 10.
+        Any LSOA with a decile score of 1 is then said to be in the top 10% most deprived
+        nationally, and a decile score of 10 would be in the 10% least deprived.<br><br>
+        Source: <a href="https://www.gov.uk/government/statistics/english-indices-of-deprivation-2019">UK Government - DLUHC</a><br><br>
+        <a href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/835115/IoD2019_Statistical_Release.pdf">Further reading</a>
+      </p>
+      <div id='legend'>
+        <table>
+  <tr>
+    <th style='width: 25%;'>Most deprived</th>
+    <th >1</th>
+    <th>2</th>
+    <th>3</th>
+    <th>4</th>
+    <th>5</th>
+    <th>6</th>
+    <th>7</th>
+    <th>8</th>
+    <th>9</th>
+    <th>10</th>
+    <th style='width: 25%;'>Least deprived </th>
+  </tr>
+  <tr>
+    <td> </td>
+    <td style='background-color: #08306b;'> </td>
+    <td style='background-color: #08519c;'> </td>
+    <td style='background-color: #2171b5;'> </td>
+    <td style='background-color: #4292c6;'> </td>
+    <td style='background-color: #6baed6;'> </td>
+    <td style='background-color: #9ecae1;'> </td>
+    <td style='background-color: #c6dbef;'> </td>
+    <td style='background-color: #deebf7;'> </td>
+    <td style='background-color: #f7fbff;'> </td>
+    <td style='background-color: #ffffff;'> </td>
+    <td> </td>
+  </tr>
+</table>
+<br>
+</div>
+<div class='flex-container'>
+  <div id='map' class="invisbox-big" style='height: 500px;'></div>
+  <div class='map-overlay' id='features' style='position: relative; top: 0;'></div>
+  <div class="invisbox-small" id='pd'>
+      <h3>IMD detail:</h3>
+      <p>Hover over an area to see the IMD Decile</p>
+    </div>
+  </div>
+
+
+      <script>
+        // define access token
+        mapboxgl.accessToken = 'pk.eyJ1IjoiamFyZ29uYXV0IiwiYSI6ImNrZWUybmR5ZjBicWMyc295NTR4N3I4OWIifQ.scaKTg7g6zt8i9_zk8NjWg';
+        // create map
+        var map = new mapboxgl.Map({
+          container: 'map', // container id
+          style: 'mapbox://styles/jargonaut/ckiabooyrdbcq19oyiwwh8j34',
+          center: [-4.15, 50.4],
+          zoom: 10
+        });
+        // wait for map to load before adjusting it
+        map.on('load', function() {
+          //make a pointer cursor
+          map.getCanvas().style.cursor = 'default';
+          // set map bounds
+          // define layer names
+          var colors = ['#ffffff', '#f7fbff', '#deebf7', '#c6dbef', '#9ecae1', '#6baed6', '#4292c6', '#2171b5', '#08519c', '#08306b'];
+          // change info window on hover
+          map.on('mousemove', function(e) {
+            var states = map.queryRenderedFeatures(e.point, {layers: ['IMD2019']});
+            if (states.length > 0) {
+              document.getElementById('pd').innerHTML = '<p>LSOA name: ' + states[0].properties.lsoa11nm + '.   Decile: ' + states[0].properties.IMDDec0 + '<p>';
+            } else {
+              document.getElementById('pd').innerHTML = '<p>Hover over an area to see the IMD Decile</p>';
+            }
+          });
+        });
+      </script>
+    </div>
+</body>
+
+<footer>
+  <!-- links to code will go here -->
+</footer>
+
+  <!-- SCRIPTS ............................................................ -->
+  <script src='data-mince-pop-ward.js'></script>
+  <!--<script src='data-reshape.js'></script>-->
+</html>
