@@ -9,38 +9,36 @@
 	<link rel="stylesheet" href="../css/jarg.css" type="text/css"/>
 	<link rel="shortcut icon" href="../assets/Jargonautical_web_icon.png"/>
 	<div class='hero-image'></div>
-	<button type="button" class="filter-btn" id="blue" value="1">Filter Blue</button>
-	<button type="button" class="filter-btn" id="orange" value="2">Filter Orange</button>
-	<button type="button" class="filter-btn" id="green" value="3">Filter Green</button>
-	<svg width="960" height="500"></svg>
+
 	<script src="https://d3js.org/d3.v4.min.js"></script>
 	<style>
 	button {
-	  position: absolute;
+	  position: relative;
 	}
-	#blue {
-	  top: 1em;
-	  left: 1em;
-	}
-	#orange {
-	  top: 1em;
-	  left: 8em;
-	}
-	#green {
-	  top: 1em;
-	  left: 16em;
-	}
+
 	.node {
-		stroke: white;
+		stroke: darkslategray;
 		stroke-width: 2px;
 	}
 	.link {
-		stroke: gray;
-		stroke-width: 4px;
+		stroke: lightgray;
 	}
 	</style>
-
 </head>
+
+<body>
+	<div style="text-align:center;">
+		<button type="button" class="filter-btn" id="slice0" value="0">Slice 0</button>
+		<button type="button" class="filter-btn" id="slice1" value="1">Slice 1</button>
+		<button type="button" class="filter-btn" id="slice2" value="2">Slice 2</button>
+		<button type="button" class="filter-btn" id="slice3" value="3">Slice 3</button>
+		<button type="button" class="filter-btn" id="slice4" value="4">Slice 4</button>
+		<button type="button" class="filter-btn" id="slice5" value="5">Slice 5</button>
+		<button type="button" class="filter-btn" id="slice6" value="6">Slice 6</button>
+		<button type="button" class="filter-btn" id="all" value="7">All</button>
+		<svg width="960" height="500"></svg>
+	</div>
+</body>
 
 <script
   src="https://code.jquery.com/jquery-3.2.1.min.js"
@@ -57,8 +55,16 @@ var svg = d3.select("svg"),
     height = +svg.attr("height"),
     radius = 10;
 
+svg.append("rect")
+.attr("width", "100%")
+.attr("height", "100%")
+.attr("fill", "white");
+
 //	d3 color scales
 var color = d3.scaleOrdinal(d3.schemeCategory10);
+const scale = d3.scaleOrdinal()
+				.domain([1,2])
+				.range(["lightseagreen", "coral", "pink", "paleturquoise"]);
 
 var link = svg.append("g").selectAll(".link"),
 	node = svg.append("g").selectAll(".node");
@@ -67,9 +73,11 @@ var link = svg.append("g").selectAll(".link"),
 var simulation = d3.forceSimulation()
 	.force("link", d3.forceLink()
 		.id(function(d) { return d.id; }))
-	.force("charge", d3.forceManyBody()
-		.strength(function(d) { return -500;}))
-	.force("center", d3.forceCenter(width / 2, height / 2));
+	.force("charge", d3.forceManyBody(1)
+		.strength(function(d) { return -100;}))
+	.force("center", d3.forceCenter(width / 2, height / 2))
+  .force("collision", d3.forceCollide(40));
+
 
 //	filtered types
 typeFilterList = [];
@@ -78,11 +86,9 @@ typeFilterList = [];
 $(".filter-btn").on("click", function() {
 	var id = $(this).attr("value");
 	console.log('id chosen is ', id);
-	if (typeFilterList.includes(id)) {
-		typeFilterList.splice(typeFilterList.indexOf(id), 1)
-	} else {
-		typeFilterList.push(id);
-	}
+	typeFilterList.pop();
+	typeFilterList.push(id);
+	console.log('filtered list is ', typeFilterList);
 	filter();
 	update();
 });
@@ -90,20 +96,6 @@ $(".filter-btn").on("click", function() {
 //	data read and store
 d3.json("clandata2.json", function(err, g) {
 	if (err) throw err;
-
-	var nodeByID = {};
-
-	g.nodes.forEach(function(n) {
-		nodeByID[n.id] = n;
-		console.log('n chosen is ', n);
-	});
-
-	g.links1.forEach(function(l) {
-		console.log('l is ', l);
-		l.sourceGroup = nodeByID[l.source].group.toString();
-		l.targetGroup = nodeByID[l.target].group.toString();
-
-	});
 
 	graph = g;
 	store = $.extend(true, {}, g);
@@ -120,8 +112,8 @@ function update() {
 	//	ENTER
 	var newNode = node.enter().append("circle")
 		.attr("class", "node")
-		.attr("r", radius)
-		.attr("fill", function(d) {return color(d.group);})
+		.attr("r", function(d) { return d.role * 10; })
+		.attr("fill", function(d) { return scale(d.group); })
 		.call(d3.drag()
           .on("start", dragstarted)
           .on("drag", dragged)
@@ -131,6 +123,16 @@ function update() {
     newNode.append("title")
       .text(function(d) { return "group: " + d.group + "\n" + "id: " + d.id; });
 	//	ENTER + UPDATE
+
+	  newNode.append("text")
+			.text(function(d) {
+				return d.code;
+			})
+			.style('fill', '#fff')
+			.style('font-size', '14px')
+			.style('font-family', 'sans-serif')
+			.attr('x', -5)
+			.attr('y', 5);
 	node = node.merge(newNode);
 
 	//	UPDATE
@@ -139,7 +141,10 @@ function update() {
 	link.exit().remove();
 	//	ENTER
 	newLink = link.enter().append("line")
-		.attr("class", "link");
+		.attr("class", "link")
+		.attr("stroke", "lightgray")
+		.attr("stroke-opacity", 0.6)
+		.attr("stroke-width", d => d.weight);
 
 	newLink.append("title")
       .text(function(d) { return "source: " + d.source + "\n" + "target: " + d.target; });
@@ -190,35 +195,22 @@ function ticked() {
 
 //	filter function
 function filter() {
-	//	add and remove nodes from data based on type filters
-	store.nodes.forEach(function(n) {
-		if (!typeFilterList.includes(n.group) && n.filtered) {
-			n.filtered = false;
-			graph.nodes.push($.extend(true, {}, n));
-		} else if (typeFilterList.includes(n.group) && !n.filtered) {
-			n.filtered = true;
-			graph.nodes.forEach(function(d, i) {
-				if (n.id === d.id) {
-					graph.nodes.splice(i, 1);
-				}
-			});
-		}
-	});
-
-	//	add and remove links from data based on availability of nodes
-	store.links1.forEach(function(l) {
-		if (!(typeFilterList.includes(l.sourceGroup) || typeFilterList.includes(l.targetGroup)) && l.filtered) {
-			l.filtered = false;
-			graph.links1.push($.extend(true, {}, l));
-		} else if ((typeFilterList.includes(l.sourceGroup) || typeFilterList.includes(l.targetGroup)) && !l.filtered) {
-			l.filtered = true;
-			graph.links1.forEach(function(d, i) {
-				if (l.id === d.id) {
-					graph.links1.splice(i, 1);
-				}
-			});
-		}
-	});
+	//clean up
+	while (graph.links1.length) {
+    graph.links1.pop();
+	}
+	//add and remove links from data
+	// version that selects only selected timeframe
+	store.links1.forEach(function(l) { // for each link
+		//console.log('typeFilterList: ', typeFilterList[0], 'timeframe: ', l.timeframe, 'same? ', (typeFilterList[0]===l.timeframe));
+		if (parseInt(typeFilterList[0]) !== 7 && typeFilterList[0] === l.timeframe ) {
+				graph.links1.push($.extend(false, {}, l)); // extend the array with item l at position 1
+			} else if (parseInt(typeFilterList[0]) === 7) {
+				graph.links1.push($.extend(false, {}, l));
+			}
+	}
+);
+	console.log('filtered: ', graph);
 }
 
 </script>
