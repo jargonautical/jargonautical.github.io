@@ -14,8 +14,8 @@
 	<style>
 	button {
 	  position: relative;
+		font: 20px sans-serif;
 	}
-
 	.node {
 		stroke: darkslategray;
 		stroke-width: 2px;
@@ -23,19 +23,68 @@
 	.link {
 		stroke: lightgray;
 	}
+	.node text {
+  pointer-events: none;
+  font: 10px sans-serif;
+}
 	</style>
 </head>
 
 <body>
+	<div>
+		<h2>Study of a gaming group network</h2>
+		<p>
+			Gaming groups, like any social network, see a general background level
+			of churn amongst their members. This can be due to life changes, shifting
+			priorities, or evolving preferences for different game genres.
+			<br><br>
+			Here we're looking at the changes over time in one such group,
+			looking specifically at the amount of time the members spend in activities
+			with each other. It's possible to see the stronger links (players have joined
+			activities together several times over a given period) and the weaker connections
+			where two players may seldom cross paths even though they belong to the
+			same clan.
+			<br><br>
+			And like all social groups, sometimes sub-groups form - players
+			drift towards those who have similar perspectives, interests or schedules
+			and more often can be found in activites with this new subset. And while
+			fractures within the group may seem at the time to be a complete surprise,
+			with hindsight they're easy to see developing.
+			<br><br>
+			The buttons here let you filter for different periods in the life of the
+			group, seeing how it evolves.
+		</p>
+		<ol>
+			<li>The original small friend group, playing together regularly.</li>
+			<li>Recruitment of new members.</li>
+			<li>New members invite their friends to join.</li>
+			<li>Distinct clusters form led by pre-existing friendships.</li>
+			<li>The split - a player is kicked from the group for problematic behaviour, and their cluster follows.</li>
+			<li>Regrouping; still a little interaction between the clusters, but very reduced.</li>
+			<li>Present day - no interaction at all between the two clusters, and the
+				breakaway cluster is seeing fractures of its own.</li>
+		</ol>
+		<p>This is a common and recurring cycle, and particularly as gaming groups
+			increase in size - like any community, it requries nurturing and management.
+			Could the group have seen this coming? Only by monitoring in-game interactions,
+			as shown in the graph here. Should a group leader be monitoring in this way?
+			I would say, 'no' ... it's an interesting study after the fact, but uncomfortably
+			invasive at any other time. All of this data has been anonymised for that reason -
+			while members of the two groups might recognise the patterns here, there's no
+			need to call people out. <br><br>
+			It's only a game, after all!
+		</p>
+	</div>
 	<div style="text-align:center;">
-		<button type="button" class="filter-btn" id="slice0" value="0">Slice 0</button>
-		<button type="button" class="filter-btn" id="slice1" value="1">Slice 1</button>
-		<button type="button" class="filter-btn" id="slice2" value="2">Slice 2</button>
-		<button type="button" class="filter-btn" id="slice3" value="3">Slice 3</button>
-		<button type="button" class="filter-btn" id="slice4" value="4">Slice 4</button>
-		<button type="button" class="filter-btn" id="slice5" value="5">Slice 5</button>
-		<button type="button" class="filter-btn" id="slice6" value="6">Slice 6</button>
-		<button type="button" class="filter-btn" id="all" value="7">All</button>
+		<button type="button" class="filter-btn" id="slice0" value="0">1</button>
+		<button type="button" class="filter-btn" id="slice1" value="1">2</button>
+		<button type="button" class="filter-btn" id="slice2" value="2">3</button>
+		<button type="button" class="filter-btn" id="slice3" value="3">4</button>
+		<button type="button" class="filter-btn" id="slice4" value="4">5</button>
+		<button type="button" class="filter-btn" id="slice5" value="5">6</button>
+		<button type="button" class="filter-btn" id="slice6" value="6">7</button>
+		<button type="button" class="filter-btn" id="all" value="7">ALL</button>
+		<br><br>
 		<svg width="960" height="500"></svg>
 	</div>
 </body>
@@ -51,33 +100,29 @@ var graph, store;
 
 //	svg selection and sizing
 var svg = d3.select("svg"),
-    width = +svg.attr("width"),
-    height = +svg.attr("height"),
-    radius = 10;
+  width = +svg.attr("width"),
+	height = +svg.attr("height"),
+	radius = 10;
 
 svg.append("rect")
 .attr("width", "100%")
 .attr("height", "100%")
 .attr("fill", "white");
 
-//	d3 color scales
-var color = d3.scaleOrdinal(d3.schemeCategory10);
 const scale = d3.scaleOrdinal()
-				.domain([1,2])
-				.range(["lightseagreen", "coral", "pink", "paleturquoise"]);
+.domain([1,2])
+.range(["lightseagreen", "coral"]);
 
-var link = svg.append("g").selectAll(".link"),
-	node = svg.append("g").selectAll(".node");
+var link = svg.append("g").selectAll(".link");
+
+var node = svg.append("g").selectAll(".node")
 
 //	force simulation initialization
 var simulation = d3.forceSimulation()
-	.force("link", d3.forceLink()
-		.id(function(d) { return d.id; }))
-	.force("charge", d3.forceManyBody(1)
-		.strength(function(d) { return -100;}))
+	.force("link", d3.forceLink().id(function(d) { return d.id; }))
+	.force("charge", d3.forceManyBody(1).strength(1))
 	.force("center", d3.forceCenter(width / 2, height / 2))
   .force("collision", d3.forceCollide(40));
-
 
 //	filtered types
 typeFilterList = [];
@@ -94,72 +139,56 @@ $(".filter-btn").on("click", function() {
 });
 
 //	data read and store
-d3.json("clandata2.json", function(err, g) {
+d3.json("clandata.json", function(err, g) {
 	if (err) throw err;
-
 	graph = g;
 	store = $.extend(true, {}, g);
-
 	update();
 });
 
 //	general update pattern for updating the graph
 function update() {
 	//	UPDATE
-	node = node.data(graph.nodes, function(d) { return d.id;});
+	node = node.data(graph.nodes, function(d) { return d.id; });
+
 	//	EXIT
 	node.exit().remove();
+
 	//	ENTER
-	var newNode = node.enter().append("circle")
-		.attr("class", "node")
-		.attr("r", function(d) { return d.role * 10; })
-		.attr("fill", function(d) { return scale(d.group); })
-		.call(d3.drag()
-          .on("start", dragstarted)
-          .on("drag", dragged)
-          .on("end", dragended)
-        )
+	var newNode = node.enter()
+	.append("circle")
+	  .attr("class", "node")
+	  .attr("r", function(d) { return d.role * 10; })
+	  .attr("fill", function(d) { return scale(d.group); })
+	.call(d3.drag()
+	  .on("start", dragstarted)
+		.on("drag", dragged)
+		.on("end", dragended)
+	)
 
-    newNode.append("title")
-      .text(function(d) { return "group: " + d.group + "\n" + "id: " + d.id; });
+  newNode.append("title")
+	.text(function(d) { return "Label: " + d.code + "\n" + "ID: " + d.id; });
 	//	ENTER + UPDATE
-
-	  newNode.append("text")
-			.text(function(d) {
-				return d.code;
-			})
-			.style('fill', '#fff')
-			.style('font-size', '14px')
-			.style('font-family', 'sans-serif')
-			.attr('x', -5)
-			.attr('y', 5);
 	node = node.merge(newNode);
-
 	//	UPDATE
-	link = link.data(graph.links1, function(d) { return d.id;});
+	link = link.data(graph.links, function(d) { return d.id;});
 	//	EXIT
 	link.exit().remove();
 	//	ENTER
 	newLink = link.enter().append("line")
-		.attr("class", "link")
-		.attr("stroke", "lightgray")
-		.attr("stroke-opacity", 0.6)
-		.attr("stroke-width", d => d.weight);
-
-	newLink.append("title")
-      .text(function(d) { return "source: " + d.source + "\n" + "target: " + d.target; });
+	.attr("class", "link")
+	.attr("stroke", "lightgray")
+	.attr("stroke-opacity", 0.6)
+	.attr("stroke-width", d => d.weight);
 	//	ENTER + UPDATE
 	link = link.merge(newLink);
-
 	//	update simulation nodes, links, and alpha
 	simulation
-		.nodes(graph.nodes)
-		.on("tick", ticked);
-
-  	simulation.force("link")
-  		.links(graph.links1);
-
-  	simulation.alpha(1).alphaTarget(0).restart();
+	.nodes(graph.nodes)
+	.on("tick", ticked);
+	simulation.force("link")
+	.links(graph.links);
+	simulation.alpha(1).alphaTarget(0).restart();
 }
 
 //	drag event handlers
@@ -196,21 +225,18 @@ function ticked() {
 //	filter function
 function filter() {
 	//clean up
-	while (graph.links1.length) {
-    graph.links1.pop();
+	while (graph.links.length) {
+    graph.links.pop();
 	}
 	//add and remove links from data
-	// version that selects only selected timeframe
-	store.links1.forEach(function(l) { // for each link
-		//console.log('typeFilterList: ', typeFilterList[0], 'timeframe: ', l.timeframe, 'same? ', (typeFilterList[0]===l.timeframe));
+	store.links.forEach(function(l) { // for each link
 		if (parseInt(typeFilterList[0]) !== 7 && typeFilterList[0] === l.timeframe ) {
-				graph.links1.push($.extend(false, {}, l)); // extend the array with item l at position 1
+				graph.links.push($.extend(false, {}, l)); // extend the array with item l at position 1
 			} else if (parseInt(typeFilterList[0]) === 7) {
-				graph.links1.push($.extend(false, {}, l));
+				graph.links.push($.extend(false, {}, l));
 			}
 	}
 );
-	console.log('filtered: ', graph);
 }
 
 </script>

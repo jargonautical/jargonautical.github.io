@@ -40,7 +40,7 @@ var simulation = d3.forceSimulation()
 		.force("charge", d3.forceManyBody(1).strength(1))
 		.force("collision", d3.forceCollide(70));
 
-d3.json("clandata.json", function(error, graph) {
+d3.json("clandata1.json", function(error, graph) {
   if (error) throw error;
 
   var link = svg.append("g")
