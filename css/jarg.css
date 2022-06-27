@@ -370,3 +370,7 @@ caption {
   caption-side: bottom;
   padding: 10px
 }
+
+img {
+  padding: 5px;
+}

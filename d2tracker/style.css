@@ -10,14 +10,14 @@ html {
   font-family: 'Lora';
   line-height: 1.6;
   color: #666;
-  background: ivory;
+  background: #f9f6ee;;
 }
 
 #root {
   max-width: 1200px;
   margin: 0 auto;
-  --color-win: tomato;
-  --color-lose: slategray;
+  --color-win: darkseagreen;
+  --color-lose: lightgray;
   --color-god: red;
   --color-scrub: salmon;
   --color-blueberry: linen;
@@ -32,14 +32,6 @@ h1 {
   color: white;
 }
 
-h2 {
-  text-align: left;
-  padding-left: 1.0rem;
-  margin: 0;
-  font-size: 1.2rem;
-  color: darkslategray;
-}
-
 h3 {
   text-align: left;
   padding: 1.0rem;
@@ -52,7 +44,6 @@ h3 {
 h4 {
   text-align: left;
   padding: 1.0rem;
-  background: linen;
   margin: 0;
   font-size: 1.0rem;
   color: darkslategray;
@@ -97,12 +88,6 @@ canvas {
   max-height: 100%;
   font-family: "Chivo";
   text-align: right;
-}
-
-p {
-  padding: 0 1.0rem 0.5rem;
-  margin: 0;
-  color: black;
 }
 
 .container {

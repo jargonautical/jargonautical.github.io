@@ -1,13 +1,13 @@
 const app = document.getElementById('root');
 
-const logo = document.createElement('img');
+//const logo = document.createElement('img');
 //logo.src = 'logo.png';
-logo.src = '../assets/Jargonautical_web_icon.png';
+//logo.src = '../assets/Jargonautical_web_icon.png';
 
 const container = document.createElement('div');
 container.setAttribute('class', 'container');
 
-app.appendChild(logo);
+//app.appendChild(logo);
 app.appendChild(container);
 
 var apiKey = 'a43fee90ad014eb880cb591885a383c4'
@@ -49,10 +49,10 @@ function displayPayload(response) {
       let winLossRatio = foo.winLossRatio.basic.displayValue;
       let prec = foo.precisionKills.pga.displayValue;
       // card elements current info
-      const s2 = document.createElement('h2');
+      const s2 = document.createElement('h4');
       s2.textContent = 'This match stats';
       // card elements comparison
-      const s3 = document.createElement('h2');
+      const s3 = document.createElement('h4');
       s3.textContent = 'This match vs all-time stats';
 
       const c1 = document.createElement('p');
@@ -135,10 +135,12 @@ function displayPayload(response) {
       const h1 = document.createElement('h1');
       if (winVal == 0) {
         //  block of code to be executed if the condition is true
-        h1.style = "background-image: linear-gradient(120deg, var(--color-win) 0%, gray 100%)";
+        //h1.style = "background-image: linear-gradient(120deg, var(--color-win) 0%, gray 100%)";
+        h1.style = "background: var(--color-win);";
       } else {
         //  block of code to be executed if the condition is false
-        h1.style = "background-image: linear-gradient(120deg, var(--color-lose) 0%, gray 100%)";
+        //h1.style = "background-image: linear-gradient(120deg, var(--color-lose) 0%, gray 100%)";
+        h1.style = "background: var(--color-lose);";
       };
 
       h1.textContent = pname;

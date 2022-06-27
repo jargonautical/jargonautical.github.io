@@ -111,13 +111,13 @@ function displayPayload(response) {
 
 
 
-      const p1 = document.createElement('h2');
+      const p1 = document.createElement('h4');
       p1.textContent = "Efficiency";
 
-      const p2 = document.createElement('h2');
+      const p2 = document.createElement('h4');
       p2.textContent = `Combat rating: ${elo}`;
 
-      const p3 = document.createElement('h2');
+      const p3 = document.createElement('h4');
       p3.textContent = "Game stats";
 
       const card = document.createElement('div');

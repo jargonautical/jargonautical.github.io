@@ -32,20 +32,29 @@
 
 <body>
 	<div>
-		<h2>Study of a gaming group network</h2>
+		<h2>Study of a social network in gaming</h2>
 		<p>
-			Gaming groups, like any social network, see a general background level
-			of churn amongst their members. This can be due to life changes, shifting
-			priorities, or evolving preferences for different game genres.
+			Gaming groups, like any community of interest, experience a
+			consistent background level of
+			churn in membership. This can be due to life changes, shifting
+			priorities, or evolving preferences for different game genres - players
+			grow up, grow apart or move on.
 			<br><br>
-			Here we're looking at the changes over time in one such group,
-			looking specifically at the amount of time the members spend in activities
-			with each other. It's possible to see the stronger links (players have joined
-			activities together several times over a given period) and the weaker connections
-			where two players may seldom cross paths even though they belong to the
-			same clan.
+			Here we're looking at the changes in one such group,
+			measured using the amount of time the members spend in activities
+			with each other. The data is pulled from the Destiny 2 API covered in
+			<a href="../index.html">this article</a>, taking a target set of player IDs
+			and collecting instances where those individuals have been in an activity that included
+			at least one other player in the same target set.
 			<br><br>
-			And like all social groups, sometimes sub-groups form - players
+			It's possible to see the stronger links between some individuals, shown
+			by the thicker lines connecting the nodes in question. This tells us that
+			these players have joined activities together several times over the
+			given period. The weaker connections, the very thin lines between some
+			nodes, suggest the two players may seldom cross paths even though they
+			belong to the same clan.
+			<br><br>
+			This is expected. As in all friendship groups, sub-groups form - players
 			drift towards those who have similar perspectives, interests or schedules
 			and more often can be found in activites with this new subset. And while
 			fractures within the group may seem at the time to be a complete surprise,
@@ -55,23 +64,23 @@
 			group, seeing how it evolves.
 		</p>
 		<ol>
-			<li>The original small friend group, playing together regularly.</li>
+			<li>The original small friend group (Cluster 1, in green), playing together regularly.</li>
 			<li>Recruitment of new members.</li>
 			<li>New members invite their friends to join.</li>
-			<li>Distinct clusters form led by pre-existing friendships.</li>
-			<li>The split - a player is kicked from the group for problematic behaviour, and their cluster follows.</li>
-			<li>Regrouping; still a little interaction between the clusters, but very reduced.</li>
+			<li>A distinct new group (Cluster 2, in red) forms led by pre-existing friendships.</li>
+			<li>The split - a player is kicked from the group, and Cluster 2 quickly follows.</li>
+			<li>Regrouping; still a little interaction between Clusters 1 and 2, but very reduced.</li>
 			<li>Present day - no interaction at all between the two clusters, and the
-				breakaway cluster is seeing fractures of its own.</li>
+				Cluster 2 is seeing fractures of its own.</li>
 		</ol>
 		<p>This is a common and recurring cycle, and particularly as gaming groups
-			increase in size - like any community, it requries nurturing and management.
+			increase in size - like any community, it requires nurturing and management.
 			Could the group have seen this coming? Only by monitoring in-game interactions,
 			as shown in the graph here. Should a group leader be monitoring in this way?
 			I would say, 'no' ... it's an interesting study after the fact, but uncomfortably
 			invasive at any other time. All of this data has been anonymised for that reason -
-			while members of the two groups might recognise the patterns here, there's no
-			need to call people out. <br><br>
+			while members of the two clusters might recognise the patterns here,
+			it's not my intention to to call people out. <br><br>
 			It's only a game, after all!
 		</p>
 	</div>
@@ -85,8 +94,31 @@
 		<button type="button" class="filter-btn" id="slice6" value="6">7</button>
 		<button type="button" class="filter-btn" id="all" value="7">ALL</button>
 		<br><br>
-		<svg width="960" height="500"></svg>
+		<svg width="960" height="500" style="border:1px solid black"></svg>
 	</div>
+
+	<h2>About the author</h2>
+  <div class="flex-container">
+
+    <div style="clear: left;">
+
+			<p>
+				Lucy works in education, open data and civic tech in the South West of England
+				(and anywhere else she's needed).
+				<br><br>
+				Currently available for project work.
+				<br><br>
+				<a href=mailto:lucy@jargonautical.com><img src="../assets/email64px.png"></a>
+				<a href=https://twitter.com/jargonautical><img src="../assets/twitter64px.png"></a>
+				<a href=https://uk.linkedin.com/in/jargonautical><img src="../assets/linkedin64px.png"></a>
+			</p>
+			<p class="query">
+				"People don't want data; they want answers."
+			</p>
+    </div>
+  </div>
+
+<h5>(c) Jargonautical Ltd 2020. Branding and logo design by Shufflewing</h5>
 </body>
 
 <script
