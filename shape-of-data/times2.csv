@@ -1,7 +1,12 @@
 ﻿minutes,seconds,colour,secs
-4,10,green,250
-4,24,yellow,264
-5,0,red,300
+4,24,blue,264
+4,28,green,268
+4,44,blue,284
+5,15,yellow,315
 5,23,red,323
-5,53,yellow,353
-6,11,blue,371
+5,30,green,330
+6,0,green,360
+6,12,red,372
+6,18,yellow,378
+6,32,red,392
+7,59,red,479
