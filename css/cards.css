@@ -32,32 +32,6 @@ h1 {
   color: white;
 }
 
-h3 {
-  text-align: left;
-  padding: 1.0rem;
-  background-image: linear-gradient(120deg, darkorange 0%, linen 100%);
-  margin: 0;
-  font-size: 1.0rem;
-  color: darkslategray;
-}
-
-h4 {
-  text-align: left;
-  padding: 1.0rem;
-  margin: 0;
-  font-size: 1.0rem;
-  color: darkslategray;
-}
-
-h5 {
-  text-align: left;
-  padding: 0.1rem;
-  background: darkslategray;
-  margin: 0 0.5rem 0.5rem;
-  font-size: 0.2rem;
-  color: darkslategray;
-}
-
 .iconbox {
   display: flex;
   justify-content: center;
@@ -99,7 +73,7 @@ canvas {
   margin: 1rem;
   background: white;
   box-shadow: 2px 4px 25px rgba(0, 0, 0, .1);
-  border-radius: 12px;
+  border-radius: 1px;
   overflow: hidden;
   transition: all .2s linear;
 }
@@ -108,7 +82,7 @@ canvas {
   box-shadow: 2px 8px 45px rgba(0, 0, 0, .15);
   transform: translate3D(0, -2px, 0);
 }
-
+/*
 @media screen and (min-width: 600px) {
   .card {
     flex: 1 1 calc(50% - 2rem);
@@ -117,9 +91,10 @@ canvas {
 
 @media screen and (min-width: 900px) {
   .card {
-    flex: 1 1 calc(33% - 2rem);
+    flex: 1 1 calc(50% - 2rem);
   }
 }
+*/
 
 .card:nth-child(2n) h1 {
   background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);

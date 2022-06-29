@@ -11,20 +11,80 @@
   	<link rel="shortcut icon" href="../assets/Jargonautical_web_icon.png"/>
   	<div class='hero-image'></div>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-    <link rel="stylesheet" href="../css/drag-drop.css"/>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/interact.js/1.0.2/interact.min.js'></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
-  <h3>The thing from the future</h3>
-  <p>Credit originators here & licence here</p>
-  <button class="button">Deal</a></button>
-  <button onClick="window.location.reload();">Start again</button>
+  <h4>The thing from the future</h4>
+
+  <div class="flex-container">
+    <div class="invisbox">
+      <h4>INSTRUCTIONS</h4>
+      <p>The Thing From The Future is an imagination game for 1-6 players.
+        The object of the game is to use the cards to generate the most
+        interesting, funny or thought-provoking ideas for artifacts from the
+        future. There are over 3.7 million possible prompts in the deck.
+        <br><br>
+        This tool will shuffle the deck for you and create a hand of four cards.
+        <br><br>
+        Look at your cards and see if you can create a brief description (and a
+        sketch if you wish) of your thing from the future. This gets easier as
+        your imagination warms up!
+        <br><br>
+        When everyone is ready, share your future thing ideas with the group.
+        Share your favorite ideas with the gameplay community using the
+        hashtag #FutureThing.
+      </p>
+      <h5>The Thing From The Future was created by Stewart Candy and Jeff Watson.</h5>
+      <h5>2015 CC-BY-NC-SA | situationlab.org | @sitlab</h5>
+      <p>
+        Card image conversions by Millie Rolfe<br><br>
+        Code by Jargonautical
+      </p>
+    </div>
+    <div class="invisbox">
+      <h4>The cards</h4>
+      <h5>ARC</h5>
+      <p>
+        Outlines the type of future world that the “thing” comes from,
+        and how far away it is from today. There are four types of Arc, each an
+        umbrella for countless possible scenarios:
+      </p>
+      <ul>
+        <li>Growth - a future in which “progress” has continued.</li>
+        <li>Collapse – a future in which society as we know it has come apart.</li>
+        <li>Discipline - a future in which order is deliberately coordinated or imposed.</li>
+        <li>Transformation – a future in which a profound historical evolution has occurred.</li>
+      </ul>
+      <h5>TERRAIN</h5>
+      <p>
+        The thematic context or location where this object could be
+        found in that future.
+      </p>
+      <h5>OBJECT</h5>
+      <p>
+        The focus for your imagination: a specific cultural artifact
+        that reveals something about how this future is different from today.
+      </p>
+      <h5>MOOD</h5>
+      <p>
+        Suggests how it might feel to experience this thing from the future.
+      </p>
+    </div>
+  </div>
+
+
+
+
+  <button class="button" onClick="dealCards()">Hit me</a></button>
   <!-- main flex container -->
   <div class='flex-container'>
     <!-- cards -->
     <div id='root'></div>
+  </div>
+  <div class="flex-container">
+    <p> add a form for adding notes?</p>
   </div>
   <script src="shuffle-deal.js"></script>
 
