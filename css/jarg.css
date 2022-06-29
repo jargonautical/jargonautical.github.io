@@ -42,6 +42,10 @@ p.pop {
   color: var(--pop);
 }
 
+a {
+    color: var(--hand);
+}
+
 blockquote {
 	color: var(--night);
 	padding-left:20px;
@@ -103,7 +107,8 @@ p.hand {
     font-family: 'Caveat', cursive;
     color: var(--dark);
     padding-left:20px;
-    font-size: 1.5em;
+    font-size: 2.0em;
+    text-align: center;
 }
 
 p.hand2 {
@@ -269,6 +274,16 @@ html {
   border-color: var(--outline);
   margin: 10px;
 	padding: 10px;
+}
+
+.sticky {
+    background-image: url('../assets/sticky3.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: absolute;
+	height: 800;
+	width: 800;
 }
 
 /* nav buttons */
