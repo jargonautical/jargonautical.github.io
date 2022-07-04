@@ -1,0 +1,46 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  background: #eee8d5;
+  color: #586e75;
+}
+
+h1, h3 {
+  margin: 0;
+  padding: 0.5em 0;
+}
+
+.note {
+  font-size: 0.75em;
+  display: block;
+}
+
+a {
+  color: #cb4b16;
+}
+
+#content {
+  margin: 0 10%;
+  padding: 0.5em 1em;
+  height: 100%;
+  background: #fdf6e3;
+}
+
+@media screen and (max-width: 1024px) {
+  #content {
+    margin: 0;
+  }
+}
+
+#graph svg {
+  border: #586e75 1px solid;
+  width: 100%;
+  max-width: 1024px;
+  height: auto;
+  display: block;
+}

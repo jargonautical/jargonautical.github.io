@@ -128,21 +128,31 @@ getMoodCards();
 getObjectCards();
 getTerrainCards();
 
+let cardSize= "250px"; //square
+
 const arcWild = document.createElement('img');
 arcWild.setAttribute("src", "cards/arc_collapse_aCentury.png");
+arcWild.setAttribute("width", cardSize);
+arcWild.setAttribute("height", cardSize);
 showCard1.appendChild(arcWild);
 
 const moodWild = document.createElement('img');
 moodWild.setAttribute("src", "cards/mood_zen.png");
-showCard2.appendChild(moodWild);
+moodWild.setAttribute("width", cardSize);
+moodWild.setAttribute("height", cardSize);
+showCard4.appendChild(moodWild);
 
 const objectWild = document.createElement('img');
 objectWild.setAttribute("src", "cards/object_wildcard.png");
+objectWild.setAttribute("width", cardSize);
+objectWild.setAttribute("height", cardSize);
 showCard3.appendChild(objectWild);
 
 const terrainWild = document.createElement('img');
 terrainWild.setAttribute("src","cards/terrain_wildcard.png");
-showCard4.appendChild(terrainWild);
+terrainWild.setAttribute("width", cardSize);
+terrainWild.setAttribute("height", cardSize);
+showCard2.appendChild(terrainWild);
 
 function dealCards() {
   var arcCard = shuffle(arcCards);
@@ -156,6 +166,8 @@ function dealCards() {
   var arcPicSrc = `cards/${arcCard.Suit}_${arcCard.Value}.png`;
   console.log(arcPicSrc);
   placeArcCard.setAttribute("src", arcPicSrc);
+  placeArcCard.setAttribute("width", cardSize);
+  placeArcCard.setAttribute("height", cardSize);
   showCard1.replaceChildren(placeArcCard);
 
   // build mood card container
@@ -163,13 +175,17 @@ function dealCards() {
   var moodPicSrc = `cards/${moodCard.Suit}_${moodCard.Value}.png`;
   console.log(moodPicSrc);
   placeMoodCard.setAttribute("src", moodPicSrc);
-  showCard2.replaceChildren(placeMoodCard);
+  placeMoodCard.setAttribute("width", cardSize);
+  placeMoodCard.setAttribute("height", cardSize);
+  showCard4.replaceChildren(placeMoodCard);
 
   // build object card container
   const placeObjectCard = document.createElement('img');
   var objectPicSrc = `cards/${objectCard.Suit}_${objectCard.Value}.png`;
   console.log(objectPicSrc);
   placeObjectCard.setAttribute("src", objectPicSrc);
+  placeObjectCard.setAttribute("width", cardSize);
+  placeObjectCard.setAttribute("height", cardSize);
   showCard3.replaceChildren(placeObjectCard);
 
   // build terrain card container
@@ -177,5 +193,7 @@ function dealCards() {
   var terrainPicSrc = `cards/${terrainCard.Suit}_${terrainCard.Value}.png`;
   console.log(terrainPicSrc);
   placeTerrainCard.setAttribute("src", terrainPicSrc);
-  showCard4.replaceChildren(placeTerrainCard);
+  placeTerrainCard.setAttribute("width", cardSize);
+  placeTerrainCard.setAttribute("height", cardSize);
+  showCard2.replaceChildren(placeTerrainCard);
 }

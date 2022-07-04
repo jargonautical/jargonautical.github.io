@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1">
+  <title>Spirograph Data Demo</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div id="content">
+    <h1>Spirograph Data Demo</h1>
+    <h3>Difference between median income per week between men and women in England (2008-2021)</h3>
+    <p>
+      <div id="selectors">
+        <label for="geo-1">Show me (red):</label><br>
+        <select name="geo-1" id="geo-1"></select><br>
+        <label for="geo-2">Compared to (blue):</label><br>
+        <select name="geo-2" id="geo-2"></select><br>
+      </div>
+      <div id="graph">
+        <svg id="comparator" onmouseenter="move_graphs(true);" onmouseleave="move_graphs(false);"></svg>
+        <input type="range" id="year-slider" name="year-slider"
+        min="0" max="0" value="0">
+        <span id="year-label"></span>
+      </div>
+    </p>
+    <div class="clear"></div>
+    <span class="note">Data from <a href="https://www.nomisweb.co.uk/">Nomis</a></span>
+  </div>
+  <script src="https://d3js.org/d3.v7.js"></script>
+  <script src="https://unpkg.com/jsonstat-toolkit@1.4.1"></script>
+  <script src="app.js"></script>
+</body>
+</html>

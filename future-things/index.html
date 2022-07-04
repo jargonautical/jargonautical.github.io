@@ -16,76 +16,97 @@
 </head>
 
 <body>
-  <h4>The thing from the future</h4>
+  <h2>The Thing From The Future</h2>
 
   <div class="flex-container">
     <div class="invisbox">
-      <h4>INSTRUCTIONS</h4>
-      <p>The Thing From The Future is an imagination game for 1-6 players.
-        The object of the game is to use the cards to generate the most
+
+      <h4>WHAT IS IT?</h4>
+      <p>The Thing From The Future is a game
+        created by Stewart Candy and Jeff Watson at Situation Labs.
+        The idea is to use the cards to generate the most
         interesting, funny or thought-provoking ideas for artifacts from the
-        future. There are over 3.7 million possible prompts in the deck.
-        <br><br>
-        This tool will shuffle the deck for you and create a hand of four cards.
-        <br><br>
-        Look at your cards and see if you can create a brief description (and a
-        sketch if you wish) of your thing from the future. This gets easier as
-        your imagination warms up!
+        future.
         <br><br>
         When everyone is ready, share your future thing ideas with the group.
-        Share your favorite ideas with the gameplay community using the
-        hashtag #FutureThing.
+        You can share your favorite ideas with the gameplay community on
+        Twitter using the hashtag #FutureThing.
       </p>
-      <h5>The Thing From The Future was created by Stewart Candy and Jeff Watson.</h5>
-      <h5>2015 CC-BY-NC-SA | situationlab.org | @sitlab</h5>
+      <h4>CREDITS</h4>
       <p>
-        Card image conversions by Millie Rolfe<br><br>
-        Code by Jargonautical
+          Game design by Stewart Candy and Jeff Watson<br>
+          2015 CC-BY-NC-SA | situationlab.org | @sitlab<br>
+          Card image conversions by Millie Rolfe<br>
+          Code by Jargonautical 2022 CC-BY-NC-SA
       </p>
     </div>
     <div class="invisbox">
-      <h4>The cards</h4>
-      <h5>ARC</h5>
+      <h4>READY TO PLAY?</h4>
       <p>
-        Outlines the type of future world that the “thing” comes from,
-        and how far away it is from today. There are four types of Arc, each an
-        umbrella for countless possible scenarios:
+        Use the 'Shuffle' button to deal yourself a hand of 4 cards, one from
+        each of the suits - Arc, Terrain, Object and Mood.
+        These set the scene for you to create a brief description (and a
+        sketch if you wish) of your thing from the future. This gets easier as
+        your imagination warms up!
+        <br><br>
+        ARC is the crucial suit; it describes the type of future world that
+        the “thing” comes from, and how far away it is from today.
       </p>
       <ul>
-        <li>Growth - a future in which “progress” has continued.</li>
-        <li>Collapse – a future in which society as we know it has come apart.</li>
-        <li>Discipline - a future in which order is deliberately coordinated or imposed.</li>
-        <li>Transformation – a future in which a profound historical evolution has occurred.</li>
+        <li>Growth: progress has continued at something like its current pace.</li>
+        <li>Collapse: total breakdown. Society as we know it has come apart.</li>
+        <li>Discipline: order is deliberately coordinated or imposed.</li>
+        <li>Transformation: a profound historical evolution has occurred.</li>
       </ul>
-      <h5>TERRAIN</h5>
-      <p>
-        The thematic context or location where this object could be
-        found in that future.
-      </p>
-      <h5>OBJECT</h5>
-      <p>
-        The focus for your imagination: a specific cultural artifact
-        that reveals something about how this future is different from today.
-      </p>
-      <h5>MOOD</h5>
-      <p>
-        Suggests how it might feel to experience this thing from the future.
-      </p>
+      <br>
+      <div class="flex-container">
+        <button class="button-function-center" onClick="dealCards()">SHUFFLE</a></button>
+      </div>
     </div>
   </div>
 
 
 
-
-  <button class="button" onClick="dealCards()">Hit me</a></button>
   <!-- main flex container -->
   <div class='flex-container'>
     <!-- cards -->
     <div id='root'></div>
   </div>
+
   <div class="flex-container">
-    <p> add a form for adding notes?</p>
+    <div class="invisbox-quarter">
+      <h5>ARC</h5>
+      <p>
+        The type of future world that the “thing” comes from,
+        and how far away it is from today.
+      </p>
+    </div>
+
+    <div class="invisbox-quarter">
+      <h5>TERRAIN</h5>
+      <p>
+        The thematic context or location where this object could be
+        found in that future.
+      </p>
+    </div>
+
+    <div class="invisbox-quarter">
+      <h5>OBJECT</h5>
+      <p>
+        The focus for your imagination: a specific cultural artifact
+        that reveals something about how this future is different from today.
+      </p>
+    </div>
+
+    <div class="invisbox-quarter">
+      <h5>MOOD</h5>
+      <p>
+        How it might feel to experience this thing from the future.
+      </p>
+    </div>
+
   </div>
+
   <script src="shuffle-deal.js"></script>
 
 
