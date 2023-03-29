@@ -171,8 +171,8 @@ function displayPayload(response) {
 }
 
 function allTimeCall(platform, memid, charId) {
-  let gambitUrl = "https://www.bungie.net/Platform/Destiny2/"+ platform + "/Account/" + memid + "/Character/" + charId + "/Stats/"
-  //console.log(pvpUrl);
+  let gambitUrl = "https://www.bungie.net/Platform/Destiny2/3/Account/4611686018476645284/Character/" + charId + "/Stats/"
+  console.log(gambitUrl);
   return $.ajax({
     url: gambitUrl,
     type: 'GET',
@@ -185,7 +185,7 @@ function allTimeCall(platform, memid, charId) {
 function instanceCall() {
   return $.ajax({
     // jarg hunter pvp
-    url: "https://www.bungie.net/Platform/Destiny2/3/Account/4611686018476645284/Character/2305843009399245548/Stats/Activities/?mode=63",
+    url: "https://www.bungie.net/Platform/Destiny2/3/Account/4611686018476645284/Character/2305843009399245548/Stats/Activities/?mode=63/",
     type: 'GET',
     dataType: 'json',
     timeout: 3000,
