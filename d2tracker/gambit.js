@@ -185,10 +185,10 @@ function allTimeCall(platform, memid, charId) {
 function instanceCall() {
   return $.ajax({
     // jarg hunter pvp
-    url: "https://www.bungie.net/Platform/Destiny2/3/Account/4611686018476645284/Character/2305843009399245548/Stats/Activities/?mode=63/",
+    url: "https://www.bungie.net/Platform/Destiny2/3/Account/4611686018476645284/Character/2305843009399245548/Stats/Activities/?mode=63",
     type: 'GET',
     dataType: 'json',
-    timeout: 3000,
+    timeout: 5000,
     headers: {"X-API-Key": apiKey}
   });
 }
