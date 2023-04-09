@@ -14,6 +14,7 @@ var apiKey = 'a43fee90ad014eb880cb591885a383c4'
 
 function displayPayload(response) {
   var report = response.Response.entries;
+  console.log('report', report);
   var keys = Object.keys(report);
   keys.forEach(function(key) {
     //console.log(report);
@@ -31,7 +32,7 @@ function displayPayload(response) {
     // TODO get this match best weapon name and type
     // TODO figure out how to do arrows for stats better/worse than all time
     // checking we are returning each player
-    //console.log('item', pname);
+    console.log('item', pname);
     // TODO get player displayName
     // TODO get platform enum, maybe add logos?
     // access each player all time PvP stats
@@ -50,7 +51,7 @@ function displayPayload(response) {
       let prec = foo.precisionKills.pga.displayValue;
       // card elements current info
       const s2 = document.createElement('h4');
-      s2.textContent = 'This match stats';
+      s2.textContent = 'All time stats';
       // card elements comparison
       const s3 = document.createElement('h4');
       s3.textContent = 'This match vs all-time stats';
@@ -171,7 +172,7 @@ function displayPayload(response) {
 }
 
 function allTimeCall(platform, memid, charId) {
-  let gambitUrl = "https://www.bungie.net/Platform/Destiny2/3/Account/4611686018476645284/Character/" + charId + "/Stats/"
+  let gambitUrl = "https://www.bungie.net/Platform/Destiny2/3/Account/" + memid + "/Character/" + charId + "/Stats/"
   console.log(gambitUrl);
   return $.ajax({
     url: gambitUrl,
@@ -188,7 +189,7 @@ function instanceCall() {
     url: "https://www.bungie.net/Platform/Destiny2/3/Account/4611686018476645284/Character/2305843009399245548/Stats/Activities/?mode=63",
     type: 'GET',
     dataType: 'json',
-    timeout: 5000,
+    timeout: 3000,
     headers: {"X-API-Key": apiKey}
   });
 }
@@ -212,7 +213,7 @@ $(document).ready(function() {
       carnageCall(data)
         .done(function(response) {
           displayPayload(response);
-          //console.log(response);
+          console.log('carnagecall', response);
         }).fail(function() {
           alert("carnageCall blew it :(");
         });
