@@ -79,12 +79,14 @@ function displayPayload(response) {
             }]
           }
         }
-        if (matchGrenade <= 1) {
-          shaxx = '"DID YOU THROW ENOUGH GRENADES?"';
-        } else if (matchKd > 3) {
-          shaxx = '"CAREFUL, GUARDIAN - YOU\'RE SCARING THEM!"';
-        } else if (matchKd  < 0.4) {
+        if (matchKd > 2) {
+          shaxx = '"Careful Guardian - you\'re scaring them!"';
+        } else if (matchSuper >= 1) {
+          shaxx = '"I BET THEY DIDN\'T EXPECT THAT!"';
+        } else if (matchKd  < 0.5) {
           shaxx = '"Come back when you\'re ready :("';
+        } else if (matchGrenade == 0) {
+          shaxx = '"Did you throw enough grenades?"';
         } else {
           shaxx = '"Shaxx has no words ... 👍🏿"';
         }
@@ -193,9 +195,9 @@ function displayPayload(response) {
       card.appendChild(line2);
       card.appendChild(p3);
       card.appendChild(allKills);
-      card.appendChild(grenades);
-      card.appendChild(melees);
-      card.appendChild(supers);
+      //card.appendChild(grenades);
+      //card.appendChild(melees);
+      //card.appendChild(supers);
       card.appendChild(precShots);
       //card.appendChild(grrr);
       //grrr.appendChild(grricon);

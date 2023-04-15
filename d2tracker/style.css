@@ -133,8 +133,19 @@ canvas {
   background-image: linear-gradient(120deg, #ffc3a0 0%, #ffafbd 100%);
 }
 
-.button {
-  background-color: #FA8072; /* salmon */
+.buttonC {
+  background-color: #DC143C; /* crimson */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.buttonG {
+  background-color: #006400; /* dark green */
   border: none;
   color: white;
   padding: 15px 32px;

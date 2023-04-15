@@ -78,9 +78,9 @@ function displayPayload(response) {
             }]
           }
         }
-        if (matchGrenade <= 1) {
+        if (matchGrenade == 0) {
           shaxx = '"DID YOU THROW ENOUGH GRENADES?"';
-        } else if (matchKd > 3) {
+        } else if (matchKd > 2.5) {
           shaxx = '"CAREFUL, GUARDIAN - YOU\'RE SCARING THEM!"';
         } else if (matchKd  < 0.4) {
           shaxx = '"Come back when you\'re ready :("';
