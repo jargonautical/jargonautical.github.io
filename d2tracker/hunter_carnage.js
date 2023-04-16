@@ -128,7 +128,16 @@ function displayPayload(response) {
 
       const h1 = document.createElement('h1');
       //h1.style = "background-image: linear-gradient(120deg, turquoise 0%, lightseagreen 100%)";
-      h1.style = "background: lightseagreen";
+      //h1.style = "background: lightseagreen";
+      if (winVal == 0) {
+        //  block of code to be executed if the condition is true
+        //h1.style = "background-image: linear-gradient(120deg, var(--color-win) 0%, gray 100%)";
+        h1.style = "background: var(--color-win);";
+      } else {
+        //  block of code to be executed if the condition is false
+        //h1.style = "background-image: linear-gradient(120deg, var(--color-lose) 0%, gray 100%)";
+        h1.style = "background: var(--color-lose);";
+      };
       h1.textContent = pname;
 
       const allKills = document.createElement('p');

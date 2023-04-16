@@ -78,12 +78,14 @@ function displayPayload(response) {
             }]
           }
         }
-        if (matchGrenade <= 1) {
-          shaxx = '"DID YOU THROW ENOUGH GRENADES?"';
-        } else if (matchKd > 3) {
-          shaxx = '"CAREFUL, GUARDIAN - YOU\'RE SCARING THEM!"';
-        } else if (matchKd  < 0.4) {
+        if (matchKd > 2) {
+          shaxx = '"Careful Guardian - you\'re scaring them!"';
+        } else if (matchSuper >= 1) {
+          shaxx = '"I BET THEY DIDN\'T EXPECT THAT!"';
+        } else if (matchKd  < 0.5) {
           shaxx = '"Come back when you\'re ready :("';
+        } else if (matchGrenade == 0) {
+          shaxx = '"Did you throw enough grenades?"';
         } else {
           shaxx = '"Shaxx has no words ... 👍🏿"';
         }
@@ -125,7 +127,15 @@ function displayPayload(response) {
 
       const h1 = document.createElement('h1');
       //h1.style = "background-image: linear-gradient(120deg, turquoise 0%, lightseagreen 100%)";
-      h1.style = "background: lightseagreen";
+      if (winVal == 0) {
+        //  block of code to be executed if the condition is true
+        //h1.style = "background-image: linear-gradient(120deg, var(--color-win) 0%, gray 100%)";
+        h1.style = "background: var(--color-win);";
+      } else {
+        //  block of code to be executed if the condition is false
+        //h1.style = "background-image: linear-gradient(120deg, var(--color-lose) 0%, gray 100%)";
+        h1.style = "background: var(--color-lose);";
+      };
       h1.textContent = pname;
 
       const allKills = document.createElement('p');
