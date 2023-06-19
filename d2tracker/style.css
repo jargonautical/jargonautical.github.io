@@ -58,6 +58,14 @@ h5 {
   color: darkslategray;
 }
 
+h6 {
+  text-align: left;
+  padding: 0.1rem;
+  margin: 0 0.5rem 0.5rem;
+  font-size: 1.2rem;
+  color: white;
+}
+
 .iconbox {
   display: flex;
   justify-content: center;
@@ -133,45 +141,65 @@ canvas {
   background-image: linear-gradient(120deg, #ffc3a0 0%, #ffafbd 100%);
 }
 
-.buttonC {
-  background-color: firebrick; /* crimson */
-  border: gray;
-  border-style: outset;
-  border-width: 3px;
+/* Container needed to position the button. Adjust the width as needed */
+.character {
+  position: relative;
+  width: 50%;
+}
+
+/* Make the image responsive */
+.character img {
+  width: 100%;
+  height: auto;
+}
+
+/* Style the button and place it in the middle of the container/image */
+.character .btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #555;
   color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 8px;
-  display: inline-block;
   font-size: 16px;
-
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
-.buttonC:hover {
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-}
-
-.buttonG {
-  background-color: #00a86b; /* jade green */
-  border: gray;
-  border-style: outset;
-  border-width: 3px;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 8px;
-  display: inline-block;
-  font-size: 16px;
-}
-
-.buttonG:hover {
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+.character .btn:hover {
+  background-color: black;
 }
 
 .disabled {
   opacity: 0.7;
   border-style: inset;
   font-style: italic;
+}
+
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.imgHolder {
+  position: relative;
+  text-align:center;
+}
+.imgHolder span {
+  color: white;
+  position: absolute;
+  right: 60%;
+  top: 75%;
 }
