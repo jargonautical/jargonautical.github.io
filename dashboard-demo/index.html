@@ -2,28 +2,24 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8" />
-	<title>Embed demo</title>
-	<meta name="description" content="A demonstration of Power BI 'publish to web' functionality" />
+	<title>MyWorld report staging</title>
+	<meta name="description" content="Interim report - client view" />
 	<meta name="author" content="jargonautical" />
 	<link rel="stylesheet" href="../css/drag-style.css" type="text/css"/>
 	<link rel="shortcut icon" href="../assets/Jargonautical_web_icon.png"/>
-	<div class='hero-image'></div>
 </head>
 <body>
-	<h1>Dashboard embed</h1>
-	<iframe title="Dashboard sample" width="1024" height="612" src="" frameborder="0" allowFullScreen="true"></iframe>
+	<h1>Staging</h1>
 	Enter Password:
-      <input type='text' value='' id='input'><br><br>
+      <input type='text' value='' id='input'><br>
       <input type='checkbox' onclick='protectpasscode()'>Show results
-      <p id='tutorial' style='display:none; color: black;'>
-				Mahendra Singh Dhoni, also known as MS Dhoni, is an Indian former international
-        cricketer who was captain of the Indian national cricket team in limited-overs formats
-        from 2007 to 2017 and in Test cricket from 2008 to 2014. </p>
+      <p id='output' style='display:none; color: black;'>
+				MyWorld Year 2 dashboard</p>
 				<iframe title="Dashboard sample" width="1024" height="612" src="" frameborder="0" allowFullScreen="true"></iframe>
 				<script>
 				  function protectpasscode() {
             var a = document.getElementById('input');
-            var b = document.getElementById('tutorial');
+            var b = document.getElementById('output');
             if (a.value === '54') {
                b.style.display = 'block';
             } else {
