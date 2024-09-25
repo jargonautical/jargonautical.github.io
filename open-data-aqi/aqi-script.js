@@ -5,7 +5,7 @@ var aqi = (function() {
   $.ajax({
     'async': false,
     'global': false,
-    'headers': {"X-API-Key": apikey, 'Access-Control-Allow-Origin': '*' },
+    'headers': {"X-API-Key": apikey},
      url: "https://api.openaq.org/v1/measurements?country=GB&parameter=pm25",
     'dataType': "json",
     'success': function(data) {
