@@ -1,12 +1,9 @@
 // aqi data from open api openaq.org
-var apikey = "1dc0ea5648bffcc7f6b7565dae1e90536405fec1d7879c9ce44d637e0355dec1";
-var headers = '{"X-API-Key": apikey, "Access-Control-Allow-Headers": "x-requested-with"}';
 var aqi = (function() {
   var json = null;
   $.ajax({
     'async': false,
     'global': false,
-    'headers': headers,
      url: "https://api.openaq.org/v1/measurements?country=GB&parameter=pm25",
     'dataType': "json",
     'success': function(data) {
