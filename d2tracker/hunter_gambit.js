@@ -17,7 +17,7 @@ function displayPayload(response) {
   console.log('report', report);
   var keys = Object.keys(report);
   keys.forEach(function(key) {
-    //console.log(report);
+    console.log("payload: ", report);
     let charId = report[key].characterId;
     let pname = report[key].player.destinyUserInfo.displayName;
     let memid = report[key].player.destinyUserInfo.membershipId;
@@ -32,14 +32,14 @@ function displayPayload(response) {
     // TODO get this match best weapon name and type
     // TODO figure out how to do arrows for stats better/worse than all time
     // checking we are returning each player
-    console.log('item', pname);
+    console.log('player', pname);
     // TODO get player displayName
     // TODO get platform enum, maybe add logos?
     // access each player all time PvP stats
     var allTime = allTimeCall(platform, memid, charId).done(function(response) {
       //console.log(response.Response.allPvECompetitive);
       let foo = response.Response.allPvECompetitive.allTime;
-      console.log(foo);
+      console.log('all time pve stats', foo);
       let highScore = foo.bestSingleGameKills.basic.displayValue;
       let kills = foo.kills.pga.displayValue;
       let bestWeapon = foo.weaponBestType.basic.displayValue;
