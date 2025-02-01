@@ -172,7 +172,7 @@ function displayPayload(response) {
 }
 
 function allTimeCall(platform, memid, charId) {
-  let gambitUrl = "https://www.bungie.net/Platform/Destiny2/3/Account/" + memid + "/Character/" + charId + "/Stats/"
+  let gambitUrl = "https://www.bungie.net/Platform/Destiny2/" + platform + "/Account/" + memid + "/Character/" + charId + "/Stats/"
   console.log(gambitUrl);
   return $.ajax({
     url: gambitUrl,
