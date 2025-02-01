@@ -142,17 +142,17 @@ function displayPayload(response) {
       allKills.textContent = `Total kills: ${matchKills}  (PGA ${kills})`;
 
       var pic1 = document.createElement('img');
-      pic1.setAttribute("src", "200px-Discipline_Icon.png");
+      pic1.setAttribute("src", "../assets/200px-Discipline_Icon.png");
       pic1.setAttribute("height", "50");
       pic1.setAttribute("width", "50");
 
       var pic2 = document.createElement('img');
-      pic2.setAttribute("src", "200px-Strength_Icon.png");
+      pic2.setAttribute("src", "../assets/200px-Strength_Icon.png");
       pic2.setAttribute("height", "50");
       pic2.setAttribute("width", "50");
 
       var pic3 = document.createElement('img');
-      pic3.setAttribute("src", "200px-Intellect_Icon.png");
+      pic3.setAttribute("src", "../assets/200px-Intellect_Icon.png");
       pic3.setAttribute("height", "50");
       pic3.setAttribute("width", "50");
 
@@ -164,7 +164,7 @@ function displayPayload(response) {
       const grrtext = document.createElement('icontext');
       const grricon = document.createElement('img');
       grrtext.textContent = `${matchGrenade}`;
-      grricon.setAttribute("src", "200px-Discipline_Icon.png");
+      grricon.setAttribute("src", "../assets/200px-Discipline_Icon.png");
       grricon.setAttribute("height", "40");
       grricon.setAttribute("width", "40");
 
