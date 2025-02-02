@@ -221,7 +221,7 @@ function displayPayload(response) {
 
 function allTimeCall(platform, memid) {
   let pvpUrl = "https://www.bungie.net/Platform/Destiny2/"+ platform + "/Account/" + memid + "/Stats/"
-  //console.log(pvpUrl);
+  console.log(pvpUrl);
   return $.ajax({
     url: pvpUrl,
     type: 'GET',
