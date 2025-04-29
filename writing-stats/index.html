@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <script src="https://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Dosis:400,700" rel="stylesheet" />
+        <link rel="stylesheet" href="../css/jarg.css" type="text/css"/>
+        <title>Radial chart sample</title>
+        <meta name="author" content="jargonautical" />
+        <link rel="shortcut icon" href="../assets/Jargonautical_web_icon.png"/>
+        <div class='hero-image'></div>
+    </head>
+    
+    <body>
+        <div class="flex-container">
+            <div class="invisbox-wide">
+                <h3>How do people find time to write?</h3>
+                <p>
+                    A couple of years ago I took up writing fiction, something I used to 
+                    enjoy but gradually stopped because I simply didn't have the time any more. 
+                    There was no particular goal in mind, and 
+                    I didn't see it as anything other than a hobby. Eventually 
+                    though, I got to the point where a story appeared to be complete, 
+                    so I went ahead and published it. I quickly discovered that it's a 
+                    very common path for new authors to find 
+                    that they have more books in them than they realised! I now have a 
+                    sequel in development, and several other works in progress, and 
+                    obviously that has an impact on how I manage my time.
+                    <br><br>
+                    I got curious. Just how many hours exactly are involved in writing 
+                    a novel? And more to the point, how much of that is actually writing 
+                    (the fun part), and how much is proof-reading, editing, typesetting, 
+                    and of course the dreaded marketing?
+                </p>
+            </div>
+        </div>
+        <div class="flex-container">
+            <div class="invisbox">
+                <h4>Do I have the data?</h4>
+                <p>
+                    Thankfully, yes. I keep a daily log of tasks and time spent on each one, so I 
+                    already have a complete and structured collection of data points to work 
+                    with. 
+                    <br><br>
+                    <img src="../assets/dfnew.png" width="80%">
+                </p>
+            </div>
+            <div class="invisbox">
+                <h4>What am I trying to investigate?</h4>
+                <p>
+                    Since I have the data, next I need to decide what questions 
+                    I'm trying to answer with it. 
+                    Let's start with some obvious ones:
+                    <ul>
+                        <li>
+                            How many hours does it take to create a novel?  
+                        </li>
+                        <li>
+                            What proportion of that is writing, compared to all the other tasks?  
+                        </li>
+                        <li>
+                            Do I get more done during the week, or at weekends? 
+                        </li>
+                        <li>What about holidays, or Christmas?
+                        </li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+        <div class="flex-container">
+            <div class="invisbox-big">
+                <h4>Do I have the code?</h4>
+                <p>
+                    There are many talented data people out there, and one of them, 
+                    <a href="">Giuseppe Solazzo</a>, recently created 
+                    <a href="https://www.letsmakeamap.com/blog/end-of-year-dataviz">this lovely radial chart
+                    showing his fitness tracker steps for 2024</a>. He was inspired by 
+                    <a href="https://dominicroye.github.io/blog/climate-circles/index.html">Dominic Royé's work plotting 
+                    climate circles</a>, and the visualisation and calculations are all done in R.
+                    <br><br>
+                    In my work I tend to work a lot more in Python, and luckily for me 
+                    <a href="https://tomicapretto.com/">Tomás Capretto</a> had 
+                    already looked into coverting a very similar R visualisation by 
+                    <a href="https://www.cedricscherer.com/">Cédric Scherer</a> into Python.
+                    <br><br> 
+                    <a href="https://python-graph-gallery.com/web-circular-lollipop-plot-with-matplotlib/">Here is Tomás's example</a> 
+                    which is already very close to what I wanted to do. The data in this example deals with the amount of 
+                    time it takes to crack certain categories and formats of passwords, but all the necessary elements 
+                    are there for me to deconstruct and tweak for my purposes.
+                </p>
+            </div>
+            <div class="invisbox-small">
+                <br><br>
+                <img src="../assets/puntofissoexample.png" width="100%">
+            </div>
+        </div>
+        <h3>The result</h3>
+        <p>
+            What does it tell us? To start with, you can see that I didn't start recording the time I spent on 
+            writing and related tasks until April 2024. You can also see that I don't find 
+            the time to write every single day; even 
+            once I'd started logging time in those categories, there are still gaps. 
+        </p>
+        <div class="flex-container">
+            <div class="invisbox-big">
+                <img src="radial_plot.png" width="100%">
+            </div>
+            <div class="invisbox-small">
+                <img src="bar_plot.png" width="100%">
+            </div>
+        </div>
+        <div class="flex-container">
+            <div class="invisbox">
+                <h3>How many hours does it take to create a novel?</h3>
+                <p>
+                    In this case, 444 hours (and counting, since technically the current 
+                    WIP isn't finished yet). That said, some people do write faster; and not 
+                    every author would count all of the activities that I've been logging 
+                    as 'writing'. Which leads me to the next question:
+                </p>
+                <h3>
+                    What proportion of that is writing, compared to all the other tasks?
+                </h3>
+                <p>
+                    Plotting, outlining, typesetting, 
+                    cover designs, proof-reading, uploading files, and marketing are all 
+                    part of the process if you're self-published. The bar chart to the right 
+                    of the radial plot shows the breakdown of total hours by catgory.
+                    <br><br>
+                    It is interesting to see the numbers, and there are a couple of surprises. 
+                    Drafting and editing make up the majority of the hours, as I would expect. 
+                    Marketing - which includes social media posts, designing ads, and editing 
+                    photographs - looks tiny. In fact this 
+                    is an almost daily activity, but usually only for a few minutes at a time. 
+                    If I reproduce this diagram for 2025 later on, I expect that number will be  
+                    significantly higher.
+                    <br><br>
+                    I am shocked by how little time I apparently spend outlining and plotting, 
+                    possibly something I need to address!            
+                </p>
+            </div>
+            <div class="invisbox">
+                <h3>
+                    Do I get more done during the week, or at weekends? What about 
+                    holidays, or Christmas?
+                </h3>
+                <p>
+                    I don't typically get more writing done at weekends versus weekdays, 
+                    as you might have imagined, but then my working week is quite flexible. 
+                    The graph shows that it's very common for there to be short bursts of
+                    four hours or less - that usually means I found a little free time in the evening.
+                    <br><br>
+                    For lines of more than four hours on a weekday, possibly I had a free day with no 
+                    paid work to focus on. That said, there are also days where the conditions were 
+                    perfect and I was writing and editing late into the night because it was all 
+                    flowing so beautifully!
+                    <br><br>
+                    Where there are several days in a row with a lot of writing hours, that's when I  
+                    made a conscious decision to take time off to focus on writing. That happened in June 2024, 
+                    when I booked a week off work and stayed in a hotel, and another occasion in October 2024 
+                    when I had my regular gaming getaway with friends.
+                </p>                      
+            </div>
+        </div>
+        
+
+        <div class="flex-container">
+            <p>
+                If you're interested in the code I used to 
+                make this chart, <a href="writing_stats_radial_diagram.ipynb">you can find the Jupyter notebook here</a>.
+                <br><br>
+                And if you got this far and are curious about what I'm writing, the first book in the series is available 
+                on   
+                <a href="https://www.amazon.co.uk/Somewhere-Be-Laurie-Mather-ebook/dp/B0CJK118GN">Amazon</a>,  
+                <a href="https://www.kobo.com/au/en/ebook/somewhere-to-be-3">Kobo</a> 
+                and <a href="https://buy.bookfunnel.com/3kmq61rjco">BookFunnel</a>.
+            </p>
+        </div>
+    </body>
+    
+    <h2>About the author</h2>
+    <div class="flex-container">
+        <div style="clear: left;">
+            <p>
+                Lucy works in education, open data and civic tech in the South West of England
+                (and anywhere else she's needed).
+                <br><br>
+                <!--Currently available for project work.-->
+                <br><br>
+                <a href=mailto:lucy@jargonautical.com><img src="../assets/email64px.png"></a>
+                <a href=https://twitter.com/jargonautical><img src="../assets/twitter64px.png"></a>
+                <a href=https://uk.linkedin.com/in/jargonautical><img src="../assets/linkedin64px.png"></a>
+            </p>
+            <p class="query">
+                "People don't want data; they want answers."
+            </p>
+        </div>
+    </div>
+
+    <h5>(c) Jargonautical Ltd 2020. Branding and logo design by Shufflewing</h5>
+
+</html>
