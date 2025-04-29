@@ -1,5 +1,5 @@
 /* JARGONAUTICAL STYLESHEET */
-@import url('https://fonts.googleapis.com/css?family=Oxygen|Ubuntu:wght@500;700|Space+Mono:700&display=swap|Caveat:400&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Oxygen|Ubuntu:wght@500;700|Space+Mono:700&display=swap|Caveat:400&display=swap|Nunito:wght@300;400;700&display=swap');
 
 
 :root {
@@ -154,9 +154,9 @@ p.hand4 {
 }
 
 .hero-image {
-	background-image: url('../assets/Jargonautical_hero_image_final.jpg');
+	background-image: url('../assets/New hero.jpg');
 	height: 150px;
-	background-position: center;
+	background-position: right;
 	background-repeat: no-repeat;
 	background-size: cover;
 	position: relative;
@@ -176,21 +176,21 @@ h1 {
 }
 
 h2 {
-  color: white;
+  color: #f9f6ee;
   background-color: var(--bgheaders);
-  font-size:1.5em;
+  font-size:2.5em;
   padding-top: 20px;
   padding-bottom: 20px;
   margin: 10px;
-  font-family: 'Ubuntu', sans-serif;
-  font-weight: 700;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 300;
 }
 
 h3 {
   color: black;
-  font-size:1.3em;
-  font-family: 'Ubuntu', sans-serif;
-  font-weight: strong;
+  font-size:2em;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 300;
 }
 
 h4 {

@@ -50,8 +50,8 @@ Plotly.d3.csv(filepath, function(err, rows){
             }],
             marker: {
                 size: 12,
-                opacity: 0.7,
-                color: 'darkturquoise'
+                opacity: 0.9,
+                color: 'coral'
             }
         };
 
@@ -60,6 +60,8 @@ Plotly.d3.csv(filepath, function(err, rows){
         //console.log(data);
 
         var layout = {
+            paper_bgcolor: "rgba(0,0,0,0)",
+            plot_bgcolor: "rgba(0,0,0,0)",
             title:'Businesses by legal status',
             //height: 600,
             //width: 1100,

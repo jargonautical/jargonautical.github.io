@@ -51,8 +51,8 @@ Plotly.d3.csv("https://www.nomisweb.co.uk/api/v01/dataset/NM_31_1.data.csv?geogr
             type: 'bar',
             marker: {
                 size: 12,
-                opacity: 0.7,
-                color: 'darkturquoise'
+                opacity: 0.9,
+                color: 'coral'
             }
         };
 
@@ -60,6 +60,8 @@ Plotly.d3.csv("https://www.nomisweb.co.uk/api/v01/dataset/NM_31_1.data.csv?geogr
         //console.log(data);
 
         var layout = {
+            paper_bgcolor: "rgba(0,0,0,0)",
+            plot_bgcolor: "rgba(0,0,0,0)",
             title:'Population estimates 2023/24 (ONS)',
             //height: 400,
             //width: 1100,

@@ -51,8 +51,8 @@ d3.csv(filepath).then(function(data) {
       text: decile,
       marker: {
         //color: '#42DBB7',
-        color: 'darkturquoise',
-        opacity: 0.4,
+        color: 'coral',
+        opacity: 0.9,
         size: count,
         sizemode: 'area',
         sizeref: 0.03,
@@ -71,6 +71,8 @@ d3.csv(filepath).then(function(data) {
       }]
     }]
     var layout = [{
+      paper_bgcolor: "rgba(0,0,0,0)",
+      plot_bgcolor: "rgba(0,0,0,0)",
       autosize: false,
       width: 500,
       height: 500

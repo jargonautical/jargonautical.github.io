@@ -45,8 +45,8 @@ Plotly.d3.csv(filepath, function(err, rows){
             type: 'bar',
             marker: {
                 size: 12,
-                opacity: 0.7,
-                color: 'darkturquoise'
+                opacity: 0.9,
+                color: 'coral'
             }
         };
 
@@ -55,6 +55,8 @@ Plotly.d3.csv(filepath, function(err, rows){
         //console.log(data);
 
         var layout = {
+            paper_bgcolor: "rgba(0,0,0,0)",
+            plot_bgcolor: "rgba(0,0,0,0)",
             title:'Business units by number of employees',
             //height: 600,
             //width: 1100,

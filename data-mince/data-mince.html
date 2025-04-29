@@ -1,64 +1,44 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/header.css">
+    <link rel="stylesheet" type="text/css" href="../css/jarg.css">
+    <link rel="shortcut icon" href="./assets/Jargonautical_web_icon.png" />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Caveat&family=Grape+Nuts&family=Rock+Salt&display=swap');
+    </style>
+    <div class='hero-image'></div>
 	  <!-- Load plotly.js into the DOM -->
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>         
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
-
-
-
-    "></script>
-  
-		<!-- chart object sripts -->
-
-		<!-- CSS -->
-		<link rel="stylesheet" href="../css/10-header.css">
-		<link rel="stylesheet" href="../css/20-reset.css">
-		<link rel="stylesheet" href="../css/jarg.css">
   </head>
   <body>
     
     <div id="intro">
-    <h3>Data Mince: collating datasets for demographic context</h3>
+    <h3>Using open data to understand a place</h3>
     <p>
-      Why 'data mince'? Lucy explains:
-    </p>
-    <p class="info">
-    "A long time ago, my brother went off to university and started learning to shop,
-    cook and stay alive on a student's budget. He found out that pretty quickly
-    he fell into a pattern; after a long day of lectures and coursework and
-    assignments he would realise it was time to cook dinner. He'd chop an onion
-    and start frying it, add some cheap beef mince to the pan ... and then realise
-    he hadn't decided what he was actually going to cook. Chilli? Spag bol? Maybe go all
-    out and make cottage pie? His basic fried-mince-and-onion was just the
-    starting point.<br><br>
-    What we found when we started working on projects for different clients, no
-    matter how sophisticated the toolset or how complex the problem, was that we
-    almost always needed to start with the same initial collection of demographic
+    Something I have found when I work on projects for different clients, no
+    matter how sophisticated the toolset or how complex the problem, I
+    almost always need to start with the same initial collection of demographic
     data; population, income, deprivation, working patterns and so on. This is
-    what we call our 'data mince'."
-  </p>
-  <p>
-    Working in the data science field in the middle of a global pandemic, there
-    are many opportunties to start building tracking dashboards and viral
-    infection models. But there are enough of those already, so we're focusing on
-    how we can provide something useful to anyone trying to manage service demand or
-    community responses to the current crisis.<br><br>
-    We'll update this periodically as we find new and useful things to add to it,
-    but for now here are the basics:<br>
+    your starter kit for understanding some of the patterns in the location you're 
+    trying to analyse;<br>
     - population,<br>
     - deprivation<br>
-    - economic activity.<br><br>
-    All of the data we use here is published under the <a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Open Government Licence</a> as open data.
+    - economic activity.<br>
+    <br>
+    All of the data I use here is UK government open data, published under the 
+    <a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Open Government Licence</a> as open data.
   </p>
   </div>
-
-  <h3>Looking at population variation</h3>
+  <h3>Population variations by age</h3>
 
   <div id="pop-section" class="flex-container">
 
     <div class="invisbox">
-      <p>We always find it useful to look at the distribution of ages
+      <p>I always find it useful to look at the distribution of ages
         rather than the absolute values; the shape of a place's age
         profile tells you a lot when you compare it to the wider
         area. For example, Exeter and Plymouth stand out in this chart
@@ -72,8 +52,9 @@
 
     <div class="invisbox">
       <p>
-        If we were looking at something like vulnerability profiles, then both groups
-        would be of interest. Outbreaks like the coronavirus are particularly concerning
+        If we were looking at something like vulnerability profiles, during COVID for 
+        example, then both groups
+        would be of interest. Viral outbreaks are particularly concerning
         for the elderly and anyone with an underlying health condition, but young people
         are by no means immune. In fact a university environment can carry extra risks,
         e.g. dorms, house shares, group tutorials and lectures in spaces that see a
@@ -108,13 +89,13 @@
         people affected we can use the ONS Annual Labour Survey data - latest is for
         the year from October 2023 to September 2024<br><br>
         Source: <a href="https://www.nomisweb.co.uk/query/construct/summary.asp?mode=construct&version=0&dataset=141">ONS UK Business Counts</a>
-      </p> <!-- update the data version -->
+      </p>
     </div>
 
     <div class="invisbox">
       <p>
         These charts show two different attributes of the UK Business Counts data;
-        the breakdown by legal status, which gives us the proportion of sole traders
+        the breakdown by legal status, which shows us the proportion of sole traders
         in a district, and the size band by number of employees so we can see where
         there's a high proportion of businesses with, for example, fewer than 5 people
         working there.
