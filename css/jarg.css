@@ -167,49 +167,49 @@ p.hand4 {
 h1 {
   color: white;
   background-color: var(--bgheaders);
-  font-size: 1em;
+  font-size: 2.5em;
   padding-top: 30px;
   padding-bottom: 30px;
   margin: 10px;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Nunito';
   font-weight: 700
 }
 
 h2 {
-  color: #f9f6ee;
+  color: white;
   background-color: var(--bgheaders);
-  font-size:2.5em;
+  font-size:1.5em;
   padding-top: 20px;
   padding-bottom: 20px;
   margin: 10px;
   font-family: 'Nunito', sans-serif;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 h3 {
   color: black;
-  font-size:2em;
+  font-size:1.3em;
   font-family: 'Nunito', sans-serif;
-  font-weight: 300;
+  font-weight: strong;
 }
 
 h4 {
   color: black;
   font-size:1.2em;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Nunito', sans-serif;
   font-weight: strong;
 }
 
 h5 {
   font-size:1.0em;
   font-weight: strong;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Nunito', sans-serif;
 }
 
 h6 {
   font-size:1.0em;
   font-style: oblique;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Nunito', sans-serif;
 }
 
 html {
@@ -236,18 +236,18 @@ html {
   border-color: var(--outline);
 }
 
-.flex-container .invisbox-quarter {
-  background-color: var(--bgbody);
-  max-width: 25%;
-  width: 25%;
-  text-align: left;
-  padding: 10px;
-}
-
 .flex-container .invisbox-small {
   background-color: var(--bgbody);
   max-width: 33%;
   width: 33%;
+  text-align: left;
+  padding: 10px;
+}
+
+.flex-container .invisbox-mini {
+  background-color: var(--bgbody);
+  max-width: 25%;
+  width: 25%;
   text-align: left;
   padding: 10px;
 }
@@ -293,7 +293,7 @@ html {
 }
 
 .sticky {
-    background-image: url('../assets/sticky3.png');
+  background-image: url('../assets/sticky3.png');
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -319,25 +319,6 @@ html {
   font-size: 16px;
   cursor: pointer;
   float: left;
-}
-
-.button-function-center {
-  width: 20%;
-  height: 50px;
-  background-color: var(--bgbody);
-  border-style: outset;
-  border-width: thin;
-  border-color: var(--dark);
-  border-radius: 25px;
-  box-shadow: 0 8px 16px 0 rgba(250,240,230,1), 0 6px 20px 0 rgba(250,240,230,1);
-  color: var(--dark);
-  padding: 10px;
-  margin: 0 auto;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 20px;
-  cursor: pointer;
 }
 
 .button-back {
@@ -390,6 +371,13 @@ ul {
 ol {
   list-style: square inside;
   list-style-type: numeric;
+}
+
+li {
+  list-style-type: disc;
+  list-style-position: inside;
+  text-indent: -1em;
+  padding-left: 1em;
 }
 
 /* tables */
