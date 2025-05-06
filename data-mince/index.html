@@ -5,7 +5,8 @@
     <link rel="stylesheet" type="text/css" href="../css/reset.css">
     <link rel="stylesheet" type="text/css" href="../css/header.css">
     <link rel="stylesheet" type="text/css" href="../css/jarg.css">
-    <link rel="shortcut icon" href="./assets/Jargonautical_web_icon.jpg" />
+    <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' />
+    <link rel="shortcut icon" href="../assets/Jargonautical_web_icon.jpg" />
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Caveat&family=Grape+Nuts&family=Nunito&family=Rock+Salt&display=swap');
     </style>
@@ -13,6 +14,7 @@
 	  <!-- Load plotly.js into the DOM -->
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>         
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
   </head>
   <body>
     
@@ -67,11 +69,11 @@
   <div>
     <div id="pop">
       <div class="bubbleplot" data-num="1">
-        <div class="plot" id="popDiv"></div>
         <div class="control-row1">
           District: <select class="districtdata">
           </select>
         </div>
+        <div class="plot" id="popDiv"></div>
       </div>
     </div>
   </div>
@@ -109,11 +111,11 @@
     <div class="invisbox">
       <div id="se">
         <div class="bubbleplot" data-num="2">
-          <div class="plot" id="empDiv"></div>
           <div class="control-row2">
             District: <select class="districtdata">
             </select>
           </div>
+          <div class="plot" id="empDiv"></div>
         </div>
       </div>
     </div>
@@ -121,11 +123,11 @@
     <div class="invisbox">
       <div id="biz">
         <div class="bubbleplot" data-num="4">
-          <div class="plot" id="bizDiv"></div>
           <div class="control-row2">
             District: <select class="districtdata">
             </select>
           </div>
+          <div class="plot" id="bizDiv"></div>
         </div>
       </div>
     </div>
@@ -160,10 +162,66 @@
         <a href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/835115/IoD2019_Statistical_Release.pdf">Further reading</a>
       </p>
     </div>
-
-    <div class="invisbox">
-      <div id='imdDiv' width=100%></div><!-- IMD chart -->
+  </div>
+  <h3>Hover over the map to see more details.</h3>    
+  <div class='flex-container'>
+    <div id='map' class="invisbox-wide" style='height: 500px;'></div>
+    <div class='map-overlay' id='features' style='position: relative; top: 0;'></div>
+            <script>
+              // define access token
+              mapboxgl.accessToken = 'pk.eyJ1IjoiamFyZ29uYXV0IiwiYSI6ImNrZWUybmR5ZjBicWMyc295NTR4N3I4OWIifQ.scaKTg7g6zt8i9_zk8NjWg';
+              // create map
+              var map = new mapboxgl.Map({
+                container: 'map', // container id
+                //style: 'mapbox://styles/jargonaut/ckiabooyrdbcq19oyiwwh8j34',
+                style: 'mapbox://styles/jargonaut/cmacoc14300pi01s355v0arto',
+                center: [-3.82, 50.75], //50.756674, -3.828226
+                zoom: 8
+              });
+              // wait for map to load before adjusting it
+              map.on('load', function() {
+                //make a pointer cursor
+                map.getCanvas().style.cursor = 'default';
+                // set map bounds
+                // define layer names
+                var colors = ['#ffffff', '#f7fbff', '#deebf7', '#c6dbef', '#9ecae1', '#6baed6', '#4292c6', '#2171b5', '#08519c', '#08306b'];
+                // change info window on hover
+                map.on('mousemove', function(e) {
+                  var states = map.queryRenderedFeatures(e.point, {layers: ['IMD2019']});
+                  if (states.length > 0) {
+                    document.getElementById('pd').innerHTML = '<p class="info">LSOA name: ' + states[0].properties.lsoa11nm + ' is in decile: ' + states[0].properties.IMDDec0 + '<p>';
+                  } else {
+                    document.getElementById('pd').innerHTML = '<p class="info">Hover over an area to see the IMD Decile</p>';
+                  }
+                });
+              });
+            </script>
+          </div>
+    <div class="invisbox-small" id='legend'>
+      <table>
+        <tr>
+          <td style='width: 25%;'>Most deprived</td>
+          <td style='background-color: #08306b;'> </td>
+          <td style='background-color: #08519c;'> </td>
+          <td style='background-color: #2171b5;'> </td>
+          <td style='background-color: #4292c6;'> </td>
+          <td style='background-color: #6baed6;'> </td>
+          <td style='background-color: #9ecae1;'> </td>
+          <td style='background-color: #c6dbef;'> </td>
+          <td style='background-color: #deebf7;'> </td>
+          <td style='background-color: #f7fbff;'> </td>
+          <td style='background-color: #ffffff;'> </td>
+          <td style='width: 25%;'>Least deprived</td>
+        </tr>
+      </table>
+      <br>
+      <br>
+    
+    
+    <div id='pd'>
+      <p class="info">Hover over an area to see the IMD Decile</p>
     </div>
+  </div>
 
   </div>
   <hr>
