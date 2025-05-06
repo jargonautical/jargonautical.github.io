@@ -376,7 +376,7 @@ ol {
 li {
   list-style-type: disc;
   list-style-position: inside;
-  text-indent: -1em;
+  text-indent: -1.4em;
   padding-left: 1em;
 }
 
