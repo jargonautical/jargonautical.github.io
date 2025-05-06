@@ -48,11 +48,13 @@ Plotly.d3.csv("https://www.nomisweb.co.uk/api/v01/dataset/NM_31_1.data.csv?geogr
         var trace1 = {
             x: currentAge,
             y: currentValue,
+            text: currentValue.map(String),
+            textposition: 'auto',
             type: 'bar',
             marker: {
                 size: 12,
                 opacity: 0.9,
-                color: 'coral'
+                color: 'darkslategray'
             }
         };
 
