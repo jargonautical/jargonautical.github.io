@@ -42,7 +42,7 @@ Plotly.d3.csv(filepath, function(err, rows){
             x: currentSizeBand,
             y: currentValue,
             text: currentValue.map(String),
-            textposition: 'outside',
+            textposition: 'auto',
             type: 'bar',
             orientation: 'h',
             transforms: [{
@@ -83,6 +83,9 @@ Plotly.d3.csv(filepath, function(err, rows){
                 size: 12,
                 color: 'black'
               },
+            },
+            yaxis: {
+              showticklabels: false
             },
             hovermode: 'closest'
         };

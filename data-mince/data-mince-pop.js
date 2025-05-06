@@ -49,7 +49,7 @@ Plotly.d3.csv("https://www.nomisweb.co.uk/api/v01/dataset/NM_31_1.data.csv?geogr
             x: currentAge,
             y: currentValue,
             text: currentValue.map(String),
-            textposition: 'outside',
+            textposition: 'auto',
             type: 'bar',
             marker: {
                 size: 12,
