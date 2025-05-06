@@ -42,11 +42,14 @@ Plotly.d3.csv(filepath, function(err, rows){
         var trace1 = {
             x: currentSizeBand,
             y: currentValue,
+            text: currentValue.map(String),
+            textposition: 'outside',
             type: 'bar',
+            orientation: 'h',
             marker: {
                 size: 12,
                 opacity: 0.9,
-                color: 'coral'
+                color: 'darkslategray'
             }
         };
 
@@ -55,6 +58,7 @@ Plotly.d3.csv(filepath, function(err, rows){
         //console.log(data);
 
         var layout = {
+            bargap: 0.05,
             paper_bgcolor: "rgba(0,0,0,0)",
             plot_bgcolor: "rgba(0,0,0,0)",
             title:'Business units by number of employees',

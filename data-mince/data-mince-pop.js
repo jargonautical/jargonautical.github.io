@@ -49,7 +49,7 @@ Plotly.d3.csv("https://www.nomisweb.co.uk/api/v01/dataset/NM_31_1.data.csv?geogr
             x: currentAge,
             y: currentValue,
             text: currentValue.map(String),
-            textposition: 'auto',
+            textposition: 'outside',
             type: 'bar',
             marker: {
                 size: 12,
@@ -62,6 +62,7 @@ Plotly.d3.csv("https://www.nomisweb.co.uk/api/v01/dataset/NM_31_1.data.csv?geogr
         //console.log(data);
 
         var layout = {
+            bargap: 0.03,
             paper_bgcolor: "rgba(0,0,0,0)",
             plot_bgcolor: "rgba(0,0,0,0)",
             title:'Population estimates 2023/24 (ONS)',
