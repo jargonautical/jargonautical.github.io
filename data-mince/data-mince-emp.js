@@ -39,8 +39,8 @@ Plotly.d3.csv(filepath, function(err, rows){
         getDistrictData(chosenDistrict);
 
         var trace1 = {
-            y: currentSizeBand,
-            x: currentValue,
+            x: currentSizeBand,
+            y: currentValue,
             text: currentValue.map(String),
             textposition: 'outside',
             type: 'bar',
@@ -53,7 +53,7 @@ Plotly.d3.csv(filepath, function(err, rows){
             marker: {
                 size: 12,
                 opacity: 0.9,
-                color: 'coral'
+                color: 'darkslategray'
             }
         };
 
