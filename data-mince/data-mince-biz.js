@@ -46,10 +46,15 @@ Plotly.d3.csv(filepath, function(err, rows){
             textposition: 'auto',
             type: 'bar',
             orientation: 'h',
+            transforms: [{
+                type: 'sort',
+                target: 'x',
+                order: 'ascending'
+              }],
             marker: {
                 size: 12,
                 opacity: 0.9,
-                color: 'darkslategray'
+                color: 'lightslategray'
             }
         };
 
@@ -65,7 +70,7 @@ Plotly.d3.csv(filepath, function(err, rows){
             //height: 600,
             //width: 1100,
             margin: {
-              l: 50,
+              l: 100,
               r: 50,
               b: 50,
               t: 100,
