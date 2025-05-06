@@ -40,8 +40,8 @@ Plotly.d3.csv(filepath, function(err, rows){
         getDistrictData(chosenDistrict);
 
         var trace1 = {
-            x: currentSizeBand,
-            y: currentValue,
+            y: currentSizeBand,
+            x: currentValue,
             text: currentValue.map(String),
             textposition: 'auto',
             type: 'bar',
@@ -72,13 +72,6 @@ Plotly.d3.csv(filepath, function(err, rows){
               pad: 4
             },
             xaxis: {
-              //tickangle: 0,
-              tickfont: {
-                size: 12,
-                color: 'black'
-              },
-            },
-            yaxis: {
               showticklabels: false
             },
             hovermode: 'closest'

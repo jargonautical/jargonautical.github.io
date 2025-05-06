@@ -39,8 +39,8 @@ Plotly.d3.csv(filepath, function(err, rows){
         getDistrictData(chosenDistrict);
 
         var trace1 = {
-            x: currentSizeBand,
-            y: currentValue,
+            y: currentSizeBand,
+            x: currentValue,
             text: currentValue.map(String),
             textposition: 'auto',
             type: 'bar',
@@ -75,7 +75,7 @@ Plotly.d3.csv(filepath, function(err, rows){
               t: 100,
               pad: 4
             },
-            xaxis: {
+            yaxis: {
               ticktext : ['Company', 'Sole proprietor', 'Partnership', 'Non-profit', 'Public corp', 'Central Gov', 'Local Gov'],
               showticklabels: true,
               tickangle: 0,
@@ -84,7 +84,7 @@ Plotly.d3.csv(filepath, function(err, rows){
                 color: 'black'
               },
             },
-            yaxis: {
+            xaxis: {
               showticklabels: false
             },
             hovermode: 'closest'
