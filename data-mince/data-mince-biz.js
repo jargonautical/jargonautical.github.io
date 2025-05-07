@@ -54,7 +54,7 @@ Plotly.d3.csv(filepath, function(err, rows){
             marker: {
                 size: 12,
                 opacity: 0.9,
-                color: 'lightslategray'
+                color: 'coral'
             }
         };
 

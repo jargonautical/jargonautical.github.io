@@ -26,7 +26,7 @@
     almost always need to start with the same initial collection of demographic
     data; population, income, deprivation, working patterns and so on. This is
     your starter kit for understanding some of the patterns in the location you're 
-    trying to analyse;<br>
+    trying to analyse;<br><br>
     - population,<br>
     - deprivation<br>
     - economic activity.<br>
@@ -138,7 +138,7 @@
 
   <div id="imd-section" class="flex-container">
 
-    <div class="invisbox">
+    <div class="invisbox-wide">
       <h3>Indices of Multiple Deprivation (IMD)</h3>
       <p>
         Income and employment are far from the only measure of wellbeing - although they certainly make a
@@ -152,9 +152,9 @@
         each one is then assigned to a decile with a numeric score from 1 to 10.
         Any LSOA with a decile score of 1 is therefore in the top 10% most deprived
         nationally; and the higher the decile score, the less deprived.<br><br>
-        This chart looks at how many LSOAs per district fall into which deciles, so we can see
+        This chart looks at which LSOAs fall into which deciles, and we can see
         that the more urban areas like Torbay and Plymouth have a far greater
-        proportion of LSOAs with lower decile scores.<br>
+        proportion of LSOAs with lower decile scores.<br><br>
         Source: 
         <br>
         <a href="https://www.gov.uk/government/statistics/english-indices-of-deprivation-2019">UK Government - MHCLG</a>
@@ -173,8 +173,9 @@
               // create map
               var map = new mapboxgl.Map({
                 container: 'map', // container id
-                //style: 'mapbox://styles/jargonaut/ckiabooyrdbcq19oyiwwh8j34',
-                style: 'mapbox://styles/jargonaut/cmacoc14300pi01s355v0arto',
+                //style: 'mapbox://styles/jargonaut/ckiabooyrdbcq19oyiwwh8j34', /*original*/
+                //style: 'mapbox://styles/jargonaut/cmacoc14300pi01s355v0arto', /*Devon*/
+                style: 'mapbox://styles/jargonaut/cmae66ast00rv01s4h4wtgyst', /*Devon warm*/
                 center: [-3.82, 50.75], //50.756674, -3.828226
                 zoom: 8
               });
@@ -189,9 +190,9 @@
                 map.on('mousemove', function(e) {
                   var states = map.queryRenderedFeatures(e.point, {layers: ['IMD2019']});
                   if (states.length > 0) {
-                    document.getElementById('pd').innerHTML = '<p class="info">LSOA name: ' + states[0].properties.lsoa11nm + ' is in decile: ' + states[0].properties.IMDDec0 + '<p>';
+                    document.getElementById('pd').innerHTML = '<p class="console">LSOA ' + states[0].properties.lsoa11nm + ' is in decile: ' + states[0].properties.IMDDec0 + '<p>';
                   } else {
-                    document.getElementById('pd').innerHTML = '<p class="info">Hover over an area to see the IMD Decile</p>';
+                    document.getElementById('pd').innerHTML = '<p class="console">Hover over an area to see the IMD Decile</p><br>';
                   }
                 });
               });
@@ -201,15 +202,15 @@
       <table>
         <tr>
           <td style='width: 25%;'>Most deprived</td>
-          <td style='background-color: #08306b;'> </td>
-          <td style='background-color: #08519c;'> </td>
-          <td style='background-color: #2171b5;'> </td>
-          <td style='background-color: #4292c6;'> </td>
-          <td style='background-color: #6baed6;'> </td>
-          <td style='background-color: #9ecae1;'> </td>
-          <td style='background-color: #c6dbef;'> </td>
-          <td style='background-color: #deebf7;'> </td>
-          <td style='background-color: #f7fbff;'> </td>
+          <td style='background-color: #662506;'> </td>
+          <td style='background-color: #993404;'> </td>
+          <td style='background-color: #cc4c02;'> </td>
+          <td style='background-color: #ec7014;'> </td>
+          <td style='background-color: #fe9929;'> </td>
+          <td style='background-color: #fec44f;'> </td>
+          <td style='background-color: #fee391;'> </td>
+          <td style='background-color: #fff7bc;'> </td>
+          <td style='background-color: #ffffe5;'> </td>
           <td style='background-color: #ffffff;'> </td>
           <td style='width: 25%;'>Least deprived</td>
         </tr>
@@ -219,7 +220,7 @@
     
     
     <div id='pd'>
-      <p class="info">Hover over an area to see the IMD Decile</p>
+      <p class="console">Hover over an area to see the IMD Decile</p>
     </div>
   </div>
 
