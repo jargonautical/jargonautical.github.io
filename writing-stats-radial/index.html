@@ -19,71 +19,74 @@
     <body>
         <div class="flex-container">
             <div class="invisbox-wide">
-                <h3>How do people find time to write?</h3>
+                <h2>Finding time to write</h2>
+            </div>
+        </div>
+        <div class="flex-container">
+            <div class="invisbox-wide">
                 <p>
-                    A couple of years ago I took up writing fiction, something I used to 
-                    enjoy but gradually stopped because I simply didn't have the time any more. 
-                    There was no particular goal in mind, and 
-                    I didn't see it as anything other than a hobby. Eventually 
-                    though, I got to the point where a story appeared to be complete, 
-                    so I went ahead and published it. I quickly discovered that it's a 
-                    very common path for new authors to find 
+                    A couple of years ago I took up writing again. 
+                    <br><br>
+                    This is something I used to 
+                    enjoy, but gradually stopped because I simply didn't have the time any more. 
+                    When I picked it up again I had no particular goal in mind,  
+                     other than as a hobby. Eventually 
+                    though, I ended up writing a complete story, 
+                    so I went ahead and published it. 
+                    <br><br>
+                    At this point I discovered that it's very common for debut authors to find 
                     that they have more books in them than they realised! I now have a 
                     sequel in development, and several other works in progress, and 
                     obviously that has an impact on how I manage my time.
                     <br><br>
-                    I got curious. Just how many hours exactly are involved in writing 
-                    a novel? And more to the point, how much of that is actually writing 
-                    (the fun part), and how much is proof-reading, editing, typesetting, 
-                    and of course the dreaded marketing?
-                </p>
-            </div>
-        </div>
-        <div class="flex-container">
-            <div class="invisbox">
-                <h4>Do I have the data?</h4>
-                <p>
-                    Thankfully, yes. I keep a daily log of tasks and time spent on each one, so I 
-                    already have a complete and structured collection of data points to work 
-                    with. 
+                    Once I started looking into my progress on each project, and with one 
+                    eye on my timesheets, I got curious. Just how many hours are involved in writing 
+                    a novel? More to the point, how much of that is actually writing 
+                    (the fun part), and how much is proof-reading, editing, typesetting - 
+                    and, of course, the dreaded marketing?
                     <br><br>
-                    <img src="../assets/dfnew.png" width="80%">
-                </p>
-            </div>
-            <div class="invisbox">
-                <h4>What am I trying to investigate?</h4>
-                <p>
-                    Since I have the data, next I need to decide what questions 
-                    I'm trying to answer with it. 
-                    Let's start with some obvious ones:
-                    <ul>
-                        <li>
-                            How many hours does it take to create a novel?  
-                        </li>
-                        <li>
-                            What proportion of that is writing, compared to all the other tasks?  
-                        </li>
-                        <li>
-                            Do I get more done during the week, or at weekends? 
-                        </li>
-                        <li>What about holidays, or Christmas?
-                        </li>
-                    </ul>
+                    Since I track the time I spend working for different client, I decided to start 
+                    keeping a record of writing in the same way, treating it as just another work 
+                    project, and with enough data I could analyse it in the same way that I do for 
+                     paying contracts. Thanks to that, I already have a complete, 
+                    detailed, and structured collection of data points to work with.                     
                 </p>
             </div>
         </div>
         <div class="flex-container">
-            <div class="invisbox-big">
-                <h4>Do I have the code?</h4>
+            <div class="invisbox">
+                <img style="border: 1pt solid #000000;" src="../assets/dfnew.png" width="98%">
+            </div>
+            <div class="invisbox">
                 <p>
-                    There are many talented data people out there, and one of them, 
-                    <a href="">Giuseppe Solazzo</a>, recently created 
-                    <a href="https://www.letsmakeamap.com/blog/end-of-year-dataviz">this lovely radial chart
-                    showing his fitness tracker steps for 2024</a>. He was inspired by 
+                    I started with date, project, activity and the number of hours.
+                    <br><br>
+                    I used Pandas to convert the date to a proper datetime object 
+                    then add the day number and day name against each entry, and 
+                    the month name against the first day of each month.
+                    <br><br>
+                    This isn't essential for the analysis, but it gives me a way 
+                    to differentiate weekdays from weekends in the final result, as 
+                    well as placing labels for the months. 
+                </p>
+            </div>
+        </div>
+        <div class="flex-container">
+            <div class="invisbox-wide">
+                <h2>Making the chart</h2>
+            </div>
+        </div>
+        <div class="flex-container">
+            <div class="invisbox">
+                <p>
+                    Now, on to the code. Normally in my analysis I aim to work backwards from the 
+                    questions I want to answer, but in this case I was partly inspired by 
+                    <a href="https://www.letsmakeamap.com/blog/end-of-year-dataviz">this post by Giuseppe Solazzo</a>
+                     showing his fitness tracker steps for 2024, and he was inspired in turn by 
                     <a href="https://dominicroye.github.io/blog/climate-circles/index.html">Dominic Royé's work plotting 
-                    climate circles</a>, and the visualisation and calculations are all done in R.
+                    climate circles</a>. In both of these examples, the visualisation and calculations are all done in R.
                     <br><br>
-                    In my work I tend to work a lot more in Python, and luckily for me 
+                    On the other hand, I tend to work a lot more in Python. Luckily for me 
                     <a href="https://tomicapretto.com/">Tomás Capretto</a> had 
                     already looked into coverting a very similar R visualisation by 
                     <a href="https://www.cedricscherer.com/">Cédric Scherer</a> into Python.
@@ -92,45 +95,61 @@
                     which is already very close to what I wanted to do. The data in this example deals with the amount of 
                     time it takes to crack certain categories and formats of passwords, but all the necessary elements 
                     are there for me to deconstruct and tweak for my purposes.
+                    <ul>
+                        <li>
+                            The length of each line represents the amount of time (seconds, minutes, hours, days
+                            or years) needed to crack each password in the dataset. I can use this for the number 
+                            of 'writing hours' per day.
+                        </li>
+                        <li>
+                            The angle of the line in relation to the starting point represents the position of the 
+                            password entry in the dataset's index, so I can order my data in date order and use the 
+                            same process to make sure everything shows up in the right place on the radial chart. 
+                        </li>
+                        <li>
+                            This example uses a custom colour map of ten different shades, but I only need two - 
+                            one for weekdays, and another for weekends. 
+                        </li>
+                    </ul>
                 </p>
             </div>
-            <div class="invisbox-small">
-                <br><br>
-                <img src="../assets/puntofissoexample.png" width="100%">
+            <div class="invisbox">
+                <img style="border: 1pt solid #000000;" src="../assets/capretto.png" width="98%"> <!--TODO add shadow-->
             </div>
         </div>
-        <h3>The result</h3>
-        <p>
-            What does it tell us? To start with, you can see that I didn't start recording the time I spent on 
-            writing and related tasks until April 2024. You can also see that I don't find 
-            the time to write every single day; even 
-            once I'd started logging time in those categories, there are still gaps. 
-        </p>
         <div class="flex-container">
-            <div class="invisbox-big">
-                <img src="radial_plot.png" width="100%">
-            </div>
-            <div class="invisbox-small">
-                <img src="bar_plot.png" width="100%">
+            <div class="invisbox-wide">
+                <h2>"If you had an answer, what would it look like?"</h2>
             </div>
         </div>
         <div class="flex-container">
             <div class="invisbox">
-                <h3>How many hours does it take to create a novel?</h3>
                 <p>
-                    In this case, 444 hours (and counting, since technically the current 
-                    WIP isn't finished yet). That said, some people do write faster; and not 
-                    every author would count all of the activities that I've been logging 
-                    as 'writing'. Which leads me to the next question:
+                    Next I need to decide what questions 
+                    I'm trying to answer with this data. More specifically, what questions do I 
+                    think would be well-answered by the radial chart I'm planning to create?
+                    <br><br>
+                    Here are the obvious ones:
                 </p>
-                <h3>
-                    What proportion of that is writing, compared to all the other tasks?
-                </h3>
-                <p>
+                    <ul>
+                        <li>
+                            How many hours does it take to create a novel?  
+                        </li>
+                        <li>
+                            What proportion of that is writing, compared to all the other tasks?  
+                        </li>
+                        <li>
+                            Do I get more done during the week, or at weekends? What about holidays, or Christmas?
+                        </li>
+                    </ul>
+                    <p>
+                    Let's start not at the beginning, but with the second question. This one 
+                    is better answered with a simple bar chart, at least to begin with.
+                    <br><br>
                     Plotting, outlining, typesetting, 
                     cover designs, proof-reading, uploading files, and marketing are all 
                     part of the process if you're self-published. The bar chart to the right 
-                    of the radial plot shows the breakdown of total hours by catgory.
+                    shows the breakdown of total hours by category.
                     <br><br>
                     It is interesting to see the numbers, and there are a couple of surprises. 
                     Drafting and editing make up the majority of the hours, as I would expect. 
@@ -145,10 +164,55 @@
                 </p>
             </div>
             <div class="invisbox">
-                <h3>
-                    Do I get more done during the week, or at weekends? What about 
-                    holidays, or Christmas?
-                </h3>
+                <img style="border: 1pt solid #000000;" src="bar_plot.png" width="98%">
+                <p style="font-family: HanziPen SC; font-size: 1.6em;">
+                    Proportion of time spent on different tasks
+                </p>
+            </div>
+        </div>
+        <div class="flex-container">
+            <div class="invisbox-wide">
+                <h2>The end result</h2>
+                
+            </div>
+        </div>
+        
+        
+        
+        
+        <div class="flex-container">
+            <div class="invisbox-big">
+                <img style="border: 1pt solid #000000;" src="radial_plot.png" width="98%">
+                <p>
+                  If you're interested in the code I used to 
+                  make this chart, <a href="writing_stats_radial_diagram.ipynb">you can find the Jupyter notebook here</a>.
+                  <br><br>
+                  And if you got this far and are curious about what I'm writing, the book is available 
+                  on   
+                  <a href="https://www.amazon.co.uk/Somewhere-Be-Laurie-Mather-ebook/dp/B0CJK118GN">Amazon</a>,  
+                  <a href="https://www.kobo.com/au/en/ebook/somewhere-to-be-3">Kobo</a> 
+                  and <a href="https://buy.bookfunnel.com/3kmq61rjco">BookFunnel</a>.
+                </p>
+            </div>
+            <div class="invisbox-small">
+                <h4>What does it tell us?</h4>
+                <p>
+                    To start with, you can see that I didn't start recording the time I spent on 
+                    writing and writing-related tasks until April 2024. You can also see that I don't find 
+                    the time to write every single day; even 
+                    once I'd started logging time in those categories, there are still gaps. 
+                </p>
+                <h4>How many hours does it take to create a novel?</h4>
+                <p>
+                    In this case, 444 hours (and counting, since technically the current 
+                    WIP isn't finished yet). That said, some people do write faster; and not 
+                    every author would count all of the activities that I've been logging 
+                    as 'writing'.
+                </p>
+                <h4>
+                    Do I get more done during the week / at weekends / during 
+                    holidays / at Christmas?
+                </h4>
                 <p>
                     I don't typically get more writing done at weekends versus weekdays, 
                     as you might have imagined, but then my working week is quite flexible. 
@@ -159,27 +223,13 @@
                     paid work to focus on. That said, there are also days where the conditions were 
                     perfect and I was writing and editing late into the night because it was all 
                     flowing so beautifully!
-                    <br><br>
-                    Where there are several days in a row with a lot of writing hours, that's when I  
-                    made a conscious decision to take time off to focus on writing. That happened in June 2024, 
-                    when I booked a week off work and stayed in a hotel, and another occasion in October 2024 
-                    when I had my regular gaming getaway with friends.
                 </p>                      
             </div>
         </div>
         
 
         <div class="flex-container">
-            <p>
-                If you're interested in the code I used to 
-                make this chart, <a href="writing_stats_radial_diagram.ipynb">you can find the Jupyter notebook here</a>.
-                <br><br>
-                And if you got this far and are curious about what I'm writing, the first book in the series is available 
-                on   
-                <a href="https://www.amazon.co.uk/Somewhere-Be-Laurie-Mather-ebook/dp/B0CJK118GN">Amazon</a>,  
-                <a href="https://www.kobo.com/au/en/ebook/somewhere-to-be-3">Kobo</a> 
-                and <a href="https://buy.bookfunnel.com/3kmq61rjco">BookFunnel</a>.
-            </p>
+            
         </div>
     </body>
     
