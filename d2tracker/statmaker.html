@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+	<script src="http://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Dosis:400,700" rel="stylesheet" />
+	<link rel="stylesheet" href="../css/jarg.css" type="text/css"/>
+	<link href="style.css" rel="stylesheet" />
+	<title>Carnage report</title>
+	<meta name="author" content="jargonautical" />
+	<link rel="shortcut icon" href="../assets/Jargonautical_web_icon.png"/>
+	<div class='hero-image'></div>
+</head>
+
+<body>
+	<h2>Destiny 2 stats</h2>
+	<p>
+		Select a mode under a character to see how they performed in their most recent matches.
+	</p>
+	
+	<div class="row">
+		<div class="column">
+			<div class="imgHolder">
+				<img src="../assets/hunter.png" alt="Hunter" title="Hunter">
+				<span><h6>Hunter</h6></span>
+			</div>
+			<a href='#' onClick="gimmeTheStats(characterHunter, modeCrucible)">Crucible</a>
+			<a href='#' onClick="gimmeTheStats(characterHunter, modeGambit)">Gambit</a>
+		</div>
+		<div class="column">
+			<div class="imgHolder">
+				<img src="../assets/titan.png" alt="Titan" title="Titan">
+				<span><h6>Titan</h6></span>
+			</div>
+			<a href='#' onClick="gimmeTheStats(characterTitan, modeCrucible)">Crucible</a>
+			<a href='#' onClick="gimmeTheStats(characterTitan, modeGambit)">Gambit</a>
+		</div>
+		<div class="column">
+			<div class="imgHolder">
+				<img src="../assets/warlock.png" alt="Warlock" title="Warlock">
+				<span><h6>Warlock</h6></span>
+			</div>
+			<a href='#' onClick="gimmeTheStats(characterWarlock, modeCrucible)">Crucible</a>
+			<a href='#' onClick="gimmeTheStats(characterWarlock, modeGambit)">Gambit</a>
+		</div>
+	</div>
+	<hr>
+	
+	<div id="root"></div>
+	
+	
+	<!-- FOOTER SECTION -->
+	<h2>About the author</h2>
+	<div class="flex-container">
+		<div style="clear: left;">
+			<p>
+				Lucy works in education, open data and civic tech in the South West of England
+				(and anywhere else she's needed).
+				<br><br>
+				Currently available for project work.
+				<br><br>
+				<a href=mailto:lucy@jargonautical.com><img src="../assets/email64px.png"></a>
+				<a href=https://twitter.com/jargonautical><img src="../assets/twitter64px.png"></a>
+				<a href=https://uk.linkedin.com/in/jargonautical><img src="../assets/linkedin64px.png"></a>
+			</p>
+			<p class="query">
+				"People don't want data; they want answers."
+			</p>
+		</div>
+	</div>
+	<h5>(c) Jargonautical Ltd 2020. Branding and logo design by Shufflewing</h5>
+	<script src="statmaker.js"></script>
+</body>
+</html>
