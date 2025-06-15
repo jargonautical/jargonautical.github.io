@@ -1,217 +1,279 @@
 @import url('https://fonts.googleapis.com/css?family=Chivo|Lora|Space+Mono:700&display=swap');
 
 * {
-  box-sizing: border-box
+	box-sizing: border-box
 }
 
 html {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-family: 'Lora';
-  line-height: 1.6;
-  /*color: #666;*/
-  background: #f9f6ee;;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-family: 'Lora';
+	line-height: 1.6;
+	/*color: #666;*/
+	background: #f9f6ee;;
 }
 
 #root {
-  max-width: 1200px;
-  margin: 0 auto;
-  --color-win: indianred;
-  --color-lose: lightgray;
-  --color-god: red;
-  --color-scrub: salmon;
-  --color-blueberry: linen;
+	max-width: 1200px;
+	margin: 0 auto;
+	--color-win: indianred;
+	--color-lose: lightgray;
+	--color-god: red;
+	--color-scrub: salmon;
+	--color-blueberry: linen;
 }
 
 h1 {
-  text-align: center;
-  padding: 1.5rem 2.5rem;
-  background: lightseagreen;
-  margin: 0 0 2rem 0;
-  font-size: 1.5rem;
-  color: white;
+	text-align: center;
+	padding: 1.5rem 2.5rem;
+	background: lightseagreen;
+	margin: 0 0 2rem 0;
+	font-size: 1.5rem;
+	color: white;
 }
 
 h3 {
-  text-align: left;
-  padding: 1.0rem;
-  background-image: linear-gradient(120deg, darkorange 0%, linen 100%);
-  margin: 0;
-  font-size: 1.0rem;
-  color: darkslategray;
+	text-align: left;
+	padding: 1.0rem;
+	background-image: linear-gradient(120deg, darkorange 0%, linen 100%);
+	margin: 0;
+	font-size: 1.0rem;
+	color: darkslategray;
 }
 
 h4 {
-  text-align: left;
-  padding: 1.0rem;
-  margin: 0;
-  font-size: 1.0rem;
-  color: darkslategray;
+	text-align: left;
+	padding: 1.0rem;
+	margin: 0;
+	font-size: 1.0rem;
+	color: darkslategray;
 }
 
 h5 {
-  text-align: left;
-  padding: 0.1rem;
-  background: darkslategray;
-  margin: 0 0.5rem 0.5rem;
-  font-size: 0.2rem;
-  color: darkslategray;
+	text-align: left;
+	padding: 0.5rem;
+	background: darkslategray;
+	margin: 0 0.5rem 0.5rem;
+	font-size: 0.8rem;
+	color: white;
 }
 
 h6 {
-  text-align: left;
-  padding: 0.1rem;
-  margin: 0 0.5rem 0.5rem;
-  font-size: 1.2rem;
-  color: white;
+	text-align: left;
+	padding: 0.1rem;
+	margin: 0 0.5rem 0.5rem;
+	font-size: 1.2rem;
+	color: white;
+}
+
+hr {
+	margin: 10px;
 }
 
 .iconbox {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0.75em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0.75em;
 }
 
 .iconbox img {
-  margin: auto;
-  align-content: left;
+	margin: auto;
+	align-content: left;
 }
 
 icontext {
-  color: darkslategray;
-  font-size: 1.2rem;
-  font-family: "Chivo";
-  justify-content: center;
-  align-items: center;
-  margin: auto;
-  align-content: right;
-  /*padding: 0 0 1.0rem 1.0rem;*/
-  position: absolute;
-
+	color: darkslategray;
+	font-size: 1.2rem;
+	font-family: "Chivo";
+	justify-content: center;
+	align-items: center;
+	margin: auto;
+	align-content: right;
+	/*padding: 0 0 1.0rem 1.0rem;*/
+	position: absolute;
+	
 }
 
 canvas {
-  max-width: 85%;
-  max-height: 100%;
-  font-family: "Chivo";
-  text-align: right;
+	max-width: 85%;
+	max-height: 100%;
+	font-family: "Chivo";
+	text-align: right;
 }
 
 .container {
-  display: flex;
-  flex-wrap: wrap;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 
 .card {
-  margin: 1rem;
-  background: white;
-  box-shadow: 2px 4px 25px rgba(0, 0, 0, .1);
-  border-radius: 12px;
-  overflow: hidden;
-  transition: all .2s linear;
+	margin: 1rem;
+	background: white;
+	box-shadow: 2px 4px 25px rgba(0, 0, 0, .1);
+	border-radius: 12px;
+	overflow: hidden;
+	transition: all .2s linear;
 }
 
 .card:hover {
-  box-shadow: 2px 8px 45px rgba(0, 0, 0, .15);
-  transform: translate3D(0, -2px, 0);
+	box-shadow: 2px 8px 45px rgba(0, 0, 0, .15);
+	transform: translate3D(0, -2px, 0);
 }
 
 @media screen and (min-width: 600px) {
-  .card {
-    flex: 1 1 calc(50% - 2rem);
-  }
+	.card {
+		flex: 0 1 calc(50% - 2rem);
+	}
 }
 
 @media screen and (min-width: 900px) {
-  .card {
-    flex: 1 1 calc(33% - 2rem);
-  }
+	.card {
+		flex: 0 1 calc(33% - 2rem);
+	}
 }
 
 .card:nth-child(2n) h1 {
-  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+	background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
 }
 
 .card:nth-child(4n) h1 {
-  background-image: linear-gradient(120deg, #ff9a9e 0%, #fecfef 100%);
+	background-image: linear-gradient(120deg, #ff9a9e 0%, #fecfef 100%);
 }
 
 .card:nth-child(5n) h1 {
-  background-image: linear-gradient(120deg, #ffc3a0 0%, #ffafbd 100%);
+	background-image: linear-gradient(120deg, #ffc3a0 0%, #ffafbd 100%);
 }
 
 /* Container needed to position the button. Adjust the width as needed */
 .character {
-  position: relative;
-  width: 50%;
+	position: relative;
+	width: 50%;
 }
 
 /* Make the image responsive */
 .character img {
-  width: 100%;
-  height: auto;
+	width: 100%;
+	height: auto;
 }
 
 /* Style the button and place it in the middle of the container/image */
 .character .btn {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  background-color: #555;
-  color: white;
-  font-size: 16px;
-  padding: 12px 24px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	background-color: #555;
+	color: white;
+	font-size: 16px;
+	padding: 12px 24px;
+	border: none;
+	cursor: pointer;
+	border-radius: 5px;
 }
 
 .character .btn:hover {
-  background-color: black;
+	background-color: black;
 }
 
 .disabled {
-  opacity: 0.7;
-  border-style: inset;
-  font-style: italic;
+	opacity: 0.7;
+	border-style: inset;
+	font-style: italic;
 }
 
 /* Three image containers (use 25% for four, and 50% for two, etc) */
 .column {
-  float: left;
-  width: 33.33%;
-  padding: 5px;
+	float: left;
+	width: 33.33%;
+	padding: 5px;
+}
+.column a {
+	display: block;
+	background: #318385;
+	color: #fff;
+	text-decoration: none;
+	font-weight: bold;
+	margin: 0.4em;
+	padding: 0.4em;
+	text-align: center;
+	border-radius: 10px;
+}
+.column a:hover {
+	background: #419496;
 }
 
 /* Clear floats after image containers */
 .row::after {
-  content: "";
-  clear: both;
-  display: table;
+	content: "";
+	clear: both;
+	display: table;
 }
 
 .imgHolder {
-  position: relative;
-  text-align:center;
+	position: relative;
+	text-align:center;
 }
 .imgHolder span {
-  color: white;
-  position: absolute;
-  right: 60%;
-  top: 75%;
+	color: white;
+	text-shadow: black 0 0 5px;
+	position: absolute;
+	right: 60%;
+	top: 75%;
+}
+.imgHolder img {
+	width: 100%;
+	padding: 0 2em;
 }
 
 /* Different hero image for D2 tracker */
 .hero-image {
-  background-image: url('https://github.com/jargonautical/hero_images/raw/master/Screenshot_57.jpg');
-  height: 100px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  padding: 10px;
-  margin: 10px;
+	background-image: url('https://github.com/jargonautical/hero_images/raw/master/Screenshot_57.jpg');
+	height: 100px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	padding: 10px;
+	margin: 10px;
+}
+
+.loader {
+	padding: 1em;
+	margin: 0 auto;
+	position: relative;
+	width: 64px;
+	height: 60px;
+}
+.loader::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	background: var(--bgheaders);
+	width: 64px;
+	height: 32px;
+	border-radius: 0 0 50px 50px;
+	animation: move 0.5s linear infinite alternate;
+}
+.loader::before {
+	content: '';
+	position: absolute;
+	left: 50%;
+	top: 0;
+	background: #FF3D00;
+	width: 24px;
+	height: 24px;
+	transform: translateX(-50%) rotate(0deg);
+	animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+	100% { transform: translateX(-50%) rotate(360deg)}
+}
+@keyframes move {
+	0% { transform: rotate(10deg)}
+	100% { transform: rotate(-10deg)}
 }
